@@ -1,0 +1,1085 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>チャートメニュー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">チャートメニュー</p>
+
+
+
+<pre>
+作成中
+
+FileName = init\selectchart.xtx
+</pre>
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc">レイヤー0～3及びセンターレイヤーで使用しているレイヤー(デフォルトでは5)は使用できません</td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype" rowspan="2">その他設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc">dialogOk dialogCancelという名前で警告ボタンを作成する</td>
+</tr>
+
+<tr>
+
+<td class = "commonstatus">必要</td>
+<td class = "commondesc">growという名前でラジオボタンを作成する</td>
+</tr>
+
+</table>
+
+<br />
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">selectchart</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">chartListNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">チャプターの個数。最大数は31個です</td>
+</tr>
+
+<tr>
+<td class = "name">basicChartNumber</td>
+<td class = "rightparam">chartListNumber</td>
+<td class = "desc">基本チャプターの個数。基本チャプターとは、初期状態で表示されるもののことです</td>
+</tr>
+
+<tr>
+<td class = "name">chartBlockSize</td>
+<td class = "rightparam">1000</td>
+<td class = "desc">1つのチャプターに含まれる最大スロットの数</td>
+</tr>
+
+<tr>
+<td class = "name">chartOpenVar</td>
+<td class = "leftparam">チャートオープン情報</td>
+<td class = "desc">チャートオープン情報を保存するためのゲーム変数名。プレイ変数では不可</td>
+</tr>
+
+<tr>
+<td class = "name">slotVarName</td>
+<td class = "leftparam">チャートスロット番号</td>
+<td class = "desc">選択したスロット番号がはいります</td>
+</tr>
+
+<tr>
+<td class = "name">workVarName</td>
+<td class = "leftparam">ワークスロット番号</td>
+<td class = "desc">プログラム内部で使用します</td>
+</tr>
+
+<tr>
+<td class = "name">slotSizeX</td>
+<td class = "rightparam">200</td>
+<td class = "desc" rowspan="2">スロットのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">slotSizeY</td>
+<td class = "rightparam">50</td>
+
+</tr>
+
+<tr>
+<td class = "subtitle" colspan="3"><center>背景レイヤー関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">backPicNumberCommon</td>
+<td class = "rightparam">2</td>
+<td class = "desc">背景画像が何枚で構成されているか(共通設定用)</td>
+</tr>
+
+<tr>
+<td class = "name">backPicSizeY</td>
+<td class = "rightparam">画面縦サイズ * backPicNumberCommon</td>
+<td class = "desc">背景画像全体のサイズ(共通設定用)</td>
+</tr>
+
+<tr>
+<td class = "name">backPicNumber[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">背景画像数がチャプターごとに違う場合に個別に設定する</td>
+</tr>
+
+<tr>
+<td class = "name">backPicSizeY[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">背景画像全体サイズが、チャプターごとに違う場合に個別に設定する</td>
+</tr>
+
+<tr>
+<td class = "name">tagNameBack</td>
+<td class = "leftparam">chart_back</td>
+<td class = "desc">背景画像の名前タグ。このあとに[チャプター番号]_[通し番号]を付けた名前で背景画像を準備する</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>センターレイヤー関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">centerPicLayer</td>
+<td class = "rightparam">5</td>
+<td class = "desc">センターレイヤーの使用レイヤー。バックスクリプト使用時には、このレイヤーはバックスクリプトでは無視される。指定範囲は4～13</td>
+</tr>
+
+<tr>
+<td class = "name">tagNameCenter</td>
+<td class = "leftparam">ta_chart_center</td>
+<td class = "desc">センターレイヤーの名前タグ。このあとに[チャプター番号]を付けた名前でセンターレイヤー画像を準備する</td>
+</tr>
+
+<tr>
+<td class = "name">scrollSpeedX[n]</td>
+<td class = "rightparam">-1</td>
+<td class = "desc">センターレイヤーの左右スクロールスピード</td>
+</tr>
+
+<tr>
+<td class = "name">centerMulti</td>
+<td class = "rightparam">200</td>
+<td class = "desc">センターレイヤーの背景に対する上下スクロールスピードを%で指定</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>スロットレイヤー関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">slotSizeX</td>
+<td class = "rightparam">200</td>
+<td class = "desc" rowspan="2">スロットのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">slotSizeY</td>
+<td class = "rightparam">50</td>
+
+</tr>
+
+<tr>
+<td class = "name">tagNameChartSlot</td>
+<td class = "leftparam">ta_chart_button</td>
+<td class = "desc">スロットグラフィック名の先頭部分。この後に、[チャプター番号]_[通し番号]を付けたファイル名でスロット画像を準備する</td>
+</tr>
+
+<tr>
+<td class = "name">filenameButtonCursor</td>
+<td class = "leftparam">ta_chart_buttoncur</td>
+<td class = "desc">カーソルがのったスロットの上にかさねる画像ファイル名</td>
+</tr>
+
+
+<tr>
+<td class = "name">bottomSpace</td>
+<td class = "rightparam">60</td>
+<td class = "desc">一番下のスロットの下の余白</td>
+</tr>
+
+<tr>
+<td class = "name">allClickOk</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:明るくないスロットでも、プレイしていれば選択可能にする</td>
+</tr>
+
+<tr>
+<td class = "name">slotAreaStartX</td>
+<td class = "rightparam">200</td>
+<td class = "desc">スロットレイヤーの表示開始X座標</td>
+</tr>
+
+<tr>
+<td class = "name">slotAreaSizeX</td>
+<td class = "rightparam">600</td>
+<td class = "desc">スロットレイヤーの表示幅</td>
+</tr>
+
+<tr>
+<td class = "name">buttonMultiCount</td>
+<td class = "rightparam">40</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">buttonMulti</td>
+<td class = "rightparam">140</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">selectButtonMulti</td>
+<td class = "rightparam">140</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">selectButtonMulti2</td>
+<td class = "rightparam">120</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">selectSlotTransPercent</td>
+<td class = "rightparam">80</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">selectOkSlotTransPercent</td>
+<td class = "rightparam">80</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">scrollSpeed</td>
+<td class = "rightparam">20</td>
+<td class = "desc">ホイールによるスロットレイヤーのスクロールスピード</td>
+</tr>
+
+<tr>
+<td class = "name">dontRightMove</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:スロットを右クリックでつかんで動かすことができなくなります</td>
+</tr>
+
+<tr>
+<td class = "name">eraseButtonBack</td>
+<td class = "rightparam">1</td>
+<td class = "desc">ボタンの後ろを背景画像でけして下のラインが見えないようにする(ボタンがサイズぴったりで半透明のときに使用する)
+ボタンが不透明(もしくはほぼ不透明)で、まわりにぬきがある形の場合には0にしたほうがよい</td>
+</tr>
+
+<tr>
+<td class = "name">filenameNotLook</td>
+<td class = "leftparam">ta_chart_button0</td>
+<td class = "desc">見ていないスロットの画像ファイル名</td>
+</tr>
+
+
+<tr>
+<td class = "name">lineColorCount</td>
+<td class = "rightparam">20</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">lineColorR[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="3">ラインの色を指定<br />
+1:現在たどってるライン<br />
+2:通過したことのあるライン<br />
+3:その他のライン<br />
+4:現在の位置からつながっているライン<br />
+5:現在の位置からつながっていて、マウスがのってるスロットへのラインの変化用色。4と5の色で変化する
+</td>
+</tr>
+
+<tr>
+<td class = "name">lineColorG[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "name">lineColorB[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "name">selectSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">スロットをクリックしたときの効果音</td>
+</tr>
+
+<tr>
+<td class = "name">overSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">スロットにマウスがのったときの効果音</td>
+</tr>
+
+<tr>
+<td class = "name">mainCaptureOk</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:メイン画面をつかめなくなります<br />
+1:スロットレイヤーをつかみます<br />
+3:背景レイヤーをつかみます</td>
+</tr>
+
+<tr>
+<td class = "name">filenameCapturePic</td>
+<td class = "leftparam">ta_capture</td>
+<td class = "desc">つかんだときにマウスの下に追加画像を表示するとき、ファイル名を指定します</td>
+</tr>
+
+<tr>
+<td class = "name">capturePrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">追加画像のマウスに対する表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">capturePrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">captureReverse</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:つかんだときの動きを上下入れ替えます</td>
+</tr>
+
+<tr>
+<td class = "name">fileNameComp</td>
+<td class = "leftparam">ta_compmark</td>
+<td class = "desc">スロットに表示されるコンプリートマークのファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">compPrintX</td>
+<td class = "rightparam">60</td>
+<td class = "desc" rowspan="2">コンプマークのスロットに対する表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">compPrintY</td>
+<td class = "rightparam">5</td>
+
+</tr>
+
+<tr>
+<td class = "name">compSizeX</td>
+<td class = "rightparam" rowspan="2">絵のサイズ</td>
+<td class = "desc" rowspan="2">コンプマークのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">compSizeY</td>
+
+
+</tr>
+
+<tr>
+<td class = "name">compNextX</td>
+<td class = "rightparam">compSizeX</td>
+<td class = "desc">コンプマークの表示間隔</td>
+</tr>
+
+<tr>
+<td class = "name">compPercent</td>
+<td class = "rightparam">20</td>
+<td class = "desc">未コンプの時の表示半透明パーセン</td>
+</tr>
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>解説関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">filenameDescWindow</td>
+<td class = "leftparam">ta_chart_meswin1</td>
+<td class = "desc">解説ウィンドウ画像のファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">upperDescWindowPrintX</td>
+<td class = "rightparam" rowspan="2">自動</td>
+<td class = "desc" rowspan="2">上に表示するときの座標</td>
+</tr>
+
+<tr>
+<td class = "name">upperDescWindowPrintY</td>
+
+
+</tr>
+
+<tr>
+<td class = "name">lowerDescWindowPrintX</td>
+<td class = "rightparam" rowspan="2">自動</td>
+<td class = "desc" rowspan="2">下に表示するときの座標</td>
+</tr>
+
+<tr>
+<td class = "name">lowerDescWindowPrintY</td>
+
+
+</tr>
+
+<tr>
+<td class = "name">descPrintX</td>
+<td class = "rightparam">32</td>
+<td class = "desc" rowspan="2">解説の表示位置(ウィンドウに対する相対指定)</td>
+</tr>
+
+<tr>
+<td class = "name">descPrintY</td>
+<td class = "rightparam">16</td>
+
+</tr>
+
+<tr>
+<td class = "name">descFontSize</td>
+<td class = "rightparam">20</td>
+<td class = "desc">解説のフォントサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">descNextY</td>
+<td class = "rightparam">descFontSize + 8</td>
+<td class = "desc">解説の次の行への距離</td>
+</tr>
+
+<tr>
+<td class = "name">descColorR</td>
+<td class = "rightparam">255</td>
+<td class = "desc" rowspan="3">解説の色</td>
+</tr>
+
+<tr>
+<td class = "name">descColorG</td>
+<td class = "rightparam">255</td>
+
+</tr>
+
+<tr>
+<td class = "name">descColorB</td>
+<td class = "rightparam">255</td>
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>達成度関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">filenameTasseido</td>
+<td class = "leftparam">ta_chart_comp</td>
+<td class = "desc">達成度等表示のためのベース画像。この上に達成度が表示されます</td>
+</tr>
+
+<tr>
+<td class = "name">tasseidoBaseX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">tasseidoBaseY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">filenameChartFont</td>
+<td class = "leftparam">ta_chart_font01</td>
+<td class = "desc">達成度数値のフォント画像ファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">chartFontSizeX</td>
+<td class = "rightparam">11</td>
+<td class = "desc" rowspan="2">達成度数値フォントサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">chartFontSizeY</td>
+<td class = "rightparam">18</td>
+
+</tr>
+
+
+<tr>
+<td class = "name">chartFontNextX</td>
+<td class = "rightparam">chartFontSizeX</td>
+<td class = "desc">数字の間隔</td>
+</tr>
+
+<tr>
+<td class = "name">chartFontUpZeroFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1: 達成度数値の上位0を表示する</td>
+</tr>
+
+<tr>
+<td class = "name">chartFontLeftFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1: 達成度数値を左つめにする</td>
+</tr>
+
+<tr>
+<td class = "name">tasseidoX</td>
+<td class = "rightparam">80</td>
+<td class = "desc" rowspan="2">現在のチャートの達成度表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">tasseidoY</td>
+<td class = "rightparam">34</td>
+
+</tr>
+
+<tr>
+<td class = "name">totalTasseidoX</td>
+<td class = "rightparam">80</td>
+<td class = "desc" rowspan="2">全体のチャートの達成度表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">totalTasseidoY</td>
+<td class = "rightparam">20</td>
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>ミニマップ関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">filenameMiniMapButton</td>
+<td class = "leftparam">ta_chart_minimap01</td>
+<td class = "desc">縮小マップでのボタン画像(通常、コンプ、現在、選択可能)の順に横に並べる</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapButtonSizeX</td>
+<td class = "rightparam">12</td>
+<td class = "desc" rowspan="2">縮小マップボタンのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapButtonSizeY</td>
+<td class = "rightparam">3</td>
+
+</tr>
+
+<tr>
+<td class = "name">miniButtonTime</td>
+<td class = "rightparam">10</td>
+<td class = "desc">縮小マップボタンの点滅間隔をフレームで指定</td>
+</tr>
+
+<tr>
+<td class = "name">filenameMiniMapWindow</td>
+<td class = "leftparam">ta_chart_minimap03</td>
+<td class = "desc">ミニマップウィンドウ画像のファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapWindowUpSize</td>
+<td class = "rightparam">15</td>
+<td class = "desc">ミニマップウィンドウ画像の上にはみ出すサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapWindowDownSize</td>
+<td class = "rightparam">15</td>
+<td class = "desc">ミニマップウィンドウ画像の下にはみ出すサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapWindowPrintX</td>
+<td class = "rightparam" rowspan="2">自動</td>
+<td class = "desc" rowspan="2">ミニマップウィンドウの表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapWindowPrintY</td>
+
+
+</tr>
+
+<tr>
+<td class = "name">filenameMiniMapBase</td>
+<td class = "leftparam">ta_chart_minimap02</td>
+<td class = "desc">ミニマップベースの共通ファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">filenameMiniMapBase[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">ミニマップベースをチャプターごとに変える場合に設定します</td>
+</tr>
+
+
+<tr>
+<td class = "name">miniMapBasePrintX</td>
+<td class = "rightparam">10</td>
+<td class = "desc" rowspan="2">ミニマップベースの共通表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapBasePrintY</td>
+<td class = "rightparam">300</td>
+
+</tr>
+
+<tr>
+<td class = "name">miniMapBasePrintX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">ミニマップベースの表示位置をチャプターごとに変える場合に設定します</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapBasePrintY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "name">miniMapSizeX</td>
+<td class = "rightparam">120</td>
+<td class = "desc" rowspan="2">ミニマップエリアの共通サイズ</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapSizeY</td>
+<td class = "rightparam">180</td>
+
+</tr>
+
+<tr>
+<td class = "name">miniMapSizeX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">ミニマップエリアのサイズをチャプターごとに変える場合に設定します</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapSizeY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "name">miniMapPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">ミニマップエリアの共通表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapPrintY</td>
+<td class = "rightparam">30</td>
+
+</tr>
+
+<tr>
+<td class = "name">miniMapPrintX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">ミニマップエリアの表示位置をチャプターごとに変える場合に設定します</td>
+</tr>
+
+<tr>
+<td class = "name">miniMapPrintY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+<tr>
+<td class = "name">miniWindowTime</td>
+<td class = "rightparam">30</td>
+<td class = "desc">ミニボタンの点滅間隔をフレームで指定</td>
+</tr>
+
+<tr>
+<td class = "name">miniWindowPercent1</td>
+<td class = "rightparam">30</td>
+<td class = "desc" rowspan="2">点滅の半透明変化値</td>
+</tr>
+
+<tr>
+<td class = "name">miniWindowPercent2</td>
+<td class = "rightparam">90</td>
+
+</tr>
+
+<tr>
+<td class = "name">autoJumpMiniWindow</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0にすると、ミニマップをクリックしたときにそこに移動しません</td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>警告関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">warningPrintFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:警告を表示する</td>
+</tr>
+
+
+<tr>
+<td class = "name">fileNameDialog</td>
+<td class = "leftparam">ta_dialog4</td>
+<td class = "desc">警告ダイアログのファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">dialogX</td>
+<td class = "rightparam">340</td>
+<td class = "desc" rowspan="2">ダイアログの表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">dialogY</td>
+<td class = "rightparam">145</td>
+
+</tr>
+
+<tr>
+<td class = "name">dialogSizeX</td>
+<td class = "rightparam">236</td>
+<td class = "desc" rowspan="2">ダイアログのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">dialogSizeY</td>
+<td class = "rightparam">160</td>
+
+</tr>
+
+<tr>
+<td class = "name">warningSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ダイアログ表示時の効果音</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>その他関連</center></td>
+</tr>
+
+<tr>
+<td class = "name">filenameNowChart</td>
+<td class = "leftparam">ta_chartmap_cur01</td>
+<td class = "desc">現在プレイ中のスロットのあるチャプターのボタンの上にかさねる画像ファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">autoNextOn</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:チャプターをまたがるスロットをクリックしたとき、次のスロットを既読にする。後述の注意点を参考にしてください</td>
+</tr>
+
+
+<tr>
+<td class = "name">useSetRouteFunction</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:スクリプトでルートセットファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">setRouteFunctionName</td>
+<td class = "leftparam">setroute</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+
+<tr>
+<td class = "name">useGetChartPercentFunction</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:スクリプトでチャートの達成度を取得するファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">getChartPercentFunctionName</td>
+<td class = "leftparam">getchartpercent</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "name">chartPercentVarName</td>
+<td class = "leftparam">answer</td>
+<td class = "desc">達成度の入る変数を変更するばあいには、ここで設定する</td>
+</tr>
+
+
+<tr>
+<td class = "name">useCheckCompSlotFunction</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:スクリプトでスロットのコンプリート度合いを取得するファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">checkCompSlotFunctionName</td>
+<td class = "leftparam">checkcompslot</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "name">checkCompVarName</td>
+<td class = "leftparam">answer</td>
+<td class = "desc">スロットのコンプリートフラグの入る変数を変更するばあいには、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "name">useOpenChartFunction</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:スクリプトで隠しスロットをオープンするファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">openChartFunctionName</td>
+<td class = "leftparam">openchart</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "name">useSlotOnFunction</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:スクリプトからスロット個別のon/offを制御するファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">slotOnFunctionName</td>
+<td class = "leftparam">sloton</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "name">useSlotOpenFunction</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:スクリプトからスロット個別のopenを制御するファンクションを使う</td>
+</tr>
+
+<tr>
+<td class = "name">slotOpenFunctionName</td>
+<td class = "leftparam">slotopen</td>
+<td class = "desc">functionの名前を変更する必要が発生した場合には、ここで設定する</td>
+</tr>
+
+<tr>
+<td class = "maintitle" colspan="3"><center>未実装分</center></td>
+</tr>
+
+
+<tr>
+<td class = "name">picLoadBackScript</td>
+<td class = "rightparam">0</td>
+<td class = "desc">(未実装につき設定しないでください) 1:バックスクリプト使用時に背景、センターレイヤーをバックスクリプトで制御する</td>
+</tr>
+
+</table>
+
+
+
+<br />
+
+<div class ="notice">
+<pre>
+通常チャプター6こ隠しチャプター2こにしたい場合の設定例
+
+chartListNumber 8
+basicChartNumber 6
+</pre>
+</div>
+
+
+
+
+
+
+<br />
+<div class = "warning">
+<pre>
+autoNextOnを使う場合の注意点
+
+この機能を使う場合、2つのチャプターにまたがるスロットは、内部分岐なしかつ、
+つながりもとのスロットは、1個のスロットのみにつながっている必要があります
+また、つながりもとのスロットのスクリプトでは、次のスロットのぶんのフィルムも実行しておく必要があります
+
+たとえばチャプター1のスロット999とチャプター2のスロット1001をつないだ場合
+スロット999のスクリプトではスロット999とスロット1001のフィルムを表示する必要があります
+スロット1001のスクリプトではスロット1001のフィルムのみを表示させます
+
+</pre>
+</div>
+
+<br />
+
+<div class = "warning">
+<pre>
+チャートオープン情報を保存するためのゲーム変数は
+必ず、ゲーム変数に設定してください
+プレイ変数では正しく動作しません。
+</pre>
+</div>
+
+
+
+<pre>
+//newマークをつかうか
+newMarkPrintFlag 0
+
+//newマークのために使う内部変数 GAME変数に設定
+newMarkVarName
+
+//ボタンに対する表示位置
+newMarkPrintX
+newMarkPrintY
+
+newMarkSizeX
+newMarkSizeY
+newMarkPattern
+newMarkSpeed
+newMarkType
+
+filenameNewMark
+
+
+
+chartDescMax 3
+//解説の最大行数を指定する
+
+
+
+
+savePrintChartFlag 0
+1:チャートの表示状態を保存する
+
+    workVarName2　ワークスロット番号２
+//その変数名
+
+
+
+
+</pre>
+
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>レジストリー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">レジストリー</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+インストーラー等で、設定しておくとよいレジストリー項目は、以下のもので
+場所は、HKEY_LOCAL_MACHINEの下です
+</pre>
+
+<table class="none">
+
+<tr>
+<td class = "box2">種類</td>
+<td class = "box3">場所</td>
+<td class = "box3">設定</td>
+</tr>
+
+<tr>
+<td class = "box2">キー</td>
+<td class = "box3">SOFTWARE</td>
+<td class = "box3">[COMPANYNAME]</td>
+</tr>
+
+<tr>
+<td class = "box2">キー</td>
+<td class = "box3">SOFTWARE\[COMPANYNAME]</td>
+<td class = "box3">[GAMENAME]</td>
+</tr>
+
+<tr>
+<td class = "box2">文字列</td>
+<td class = "box3">SOFTWARE\[COMPANYNAME]\[GAMENAME]</td>
+<td class = "box3">installdirectory</td>
+</tr>
+
+</table>
+
+<br />
+<br />
+
+
+<pre>
+補足
+</pre>
+<table class="none">
+
+<tr>
+<td class="box2">[CAMPANYNAME]</td>
+<td class="box3">サークル名などをいれます。init\game.xtxのcompanyName項目と同じである必要があります</td>
+</tr>
+
+<tr>
+<td class="box2">[GAMENAME]</td>
+<td class="box3">ゲーム名をいれます。init\game.xtxのgameName項目と同じである必要があります</td>
+</tr>
+
+<tr>
+<td class="box2">installdirectory</td>
+<td class="box3">インストールされたフォルダをいれるように、使用するインストーラーで設定します。設定の方法は、使用するインストーラーで違いますので、それぞれのマニュアルを参考にしてください</td>
+</tr>
+
+</table>
+
+<pre>
+
+この設定は、パッチをあてるときなどに使用されます
+
+</pre>
+
+</body>
+</html>
+

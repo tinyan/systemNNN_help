@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>モード番号</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">モード番号</p>
+
+<br />
+<pre>
+NNNシステムでは、ゲームの動作状態をモード番号で区別しています。
+通常は、気にする必要はありませんが、
+バックスクリプトを作成するときに、1つのNNNファイルに
+いろんな画面の動作をいれておきたい場合に、
+モード番号をみて処理を分けることができます
+
+</pre>
+
+<div class = "notice">
+<pre>
+モード番号を示す変数
+
+mode
+</pre>
+</div>
+<br />
+<br />
+
+<table class="none">
+
+<tr>
+<td class="box1">番号</td>
+<td class="box2">名称</td>
+<td class="box3">解説</td>
+</tr>
+
+<tr>
+<td class="box1"></td>
+<td class="box2"></td>
+<td class="box3"></td>
+</tr>
+
+<tr>
+<td class="box1">1</td>
+<td class="box2">nothing</td>
+<td class="box3">起動時</td>
+</tr>
+
+<tr>
+<td class="box1">2</td>
+<td class="box2">logo</td>
+<td class="box3">ロゴ表示</td>
+</tr>
+
+<tr>
+<td class="box1">3</td>
+<td class="box2">opening</td>
+<td class="box3">オープニングスクリプト動作時</td>
+</tr>
+
+<tr>
+<td class="box1">4</td>
+<td class="box2">title</td>
+<td class="box3">タイトル画面</td>
+</tr>
+
+<tr>
+<td class="box1">5</td>
+<td class="box2">load</td>
+<td class="box3">ロード画面</td>
+</tr>
+
+<tr>
+<td class="box1">6</td>
+<td class="box2">save</td>
+<td class="box3">セーブ画面</td>
+</tr>
+
+<tr>
+<td class="box1">7</td>
+<td class="box2">backlog</td>
+<td class="box3">バックログ表示時</td>
+</tr>
+
+<tr>
+<td class="box1">8</td>
+<td class="box2">listenbgm</td>
+<td class="box3">BGM鑑賞画面</td>
+</tr>
+
+<tr>
+<td class="box1">9</td>
+<td class="box2">selectmessage</td>
+<td class="box3">選択肢画面</td>
+</tr>
+
+<tr>
+<td class="box1">10</td>
+<td class="box2">printmessage</td>
+<td class="box3">通常会話画面</td>
+</tr>
+
+<tr>
+<td class="box1">11</td>
+<td class="box2">draw</td>
+<td class="box3">未使用</td>
+</tr>
+
+<tr>
+<td class="box1">12</td>
+<td class="box2">config</td>
+<td class="box3">コンフィグ画面</td>
+</tr>
+
+<tr>
+<td class="box1">13</td>
+<td class="box2">systemmenu</td>
+<td class="box3">システムメニュー表示時</td>
+</tr>
+
+<tr>
+<td class="box1">14</td>
+<td class="box2">printoverrap</td>
+<td class="box3">未使用</td>
+</tr>
+
+<tr>
+<td class="box1">15</td>
+<td class="box2">omake</td>
+<td class="box3">おまけ選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">16</td>
+<td class="box2">selectcgchara</td>
+<td class="box3">CGキャラ選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">17</td>
+<td class="box2">selectcg</td>
+<td class="box3">CG選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">18</td>
+<td class="box2">selectscene</td>
+<td class="box3">シーン選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">19</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">20</td>
+<td class="box2">selectscenechara</td>
+<td class="box3">シーンキャラ選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">21</td>
+<td class="box2">cderror</td>
+<td class="box3">未使用</td>
+</tr>
+
+<tr>
+<td class="box1">22</td>
+<td class="box2">selectplace</td>
+<td class="box3">標準場所選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">23</td>
+<td class="box2">printcg</td>
+<td class="box3">CG表示中</td>
+</tr>
+
+<tr>
+<td class="box1">24</td>
+<td class="box2">selectzukan</td>
+<td class="box3">簡易図鑑画面</td>
+</tr>
+
+<tr>
+<td class="box1">25</td>
+<td class="box2">selectmoviechara</td>
+<td class="box3">ムービーキャラ選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">26</td>
+<td class="box2">selectmovie</td>
+<td class="box3">ムービー選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">27</td>
+<td class="box2">printmovie</td>
+<td class="box3">ムービー表示中</td>
+</tr>
+
+<tr>
+<td class="box1">28</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">29</td>
+<td class="box2">nameinput</td>
+<td class="box3">名前入力画面</td>
+</tr>
+
+<tr>
+<td class="box1">30</td>
+<td class="box2">printcalendar</td>
+<td class="box3">カレンダー表示画面</td>
+</tr>
+
+<tr>
+<td class="box1">31</td>
+<td class="box2">selectheroin</td>
+<td class="box3">ヒロイン選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">32</td>
+<td class="box2">codecerror</td>
+<td class="box3">コーデックエラー表示画面</td>
+</tr>
+
+<tr>
+<td class="box1">33</td>
+<td class="box2"></td>
+<td class="box3">実績画面</td>
+</tr>
+
+<tr>
+<td class="box1">34</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">35</td>
+<td class="box2">selectplace2</td>
+<td class="box3">拡張場所選択画面</td>
+</tr>
+
+<tr>
+<td class="box1">36</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">37</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">38</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">39</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">40</td>
+<td class="box2">minigame</td>
+<td class="box3">ミニゲーム画面</td>
+</tr>
+
+<tr>
+<td class="box1">41</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">42</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">43</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">44</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">45</td>
+<td class="box2">cardsystem</td>
+<td class="box3">カード組み合わせ画面</td>
+</tr>
+
+<tr>
+<td class="box1">46</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">47</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">48</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">49</td>
+<td class="box2"></td>
+<td class="box3">予約</td>
+</tr>
+
+<tr>
+<td class="box1">～</td>
+<td class="box2"></td>
+<td class="box3">50～はユーザー独自プログラム用です</td>
+</tr>
+
+</table>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>check,radio button</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">check,radio button</p>
+
+
+
+<pre>
+特殊なボタンとして、チェックボタン、ラジオボタンがあります
+それぞれ複数のボタンを使って実装されています
+
+チェックボタン
+2つの状態を持っています。非チェック状態、チェック状態
+チェックボタンは、2つのボタンから構成されます
+
+ラジオボタン
+ラジオボタンは2つ以上の状態をもっています
+状態1、状態2・・・
+ラジオボタンは、必要な個数のチェックボタンから構成されます
+画面には状態の数だけボタンが表示されます
+
+チェックボタンはそれぞれ
+[ボタン名]1
+[ボタン名]2
+という名前でinitに設定をかきます
+
+1が非チェック状態、2がチェック状態に対応しています
+</pre>
+<br />
+<img src="graphics/checkbutton1.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+ラジオボタンは
+
+[ボタン名]1Button1
+[ボタン名]1Button2
+[ボタン名]2Button1
+[ボタン名]2Button2
+[ボタン名]3Button1
+[ボタン名]3Button2
+・
+・
+・
+という名前でinitに設定をかきます
+
+たとえば、音楽鑑賞画面のプレイボタンは、チェックボタンですが
+チェックボタンとして「play」ボタンを作成する場合
+play1ボタン、play2ボタンを作成するように設定を書き込みます
+
+
+ラジオボタンは該当する状態のボタンのみがチェック状態になります
+たとえば、上の例で状態3の場合には
+[ボタン名]1Button1
+[ボタン名]2Button1
+[ボタン名]3Button2
+が表示されます
+</pre>
+<br />
+<img src="graphics/radiobutton1.jpg" alt="" />
+</body>
+</html>
+
+
+

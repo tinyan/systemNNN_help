@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - selectheroin</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\selectHeroin.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>上下ボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照あとでリンクをつける</TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>次へ、決定ボタン</TD>
+<TD>ボタン名[next][ok]で、次へ、決定ボタンを、必要なら作る</TD>
+</TR>
+
+
+</TABLE>
+
+
+
+
+
+
+
+
+
+
+
+<BR>
+ヒロインの画像はnya\heroin.xtxに並べて設定する<BR>
+ヒロイン画像に表情等のバリエーションがある場合には<BR>
+全員分のバリエーションを設定する(バリエーションがないキャラの部分にはダミーをいれておく)<BR>
+<BR>
+設定例<BR>
+<BR>
+ta_キャラ1笑い,ta_キャラ2笑い,ta_キャラ3笑い<BR>
+ta_キャラ1泣き,ta_キャラ2笑い,ta_キャラ3泣き<BR>
+<BR>
+画像はsysではなく立ち絵から読み込まれる<BR>
+<BR>
+スクリプトからヒロイン選択を呼び出す前に、選択対象ヒロインは変数に1～をいれる、そうでないヒロインは0<BR>
+2～は、バリエーション分に対応<BR>
+<BR>
+ユーザーの操作でかえされる値は、0:次へボタン 1～:選ばれたヒロイン<BR>
+<BR>
+<BR>
+
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>selectHeroin</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>nextButtonFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:「次へ」ボタンを表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>nextButtonVarName</TD>
+<TD ALIGN=RIGHT></TD>
+<TD>「次へ」ボタンの有り無しを判断する変数名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>okButtonFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:「決定」ボタンを表示する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>m_createBufferFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ヒロイン画像用にメモリを確保する。0:レイヤー 6-15 2-3を流用する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>heroinPrintMax</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>選択されるヒロインの最大数(12まで)</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>heroinVarName[n]</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>ヒロインが選択対象にするかどうかを判断する変数名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>returnVarName</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>選択されたヒロインの番号を返すための変数名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>minTurnNumber</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>選択画面でヒロインを回転させる最小人数。これを2にすると表示されているヒロインが1人のとき回転しない</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>turnFrame</TD>
+
+<TD ALIGN=RIGHT>10</TD>
+<TD>ヒロインを回転させる時間をフレーム数で設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>percent1</TD>
+
+<TD ALIGN=RIGHT>20</TD>
+<TD>遠いところに表示されるヒロインの透明度</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>percent2</TD>
+
+<TD ALIGN=RIGHT>110</TD>
+<TD>近いところに表示されるヒロインの透明度。計算上100を超えても100となる</TD>
+</TR>
+
+ 
+<TR>
+<TD COLSPAN= 2>circleX</TD>
+
+<TD ALIGN=RIGHT>250</TD>
+<TD ROWSPAN=2>ヒロインを回転させる楕円の幅</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>circleY</TD>
+
+<TD ALIGN=RIGHT>120</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>deltaAngle</TD>
+
+<TD ALIGN=RIGHT>15</TD>
+<TD>ヒロインの正面の位置をずらす場合、角度で設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>filenameBG</TD>
+
+<TD>bg_selectheroin</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+ 
+<TR>
+<TD COLSPAN= 2>filenamePlate</TD>
+
+<TD></TD>
+<TD>画面に追加画像を表示したい場合ファイル名を設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>plateX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>追加画像の表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>plateY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+ 
+
+
+
+
+</TABLE>
+
+
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

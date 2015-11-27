@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>saveformat - data[n].sav</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">saveformat - data[n].sav</p>
+<br />
+
+
+<pre>
+data[n].sav形式
+
+
+	typedef struct _tagGAMEGENERALDATA
+	{
+		int size;
+		int code;
+		int dummy1;
+		int dummy2;
+		char message[16];
+	} GAMEGENERALDATA;
+
+
+
+	typedef struct _tagGAMEHEADER
+	{
+		GAMEGENERALDATA general;
+	} GAMEHEADER;
+
+	typedef struct tagGAMEINFO
+	{
+		GAMEGENERALDATA general;
+		int dataKosuu;
+		int version;
+		int extDataKosuu;
+		int omakeClass;
+		int cutin;
+		int pad[16-13];
+	} GAMEINFO;
+
+
+	typedef struct tagGAMESTATUS
+	{
+		GAMEGENERALDATA general;
+		
+		int year,month,day,week;
+		int hour,minute,second,milli;
+
+		int gameMonth,gameDay,gameHour,gameWeek;
+		int gameMode;
+		int saveCount;
+		int scriptAdjustVersion;
+		int pad0;
+
+
+		int scriptRunMode;
+		int controlScriptNumber;	//dummy
+		int scriptNumber;
+		int scriptSubNumber;
+
+
+		int lastMessageID;	//追加
+		int messageKosuu;
+		int messageSubMode;
+		int scriptSubSubNumber;	//追加2008-05-01
+
+		int lastSelectID;
+		int selectMessageKosuu;
+		int selectMessageAddKosuu;
+		int pad3;
+
+
+		int bgmNumber;
+		int bgmKaisuu;
+		int bgmVolume;
+		int pad4;
+		int bgmParam[4];
+
+		int messageWindowPrintFlag;
+		int frame;
+		int nokori;
+		int lastselectheroinnumber;
+		int layerOff;
+		int pad5[3];
+
+		int loopSound[8*16];
+
+		int scriptWindowNumber;
+		int scriptCursorNumber;
+		int scriptMouseNumber;
+		int pad6;
+
+		int loopVoice[8*16];
+
+		char loopVoiceFileName[8*64];
+
+		char minicomment[32];
+
+		char playerSei[16];
+		char playerMei[16];
+
+		char sptFilename[32-16];	//未使用16byes削ってguidエリアに使用
+		char guid[16];              //2008から使用する
+		char bgmFilename[32];	//未使用
+
+		int m_PC;
+		int m_PC2;
+		int m_PC3;
+		int m_PC4;
+
+		int configMask;
+		int pad7,pad8,pad9;
+
+		int selectTimeLimit;
+		int autoSelect;
+		int selectTimeCount;
+		int pad10;
+
+		int autoMessage;
+		int cannotClick;
+		int cannotSkip;
+		int pad11;
+
+		int stackPointer;
+		int callStack[255];
+
+		int stackPointer2;
+		int callStack2[255];
+
+		int stackPointer3;
+		int callStack3[255];
+
+		int stackPointer4;
+		int callStack4[255];
+
+		int largeCommentFlag;
+		int pad20,pad21,pad22;
+		char largeComment1[256];
+		char largeComment2[256];
+		char largeComment3[256];
+		char largeComment4[256];
+	} GAMESTATUS;
+
+
+
+	typedef struct tagGAMEMINICG
+	{
+		GAMEGENERALDATA general;
+		int sizeX;
+		int sizeY;
+		int pad[2];
+		int cg[1];		//sizeX sizeYで変わる
+	} GAMEMINICG;
+
+
+	typedef struct _tagGAMEVAR
+	{
+		GAMEGENERALDATA general;
+		int var[1024];
+	} GAMEVAR;
+
+
+	typedef struct _tagGAMEEFFECT
+	{
+		GAMEGENERALDATA general;
+		EFFECT effect[16];
+	} GAMEEFFECT;
+
+
+	typedef struct _tagGAMEEFFECTFILENAME
+	{
+		GAMEGENERALDATA general;
+		char filename[16][256];
+	} GAMEEFFECTFILENAME;
+
+
+	typedef struct _tagGAMEMESSAGE
+	{
+		GAMEGENERALDATA general;
+		char messageData[64][256];
+	} GAMEMESSAGE;
+
+
+	typedef struct _tagGAMEEXTDATA
+	{
+		GAMEGENERALDATA general;
+		char dat[1];
+	} GAMEEXTDATA;
+
+
+	typedef struct _tagGAMECUTIN
+	{
+		GAMEGENERALDATA general;
+		int cutinData[64*4];	//64*2でいいけど用心のため少しおおめに
+	} GAMECUTIN;
+
+
+	typedef struct _tagGAMEOMAKECLASSDATA
+	{
+		GAMEGENERALDATA general;
+		int omake[3200];
+	} GAMEOMAKECLASSDATA;
+
+    //ユーザー拡張データ
+	typedef struct _tag[USERDATATYPENAMEn]
+	{
+		GAMEGENERALDATA general;
+		int userdata[userDataSizeN];
+	} [USERDATATYPENAMEn];
+    
+</pre>
+
+</body>
+</html>
+

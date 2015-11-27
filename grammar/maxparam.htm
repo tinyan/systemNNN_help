@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>制限数値</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">制限数値</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+設定できる個数等の最大値
+</pre>
+
+<pre>
+プロジェクトに含まれるスクリプトの数と、1スクリプトあたりの、フィルムの最大数、メッセージの最大数
+ただし、音声については、ファイル名が4桁分しかないため、1nnnあたり9999個を超えた場合、番号が数値ではなくアルファベット込みでつけられます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class = "box2">スクリプト数</td>
+<td class = "box2">最大フィルム数</td>
+<td class = "box2">最大メッセージ数</td>
+</tr>
+
+<tr>
+<td class = "box2"></td>
+<td class = "box2"></td>
+<td class = "box2"></td>
+</tr>
+
+<tr>
+<td class = "box2">2</td>
+<td class = "box2">65536</td>
+<td class = "box2">131072</td>
+</tr>
+
+<tr>
+<td class = "box2">3～4</td>
+<td class = "box2">32768</td>
+<td class = "box2">65536</td>
+</tr>
+
+<tr>
+<td class = "box2">5～8</td>
+<td class = "box2">16384</td>
+<td class = "box2">32768</td>
+</tr>
+
+<tr>
+<td class = "box2">9～16</td>
+<td class = "box2">8192</td>
+<td class = "box2">16384</td>
+</tr>
+
+<tr>
+<td class = "box2">17～32</td>
+<td class = "box2">4096</td>
+<td class = "box2">8192</td>
+</tr>
+
+<tr>
+<td class = "box2">33～64</td>
+<td class = "box2">2048</td>
+<td class = "box2">4096</td>
+</tr>
+
+<tr>
+<td class = "box2">65～128</td>
+<td class = "box2">1024</td>
+<td class = "box2">2048</td>
+</tr>
+
+<tr>
+<td class = "box2">129～256</td>
+<td class = "box2">512</td>
+<td class = "box2">1024</td>
+</tr>
+
+
+
+</table>
+
+<br />
+<br />
+
+<pre>
+キャラ人数と、1キャラあたりのCG個数の制限
+これは差分も含んだ数値です
+</pre>
+
+<table class="none">
+
+<tr>
+<td class = "box2">キャラ人数</td>
+<td class = "box2">最大CG個数</td>
+</tr>
+
+<tr>
+<td class = "box2">1</td>
+<td class = "box2">8192</td>
+</tr>
+
+<tr>
+<td class = "box2">2</td>
+<td class = "box2">4096</td>
+</tr>
+
+<tr>
+<td class = "box2">3～5</td>
+<td class = "box2">2048</td>
+</tr>
+
+<tr>
+<td class = "box2">6～10</td>
+<td class = "box2">1024</td>
+</tr>
+
+<tr>
+<td class = "box2">11～20</td>
+<td class = "box2">512</td>
+</tr>
+
+<tr>
+<td class = "box2">21～40</td>
+<td class = "box2">256</td>
+</tr>
+
+<tr>
+<td class = "box2">41～80</td>
+<td class = "box2">128</td>
+</tr>
+
+<tr>
+<td class = "box2">81～160</td>
+<td class = "box2">64</td>
+</tr>
+
+<tr>
+<td class = "box2">161～255</td>
+<td class = "box2">32</td>
+</tr>
+
+
+
+</table>
+<br />
+<br />
+<div class="caution">
+<pre>
+固めた音声や、画像ファイルのサイズ
+
+32bitでアクセスするため、1つあたり2GB以内です。
+画像などがこれを超える場合は、複数にわけてかためてください。
+</pre>
+</div>
+
+<br />
+<br />
+
+
+<pre>
+memo:
+	m_maxMovieCharaNumber = m_maxMovieCharaNumberForInit;
+	m_maxMovieNumber = 256/m_maxMovieCharaNumber;
+	m_maxMovieNumber *= 32;
+
+</pre>
+
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+body.basic {background-color : #80C0A0; color : #202020}
+
+
+iframe.upperframe
+{
+	width:100%;
+	height:10%;
+	min-height:100px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+iframe.leftframe
+{
+	min-width:160px;
+	width:11%;
+	height:89%;
+	position:absolute;
+	top:100px;
+	left:0px;
+}
+
+iframe.rightframe
+{
+	width:88%;
+	height:89%;
+	position:absolute;
+	top:100px;
+	left:160px;
+}
+
+

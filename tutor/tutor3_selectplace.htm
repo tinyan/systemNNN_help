@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>場所選択演出1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">場所選択演出1</p>
+<br />
+
+
+<pre>
+
+場所選択でマウスがのったボタンに応じてバックスクリプトの画像をかえる方法です
+
+1.場所選択で使うバックスクリプトで、変えたい画像のレイヤーを決めます。このレイヤーにプログラムが自動的に画像を読み込むように設定します。
+　エディター上では、仮の画像をいれておいてください。説明のためにこのレイヤーを9と10にしたものとして進めます
+2.変化させる画像を連番ファイル名で作成します。番号は0(選ばれてないとき) 1～(ボタンに対応)
+　ここでは、ta_hoge0～ta_hoge8 ta_bar0～ta_bar8を使うものとして進めます(ボタンは8個とします)
+
+3.init/selectplace.xtxに
+    autoPicLoad 1
+    autoPicLayerTag9 ta_hoge
+    autoPicLayerTag10 ta_bar
+　を追加します    
+　　
+
+
+</pre>
+
+
+</body>
+</html>
+
+

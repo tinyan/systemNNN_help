@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ロゴ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">ロゴ</p>
+
+<br />
+
+
+<pre>
+FileName = init\logo.xtx
+</pre>
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">不可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">不可</td>
+<td class = "commondesc"></td>
+</tr>
+
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">なし</td>
+<td class = "commondesc"></td>
+</tr>
+
+</table>
+
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">logo</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">nextMode</td>
+<td class = "leftparam">title</td>
+<td class = "desc">ロゴ表示後のモードを番号または名前で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">logoNumber</td>
+<td class = "rightparam">2</td>
+<td class = "desc">表示するロゴの個数</td>
+</tr>
+
+<tr>
+<td class = "name">defaultUseBGColor</td>
+<td class = "rightparam">0</td>
+<td class = "desc">フェードイン、フェードアウト時のBGカラーのデフォルトの指定方法を設定する 0:指定色 1:画像左上の色</td>
+</tr>
+
+
+<tr>
+<td class = "name">defaultFadeInTime</td>
+<td class = "rightparam">10</td>
+<td class = "desc">フェードインのデフォルトの長さをフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">defaultFadeOutTime</td>
+<td class = "rightparam">10</td>
+<td class = "desc">フェードアウトのデフォルトの長さをフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">defaultKeepTime</td>
+<td class = "rightparam">20</td>
+<td class = "desc">表示時間のデフォルトの長さをフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">defaultFadeInColor[RGB]></td>
+<td class = "rightparam">255</td>
+<td class = "desc">フェードイン時のデフォルトの色を設定する</td>
+</tr>
+
+<tr>
+<td class = "name">defaultFadeOutColor[RGB]</td>
+<td class = "rightparam">255</td>
+<td class = "desc">フェードアウト時のデフォルトの色を設定する</td>
+</tr>
+
+
+<tr>
+<td class = "name">useCustomBGColorFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:フェードイン、フェードアウト時の背景色の表示方法を絵ごとに設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">fadeInBGColorFlag[n]</td>
+<td class = "rightparam">defaultUseBGColor</td>
+<td class = "desc"rowspan = "2">n番目の絵の背景表示方法を設定する。defaultUseBGColorと同じ動作</td>
+</tr>
+
+<tr>
+<td class = "subname">fadeOutBGColorFlag[n]</td>
+<td class = "rightparam">defaultUseBGColor</td>
+
+</tr>
+
+<tr>
+<td class = "name">useCustomFileFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:絵のファイル名を個別に指定する。0:logo1,logo2...</td>
+</tr>
+
+
+<tr>
+<td class = "subname">filename[n]</td>
+<td class = "leftparam">logo[n]</td>
+<td class = "desc">n番目の絵のファイル名を設定する</td>
+</tr>
+
+<tr>
+<td class = "name">useCustomSkipFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:絵ごとにスキップ処理の仕方を設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">skipOk[n]</td>
+<td class = "rightparam">1</td>
+<td class = "desc">n番目の絵のスキップ処理を 0:禁止する 1:許可する 2～その回数目の起動から許可する</td>
+</tr>
+
+<tr>
+<td class = "name">useCustomTimeFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:絵ごとに表示時間を設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">fadeInTime[n]</td>
+<td class = "rightparam">defaultFadeInTime</td>
+<td class = "desc">n番目の絵のフェードイン時間をフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">fadeOutTime[n]</td>
+<td class = "rightparam">defaultFadeOutTime</td>
+<td class = "desc">n番目の絵のフェードアウト時間をフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">keepTime[n]</td>
+<td class = "rightparam">defaultKeepTime</td>
+<td class = "desc">n番目の絵の表示時間をフレーム数で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">useCustomColorFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:絵ごとにフェードイン、フェードアウト時の背景色を設定する</td>
+</tr>
+
+
+<tr>
+<td class = "subname">fadeInColor[RGB][n]</td>
+<td class = "rightparam">defaultFadeInColor[RGB]</td>
+<td class = "desc">n番目の絵のフェードイン時の背景色を設定する</td>
+</tr>
+
+
+<tr>
+<td class = "subname">fadeOutColor[RGB][n]</td>
+<td class = "rightparam">defaultFadeOutColor[RGB]</td>
+<td class = "desc">n番目の絵のフェードアウト時の背景色を設定する</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">soundNumber</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ロゴ画面で鳴らす効果音の数を設定</td>
+</tr>
+
+<tr>
+<td class = "subname">soundType[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:効果音(vaw/sys) 1:音声(cdvaw)</td>
+</tr>
+
+<tr>
+<td class = "subname">soundLogo[n]</td>
+<td class = "rightparam">1</td>
+<td class = "desc">何枚目のロゴ画面で音を出すか</td>
+</tr>
+
+<tr>
+<td class = "subname">soundTime[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">何フレーム目に音を出すか</td>
+</tr>
+
+<tr>
+<td class = "subname">soundFilename[n]</td>
+<td class = "leftparam"></td>
+<td class = "desc">音のファイル名</td>
+</tr>
+
+
+</table>
+
+</body>
+</html>

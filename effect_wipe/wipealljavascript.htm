@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+
+
+<script type="text/javascript" src="wipenamelist.js"></script>
+
+
+<script type="text/javascript">
+<!--
+function init()
+{
+/*
+	animenumber = 0;
+	animeflag = 0;
+	animespeed = 100;
+
+	aaa=0;
+	id = 0;
+	wipenumber = window.location.search.substr(1);
+
+	image = new Array(11);
+	
+	image[0] = new Image();
+	image[0].src = "graphics/sample_from.jpg";
+	for (i=1;i<10;i++)
+	{
+		image[i] = new Image();
+		str = "graphics/sample_" + wipenumber + "_" + i + ".jpg";
+		image[i].src = str;
+	}
+	image[10] = new Image();
+	image[10].src = "graphics/sample_to.jpg";
+
+
+    for (i=0;i<=10;i++)
+    {
+        nm = "mini" + i;
+        
+  	    window.document.images[nm].src = image[i].src;  
+  	    window.document.images[nm].width = 75;  
+//  	    window.document.images[nm].width = 75;  
+  	    
+    }
+    */
+    
+    makewipenametable();
+
+	image = new Array(wipeMax);
+    
+	typenumber = window.location.search.substr(1);
+
+    kosuu = 0;
+    for (i=1;i<wipeMax;i++)
+    {
+        if (wipetype[i] & typenumber)
+        {
+            kosuu++;
+        }
+    }
+    
+ //   window.alert(kosuu);
+
+    
+  /*  
+    wipenamelist = new Array(100);
+    wipedesclist = new Array(100);
+    
+    wipenamelist[0] = "ワイプ名がはいる";
+    wipedesclist[0] = "ワイプ解説が入る";
+   
+    wipenamelist[1] = "オーバラップ";
+    wipedesclist[1] = "ワイプ解説が入る";
+    wipenamelist[2] = "カーテン(右)";
+    wipedesclist[2] = "ワイプ解説が入る";
+    wipenamelist[3] = "カーテン(下)";
+    wipedesclist[3] = "ワイプ解説が入る";
+    
+    
+    document.all.wipename.innerHTML = wipenamelist[wipenumber];
+    document.all.wipedesc.innerHTML = wipedesclist[wipenumber];
+    */
+    
+//	image[1] = new Image();
+//	image[1].src = "graphics/sample_1_1.jpg";
+//	image[2] = new Image();
+//	image[2].src = "graphics/sample_1_2.jpg";
+//	image[3] = new Image();
+//	image[3].src = "graphics/sample_1_3.jpg";
+//	image[4] = new Image();
+//	image[4].src = "graphics/sample_1_4.jpg";
+
+
+
+//	if (window.location.search.substr(1) == 2)
+//	{
+//		image[0].src = "graphics/sample_to.jpg";
+//		image[1].src = "graphics/sample_14_1.jpg";
+//		image[2].src = "graphics/sample_14_2.jpg";
+//		image[3].src = "graphics/sample_14_3.jpg";
+//		image[4].src = "graphics/sample_14_4.jpg";
+//		image[5].src = "graphics/sample_to.jpg";
+//	}
+
+//	Image image[6] = new Image[6];
+//	image[0] = new Image("graphics/sample_1_1.jpg");
+//	image[1] = new Image("graphics/sample_1_2.jpg");
+//	image[2] = new Image("graphics/sample_1_3.jpg");
+//	image[3] = new Image("graphics/sample_1_4.jpg");
+//	image[4] = new Image("graphics/sample_1_5.jpg");
+//	image[5] = new Image("graphics/sample_1_6.jpg");
+
+//	animestart();
+
+    var tableId = 'targetTable';
+    var rowCount = Math.floor((kosuu+7) / 8);
+    var columnCount = 8;
+    var targetTable = document.getElementById(tableId);
+    for (var j = 0; j < rowCount; j ++)
+    {
+        var row = targetTable.insertRow(0 + j);
+        for (var i = 0; i < columnCount; i ++)
+        {
+            var cell = row.insertCell(i);
+            cell.setAttribute('id', tableId + '.r' + j + '.c' + i);
+            
+            if ((i==0) && (j==0))
+            {
+                ms = tableId + '.r' + i + '.c' + j;
+//                window.alert(ms);
+            }
+        }
+    }
+
+    n = 0;
+    
+    for (i=1;i<wipeMax;i++)
+    {
+        if (wipetype[i] & typenumber)
+        {
+            row = Math.floor(n / 8);
+            col = n - row * 8;
+            
+            id = "targetTable.r" + row + ".c" + col;
+            
+            txt = "<a href=\"wipe" + i + ".htm\"><img src=\"graphics/sample_mini_" + i + ".jpg\" /><br />" + i + "," + wipenamelist[i] + "</a>";
+            document.all.item(id).innerHTML = txt;
+        
+            n++;
+        }
+    }
+    
+    //sukima
+    
+    document.all.wipeTypeName.innerHTML = wipetypenamelist[typenumber];
+    
+    
+//oElement = document.getElementById("targetTable.r0.c0");
+//                window.alert(oElement);
+
+//document.all.item("targetTable.r0.c0").innerHTML = "aaa";
+//document.all.item("targetTable.r1.c1").innerHTML = "bbb";
+//document.all.item("targetTable.r2.c1").innerHTML = "ccc";
+}
+
+
+// -->
+</script>
+
+
+
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000"
+	  onload="init()"
+	  >
+
+
+<pre id ="wipeTypeName">
+ワイプタイプが入る
+</pre>
+
+<table id="targetTable">
+</table>
+
+<noscript>
+JAVASCRIPTを有効にしてください
+
+<br />
+
+<TABLE BORDER=2>
+<TR>
+
+<TD>
+<A HREF="wipe1.htm"><IMG SRC="graphics/sample_mini_1.jpg"><BR>1,オーバーラップ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipegraphicsjavascript.htm?2"><IMG SRC="graphics/sample_mini_2.jpg"><BR>2,カーテン(右)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipegraphicsjavascript.htm?3"><IMG SRC="graphics/sample_mini_3.jpg"><BR>3,カーテン(下)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe4.htm"><IMG SRC="graphics/sample_mini_4.jpg"><BR>4,カーテン(上下)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe5.htm"><IMG SRC="graphics/sample_mini_5.jpg"><BR>5,スライド(斜め左)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe6.htm"><IMG SRC="graphics/sample_mini_6.jpg"><BR>6,引きずり(左)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe7.htm"><IMG SRC="graphics/sample_mini_7.jpg"><BR>7,円拡大</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe8.htm"><IMG SRC="graphics/sample_mini_8.jpg"><BR>8,円縮小</A><BR>
+</TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD>
+<A HREF="wipe9.htm"><IMG SRC="graphics/sample_mini_9.jpg"><BR>9,円引きずり(左)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe10.htm"><IMG SRC="graphics/sample_mini_10.jpg"><BR>10,時計</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe11.htm"><IMG SRC="graphics/sample_mini_11.jpg"><BR>11,入場上から↓</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe12.htm"><IMG SRC="graphics/sample_mini_12.jpg"><BR>12,入場右から←</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe13.htm"><IMG SRC="graphics/sample_mini_13.jpg"><BR>13,入場下から↑</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe14.htm"><IMG SRC="graphics/sample_mini_14.jpg"><BR>14,入場左から→</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe15.htm"><IMG SRC="graphics/sample_mini_15.jpg"><BR>15,退場上へ↑</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe16.htm"><IMG SRC="graphics/sample_mini_16.jpg"><BR>16,退場右へ→</A><BR>
+</TD>
+
+
+</TR>
+
+
+<TR>
+
+<TD>
+<A HREF="wipe17.htm"><IMG SRC="graphics/sample_mini_17.jpg"><BR>17,退場下へ↓</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe18.htm"><IMG SRC="graphics/sample_mini_18.jpg"><BR>18,退場左へ←</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe19.htm"><IMG SRC="graphics/sample_mini_19.jpg"><BR>19,入場上下X</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe20.htm"><IMG SRC="graphics/sample_mini_20.jpg"><BR>20,入場左右→←</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe21.htm"><IMG SRC="graphics/sample_mini_21.jpg"><BR>21,退場上下◇</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe22.htm"><IMG SRC="graphics/sample_mini_22.jpg"><BR>22,退場左右←→</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe23.htm"><IMG SRC="graphics/sample_mini_23.jpg"><BR>23,横伸ばし消え現れ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe24.htm"><IMG SRC="graphics/sample_mini_24.jpg"><BR>24,上から落ちてくる</A><BR>
+</TD>
+
+
+</TR>
+
+<TR>
+
+<TD>
+<A HREF="wipe25.htm"><IMG SRC="graphics/sample_mini_25.jpg"><BR>25,ぎざぎざ左から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe26.htm"><IMG SRC="graphics/sample_mini_26.jpg"><BR>26,ぎざぎざ右から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe27.htm"><IMG SRC="graphics/sample_mini_27.jpg"><BR>27,ほこら</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe28.htm"><IMG SRC="graphics/sample_mini_28.jpg"><BR>28,ほこら(外側黒)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe29.htm"><IMG SRC="graphics/sample_mini_29.jpg"><BR>29,星拡大ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe30.htm"><IMG SRC="graphics/sample_mini_30.jpg"><BR>30,星縮小ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe31.htm"><IMG SRC="graphics/sample_mini_31.jpg"><BR>31,ハート拡大ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe32.htm"><IMG SRC="graphics/sample_mini_32.jpg"><BR>32,ハート縮小ワイプ</A><BR>
+</TD>
+
+</TR>
+
+
+<TR>
+
+<TD>
+<A HREF="wipe33.htm"><IMG SRC="graphics/sample_mini_33.jpg"><BR>33,星回転拡大ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe34.htm"><IMG SRC="graphics/sample_mini_34.jpg"><BR>34,星回転縮小ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe35.htm"><IMG SRC="graphics/sample_mini_35.jpg"><BR>35,ひび割れとびちる(処理重い)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe36.htm"><IMG SRC="graphics/sample_mini_36.jpg"><BR>36,ひび割れあつまる(処理重い)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe37.htm"><IMG SRC="graphics/sample_mini_37.jpg"><BR>37,なみなみ左から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe38.htm"><IMG SRC="graphics/sample_mini_38.jpg"><BR>38,なみなみ右から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe39.htm"><IMG SRC="graphics/sample_mini_39.jpg"><BR>39,モザイク</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe40.htm"><IMG SRC="graphics/sample_mini_40.jpg"><BR>40,ランダムストライプ</A><BR>
+</TD>
+
+</TR>
+
+
+<TR>
+
+<TD>
+<A HREF="wipe41.htm"><IMG SRC="graphics/sample_mini_41.jpg"><BR>41,加算</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe42.htm"><IMG SRC="graphics/sample_mini_42.jpg"><BR>42,めくり</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe43.htm"><IMG SRC="graphics/sample_mini_43.jpg"><BR>43,ながれおちる</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe44.htm"><IMG SRC="graphics/sample_mini_44.jpg"><BR>44,その逆</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe45.htm"><IMG SRC="graphics/sample_mini_45.jpg"><BR>45,ながれあがる</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe46.htm"><IMG SRC="graphics/sample_mini_46.jpg"><BR>46,その逆</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe47.htm"><IMG SRC="graphics/sample_mini_47.jpg"><BR>47,上下にながれる</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe48.htm"><IMG SRC="graphics/sample_mini_48.jpg"><BR>48,その逆</A><BR>
+</TD>
+
+</TR>
+
+
+<TR>
+
+<TD>
+<A HREF="wipe49.htm"><IMG SRC="graphics/sample_mini_49.jpg"><BR>49,ぎざぎざ左から小：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe50.htm"><IMG SRC="graphics/sample_mini_50.jpg"><BR>50,ぎざぎざ左から中：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe51.htm"><IMG SRC="graphics/sample_mini_51.jpg"><BR>51,ぎざぎざ左から大：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe52.htm"><IMG SRC="graphics/sample_mini_52.jpg"><BR>52,ぎざぎざ右から小：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe53.htm"><IMG SRC="graphics/sample_mini_53.jpg"><BR>53,ぎざぎざ右から中：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe54.htm"><IMG SRC="graphics/sample_mini_54.jpg"><BR>54,ぎざぎざ右から大：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe55.htm"><IMG SRC="graphics/sample_mini_55.jpg"><BR>55,なみなみ左から小：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe56.htm"><IMG SRC="graphics/sample_mini_56.jpg"><BR>56,なみなみ左から中：グラデ付き</A><BR>
+</TD>
+
+</TR>
+
+
+
+
+<TR>
+
+<TD>
+<A HREF="wipe57.htm"><IMG SRC="graphics/sample_mini_57.jpg"><BR>57,なみなみ左から大：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe58.htm"><IMG SRC="graphics/sample_mini_58.jpg"><BR>58,なみなみ右から小：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe59.htm"><IMG SRC="graphics/sample_mini_59.jpg"><BR>59,なみなみ右から中：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe60.htm"><IMG SRC="graphics/sample_mini_60.jpg"><BR>60,なみなみ右から大：グラデ付き</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe61.htm"><IMG SRC="graphics/sample_mini_61.jpg"><BR>61,乗算</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe62.htm"><IMG SRC="graphics/sample_mini_62.jpg"><BR>62,ところてん上</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe63.htm"><IMG SRC="graphics/sample_mini_63.jpg"><BR>63,ところてん右</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe64.htm"><IMG SRC="graphics/sample_mini_64.jpg"><BR>64,ところてん下</A><BR>
+</TD>
+
+</TR>
+
+
+
+
+
+<TR>
+
+<TD>
+<A HREF="wipe65.htm"><IMG SRC="graphics/sample_mini_65.jpg"><BR>65,ところてん左</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe66.htm"><IMG SRC="graphics/sample_mini_66.jpg"><BR>斜め左上から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe67.htm"><IMG SRC="graphics/sample_mini_67.jpg"><BR>斜め左下から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe68.htm"><IMG SRC="graphics/sample_mini_68.jpg"><BR>斜め右上から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe69.htm"><IMG SRC="graphics/sample_mini_69.jpg"><BR>斜め右下から</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe70.htm"><IMG SRC="graphics/sample_mini_70.jpg"><BR>70.<BR>スロット縦2</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe71.htm"><IMG SRC="graphics/sample_mini_71.jpg"><BR>71.<BR>スロット縦3</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe72.htm"><IMG SRC="graphics/sample_mini_72.jpg"><BR>72.<BR>スロット縦4</A><BR>
+</TD>
+
+</TR>
+
+
+
+
+<TR>
+
+<TD>
+<A HREF="wipe73.htm"><IMG SRC="graphics/sample_mini_73.jpg"><BR>73.<BR>スロット縦5</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe74.htm"><IMG SRC="graphics/sample_mini_74.jpg"><BR>古い絵が落ちる</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe75.htm"><IMG SRC="graphics/sample_mini_75.jpg"><BR>75.<BR>スロット横2</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe76.htm"><IMG SRC="graphics/sample_mini_76.jpg"><BR>76.<BR>スロット横3</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe77.htm"><IMG SRC="graphics/sample_mini_77.jpg"><BR>77.<BR>スロット横4</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe78.htm"><IMG SRC="graphics/sample_mini_78.jpg"><BR>78</A>.<BR>スロット横5<BR>
+</TD>
+
+<TD>
+<A HREF="wipe79.htm"><IMG SRC="graphics/sample_mini_79.jpg"><BR>79.星回転拡大<BR>ゆっくり(3/5回転)</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe80.htm"><IMG SRC="graphics/sample_mini_80.jpg"><BR>80.星回転縮小<BR>ゆっくり(3/5回転)</A><BR>
+</TD>
+
+</TR>
+
+
+<TR>
+
+<TD>
+<A HREF="wipe81.htm"><IMG SRC="graphics/sample_mini_81.jpg"><BR>81.ズームワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe82.htm"><IMG SRC="graphics/sample_mini_82.jpg"><BR>82.ズームワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe83.htm"><IMG SRC="graphics/sample_mini_83.jpg"><BR>83.ズームワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe84.htm"><IMG SRC="graphics/sample_mini_84.jpg"><BR>84.ズームワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe85.htm"><IMG SRC="graphics/sample_mini_85.jpg"><BR>85.拡大ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe86.htm"><IMG SRC="graphics/sample_mini_86.jpg"><BR>86.拡大ワイプ</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe87.htm"><IMG SRC="graphics/sample_mini_87.jpg"><BR>87.拡大ワイプ半透明</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe88.htm"><IMG SRC="graphics/sample_mini_88.jpg"><BR>88.拡大ワイプ半透明</A><BR>
+</TD>
+
+</TR>
+
+
+
+<TR>
+
+<TD>
+<A HREF="wipe89.htm"><IMG SRC="graphics/sample_mini_89.jpg"><BR>89</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe90.htm"><IMG SRC="graphics/sample_mini_90.jpg"><BR>90</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe91.htm"><IMG SRC="graphics/sample_mini_91.jpg"><BR>91</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe92.htm"><IMG SRC="graphics/sample_mini_92.jpg"><BR>92</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe93.htm"><IMG SRC="graphics/sample_mini_93.jpg"><BR>93</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe94.htm"><IMG SRC="graphics/sample_mini_94.jpg"><BR>94</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe95.htm"><IMG SRC="graphics/sample_mini_95.jpg"><BR>95</A><BR>
+</TD>
+
+<TD>
+<A HREF="wipe96.htm"><IMG SRC="graphics/sample_mini_96.jpg"><BR>96</A><BR>
+</TD>
+
+</TR>
+
+
+</TABLE>
+
+</noscript>
+
+
+
+</BODY>
+</HTML>
+
+

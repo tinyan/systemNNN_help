@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#A000C0"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+<BR>
+
+<pre>
+sysfile.sav形式
+
+<pre>
+
+
+	typedef struct tagSYSTEMDATAINFO
+	{
+		int size;
+		int code;
+		int dummy1;
+		int dummy2;
+		char message[16];
+		int dataKosuu;
+		int pad[16-9];
+	} SYSTEMDATAINFO;
+
+	typedef struct tagSYSTEMDATA
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+		
+		int year,month,day,week,hour,minute,second,milli;
+		int windowX,windowY,windowSizeX,windowSizeY,colorBits,fullScreenFlag,midiMode,saveCount;
+		int normalMusicVolume,normalSoundVolume,normalVoiceVolume,normalCDVolume;
+		int directMusicVolume,directSoundVolume,directVoiceVolume,directCDVolume;
+
+		int voiceMode,warningMode,messageSpeed,skipMode;
+		
+		int highcolormesh;
+		int fontType;
+		int noSkipFrame;
+		int userFontFlag;
+
+		int bgmMode;
+		int autoMode;
+		int notUse3DSound;
+		int useVMR9;
+
+		int musicVolume;
+		int voiceVolume;
+		int soundVolume;
+		int movieVolume;
+
+		int musicSwitch;
+		int voiceSwitch;
+		int soundSwitch;
+		int movieSwitch;
+
+		int launchCount;
+		int soundVoiceVolume;
+		int soundVoiceSwitch;
+		int pad4;
+
+
+		char sei[16];
+		char mei[16];
+
+		char fontName[1024];
+
+		char seiYomi[64];
+		char meiYomi[64-16];   //未使用のmeiYomiを16byte削ってguidエリアに使用
+		char guid[16];      //lib2008から使用する。
+
+		int seiAccent[16];
+		int meiAccent[16];
+
+		int voiceOff[32];
+
+		int userParam[32];
+
+		int expMode[16];
+		int expCheck[16];
+		
+		int windowNumber;
+		int cursorNumber;
+		int mouseNumber;
+		int pad96;
+
+		int d2d3d;
+		int shader;
+		int needShader;
+		int lowTexture;
+
+		int monitor;
+		int pad102;
+		int pad103;
+		int pad104;
+
+		int pad99[20];
+	} SYSTEMDATA;
+
+
+
+	typedef struct _tagMESSAGEREADFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int flag[4096*64/32];
+	} MESSAGEREADFLAG;
+
+	typedef struct tagSYSTEMVAR
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int var[128];
+	} SYSTEMVAR;
+
+	typedef struct tagCGFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int data[128/32*20*4];
+	} CGFLAG;
+
+	typedef struct tagSCENEFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int data[512];
+	} SCENEFLAG;
+
+	typedef struct tagFILMFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int flag[128*32];
+	} FILMFLAG;
+
+	typedef struct tagVOICEFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int flag[256];
+	} VOICEFLAG;
+
+	typedef struct tagMOVIEFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+		char message[16];
+
+		int flag[256];
+	} MOVIEFLAG;
+
+	typedef struct tagMUSICFLAG
+	{
+		int size;
+		int code;
+		int dummy;
+		int dummy2;
+
+		char message[16];
+
+		int flag[256];
+	} MUSICFLAG;
+
+</pre>
+
+</BODY>
+</HTML>
+

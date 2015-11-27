@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ビルド設定</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="menu.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">ビルド設定</p>
+
+
+
+<br />
+<img src="graphics/framemenu_config_buildsetup.jpg" alt=""/><br />
+<br />
+
+<pre>
+ビルド時の、シーン登録、SETCG登録、同一CGチェック、ルビ処理、カットイン処理、の設定を行います
+</pre>
+
+
+<table class = "none">
+
+<tr>
+<td class = "box2">シーン登録</td>
+<td class = "box3">シーン登録を行うかどうかの設定をします。</td>
+</tr>
+
+<tr>
+<td class = "box2">SETCG登録</td>
+<td class = "box3">SETCG登録を行うかどうかの設定をします。SETCGは負荷が高いので、常には行わないことが多いようです</td>
+</tr>
+
+<tr>
+<td class = "box2">同一CG登録チェック</td>
+<td class = "box3">SETCG登録で、同一のCGが登録されようとしているかチェックするかどうかを設定します。負荷が高いので常には行わないことが多いようです</td>
+</tr>
+
+<tr>
+<td class = "box2">BUFFERもCGに登録する</td>
+<td class = "box3">チェックをはずすと、BUFFERで使われた画像はその時点では登録されません。ただし、チェンジ、ワイプ系、パタパタアニメで変化後のレイヤーに指定された場合は、その時点で登録対象となります</td>
+</tr>
+
+<tr>
+<td class = "box2">ルビ処理</td>
+<td class = "box3">メッセージを対応表に応じてルビ処理を行います。負荷が高いのでテスト時には行わないことが多いようです</td>
+</tr>
+
+<tr>
+<td class = "box2">カットイン処理</td>
+<td class = "box3">メッセージを対応表に応じてカットイン処理を行います。負荷が高いのでテスト時には行わないことが多いようです</td>
+</tr>
+
+</table>
+
+<br />
+
+<pre>
+memo:BUFFERもCGに登録する
+
+チェックをはずすと、BUFFERで使われた画像はその時点では登録されません。
+ただし、チェンジ、ワイプ系で変化後のレイヤーに指定された場合は、その時点で登録対象となります
+
+</pre>
+
+<div class = "warning">
+<pre>
+これらの設定は、負荷が高いため、通常はOFFにしておくことが多いようです。
+ゲーム完成のあるていど前から、ONにしておくことをお勧めします
+マスター直前にONにすると、おもわぬバグが残っていたりするものです。
+また、ONにするのをわすれて「なぜかCGが登録されないー!」という状況も回避しやすくなります
+</pre>
+</div>
+
+
+<br />
+<br />
+<img src="graphics/framemenu_config_buildsetup_scene.jpg" alt=""/><br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "box2">行う</td>
+<td class = "box3">シーン登録を行います</td>
+</tr>
+
+<tr>
+<td class = "box2">行わない</td>
+<td class = "box3">シーン登録を行いません</td>
+</tr>
+
+</table>
+
+
+
+<br />
+<br />
+<br />
+<img src="graphics/framemenu_config_buildsetup_setcg.jpg" alt=""/><br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "box2">行う</td>
+<td class = "box3">CG登録を行います</td>
+</tr>
+
+<tr>
+<td class = "box2">行わない</td>
+<td class = "box3">CG登録を行いません</td>
+</tr>
+
+<tr>
+<td class = "box2">毎回選択する</td>
+<td class = "box3">行うか行わないか、ビルドのたびに選択ダイアログで選びます</td>
+</tr>
+
+</table>
+
+
+
+<br />
+<br />
+<br />
+<img src="graphics/framemenu_config_buildsetup_samecgcheck.jpg" alt=""/><br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "box2">行う</td>
+<td class = "box3">同一CGチェックを行います</td>
+</tr>
+
+<tr>
+<td class = "box2">行わない</td>
+<td class = "box3">同一CGチェックを行いません</td>
+</tr>
+
+</table>
+
+
+
+
+
+<br />
+<br />
+<br />
+<img src="graphics/framemenu_config_buildsetup_rubi.jpg" alt=""/><br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "box2">行う</td>
+<td class = "box3">ルビ処理を行います</td>
+</tr>
+
+<tr>
+<td class = "box2">行わない</td>
+<td class = "box3">ルビ処理を行いません</td>
+</tr>
+
+<tr>
+<td class = "box2">毎回選択する</td>
+<td class = "box3">行うか行わないか、ビルドのたびに選択ダイアログで選びます</td>
+</tr>
+
+</table>
+
+
+
+
+<br />
+<br />
+<br />
+<img src="graphics/framemenu_config_buildsetup_cutin.jpg" alt=""/><br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "box2">行う</td>
+<td class = "box3">カットイン処理を行います</td>
+</tr>
+
+<tr>
+<td class = "box2">行わない</td>
+<td class = "box3">カットイン処理を行いません</td>
+</tr>
+
+<tr>
+<td class = "box2">毎回選択する</td>
+<td class = "box3">行うか行わないか、ビルドのたびに選択ダイアログで選びます</td>
+</tr>
+
+</table>
+
+
+</body>
+</html>
+

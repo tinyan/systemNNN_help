@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>SYSと統合</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">SYSと統合</p>
+<br />
+<br />
+<pre>
+さて、さきほどのシナリオ作成で、作成したシナリオを実行させるためには、「★トップ」と関連付ける必要がありましたが
+同様に、たくさんあるnnnファイルのどれを実行させるかを指定する必要があります。
+
+nnnシステムでは、新規ゲーム時に実行されるnnnスクリプトファイルはきまっていて
+sys
+が、それに該当します。
+つまり、sysスクリプトの★トップシナリオの最初のコマンドが、一番最初に実行されるコマンドになります
+
+</pre>
+
+<img src ="graphics/tutor2_7_1.jpg" alt="" /><br />
+
+<br />
+<pre>
+それでは、sysスクリプトの修正をはじめます。
+
+まずは、アプリケーションの左上のほうにある、
+スクリプトを開くボタンを押します
+</pre>
+
+<img src ="graphics/tutor2_7_2.jpg" alt="" /><br />
+
+<br />
+<pre>
+もしくは、メニューから、開く、を選びます
+</pre>
+
+<img src ="graphics/tutor2_7_3.jpg" alt="" /><br />
+
+<br />
+<pre>
+このようなスクリプト選択ダイアログが表示されますので、
+sys.nnn
+をえらびます
+</pre>
+
+<img src ="graphics/tutor2_7_4.jpg" alt="" /><br />
+
+<br />
+<pre>
+シナリオ集ウィンドウから
+★トップ
+を選びます
+</pre>
+
+<img src ="graphics/tutor2_7_5.jpg" alt="" /><br />
+
+<br />
+<pre>
+シナリオウィンドウの一番上のコマンドを選びます
+</pre>
+
+<img src ="graphics/tutor2_7_6.jpg" alt="" /><br />
+
+<br />
+<pre>
+スクロールバーが表示されているときは、一番上まであげておくのを忘れないようにしておいてください
+</pre>
+
+<img src ="graphics/tutor2_7_7.jpg" alt="" /><br />
+
+<br />
+<pre>
+新規コマンドボタンを押してコマンドを作成します
+</pre>
+
+<img src ="graphics/tutor2_7_8.jpg" alt="" /><br />
+
+<br />
+<pre>
+このコマンドの上で右クリックメニューを開いて
+[スクリプト呼び出し]-[スクリプト呼び出し]
+を選びます
+</pre>
+
+<img src ="graphics/tutor2_7_9.jpg" alt="" /><br />
+
+<br />
+<pre>
+これで、sysの★トップの最初に、
+他のnnnスクリプトを呼び出して実行するコマンドができました。
+</pre>
+
+<img src ="graphics/tutor2_7_10.jpg" alt="" /><br />
+
+<br />
+<pre>
+まだ、どのスクリプトを呼び出すかがはいっていませんので
+それを設定します。
+
+右クリックメニューから、「内容修正」を選びます
+</pre>
+
+<img src ="graphics/tutor2_7_11.jpg" alt="" /><br />
+
+<br />
+<pre>
+入力ダイアログがでますので、ここに
+opening_test
+と入力します。このチュートリアルで作成したスクリプトの名前です
+</pre>
+
+<img src ="graphics/tutor2_7_12.jpg" alt="" /><br />
+
+<br />
+<pre>
+
+これで、新規開始すると、いまつくったチュートリアルが表示されるようになりました
+
+忘れないように保存しておいてください
+</pre>
+
+<div class="notice">
+<pre>
+実際の流れは
+
+sysスクリプト実行
+ ★トップシナリオ実行
+  スクリプト呼び出しコマンド実行(opening_test)
+  
+opening_testスクリプト実行
+ ★トップシナリオ(opening_testの)実行
+  シナリオ呼び出し(とっぷだよ)の実行
+   とっぷだよシナリオの実行
+    フィルム実行コマンド実行(オープニングフィルム)
+    
+という流れになります    
+</pre>
+</div>
+
+
+
+
+
+<br />
+
+
+
+<a href="tutor2_nnnedit_build.htm">ビルド</a><br />
+
+
+
+</body>
+</html>
+

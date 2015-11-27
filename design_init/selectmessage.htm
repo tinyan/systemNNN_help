@@ -1,0 +1,800 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - selectmessage</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\selectMessage.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>上下ボタン設定</TD>
+<TD>必要があれば</TD>
+<TD>スクロール可能な設定の場合必要</TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>なし</TD>
+<TD></TD>
+</TR>
+
+</TABLE>
+
+
+
+
+
+
+
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>selectMessage</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD COLSPAN= 2>useScrollFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:選択肢の数が表示行数より多くなる場合にスクロールさせて選択できるようにする</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>optionOk</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:システムメニューの表示及び動作を行う</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>backLogOk</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:バックログの操作ができるようにする。(optionOKが1の場合には自動的に1になる)</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>windowPrintFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:選択肢用のウィンドウを表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>windowFileName</TD>
+<TD>ta_win_select</TD>
+<TD>選択肢用ウィンドウファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>windowPrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>選択肢ウィンドウ表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>windowPrintY</TD>
+<TD ALIGN=RIGHT>400</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>windowSizeX</TD>
+<TD ALIGN=RIGHT>800</TD>
+<TD ROWSPAN=2>選択肢ウィンドウのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>windowSizeY</TD>
+<TD ALIGN=RIGHT>200</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>timeLimitWindowPrintFlag</TD>
+
+<TD ALIGN=RIGHT>windowPrintFlag</TD>
+<TD>1:時間制限時選択肢用のウィンドウを表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timeLimitWindowFileName</TD>
+<TD>windowFileName</TD>
+<TD>時間制限時選択肢用ウィンドウファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timeLimitWindowPrintX</TD>
+<TD ALIGN=RIGHT>windowPrintX</TD>
+<TD ROWSPAN=2>時間制限時選択肢ウィンドウ表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timeLimitWindowPrintY</TD>
+<TD ALIGN=RIGHT>windowPrintY</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timeLimitWindowSizeX</TD>
+<TD ALIGN=RIGHT>windowSizeX</TD>
+<TD ROWSPAN=2>時間制限時選択肢ウィンドウのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timeLimitWindowSizeY</TD>
+<TD ALIGN=RIGHT>windowSizeY</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>firstAppearType</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>選択肢表示開始時に、0:すぐ表示する 1～:指定された演出をつける</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>firstAppearTime</TD>
+<TD ALIGN=RIGHT>10</TD>
+<TD>選択肢表示開始時の演出時間をフレーム数で設定</TD>
+</TR>
+ 
+
+
+<TR>
+<TD COLSPAN= 2>cursorFileName</TD>
+
+<TD>ta_select01</TD>
+<TD>選択肢カーソルファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>animePatternNumber</TD>
+
+<TD ALIGN=RIGHT>8</TD>
+<TD>選択肢カーソルのアニメパターンの数</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>animePrintType</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:選択肢カーソルのアニメをオーバーラップで表示</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>animeReverse</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:選択肢カーソルのアニメを折り返す</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>animeFrame</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>選択肢カーソルのアニメの1つの絵の表示時間をフレーム数で設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorIsOnMessage</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:カーソルをメッセージの上から表示する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>backPrintMode</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>背景を 0:ぬりつぶす 1:指定された絵を表示する 2:直前のスクリプトの動作に従う</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backColorR</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=3>塗りつぶし色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backColorG</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backColorB</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backFileName</TD>
+<TD>sel_bg</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>messagePrintX</TD>
+
+<TD ALIGN=RIGHT>66</TD>
+<TD ROWSPAN=2>選択肢表示座標</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>messagePrintY</TD>
+
+<TD ALIGN=RIGHT>383</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>messageNextX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>次の選択肢までの距離</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>messageNextX</TD>
+
+<TD ALIGN=RIGHT>30</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorSizeX</TD>
+
+<TD ALIGN=RIGHT>469</TD>
+<TD ROWSPAN=2>選択肢カーソルのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>cursorSizeY</TD>
+
+<TD ALIGN=RIGHT>27</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorDeltaX</TD>
+
+<TD ALIGN=RIGHT>-8</TD>
+<TD ROWSPAN=2>選択肢カーソルのメッセージからの相対表示位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>cursorDeltaY</TD>
+
+<TD ALIGN=RIGHT>-2</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>fontSize</TD>
+
+<TD ALIGN=RIGHT>24</TD>
+<TD>選択肢メッセージのフォントサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>messagePrintGyo</TD>
+
+<TD ALIGN=RIGHT>4</TD>
+<TD>選択肢の表示行数(表題等も含む)</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>backlogMessage</TD>
+
+<TD>#足選択肢</TD>
+<TD>バックログに記録される文字列</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>backlogMessageColorR</TD>
+
+<TD ALIGN=RIGHT>64</TD>
+<TD ROWSPAN=3>選択肢のバックログでの文字色</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogMessageColorG</TD>
+
+<TD ALIGN=RIGHT>192</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogMessageColorB</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>backlogSelectColorR</TD>
+
+<TD ALIGN=RIGHT>192</TD>
+<TD ROWSPAN=3>選択された選択肢のバックログでの色</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogSelectColorG</TD>
+
+<TD ALIGN=RIGHT>232</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogSelectColorB</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>windowOffSound</TD>
+
+<TD ALIGN=RIGHT>-1</TD>
+<TD>ウィンドウ消去時に鳴らす音を設定。修正予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>windowOnSound</TD>
+
+<TD ALIGN=RIGHT>-1</TD>
+<TD>ウィンドウ表示時に鳴らす音を設定。修正予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>selectSound</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>選択肢を選んだ時に鳴らす音を設定。修正予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogSound</TD>
+
+<TD ALIGN=RIGHT>-1</TD>
+<TD>バックログにいく時に鳴らす音を設定。修正予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>timerPrintType</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>残り時間グラフィック表示 0:なし 1:長方形カラー 2:長方形タイプグラフィック 3:アニメ(コマ) 4:アニメ(オーバーラップ)</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>timerPrintX</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>残り時間グラフィック表示座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerPrintY</TD>
+<TD></TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerPicSizeX</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>残り時間グラフィックサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerPicSizeY</TD>
+<TD></TD>
+<TD></TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>fileNameTimer</TD>
+<TD></TD>
+<TD>残り時間グラフィックファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>timerPicNumber</TD>
+<TD></TD>
+<TD>アニメタイプの場合のパーツ数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerBarHoukou</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>長方形タイプのけずれる方向 0:上 1:右 2:下 3:左</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerColorR1</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=3>長方形カラー開始色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerColorG1</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerColorB1</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>timerColorR2</TD>
+<TD ALIGN=RIGHT>255</TD>
+<TD ROWSPAN=3>長方形カラー終了色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerColorG2</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerColorB2</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>timerTimePrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>2:秒数 3:秒.X 4:秒.XX 5:秒.XXX</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>timerTimePrintX</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>残り時間表示座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimePrintY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontSizeX</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ROWSPAN=2>残り時間数字フォントグラフィックサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontSizeY</TD>
+<TD ALIGN=RIGHT>16</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontNextX</TD>
+<TD ALIGN=RIGHT>timerTimeFontSizeX</TD>
+<TD>残り時間数字次まで文字距離</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameTimerTime</TD>
+<TD></TD>
+<TD>残り時間数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeKeta</TD>
+<TD ALIGN=RIGHT>3</TD>
+<TD>残り時間数字桁数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeLeftFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:残り時間数字左詰表示</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeUpzeroFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:残り時間数字上位ゼロ表示</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>timerTimePrintX2</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>小数点以下残り時間表示座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimePrintY2</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontSizeX2</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>小数点以下残り時間数字フォントグラフィックサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontSizeY2</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeFontNextX2</TD>
+<TD ALIGN=RIGHT>timerTimeFontSizeX2</TD>
+<TD>小数点以下残り時間数字次まで文字距離</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameTimerTime2</TD>
+<TD></TD>
+<TD>小数点以下残り時間数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeKeta2</TD>
+<TD ALIGN=RIGHT></TD>
+<TD>小数点以下残り時間数字桁数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeLeftFlag2</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:小数点以下残り時間数字左詰表示</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>timerTimeUpzeroFlag2</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:小数点以下残り時間数字上位ゼロ表示</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>timeLimitOptionOk</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:時間制限中でもセーブ可能</TD>
+</TR>
+
+
+</TABLE>
+
+<pre>
+選択肢表示行
+#制限時間設定ミリ秒
+?制限時間設定変数名(変数で制御する場合はこちら)
+@制限時間オーバー自動選択選択肢番号
+%説明文行(選択肢の後には置けない)
+
+!特殊選択肢
+!!特殊選択肢ログなし
+
+</pre>
+
+<pre>
+
+useSpecialNumber 4
+
+filenameSpecialWindow ta_specialSelect
+
+specialWindowSizeX 800
+specialWindowSizeY 60
+
+specialWindow1PrintX1 000
+specialWindow1PrintY1 300
+
+specialWindow2PrintX1 0
+specialWindow2PrintY1 100
+specialWindow2PrintX2 0
+specialWindow2PrintY2 400
+
+specialWindow3PrintX1 0
+specialWindow3PrintY1 100
+specialWindow3PrintX2 0
+specialWindow3PrintY2 200
+specialWindow3PrintX3 0
+specialWindow3PrintY3 300
+
+specialWindow4PrintX1 0
+specialWindow4PrintY1 50
+specialWindow4PrintX2 0
+specialWindow4PrintY2 150
+specialWindow4PrintX3 0
+specialWindow4PrintY3 250
+specialWindow4PrintX4 0
+specialWindow4PrintY4 350
+
+@specialWindowVarName1 aaa
+@specialWindowVarName2 aaa
+@specialWindowVarName3 aaa
+@specialWindowVarName4 aaa
+
+
+@specialAnimePatternNumber 1
+@specialAnimeFrame 1
+@specialAnimeReverse 1
+@specialAnimePrintType 1
+@specialCursorIsOnMessage 0
+
+@filenameSpecialCursor aaa
+
+
+
+specialmessagePrintX 30
+specialmessagePrintY 10
+
+specialFontSize 40
+
+@specialCursorDeltaX -5
+@specialCursorDeltaY -10
+@specialCursorSizeX 100
+@specialCursorSizeY 50
+
+
+
+centeringFlag
+centerAreaSizeX
+
+</pre>
+
+
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

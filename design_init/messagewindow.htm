@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - messageWindow</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\messageWindow.xtx<BR>
+<BR>
+
+
+
+
+<TABLE BORDER=4>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>name</TD>
+
+<TD>messageWindow</TD>
+<TD>省略しないこと</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>filenameWindow</TD>
+
+<TD>ta_meswin</TD>
+<TD>メッセージウィンドウのファイル名を設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>printX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>メッセージウィンドウの表示位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>printY</TD>
+
+<TD ALIGN=RIGHT>300</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sizeX</TD>
+
+<TD ALIGN=RIGHT>640</TD>
+<TD ROWSPAN=2>メッセージウィンドウのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>sizeY</TD>
+
+<TD ALIGN=RIGHT>180</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>nameWindowFlag</TD>
+
+<TD>0</TD>
+<TD>1:名前専用ウィンドウ有り</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameNameWindow</TD>
+<TD>ta_namewin</TD>
+<TD>名前ウィンドウのファイル名を設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>namePrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>名前ウィンドウの表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>namePrintY</TD>
+<TD ALIGN=RIGHT>200</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>nameSizeX</TD>
+<TD ALIGN=RIGHT>640</TD>
+<TD ROWSPAN=2>名前ウィンドウのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameSizeY</TD>
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+
+
+</TABLE>
+
+windowNumberConfig 1<BR>
+windowNumberScript 1<BR>
+<BR>
+<BR>
+m:スクリプトによるウィンドウの種類<BR>
+n:コンフィグによるウィンドウの種類<BR>
+filenameWindow[m]_[n]	config,scriptともに複数種類ある場合<BR>
+filenameWindow[m]		scriptのみ複数種類<BR>
+filenameWindow[n]		configのみ複数種類<BR>
+<BR>
+filenameNameWindow[m]_[n]	config,scriptともに複数種類ある場合<BR>
+filenameNameWindow[m]		scriptのみ複数種類<BR>
+filenameNameWindow[n]		configのみ複数種類<BR>
+
+
+
+windowNumberFontSizeType 0
+//メッセージ表示画面でフォントサイズタイプを複数使う場合、それにあわせてウィンドウを変える場合には、個数を設定
+//ここに個数を設定した場合には、ファイル名の指定のあとに _Font[n]をつける。これは追加フォントサイズのときのみ
+//たとえば、スクリプト3 コンフィグ7 の追加２番目のフォントサイズのウィンドウの場合には filenameWindow3_7_Font2 画像ファイル名
+//となる
+
+
+
+
+</BODY>
+</HTML>
+

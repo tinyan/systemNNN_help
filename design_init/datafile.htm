@@ -1,0 +1,910 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>データスロット</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">データスロット</p>
+
+<br />
+
+
+<pre>
+FileName = init\dataFile.xtx
+</pre>
+
+
+
+
+
+
+
+
+<TABLE BORDER=4>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>name</TD>
+
+<TD>dataFile</TD>
+<TD>変更不可</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>picPrintType</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>サムネイル画像の表示方法 0:通常 1:カラー処理(下地の色合いとサムネイルの明度を合成)</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>areaSizeX</TD>
+
+<TD ALIGN=RIGHT>132</TD>
+<TD ROWSPAN=2>セーブスロットの全表示エリアサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>areaSizeY</TD>
+
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>picSizeX</TD>
+
+<TD ALIGN=RIGHT>areaSizeX</TD>
+<TD ROWSPAN=2>サムネイル画像のサイズ(プログラム側で対応している大きさにすること)</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>picSizeY</TD>
+
+<TD ALIGN=RIGHT>areaSizeY</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>picPrintX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>サムネイル画像のエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>picPrintY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>saveTimePrintFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:セーブ時間を表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>saveTimePrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>セーブ時間のエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveTimePrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>saveTimeFontSizeX</TD>
+<TD ALIGN=RIGHT>10</TD>
+<TD ROWSPAN=2>セーブ時間に使うグラフィックフォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveTimeFontSizeY</TD>
+<TD ALIGN=RIGHT>10</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveTimeFontNextX</TD>
+<TD ALIGN=RIGHT>saveTimeFontSizeX</TD>
+<TD>セーブ時間表示の文字間隔</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameSaveTimeFont</TD>
+<TD>ta_sl_font</TD>
+<TD>セーブ時間表示のフォントグラフィックファイル名</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN=2>gameYearPrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ゲーム内の「年」を表示する</TD>
+</TR>
+ 
+<TR>
+<TD COLSPAN=2>gameDatePrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>ゲーム内の「日にち(月日)」を表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>fileNameGameTimeFont</TD>
+<TD>ta_sl_font</TD>
+<TD>ゲーム内年月日表示用グラフィックフォントファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>gameTimePrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>ゲーム内年月日のエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>gameTimePrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>gameTimeFontSizeX</TD>
+<TD ALIGN=RIGHT>10</TD>
+<TD ROWSPAN=2>ゲーム内年月日表示に使うグラフィックフォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>gameTimeFontSizeY</TD>
+<TD ALIGN=RIGHT>10</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>gameTimeFontNextX</TD>
+<TD ALIGN=RIGHT>gameTimeFontSizeX</TD>
+<TD>ゲーム内年月日表示の文字間隔</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>addPicPrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:追加グラフィックを表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>addPicPrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>追加画像のエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>addPicPrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>addPicSizeX</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ROWSPAN=2>追加画像のサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>addPicSizeY</TD>
+<TD ALIGN=RIGHT>16</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameAddPic</TD>
+<TD></TD>
+<TD>追加グラフィックファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>addPicWithSpecialFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:追加画像の表示を特殊数値表示と連動させる</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>addPicMultiFlag</TD>
+<TD>0</TD>
+<TD>1:追加画像を数値によって変化させる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>addPicMultiNumberX</TD>
+<TD>1</TD>
+<TD>追加画像データが横にいくつならんでいるか</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>specialNumberPrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:特殊数値を表示させる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberPrintLimit</TD>
+<TD ALIGN=RIGHT>-1</TD>
+<TD>特殊数値がこの数より大きい場合に表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberPrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>特殊数値のエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberPrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberFontSizeX</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ROWSPAN=2>特殊数値のグラフィックフォントサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberFontSizeY</TD>
+<TD ALIGN=RIGHT>16</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberFontNextX</TD>
+<TD ALIGN=RIGHT>specialNumberFontSizeX</TD>
+<TD>特殊数値の文字間隔</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>specialNumberKeta</TD>
+<TD ALIGN=RIGHT>2</TD>
+<TD>特殊数値の桁数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameSpecialNumberFont</TD>
+<TD></TD>
+<TD>特殊数値のグラフィックフォントファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>commentPrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:コメントを表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentFontSize</TD>
+<TD ALIGN=RIGHT>12</TD>
+<TD>コメント表示に使う文字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentPrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>コメントのエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentPrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentSpaceX</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>コメントの文字と文字との隙間</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentColorR</TD>
+<TD ALIGN=RIGHT>255</TD>
+<TD ROWSPAN=3>コメントの文字色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentColorG</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentColorB</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>commentColorShade</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>コメントの影色。現在RGBをまとめた32bit値で設定</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>errorPrintX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>エラーデータのエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>errorPrintY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>oldPrintX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>古いデータのエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>oldPrintY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN=2>badPrintX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>ロードできないデータのエリア内での表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>badPrintY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>fileNameError</TD>
+
+<TD></TD>
+<TD>エラー表示用グラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>fileNameOld</TD>
+
+<TD></TD>
+<TD>古いデータ表示用グラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>fileNameBad</TD>
+
+<TD></TD>
+<TD>使えないデータ表示用グラフィックファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>basePrintFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>エリアに下地グラフィックを表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>baseChangeLoadSave</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:セーブ用下地にロード用下地を流用する。1:個別に設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameLoadBase</TD>
+<TD></TD>
+<TD>ロード用下地グラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameSaveBase</TD>
+<TD></TD>
+<TD>セーブ用下地グラフィックファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>selectColorR</TD>
+
+<TD ALIGN=RIGHT>230</TD>
+<TD ROWSPAN=3>選択カーソルの色</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>selectColorG</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN=2>selectColorB</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>selectPercent</TD>
+
+<TD ALIGN=RIGHT>50</TD>
+<TD>選択カーソルの透明度</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>selectPrintMode</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>選択カーソルは 0:色 1:グラフィック 2:アニメ付き(ロードセーブ上書き別グラ)</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>fileNameSelectPic</TD>
+<TD></TD>
+<TD>selectPrintModeが1の時、選択カーソルグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimePattern</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソルアニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimeSpeed</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソルアニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimeType</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソルアニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimePattern2</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソル決定時アニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimeSpeed2</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソル決定時アニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>saveAnimeType2</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソル決定時アニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>filenameSaveCursor</TD>
+<TD>1</TD>
+<TD>セーブ選択カーソルファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>loadAnimePattern</TD>
+<TD>1</TD>
+<TD>ロード選択カーソルアニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>loadAnimeSpeed</TD>
+<TD>1</TD>
+<TD>ロード選択カーソルアニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>loadAnimeType</TD>
+<TD>1</TD>
+<TD>ロード選択カーソルアニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>loadAnimePattern2</TD>
+<TD>1</TD>
+<TD>ロード選択カーソル決定時アニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>loadAnimeSpeed2</TD>
+<TD>1</TD>
+<TD>ロード選択カーソル決定時アニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>loadAnimeType2</TD>
+<TD>1</TD>
+<TD>ロード選択カーソル決定時アニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>filenameLoadCursor</TD>
+<TD>1</TD>
+<TD>ロード選択カーソルファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimePattern</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソルアニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimeSpeed</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソルアニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimeType</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソルアニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimePattern2</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソル決定時アニメパターン数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimeSpeed2</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソル決定時アニメ速度</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>overwriteAnimeType2</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソル決定時アニメタイプ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>filenameOverwriteCursor</TD>
+<TD>1</TD>
+<TD>上書きセーブ選択カーソルファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>selectPrintX</TD>
+
+<TD ALIGN=RIGHT>picPrintX</TD>
+<TD ROWSPAN=2>選択カーソルのエリアないでの表示位置を相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>selectPrintY</TD>
+
+<TD ALIGN=RIGHT>picPrintY</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>selectSizeX</TD>
+
+<TD ALIGN=RIGHT>picSizeX</TD>
+<TD ROWSPAN=2>選択カーソルのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>selectSizeY</TD>
+
+<TD ALIGN=RIGHT>picSizeY</TD>
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+<BR>
+アニメ選択カーソル画像はは、カーソルオン、決定の２パターンを<BR>
+以下のように並べて配置します<BR>
+<BR>
+<IMG SRC="graphics/datafile_cursor.jpg"><BR>
+<BR>
+
+<BR>
+<BR>
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">filenameQuickLoadBase</td>
+<td class = "leftparam"></td>
+<td class = "desc">ロード時クイックセーブスロット専用用下地グラフィックファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">filenameQuickSaveBase</td>
+<td class = "leftparam"></td>
+<td class = "desc">セーブ時クイックセーブスロット専用用下地グラフィックファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">quickSlotNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">クイックセーブスロットの番号</td>
+</tr>
+
+<tr>
+<td class = "name">serialPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:データスロットに通し番号を表示する</td>
+</tr>
+
+<tr>
+<td class = "subname">serialPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">serialPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">serialFontSizeX</td>
+<td class = "rightparam">16</td>
+<td class = "desc" rowspan="2">数字フォントサイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">serialFontSizeY</td>
+<td class = "rightparam">16</td>
+
+</tr>
+
+<tr>
+<td class = "subname">serialFontNextX</td>
+<td class = "rightparam">16</td>
+<td class = "desc">数字幅</td>
+</tr>
+
+<tr>
+<td class = "subname">fileNameSerialNumberFont</td>
+<td class = "leftparam">ta_sl_font</td>
+<td class = "desc">数字フォントのファイル名</td>
+</tr>
+
+<tr>
+<td class = "subname">serialNumberKeta</td>
+<td class = "rightparam">2</td>
+<td class = "desc">通し番号の表示桁数</td>
+</tr>
+
+
+</table>
+
+<pre>
+
+正しい設定は、共通設定-ゲーム内日付
+を参照してください
+
+
+
+gameMonthUpZeroPrintFlag 1
+//月の上位0を表示する
+
+gameDateSlashPrintFlag 1
+//年と月と日のあいだのスラッシュを表示する
+
+gameMonthPrintX
+gameMonthPrintY
+gameDayPrintX
+gameDayPrintY
+//月、日の表示位置をかえるとき設定
+
+
+
+gameWeekPrintFlag 0
+//曜日を表示するフラグ曜日は曜日専用の数字フォントの0-6に、「日」「月」「火」「水」「木」「金」「土」をコロン、スラッシュに「曜」「日」を対応させる
+
+gameWeekPrintX
+gameWeekPrintY
+filenameGameWeekFont
+gameWeekFontSizeX
+gameWeekFontSizeY
+
+gameWeekYouPrintFlag 1
+//「曜」を表示する
+gameWeekBiPrintFlag 1
+//「日」(曜日の日の部分)を表示する
+
+
+//単なる飾りを追加する。
+kazariPrintFlag 0
+filenamekazari
+kazariPrintX
+kazariPrintY
+kazariSizeX
+kazariSizeY
+
+
+
+最終保存マークを使う場合には
+lastSaveという名前でアニメパーツを作成する
+ただし、座標はスロットからの相対位置
+filenameLastSave
+lastSaveType
+lastSavePattern
+lastSaveSpeed
+lastSaveSizeX
+lastSaveSizeY
+lastSavePrintX
+lastSavePrintY
+
+
+
+
+
+
+</pre>
+
+
+
+</body>
+</html>
+
+

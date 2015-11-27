@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - selectcgchara</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\selectCGChara.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>戻るボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時フェード設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時音声設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>その他設定</TD>
+<TD>なし</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+</TABLE>
+
+
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>selectcgchara</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+ 
+
+<TR>
+<TD COLSPAN=2>filenameBG</TD>
+
+<TD>cgm_bg</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+
+
+
+ 
+<TR>
+<TD COLSPAN=2>pictureMode</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>0:キャラ絵なし 1:この絵を常に表示 2:カーソルオン時のみ表示 3:通常、カーソルオンで2種類(画像は縦にならべる)もつ</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameChara</TD>
+<TD>ta_cgm_bt</TD>
+<TD>キャラ絵のファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>cursorMode</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:カーソルなし 1:色 2:絵</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>cursorPercent</TD>
+<TD>50</TD>
+<TD>カーソルを半透明で表示する場合の透明度</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameCursor</TD>
+<TD></TD>
+<TD>カーソルを絵で表示する場合のファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>cursorPrintType</TD>
+<TD>1</TD>
+<TD>カーソル画像の表示方法 0:通常 1:半透明 2:加算</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>checkOnByPicFlag</TD>
+
+<TD>0</TD>
+<TD>カーソルオンを 0:大きさ 1:画像で チェックする</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>picNumberX</TD>
+
+<TD>cgキャラの人数</TD>
+<TD>CGキャラ画像が横に何人ずつならべてあるか</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>numberX</TD>
+
+<TD>CGキャラ人数</TD>
+<TD ROWSPAN=2>並べて表示するCGキャラの数を縦横それぞれ指定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>numberY</TD>
+
+<TD>1</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sizeX</TD>
+
+<TD>32</TD>
+<TD ROWSPAN=2>CGキャラのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>sizeY</TD>
+
+<TD>32</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>baseX</TD>
+
+<TD>0</TD>
+<TD ROWSPAN=2>CGキャラ表示開始位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>baseY</TD>
+
+<TD>0</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN=2>nextX</TD>
+
+<TD>sizeX</TD>
+<TD ROWSPAN=2>次のCGキャラまでの距離</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>nextY</TD>
+
+<TD>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>customPrintFlag</TD>
+
+<TD>0</TD>
+<TD>1:CGキャラ表示位置を個別に設定する</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>printX[n]</TD>
+<TD></TD>
+<TD ROWSPAN=2>[n]番目のCGキャラの表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>printY[n]</TD>
+<TD></TD>
+
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>cursorColorR</TD>
+<TD>128</TD>
+<TD ROWSPAN=3>カーソルの色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorColorG</TD>
+<TD>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorColorB</TD>
+<TD>255</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>totalPercentPrintFlag</TD>
+
+<TD>1</TD>
+<TD>1:全CG回収率を表示する</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>totalPercentPercentFlag</TD>
+<TD>1</TD>
+<TD>1:%(パーセント)記号も表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameTotalPercentPic</TD>
+<TD>ta_font_cgm1</TD>
+<TD>CG回収率表示用の数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentPrintX</TD>
+<TD></TD>
+<TD ROWSPAN=2>CG回収率の表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentPrintY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentSizeX</TD>
+<TD></TD>
+<TD>CG回収率数字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentSizeY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentNextX</TD>
+<TD>totalPercentSizeX</TD>
+<TD>CG回収率数字フォントの文字間隔</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>charaPercentPrintFlag</TD>
+
+<TD>1</TD>
+<TD>1:キャラごとのCG回収率を表示する</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>percentPercentFlag</TD>
+<TD>1</TD>
+<TD>1:%(パーセント)記号表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNamePercentPic</TD>
+<TD>ta_font_cgm1</TD>
+<TD>CG回収率表示用の数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentPrintX</TD>
+<TD></TD>
+<TD ROWSPAN=2>CG回収率表示位置をキャラ絵の表示位置からの相対座標で設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentPrintY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentSizeX</TD>
+<TD></TD>
+<TD>CG回収率数字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentSizeY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentNextX</TD>
+<TD>percentSizeX</TD>
+<TD>CG回収率数字フォントの文字間隔</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>charaVoiceFlag</TD>
+
+<TD>0</TD>
+<TD>1:キャラ絵にカーソルがのったときに音声を出す(未実装)</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>charaVoiceWaitTime</TD>
+<TD>10</TD>
+<TD>音声を出すまでの待ち時間をフレームで指定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaVoiceFileName[n]</TD>
+<TD></TD>
+<TD>音声ファイル名</TD>
+</TR>
+
+
+ 
+
+
+</TABLE>
+
+charaAppearPercent[n] 0
+CG達成率がこの数値以上であれば表示する
+例0:常に表示 1:1つでも取得したら表示 100:全て取得したら表示
+
+
+charaAppearVarName[n]
+変数でそのキャラの表示を制御する
+0:表示しない 1:表示する
+
+表示されてないキャラは当然えらべません
+
+
+
+<BR>
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

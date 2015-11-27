@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>fadeinout</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">fadeinout</p>
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name">enterFadeInType</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:フェードイン処理なし。-1:塗りつぶし色からのフェードイン 1～:ワイプ処理</td>
+</tr>
+
+<tr>
+<td class = "subname">enterFadeInTime</td>
+<td class = "rightparam">10</td>
+<td class = "desc">フェードイン時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "subname">enterFadeInColorR</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="3">フェードイン塗りつぶし処理の場合の色をRGBで設定</td>
+</tr>
+
+<tr>
+<td class = "subname">enterFadeInColorG</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">enterFadeInColorB</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">createExitScreenFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:フェードイン、アウト用の画像を作成しない</td>
+</tr>
+
+<tr>
+<td class = "subname">fillExitScreenFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:終了時に次のフェードインでつかわれる画像を塗りつぶす</td>
+</tr>
+
+<tr>
+<td class = "name">exitFadeOutType</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:フェードアウト処理なし。1～:ワイプ処理でフェードアウト</td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutTime</td>
+<td class = "rightparam">10</td>
+<td class = "desc">フェードアウト時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorR</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="3">フェードアウト塗りつぶし色をRGBで設定</td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorG</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorB</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">createExitScreenFlagSpecial</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:特殊フェードイン、アウト用の画像を作成する</td>
+</tr>
+
+<tr>
+<td class = "name">exitFadeOutSpecialMode</td>
+<td class = "rightparam">-2</td>
+<td class = "desc">ここで設定されたモードに変化する場合、以下の設定が使われる(標準モード名で設定可能)</td>
+</tr>
+
+
+<tr>
+<td class = "subname">exitFadeOutTypeSpecial</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:特殊フェードアウト設定なし。1～:ワイプ処理でフェードアウト</td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutTimeSpecial</td>
+<td class = "rightparam">10</td>
+<td class = "desc">特殊フェードアウト時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorSpecialR</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="3"></td>
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorSpecialG</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">exitFadeOutColorSpecialB</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">fillExitScreenFlagSpecial</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:終了時に次のフェードインでつかわれる画像を塗りつぶす（特殊フェードアウト用）</td>
+</tr>
+
+
+</table>
+
+<br />
+
+<div class ="notice">
+<pre>
+特殊フェードアウト設定は、変化先が複数ある画面モードで(CONFIG等)
+変化先に応じてフェードアウトを設定するためのものです
+
+たとえば、CONFIG画面で通常はフェードアウトありにして、
+(ゲーム中によばれた場合など、戻り先でフェードイン設定ができないため)
+
+タイトルに戻るときのみフェードアウトなしに設定するとよいようです
+
+デフォルトではConfig Load画面では
+特殊フェードアウト設定は
+もどりさき:TITLE
+特殊フェードアウト:なし
+
+になっています
+</pre>
+</div>
+
+
+</body>
+</html>

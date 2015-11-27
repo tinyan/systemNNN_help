@@ -1,0 +1,612 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - config</FONT><BR>
+</CENTER>
+<BR>
+FileName init\config.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>上下ボタン設定</TD>
+<TD>必要であれば</TD>
+<TD>複数ページで、かつ、ページ選択が上下ボタンになっている場合</TD>
+</TR>
+
+<TR>
+<TD>タブボタン設定</TD>
+<TD>必要であれば</TD>
+<TD>複数ページで、かつ、タブ使用モードの場合、ラジオボタン[tab]を作成する</TD>
+</TR>
+
+<TR>
+<TD>設定ボタン</TD>
+<TD>必要</TD>
+<TD>ラジオボタンとして以下を作成する[screen][skip][auto]</TD>
+</TR>
+
+<TR>
+<TD>拡張設定ラジオボタン</TD>
+<TD>必要があれば</TD>
+<TD>ラジオボタンとして作成する:exp[n]Radio</TD>
+</TR>
+
+<TR>
+<TD>拡張設定チェックボタン</TD>
+<TD>必要があれば</TD>
+<TD>チェックボタンとして作成する:exp[n]Check</TD>
+</TR>
+
+<TR>
+<TD>ボリューム名</TD>
+<TD></TD>
+<TD>現在次の8つ[message][music][sound][voice][moive][soundvoice][windowPercent][autoSpeed]</TD>
+</TR>
+
+<TR>
+<TD>ボリュームボタン</TD>
+<TD>必要</TD>
+<TD>以下の名前でボリュームボタン(チェックボタン)を作成する[music][sound][voice][moive][soundvoice] + Button</TD>
+</TR>
+
+<TR>
+<TD>ボイス制御ボタン</TD>
+<TD>必要な数</TD>
+<TD>voice[n]Buttonという名前でチェックボタンを作成する</TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>戻るボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時フェード設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時音声設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>なし</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+</TABLE>
+
+
+<BR>
+<BR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>config</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>modePageMax</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>設定画面が何ページにわかれているか</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>pageMode</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>設定画面が複数ページの場合に、ページ切り替えを 1:上下ボタンで 2:タブボタンで 行う</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>mustStartPage1Flag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:設定画面開始時に必ず1ページ目に戻す</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>pageNumberSetFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ページ数を変数に入れる</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>pageNumberVarName</TD>
+<TD>コンフィグページ</TD>
+<TD>ページ番号がはいる変数名を設定する</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>changePageRestartScriptFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:背景スクリプト使用時、ページが切り替わったとき、スクリプトを最初にもどす</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>filenameBG</TD>
+
+<TD>bg_config</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>filenameBG[n]</TD>
+
+<TD></TD>
+<TD>ページごとに背景画像を変える場合のファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]VolumeExistFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:[ボリューム名]が存在する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]VolumePrintPage</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>[ボリューム名]を表示するページを設定</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>[設定ボタン名]ModeButtonPrintPage</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>[設定ボタン名]を表示するページを設定</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>voicePrintPage</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>音声制御ボタンを表示するページを設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>volumeMin</TD>
+
+<TD ALIGN=RIGHT>80</TD>
+<TD ROWSPAN=2>画面上のボリュームと実際のボリュームとの対応値</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeMax</TD>
+
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSizeX</TD>
+
+<TD ALIGN=RIGHT>338</TD>
+<TD ROWSPAN=2>ボリュームの共通サイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSizeY</TD>
+
+<TD ALIGN=RIGHT>19</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>volumeSizeX[n]</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>個別にボリュームサイズを設定する(ボリューム名指定ではないので注意)</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSizeY[n]</TD>
+
+<TD ALIGN=RIGHT>19</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]VolumePrintX</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>[ボリューム名]の表示位置を設定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]VolumePrintY</TD>
+
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]BarFileName</TD>
+
+<TD>ta_opt_bar</TD>
+<TD>[ボリューム名]の画像ファイル名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>[ボリューム名]VolumeTransFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:[ボリューム名]の透過処理を行わない</TD>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD COLSPAN=2>voiceCutButtonFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>ボイスのオンオフ制御を行う</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>voiceCutButtonNumber</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>ボイス制御ボタンの数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceNameChangeFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:シナリオの進行に応じてボイスキャラの名前を変更する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceNameChangeVar[n]</TD>
+<TD></TD>
+<TD>チェックする変数名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceCutButtonCheckAppearFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:聞いていないキャラの音声ボタンは表示しない</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLineSetFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ボイスボタンを一定間隔で配置する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLinePrintX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>一定間隔配置の1個目の位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLinePrintY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLineNextX</TD>
+<TD ALIGN=RIGHT>100</TD>
+<TD ROWSPAN=2>一定間隔配置の間隔</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLineNextY</TD>
+<TD ALIGN=RIGHT>30</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLineNumberX</TD>
+<TD ALIGN=RIGHT>5</TD>
+<TD ROWSPAN=2>一定間隔配置の個数(XYのどちらか一方は0にすること)</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceAutoLineNumberY</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>voiceCutButtonCustomFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ボイス制御ボタン1つで複数のキャラをまとめて制御する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceOffNumberByButton[n]</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>[n]番目のボタンで何人のキャラを制御するか</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceOffButton[n]chara[k]</TD>
+<TD></TD>
+<TD>[n]番目のボタンの[k]番目はどのキャラを制御するか (先頭の一人を設定すれば、以下は続けて設定される)</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>extSeFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:ボリュームを変更したときに音や声を出す</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>voiceSeNumber</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>音声ボリュームの音を nya\configse.xtx での番号で設定する この番号から11段階が設定される(0～10)</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>messageSeNumber</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>メッセージスピードボリュームの音を nya\configse.xtx での番号で設定する この番号から5段階が設定される</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>messageIsVoice</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:メッセージボリュームの音を効果音ではなく、音声の設定ボリュームで鳴らす</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>soundSeNumber</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>効果音ボリュームの音を nya\configse.xtx での番号で設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>movieSeNumber</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>ムービーボリュームの音を nya\configse.xtx での番号で設定する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>expRadioNumber</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>拡張ラジオボタンの個数を設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>exp[n]RadioPrintPage</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>拡張ラジオボタンの表示ページを設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>exp[n]Radio</TD>
+<TD ALIGN=RIGHT>2</TD>
+<TD>拡張ラジオボタンの選択数を設定する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>expCheckNumber</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>拡張チェックボタンの個数を設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>exp[n]CheckPrintPage</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>拡張チェックボタンの表示ページを設定する</TD>
+</TR>
+
+</TABLE>
+
+
+<BR>
+<IMG SRC="graphics/configpage.jpg"><BR>
+<BR>
+<BR>
+
+<pre>
+voiceVoiceChangeFlag 0
+
+voiceVoiceChangeVoiceOnClick[n]
+voiceVoiceChangeVoiceOnCannotClick[n]
+voiceVoiceChangeVoiceOnEnter[n]
+voiceVoiceChangeVoiceOnExit[n]
+
+voiceVoiceChangeVoiceOffClick[n]
+voiceVoiceChangeVoiceOffCannotClick[n]
+voiceVoiceChangeVoiceOffEnter[n]
+voiceVoiceChangeVoiceOffExit[n]
+
+voiceVoiceChangeVar[n] voiceNameChangeVar[n]
+
+
+
+windowPrintPage 1
+windowPrintX 0
+windowPrintY 0
+//複数のconfig指定のメッセージウィンドウがある場合に、指定する(config指定のメッセージウィンドウは、クリックするたびにきりかわります)
+
+windowPrintFlag 0   //1:ウィンドウの種類が1つしかないときでもConfigにウィンドウ表示を行う
+
+windowMessageNumber 0   //ウィンドウにかぶせるメッセージの行数
+windowMessage[n]    あああ  //その内容
+messagePrintX 0
+messagePrintY 0
+messageNextY 30
+messageFontSize 24
+messageColor[RGB]
+
+nameWindowMessage あああ
+namePrintX 0
+namePrintY 0
+nameFontSize 16
+nameColor[RGB]
+
+メッセージの表示位置は、ウィンドウからの相対座標
+
+
+volumeNumber 6
+//ウィンドウの透過率を設定するボリュームを使用する場合には、7にします
+
+configExeVolumeAdjustFlag 1
+//config.exeもvolumeMin volumeMaxに対応した表示にする。この機能をつかうときには、volumeMin volumeMaxも設定しておく必要がある(設定しないと、ゲーム本体はデフォルトの80-100、config.exeは以前のバージョンとの互換性のために0-100になる)
+
+
+voiceSameBufferFlag 0
+//1:音声に複数のバッファーを使わない
+
+
+
+
+//キャラごとに音声ボリューム設定をつける
+charaVoiceVolumeFlag 0
+//ボリュームスライダーの最大最小値 実際の増減値は、game.xtxのcharaVoiceVolumeDeltaで変化する。デフォルトは、1メモリでボリューム2
+charaVoiceVolumeMin -15
+charaVoiceVolumeMax 15
+
+
+//ボリュームファイル名
+filenameCharaVoiceVolume
+charaVolumePrintX
+charaVolumePrintY
+charaVolumeSizeX
+charaVolumeSizeY
+
+
+
+
+</pre>
+
+
+</BODY>
+</HTML>
+

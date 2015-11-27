@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>EXE ICON変更方法</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">EXE ICON変更方法</p>
+
+
+<pre>
+標準exeのアイコンはC++のソースをビルドできる場合は簡単に変更できますが
+
+initだけで変更する方法もあります
+ただし、exeファイル自体のアイコンは変更できません。
+変更できるのは、起動時にウィンドウの左上に表示されるアイコンだけです
+
+mainControl.xtxに
+
+iconName hogehoge.ico
+
+と設定します。hogehogeの部分は使用するアイコンファイル名で
+アイコンファイルは、exeファイルと同じフォルダーにいれておきます
+
+
+フリーなリソースさしかえツールでアイコンのみをいれかえてしまうのも1つの手です
+</pre>
+
+
+</body>
+
+
+</html>
+

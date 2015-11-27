@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>流し込み</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">テキストの一括流し込みの際の特殊文字</p>
+
+<br />
+<pre>
+メッセージウィンドウで、文章を入力する際には、1つずつではなく
+一括して流し込むことができます。
+このとき、文章の先頭に特殊な制御用の文字をいれておくことで
+流し込むときに特殊な動作を指定することができます
+</pre>
+
+<div class = "notice">
+<pre>
+文章入力の際に表示されるダイアログの
+[]すべて流し込む
+というチェックボックスをチェック状態にしておくことで、この機能が使えます
+</pre>
+</div>
+<br />
+<br />
+
+<div class ="block">
+<pre>
+メッセージ流し込みのサブコマンド
+メッセージを一度に流し込む場合、通常は設定行数(4行)を超えた時点で次の行と判断しますが
+先頭の1文字が特定の半角文字の場合、その行は特殊コマンド行として認識されます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class ="box1">@</td>
+<td class ="box2">NEXT</td>
+<td class ="box3">新たなメッセージ行を示します。</td>
+</tr>
+
+<tr>
+<td class ="box1">%</td>
+<td class ="box2">KOMA</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1">&</td>
+<td class ="box2">画像</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1">!</td>
+<td class ="box2">エフェクト</td>
+<td class ="box3"></td>
+</tr>
+
+
+</table>
+
+<pre>
+@と%には、さらにサブコマンド文字がつけられます。これは@または%の直後に半角大文字で指定します
+</pre>
+
+<table class="none">
+
+<tr>
+<td class ="box1">N</td>
+<td class ="box2">Normal</td>
+<td class ="box3">次からの文章を通常メッセージとして処理します</td>
+</tr>
+
+<tr>
+<td class ="box1">L</td>
+<td class ="box2">LPrint</td>
+<td class ="box3">次からの文章を全体メッセージとして処理します</td>
+</tr>
+
+<tr>
+<td class ="box1">A</td>
+<td class ="box2">Append</td>
+<td class ="box3">次からの文章を追加メッセージとして処理します</td>
+</tr>
+
+<tr>
+<td class ="box1">D</td>
+<td class ="box2">Draw</td>
+<td class ="box3">時間待ちとして処理します。後ろにフレーム数を指定できます。省略した場合は、エディターのデフォルト値が使われます</td>
+</tr>
+
+</table>
+
+<pre>
+%(KOMA)には、さらにオーバーラップが指定できます。
+フレーム数、種類の順に指定します。
+フレーム数のみの設定はできますが、種類のみの設定はできません
+
+
+&(画像指定サブコマンド)のあとには
+
+ファイル名
+設定レイヤー番号
+位置X,位置Y
+サイズX,サイズY
+
+が指定できます。省略した場合のデフォルト値は
+レイヤー 0:(bg,ev画像の場合) 4:(ta画像の場合) 複数の画像がある場合には+1されていきます(範囲チェックはされませんので超えないように注意してください)
+座標 (0,0)
+サイズ 画面サイズ
+
+
+!(エフェクト指定サブコマンド)の後には
+
+ファイル名(*.lef)
+レイヤー番号
+読み込みモード(1:画像のみ 2:エフェクトのみ 3:画像+エフェクト)   デフォルトは2です
+
+例
+!myeffect
+//myeffect.lefのエフェクトのみをを現在のレイヤーに読み込みます
+
+!youreffect 4
+//youreffect.lefのエフェクトのみをを4番レイヤーに読み込みます
+
+!othereffect 4 3
+//othereffect.lefの画像とエフェクトを4番レイヤーに読み込みます
+
+
+
+
+!(エフェクト指定サブコマンド)の後にもうひとつ!をつけた場合には全レイヤーエフェクト読み込みとなり
+ファイル名(*.eff)
+読み込みモード(1:画像のみ 2:エフェクトのみ 3:画像+エフェクト)   デフォルトは2です
+
+例
+!!super
+//super.effのエフェクトのみを全レイヤーに読み込みます
+
+!!special 3
+//special.effの画像とエフェクトを全レイヤーに読み込みます
+
+
+
+
+</pre>
+
+<div class="caution">
+<pre>
+エフェクトで画像のみの読み込みを使用する場合には注意がひつようです。
+画像の位置やサイズはエフェクトあつかいなので、よみこまれません。画像の存在しなかったレイヤーに読み込むとサイズが0になり表示されません
+エディター上では、サイズ0x0で表示する設定になっていますが、縮小画像は表示されていますので、勘違いしやすいです
+画像の読み込みは、なるべく&(画像指定サブコマンド)のほうをつかってください
+</pre>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>
+

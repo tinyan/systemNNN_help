@@ -1,0 +1,127 @@
+
+.operation
+{
+	width: 150px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+.operationdesc
+{
+	width: 500px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border:none;
+}
+
+
+
+.setting
+{
+	width: 150px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+
+.settingdesc
+{
+	width: 500px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border:none;
+}
+
+
+.nextline
+{
+	clear:left;
+}
+
+.box1
+{
+	width: 32px;
+	background-color : #F3C4C4;
+	margin: 1px;
+	border:none;
+}
+
+.box2
+{
+	width: 150px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+.box3
+{
+	width: 500px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border:none;
+}
+
+.basicbox1
+{
+	width: 150px;
+	background-color : #F3C4C4;
+	margin: 1px;
+	border:none;
+}
+
+.basicbox2
+{
+	width: 550px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+.menubox
+{
+	background-color : #A080D0;
+	width:800px;
+	padding:5px;
+}
+
+.descbox
+{
+	background-color : #80A0D0;
+	width:800px;
+	padding:5px;
+}
+
+.daihonbox1
+{
+	width: 100px;
+	background-color : #F3C4C4;
+	margin: 1px;
+	border:none;
+}
+
+.daihonbox2
+{
+	width: 150px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+.daihonbox3
+{
+	width: 200px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border:none;
+}
+
+.daihonbox4
+{
+	width: 400px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border:none;
+}

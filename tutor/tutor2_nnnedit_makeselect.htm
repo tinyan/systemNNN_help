@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>選択肢をつける</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">選択肢をつける</p>
+<br />
+
+<pre>
+さて、こんどは、もう少しゲームっぽくしてみましょう
+
+選択肢です。
+
+</pre>
+
+<pre>
+
+こんかいも新しくnnnファイルを作成して、そこでつくってみます
+アプリケーションメニューの「新規作成ボタン」を押して、からっぽのnnnファイルを作成します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect0.jpg" alt="" /><br />
+
+<pre>
+いったん、「名前を付けて保存」ボタンを押して
+「select_test」という名前で保存します
+</pre>
+<img src ="graphics/tutor2_nnnedit_makeselect00.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+まずは、フィルムからつくっていきます
+フィルムケースウィンドウで、「新規」ボタンを押して、新しいフィルムを作ります
+名前は「選択肢前」に変更しておいてください。
+
+このフィルムを選択肢を出す前の説明用にします
+
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect1.jpg" alt="" /><br />
+
+<pre>
+
+簡単に中身をつくっておきましょう。テスト用なので、こったことはしません
+コマ数は1つです。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect2.jpg" alt="" /><br />
+
+<pre>
+レイヤーの0番のエフェクトとして、
+[画面効果系]-[ぬりつぶし]
+を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect3.jpg" alt="" /><br />
+
+<pre>
+
+
+エフェクトレイヤーで、色を指定します。
+今回は、赤:64 緑:0 青:0
+の暗めの赤にしておきます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect4.jpg" alt="" /><br />
+
+<pre>
+
+メッセージは、2つほどいれておきましょう。
+コマウィンドウで、次のようにメッセージをいれます
+
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect5.jpg" alt="" /><br />
+
+<pre>
+
+続いて、選択肢を選んだ結果を表示するフィルムを作ります
+次のように3つのフィルムをつくってください。
+
+名前は、それぞれ
+
+選択肢１がえらばれた
+選択肢２がえらばれた
+選択肢３がえらばれた
+
+です。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect6.jpg" alt="" /><br />
+
+
+<pre>
+フィルム「選択肢１がえらばれた」を作ります
+コマ数は1つ。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect7.jpg" alt="" /><br />
+
+<pre>
+メッセージもいれておきます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect8.jpg" alt="" /><br />
+
+<pre>
+フィルム「選択肢２がえらばれた」を作ります
+これも、コマ数は1つ。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect9.jpg" alt="" /><br />
+
+<pre>
+メッセージもいれておきます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect10.jpg" alt="" /><br />
+
+<pre>
+フィルム「選択肢３がえらばれた」を作ります
+同様に、コマ数1つ。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect11.jpg" alt="" /><br />
+
+<pre>
+メッセージもいれておきます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect12.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+これで、だいたいの準備ができました。
+次は、シナリオの部分にかかります
+
+シナリオモード用の配置に変えておいてください。
+
+
+まずは、シナリオウィンドウで、「新規ボタン」をおして、コマンドを1つつくります。
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect20.jpg" alt="" /><br />
+
+<pre>
+
+ここには、さきほど作った、「選択肢前フィルム」をいれておきましょう
+NOPとかかれたコマンド行の上で、右クリックを押し、メニューからフィルムを選びます
+そして、一覧から「選択肢前」フィルムを選んで、ここに設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect21.jpg" alt="" /><br />
+
+<pre>
+次に、シナリオウィンドウで、いまつくったコマンドの下の「新規」とかかれている行をクリックして選択します。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect22.jpg" alt="" /><br />
+
+<pre>
+
+さきほどと同様に、「新規」ボタンを押して、コマンドを追加します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect23.jpg" alt="" /><br />
+
+<pre>
+この新たにつくったコマンド(NOP)の上で右クリックメニューをひらき
+
+[選択肢]-[3個]を選びます
+
+すると、コマンドがNOPから選択肢に変わり、同時に、子コマンドが3つ作成されます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect24.jpg" alt="" /><br />
+
+<pre>
+
+SELECTとかかれたコマンドの上で右クリックメニューを開き
+「内容修正」を選んで、選択肢の文章をいれます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect25.jpg" alt="" /><br />
+
+<pre>
+
+次のように3行いれてください
+基本は、選択肢の個数とここの行数は同じになるようにします
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect26.jpg" alt="" /><br />
+
+<pre>
+
+選ばれたコマンドの動作を設定します。
+
+まずは、さいしょのコマンドです。
+右クリックメニューからフィルムを選びます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect27.jpg" alt="" /><br />
+
+<pre>
+
+「選択肢１が選ばれた」という名前のフィルムを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect28.jpg" alt="" /><br />
+
+<pre>
+
+のこりの2つも同様にフィルムを設定します
+
+これで、このnnnはとりあえず完成です。忘れないように保存しておきましょう
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect29.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+
+
+
+さて、このままでは、このnnnは、たんに存在しているだけですので、
+前行ったように、sysと統合します
+
+アプリケーションウィンドウの、「読み込み」ボタンを押して、sysスクリプトを読み込んでください
+sysスクリプトを読み込んだら
+
+シナリオ集ウィンドウの「★トップ」シナリオを選択します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect_sys1.jpg" alt="" /><br />
+
+<pre>
+シナリオウィンドウには、前回作った「opening_test」スクリプトを読み込むコマンドがはいっています
+ちょうどいいので、これは、そのままにしておきましょう
+
+その下の「新規」とかかれたところを選択します
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect_sys2.jpg" alt="" /><br />
+
+<pre>
+
+「新規」ボタンを押してコマンドを追加します
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect_sys3.jpg" alt="" /><br />
+
+<pre>
+
+ここに、前回と同様に、[スクリプト呼び出し]-[スクリプト呼び出し]を選んで
+さらに内容変更を選んで、今回つくった
+「select_test」というスクリプト名を入力します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect_sys4.jpg" alt="" /><br />
+
+<pre>
+
+これで全て完成です。保存しておきましょう。
+
+保存がすんだら、ビルドを行ってください。
+エラーがなければ実効させてみましょう
+
+
+実行させて「NEWGAME」を選ぶと、前回つくったオープニングが表示されます。何回かクリックして進めていくと
+今回作った画面が表示されるはずです
+</pre>
+
+<br />
+
+<img src ="graphics/tutor2_nnnedit_makeselect_run1.jpg" alt="" /><br />
+
+<pre>
+これはピンチだ！
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect_run2.jpg" alt="" /><br />
+
+<pre>
+ここでの判断が生死を分ける
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect_run3.jpg" alt="" /><br />
+
+<pre>
+選択肢が表示されました。どれかをえらんでみましょう
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeselect_run4.jpg" alt="" /><br />
+
+<pre>
+
+無事、アイスソードを奪われたようです。
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeselect_run5.jpg" alt="" /><br />
+
+<br />
+<br />
+<br />
+<br />
+
+
+<a href="tutor2_nnnedit_makewhile.htm">次へ(繰り返し)</a>
+
+</body>
+</html>
+

@@ -1,0 +1,263 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>顔コントロール</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">顔コントロール</p>
+
+<pre>
+
+メッセージウィンドウの上か下に
+セリフの人物に応じて顔グラフィックを表示させます
+
+filename = init/face.xtx
+
+</pre>
+
+<table class = "none">
+
+<tr>
+<td class = "basicbox1">[n]</td>
+<td class = "basicbox2">顔コントロールキャラ番号に変換</td>
+</tr>
+
+
+<tr>
+<td class = "basicbox1">[k]</td>
+<td class = "basicbox2">顔タイプ番号に変換</td>
+</tr>
+
+</table>
+
+
+<br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name">sizeX</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">顔グラフィックのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">sizeY</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+
+<tr>
+<td class = "name">printX</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">顔グラフィックの表示位置</td>
+</tr>
+
+<tr>
+<td class = "name">printY</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+<tr>
+<td class = "name">filenameTag</td>
+<td class = "leftparam">ta_sys_face</td>
+<td class = "desc">ファイルネームの共通タグ</td>
+</tr>
+
+
+<tr>
+<td class = "name">customFaceFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:キャラごとにファイルネームタグを指定する</td>
+</tr>
+
+
+<tr>
+<td class = "subname">filenameFace[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">タグ名</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">maxSave</td>
+<td class = "rightparam">256</td>
+<td class = "desc">顔キャラのセーブデータの最大数+1以上の値を設定します。通常は変更する必要はないでしょう</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">face[n]TypeNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">n番目のキャラに顔タイプが何種類あるか</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">face[n]type[k]animePattern</td>
+<td class = "rightparam">1</td>
+<td class = "desc">アニメのパターン数</td>
+</tr>
+
+<tr>
+<td class = "name">face[n]type[k]animeType</td>
+<td class = "rightparam">1</td>
+<td class = "desc">アニメの種類</td>
+</tr>
+
+<tr>
+<td class = "name">face[n]type[k]animeSpeed</td>
+<td class = "rightparam">1</td>
+<td class = "desc">アニメの表示速度をフレームで指定(大きいほど遅い)</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">face[n]type[k]waitMin</td>
+<td class = "rightparam">0</td>
+<td class = "desc">アニメしていない時間の最小値</td>
+</tr>
+
+<tr>
+<td class = "name">face[n]type[k]waitMax</td>
+<td class = "rightparam">0</td>
+<td class = "desc">アニメしていない時間の最大値</td>
+</tr>
+
+
+
+
+</table>
+
+<br />
+
+
+<pre>
+ファイル名は共通タグを使った場合には
+[共通タグ名][n]__[k]
+キャラごとに違うタグを使う場合には
+[キャラごとのタグ]__[k]
+
+__はアンダーバー「_」が２つですので注意してください
+また、顔タイプ番号が1のみ__[k]がつきません
+
+
+
+
+アニメについてはボタンを参照してください
+アニメしていない時間は最小値と最大値の間の乱数になります
+
+
+
+アニメさせるときには、必要な個数のグラフィックを１枚の画像に並べます
+
+
+画像はシステム画像として準備する必要があります(png/sys/taフォルダー内などに準備する)
+
+
+
+
+</pre>
+<img src="graphics/facecontrolbutton.png" />
+<pre>
+コマウィンドウのこのボタンでキャラの顔コントロールを行います
+
+</pre>
+
+
+
+<img src="graphics/setcharanumberbutton.png" />
+<pre>
+コマウィンドウのこのボタンで人物名からキャラが特定できない場合に、そのメッセージに対応するキャラを指定します
+
+</pre>
+
+
+<br />
+<br />
+<br />
+
+
+<div class ="notice">
+<pre>
+たとえば、登場人物のうち3人に1種類ずつの顔コントロールをつけたい場合
+
+nnndir/facelist.xtxには
+0,なし
+1,たいにゃん
+2,れいな
+3,あみば
+
+と、その人物名を設定し
+
+init/face.xtxに表示位置、サイズを指定し
+ta_sys_face1.png
+ta_sys_face2.png
+ta_sys_face3.png
+のように画像を準備します
+
+</pre>
+</div>
+
+<br />
+
+<div class ="notice">
+<pre>
+さらにそのうちひとり(れいな)に顔の表情を4種類つけたい場合
+
+
+init/face.xtxに
+face2TypeNumber 4
+を設定し
+
+準備する画像は、以下のものになります
+
+ta_sys_face1.png
+
+ta_sys_face2.png
+ta_sys_face2__2.png
+ta_sys_face2__3.png
+ta_sys_face2__4.png
+
+ta_sys_face3.png
+
+</pre>
+</div>
+
+
+
+
+
+</body>
+</html>
+

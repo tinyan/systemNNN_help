@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>選択肢</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">選択肢</p>
+
+<br />
+<pre>
+選択肢メッセージは、基本は、選択肢の個数分だけ1行に1つずつ書いていきます
+
+3つの選択肢があるもののメッセージ例
+</pre>
+
+<div class ="notice">
+<pre>
+勇気を出して話しかけてみる
+せっかくだから青の扉を選ぶぜ
+殺してでも奪い取る
+</pre>
+</div>
+
+<br />
+
+<pre>
+選択肢の行頭に特殊な半角文字をいれることで
+通常とは違った動作をさせることもできます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class = "box2">行頭コマンド</td>
+<td class = "box3">解説
+</td>
+</tr>
+
+<tr>
+<td class = "box2">%</td>
+<td class = "box3">
+この行は選択肢ではなく説明文として扱われます<br />
+選択肢のあとに説明文を入れることはできません
+</td>
+</tr>
+
+<tr>
+<td class = "box2">#数値</td>
+<td class = "box3">
+制限時間を設定します
+</td>
+</tr>
+
+<tr>
+<td class = "box2">?変数名</td>
+<td class = "box3">
+制限時間を変数で設定します
+</td>
+</tr>
+
+<tr>
+<td class = "box2">@選択肢番号</td>
+<td class = "box3">
+時間切れでの自動選択対象を指定します
+</td>
+</tr>
+
+</table>
+
+<br />
+<pre>
+説明文入り選択肢の例
+ここでは3つの選択肢ので例を出しています
+</pre>
+<div class = "notice">
+<pre>
+%どれを選ぶかね
+世界の半分
+ギャルのパンティ
+アイスソード
+</pre>
+</div>
+
+<pre>
+このように書いた場合、ゲーム中では、4行の文章が表示されます(1行目の%のみは当然表示されません)が、
+選べるのは、2行目～4行目だけです。
+2行目を選ぶと選択肢1が実行され
+3行目を選ぶと選択肢2が実行され
+4行目を選ぶと選択肢3が実行されることになります
+</pre>
+
+<br />
+<br />
+
+<pre>
+ゲーム中にクイズなどを出して、時間制限を付けたい場合は、
+#コマンドを使用して、制限時間を付けます。
+単位はミリ秒です。
+制限時間内に選ばれなかった場合、デフォルトでは、最初の選択肢を選んだことになります
+
+5秒以内に、「はい」か「いいえ」を答えさえる選択肢の設定例を示します
+</pre>
+<div class="notice">
+<pre>
+#5000
+はい
+いいえ
+</pre>
+</div>
+
+<br />
+<br />
+
+<pre>
+いろいろくみあわせることで、かわったこともできます
+制限時間内に答えなかった場合のデフォルトの選択肢を、「かくし」にすることもできます
+このばあい、まず表示させる選択肢の数+1の選択肢をつくります
+表示は、「はい」「いいえ」だけで、時間切れ用の選択肢が別にあるものをつくってみましょう
+選択肢の個数を3つにします。
+メッセージの設定は下のようにします
+</pre>
+
+<div class="notice">
+<pre>
+#5000
+@3
+はい
+いいえ
+</pre>
+</div>
+
+<br />
+
+<pre>
+こうすると、ゲーム中では、「はい」「いいえ」のみが表示され
+時間内に選んだ場合は、「はい」なら選択肢1、「いいえ」なら選択肢2が実行され
+時間切れになった場合には、選択肢3が実行されます
+</pre>
+
+</body>
+</html>
+

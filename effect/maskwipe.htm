@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnEdit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="effect.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">エフェクト - マスクワイプ</p>
+<br />
+
+
+
+
+<a href="graphics/mask_uzu.jpg"><img src="mini/mask_uzu.jpg" alt="" /></a>
+<a href="graphics/sea.jpg"><img src="mini/sea.jpg" alt="" /></a>
+<a href="graphics/congra.jpg"><img src="mini/congra.jpg" alt="" /></a>
+<a href="graphics/effect_maskwipe_sample1.jpg"><img src="mini/effect_maskwipe_sample1.jpg" alt="" /></a><br />
+<pre>
+変化用画像、元画像、変化後画像、エフェクト中画像
+
+元画像、変化後画像、変化用画像の3枚の画像を使って
+ワイプをかけます。変化用画像の明るい部分からワイプしていきます
+
+
+【画像エフェクト】
+【2D3D:???】
+
+</pre>
+
+<br />
+<table>
+
+<tr>
+	<td class="box1">パラメーター名</td>
+	<td class="box2">デフォルト値</td>
+	<td class="box3">解説</td>
+	<td class="box4">最小値</td>
+	<td class="box5">最大値</td>
+</tr>
+
+<tr>
+	<td class="box1"></td>
+	<td class="box2"></td>
+	<td class="box3"></td>
+	<td class="box4"></td>
+	<td class="box5"></td>
+</tr>
+
+<tr>
+	<td class="box1">フレーム</td>
+	<td class="box2">20</td>
+	<td class="box3">エフェクト全体の時間をフレーム数で指定</td>
+	<td class="box4">0</td>
+	<td class="box5">9999</td>
+</tr>
+
+<tr>
+	<td class="box1">バッファ番号</td>
+	<td class="box2">12</td>
+	<td class="box3">変化後の画像のあるレイヤー番号</td>
+	<td class="box4">0</td>
+	<td class="box5">15</td>
+</tr>
+
+<tr>
+	<td class="box1">マスク番号</td>
+	<td class="box2">13</td>
+	<td class="box3">マスク画像のあるレイヤー番号</td>
+	<td class="box4">0</td>
+	<td class="box5">15</td>
+</tr>
+
+<tr>
+	<td class="box1s">倍率</td>
+	<td class="box2s">1</td>
+	<td class="box3s">数値を大きくすると境目がはっきりします</td>
+	<td class="box4s">1</td>
+	<td class="box5s">64</td>
+</tr>
+
+<tr>
+	<td class="box1s">変化タイプ</td>
+	<td class="box2s">0</td>
+	<td class="box3s" rowspan="2">度合いを方をサブフレームで制御</td>
+	<td class="box4s">0</td>
+	<td class="box5s">199</td>
+</tr>
+
+<tr>
+	<td class="box1s">サブフレーム</td>
+	<td class="box2s">0</td>
+
+	<td class="box4s">0</td>
+	<td class="box5s">9999</td>
+</tr>
+
+<tr>
+	<td class="box1s">元ＧＥＴ使用</td>
+	<td class="box2s">0</td>
+	<td class="box3s" rowspan="2">変化前、変化後の画像のかわりにGETバッファーを使う。どちらか一方のみ可能</td>
+	<td class="box4s" rowspan="2">0</td>
+	<td class="box5s" rowspan="2">1</td>
+</tr>
+
+<tr>
+	<td class="box1s">先ＧＥＴ使用</td>
+	<td class="box2s">0</td>
+
+
+
+</tr>
+
+
+</table>
+
+<pre>
+
+終了画像のレイヤーとマスクレイヤーは、通常はバッファーエフェクトをかけて
+非表示にして使います
+</pre>
+
+</body>
+</html>
+

@@ -1,0 +1,1090 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>game</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">game</p>
+
+
+<br />
+FileName = init\game.xtx<br />
+<br />
+
+
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>システム設定</center></td>
+</tr>
+
+<tr>
+<td class = "name">name</td>
+<td class = "leftparam">game</td>
+<td class = "desc">変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">companyName</td>
+<td class = "leftparam"></td>
+<td class = "desc">インストーラーによってレジストリに設定されている製作社(者)を入れる</td>
+</tr>
+
+<tr>
+<td class = "name">gameName</td>
+<td class = "leftparam"></td>
+<td class = "desc">インストーラーによってレジストリに設定されているゲーム名を入れる</td>
+</tr>
+
+<tr>
+<td class = "name">errorLogFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:エラーログを記録する</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">highVersion</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="3">バージョンを設定する。highVersionは内部的に+1されて扱われる。例えば、全て0なら ver 1.00 になる</td>
+</tr>
+
+<tr>
+<td class = "name">middleVersion</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">lowVersion</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+
+<tr>
+<td class = "name">useExtClass</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:拡張クラスを使用する</td>
+</tr>
+
+<tr>
+<td class = "name">codecErrorRunMode</td>
+<td class = "rightparam">0</td>
+<td class = "desc">codecエラー等が発生した場合 0:再生しない 1:可能な部分だけ再生する 変更不能(デフォルト0)に修正:この機能は今後削除決定済みなので使わないこと</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">dwqPackLevel</td>
+<td class = "rightparam">0</td>
+<td class = "desc">リリースごとにdwqデータを固めた回数をいれる。初回リリース時には1</td>
+</tr>
+
+<tr>
+<td class = "name">saveHeaderName</td>
+<td class = "leftparam">SAVEDATA</td>
+<td class = "desc">セーブファイルに記録されるヘッダーを設定する。最大15Bytes</td>
+</tr>
+
+<tr>
+<td class = "name">extSaveDataNumber</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ゲーム独自の追加セーブデータの個数を設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">extSaveDataSize[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">追加データのサイズを設定する</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">directXVolumeFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:directSoundのためにシステムボリュームのwaveの値を設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">directXVolume</td>
+<td class = "rightparam">60</td>
+<td class = "desc">システムボリュームのwaveの値</td>
+</tr>
+
+<tr>
+<td class = "name">frameTime</td>
+<td class = "rightparam">50</td>
+<td class = "desc">ゲームの速度を1フレームあたりのミリ秒で設定する。この設定だと毎秒20フレーム表示になる</td>
+</tr>
+
+<tr>
+<td class = "name">startMessageFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:ゲーム起動直後のウィンドウにメッセージを表示する</td>
+</tr>
+
+<tr>
+<td class = "subname">startMessage</td>
+<td class = "leftparam"></td>
+<td class = "desc">起動直後のメッセージ</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">backScriptSetCGOkFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:バックスクリプトで使われたCGも見たCGとして登録する</td>
+</tr>
+
+<tr>
+<td class = "name">miniCGReduce</td>
+<td class = "rightparam">6</td>
+<td class = "desc">セーブファイル用の縮小サムネイルの縮小比</td>
+</tr>
+
+
+
+
+
+<tr>
+<td class = "name">f9KeyExitOffFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:[F9]キーによるゲーム終了機能をオフにする</td>
+</tr>
+
+<tr>
+<td class = "name">escKeyExitOffFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:[ESC]キーによるゲーム終了機能をオフにする</td>
+</tr>
+
+<tr>
+<td class = "name">F4Ok</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:F4キーによるスキップを許可する 0:不許可</td>
+</tr>
+
+<tr>
+<td class = "name">F5Ok</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:F5キーによるスキップを許可する 0:不許可</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">movieVolumeNotUse</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:ムービー音量を独自に使う。1:音楽 2:効果音 3:ボイス の音量を使用する</td>
+</tr>
+
+<tr>
+<td class = "name">soundVoiceVolumeNotUse</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:サウンド効果音音量を独自に使う。1:ボイス 2:効果音 の音量を使用する</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">noWaitVSync</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:垂直同期信号を待たない</td>
+</tr>
+
+<tr>
+<td class = "name">maxSkipFrame</td>
+<td class = "rightparam">2</td>
+<td class = "desc">描画がまにあわなかった時にスキップされるフレームの最大数</td>
+</tr>
+
+<tr>
+<td class = "name">skipAdjustFrame</td>
+<td class = "rightparam">10</td>
+<td class = "desc">描画がまにあわなかった時に何フレームかけて遅れを調整するか</td>
+</tr>
+
+<tr>
+<td class = "name">maxSkipFrameBackScript</td>
+<td class = "rightparam">maxSkipFrame</td>
+<td class = "desc">バックスクリプト時に、描画がまにあわなかった時にスキップされるフレームの最大数</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">specialNumberForSaveSetFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">セーブファイルに表示用の変数値を代入する</td>
+</tr>
+
+<tr>
+<td class = "subname">specialNumberForSaveVarName</td>
+<td class = "leftparam">残り日数</td>
+<td class = "desc">その変数名</td>
+</tr>
+
+
+<tr>
+<td class = "name">optionOffVarFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:オプションの表示を変数で管理する</td>
+</tr>
+
+
+<tr>
+<td class = "subname">optionOffVarName</td>
+<td class = "leftparam">オプションオフ</td>
+<td class = "desc">その変数名</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">floatingLayerFlashFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:マウス、送りカーソル他の独立して表示されているものの消去を行わない</td>
+</tr>
+
+<tr>
+<td class = "name">defaultMusicFadeInTime</td>
+<td class = "rightparam">0</td>
+<td class = "desc">曲のフェードイン時間を100ミリ秒単位で設定</td>
+</tr>
+
+<tr>
+<td class = "name">defaultMusicFadeOutTime</td>
+<td class = "rightparam">5</td>
+<td class = "desc">曲のフェードアウト時間を100ミリ秒単位で設定</td>
+</tr>
+
+<tr>
+<td class = "name">primaryFormatSetFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:DirectSoundのプライマリーバッファのフォーマットを設定する 0:デフォルトのまま</td>
+</tr>
+
+<tr>
+<td class = "subname">soundChannel</td>
+<td class = "rightparam">2</td>
+<td class = "desc">1:モノラル 2:ステレオ</td>
+</tr>
+
+<tr>
+<td class = "subname">samplingRate</td>
+<td class = "rightparam">44100</td>
+<td class = "desc">サンプリングレートをHz単位で指定する</td>
+</tr>
+
+<tr>
+<td class = "subname">samplingBit</td>
+<td class = "rightparam">16</td>
+<td class = "desc">サンプリングビットを 8,16 で指定する</td>
+</tr>
+
+
+<tr>
+<td class = "name">sound3DFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:3Dサウンドを使う。0:3Dサウンドを使用しない</td>
+</tr>
+
+
+<tr>
+<td class = "name">systemSoundLoadNumber</td>
+<td class = "rightparam">4</td>
+<td class = "desc">システムサンドのうち、先頭のいくつかを常にメモリに読み込んでおく。その個数を設定</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">defaultFont</td>
+<td class = "rightparam"></td>
+<td class = "desc">デフォルトのフォント名を設定する。(「半角?」は「半角スペース」に置き換えられる)システムファイルに記録されているものより優先される</td>
+</tr>
+
+<tr>
+<td class = "name">userFontNumber</td>
+<td class = "rightparam">0</td>
+<td class = "desc">独自フォントを使用する場合、その個数を設定</td>
+</tr>
+
+<tr>
+<td class = "subname">userFont[n]FileName</td>
+<td class = "rightparam"></td>
+<td class = "desc">使用する独自フォント(*.mft)を拡張子なしで指定する</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">gameMouseCreateFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:マウスカーソルを使用する</td>
+</tr>
+
+<tr>
+<td class = "name">messageCursorCreateFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:メッセージカーソルを使用する</td>
+</tr>
+
+<tr>
+<td class = "name">optionButtonCreateFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:オプションボタン(システムメニューボタン)を使用する</td>
+</tr>
+
+<tr>
+<td class = "name">sceneButtonCreateFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:シーン鑑賞から戻るためのボタンを使用する</td>
+</tr>
+
+<tr>
+<td class = "name">skipFilmButtonCreateFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:フィルム最後までスキップするボタンを使用する</td>
+</tr>
+
+<tr>
+<td class = "name">noMessageWindowFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:メッセージウィンドウを使用しない</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">allMusicSetFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:スクリプト以外で再生された曲も、聴いた曲として登録する</td>
+</tr>
+
+<tr>
+<td class = "name">pictureBufferInitSizeFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">レイヤーのバッファーをサイズ指定で初期化する</td>
+</tr>
+
+<tr>
+<td class = "subname">pictureBufferSizeX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">[n]ばんめのレイヤーの初期化サイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">pictureBufferSizeY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "name">pictureBufferInitLoadFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム起動時にレイヤーに絵を読み込んでおく</td>
+</tr>
+
+<tr>
+<td class = "subname">pictureBufferFileName[n]</td>
+<td class = "leftparam"></td>
+<td class = "desc">[n]ばんめのレイヤーに読み込む絵のファイル名</td>
+</tr>
+
+
+<tr>
+<td class = "name">shortCutSystemMenuSound</td>
+<td class = "rightparam">1</td>
+<td class = "desc">ショートカットキーでシステムメニューを開いたときの効果音を番号で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">shortCutSaveSound</td>
+<td class = "rightparam">shortCut<br />SystemMenuSound</td>
+<td class = "desc">ショートカットキーでセーブ画面を開いたときの効果音を番号で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">shortCutLoadSound</td>
+<td class = "rightparam">shortCut<br />SystemMenuSound</td>
+<td class = "desc">ショートカットキーでロード画面を開いたときの効果音を番号で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">shortCutConfigSound</td>
+<td class = "rightparam">shortCut<br />SystemMenuSound</td>
+<td class = "desc">ショートカットキーで環境設定画面を開いたときの効果音を番号で設定する</td>
+</tr>
+
+
+<tr>
+<td class = "name">bossComingType</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:ボスカミング機能なし 1:塗りつぶし画面 2:グラフィック画面</td>
+</tr>
+
+<tr>
+<td class = "subname">bossComingColorR</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="3">塗りつぶし色をRGBで設定</td>
+</tr>
+
+<tr>
+<td class = "subname">bossComingColorG</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "subname">bossComingColorB</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "subname">bossComingFileName</td>
+<td class = "leftparam"></td>
+<td class = "desc">bossComingType=2 ボスカミング画面用のファイル名を設定</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">fukaPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:フレームごとの負荷を画面に表示する</td>
+</tr>
+
+<tr>
+<td class = "name">createBackButtonFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">未実装(修正中)</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">[モード名]ClassDisable</td>
+<td class = "rightparam"></td>
+<td class = "desc">1:指定されたモードを実行するクラスの作成を禁止する</td>
+</tr>
+
+<tr>
+<td class = "name">[モード名]IsDefault</td>
+<td class = "rightparam"></td>
+<td class = "desc">1:指定されたモードコマンドを有効にする。現在printMovie,selectPlace,selectHeroin,printCalendarのみ有効</td>
+</tr>
+
+
+<tr>
+<td class = "name">seiInitData</td>
+<td class = "leftparam"></td>
+<td class = "desc">最初にsysファイルが作成されるときのデフォルトの｢姓」<br />@にすると、なしになる</td>
+</tr>
+
+<tr>
+<td class = "name">meiInitData</td>
+<td class = "leftparam"></td>
+<td class = "desc">最初にsysファイルが作成されるときのデフォルトの｢名」<br />@にすると、なしになる</td>
+</tr>
+
+<tr>
+<td class = "name">windowAdjustFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:起動時にウィンドウを可能な限り画面内に移動させる</td>
+</tr>
+
+<tr>
+<td class = "name">vistaDebug</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:vista等GDIとの相性が悪い場合にデバッグモードに背景色をつける</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>セーブフォルダー関連設定</center></td>
+</tr>
+
+<tr>
+<td class = "name">saveFolderType</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:カレント 1:マイドキュメント 2:アプリケーションデータ<br />1:保存先は マイドキュメント / サブカンパニーフォルダー名 / サブゲームフォルダー名 / sav<br />2:c:/Documents and Settings / [ユーザー名] / Application Data / サブカンパニーフォルダー名 / サブゲームフォルダー名 / sav<br />sysfile.orgのみは、従来どおりカレントのsavフォルダにいれること</td>
+</tr>
+
+<tr>
+<td class = "subname">saveCompanyFolder</td>
+<td class = "rightparam"></td>
+<td class = "desc">サブカンパニーフォルダー名</td>
+</tr>
+
+<tr>
+<td class = "subname">saveGameFolde</td>
+<td class = "rightparam"></td>
+<td class = "desc">サブゲームフォルダー名</td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>アンインストール時の削除関連設定</center></td>
+</tr>
+
+<tr>
+<td class = "name">deleteSaveLastConfirm</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:最終確認を表示する</td>
+</tr>
+
+<tr>
+<td class = "name">deleteParentSaveFolder</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:親フォルダー(サブカンパニーフォルダ サブカンパニーフォルダ)も削除する(空の場合のみ)</td>
+</tr>
+
+<tr>
+<td class = "name">deleteSubSaveFolder</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:savフォルダのサブフォルダーも削除する</td>
+</tr>
+
+<tr>
+<td class = "name">deleteSaveOrg</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:拡張子.orgのファイルも削除する</td>
+</tr>
+
+<tr>
+<td class = "name">deleteOnlySave</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:拡張子.savのファイルだけを削除する</td>
+</tr>
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>内部使用設定</center></td>
+</tr>
+
+<tr>
+<td class = "name">noSceneListFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">noBGMFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">noSystemSeFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modalCannotCloseFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>その他設定</center></td>
+</tr>
+
+<tr>
+<td class = "name">jpegMMX</td>
+<td class = "rightparam">1</td>
+<td class = "desc">jpegの展開を 1:MMXで行う14bit精度 0:floatで行う(32bit精度)</td>
+</tr>
+
+<tr>
+<td class = "name">imeAutoOpenFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc" rowspan="2">1:名前などの入力時に、IMEのon/offを自動で行う</td>
+</tr>
+
+<tr>
+<td class = "name">imeAutoCloseFlag</td>
+<td class = "rightparam">1</td>
+
+</tr>
+
+<tr>
+<td class = "name">varInitFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1: editorで設定された変数の初期値をNEWGAME時に設定する</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">resultFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:実績状態を保存し、setresultファンクションを有効にする</td>
+</tr>
+
+<tr>
+<td class = "subname">getResultVarName</td>
+<td class = "rightparam"></td>
+<td class = "desc">getresultファンクションで、チェック結果をもどす変数名を指定し、getresultファンクションを有効にする</td>
+</tr>
+
+<tr>
+<td class = "name">autoResultNotice</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:setresultファンクションで自動でnoticeを実行する。<br />クイックロード、セーブ等でもnoticeを使用するなどして、実績で使うnoticeがずれる場合、たとえば3番目からの場合には3を設定する</td>
+</tr>
+
+
+
+
+
+<tr>
+<td class = "name">quickSaveButtonCreateFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan ="4">1:クイック[セーブ・ロード・コンフィグ・バックログ]ボタンを作成する。<br />細かな設定はquick[Save,Load,Config,Backlog]Button.xtxにsceneButtonと同じ形式で設定する。<br />ただし、かざりは使えないので注意</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadButtonCreateFlag</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">quickConfigButtonCreateFlag</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">quickBackLogButtonCreateFlag</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+
+
+<tr>
+<td class = "name">seiClearFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:初期「姓」をなしにする</td>
+</tr>
+
+<tr>
+<td class = "name">meiClearFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:初期「名」をなしにする</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">expModeCheckByVarNumber</td>
+<td class = "rightparam">0</td>
+<td class = "desc">拡張システムメニューのモード対応ボタンを変数で制御する場合、その個数を入れる</td>
+</tr>
+
+<tr>
+<td class = "subname">expModeCheckByVarMode[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">モード番号</td>
+</tr>
+
+<tr>
+<td class = "subname">expModeCheckByVarName[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc">変数名</td>
+</tr>
+
+<tr>
+<td class = "name">offLayerDontSetCG</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:レイヤーオフ状態のレイヤーに読み込まれた画像はCGに登録しない</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">controlScriptSize</td>
+<td class = "rightparam">64</td>
+<td class = "desc" rowspan="4">//スクリプト(spt)の最大サイズをKBで設定</td>
+</tr>
+
+<tr>
+<td class = "name">execScriptSize</td>
+<td class = "rightparam">2048</td>
+
+</tr>
+
+<tr>
+<td class = "name">subScriptSize</td>
+<td class = "rightparam">2048</td>
+
+</tr>
+
+<tr>
+<td class = "name">subSubScriptSize</td>
+<td class = "rightparam">2048</td>
+
+</tr>
+
+
+
+
+
+<tr>
+<td class = "name">loadVoiceErrorPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:none 1:mbox 2:screen</td>
+</tr>
+
+<tr>
+<td class = "name">loadSeErrorPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">未実装</td>
+</tr>
+
+
+<tr>
+<td class = "name">codeByte</td>
+<td class = "rightparam">2</td>
+<td class = "desc">日本語環境では2にすること</td>
+</tr>
+
+
+<tr>
+<td class = "name">optionStartMouseButton</td>
+<td class = "rightparam">2</td>
+<td class = "desc">1:right-click</td>
+</tr>
+
+<tr>
+<td class = "name">windowOffMouseButton</td>
+<td class = "rightparam">1</td>
+<td class = "desc"> 2:center-click -1:not use</td>
+</tr>
+
+
+<tr>
+<td class = "name">quickSaveEnable</td>
+<td class = "rightparam">0</td>
+<td class = "desc">クイックセーブを有効にする</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadEnable</td>
+<td class = "rightparam">quickSaveEnable</td>
+<td class = "desc">クイックロードを有効にする</td>
+</tr>
+
+<tr>
+<td class = "name">quickSavePrint</td>
+<td class = "rightparam">quickSaveEnable</td>
+<td class = "desc">クイックセーブボタンを表示する</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadPrint</td>
+<td class = "rightparam">quickSavePrint</td>
+<td class = "desc">クイックロードボタンを表示する</td>
+</tr>
+
+
+<tr>
+<td class = "name">noticeFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">notice機能を有効にする</td>
+</tr>
+
+<tr>
+<td class = "subname">loadNoticeNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">クイックロード時にながすnoticeの番号</td>
+</tr>
+
+<tr>
+<td class = "subname">saveNoticeNumber</td>
+<td class = "rightparam">2</td>
+<td class = "desc">クイックセーブ時にながすnoticeの番号</td>
+</tr>
+
+
+<tr>
+<td class = "name">quickSaveKey</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">システムメニューにクイックセーブ、ロードがないときにショートカットを設定したい場合に使う</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadKey</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+
+
+<tr>
+<td class = "name">quickSaveSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="3">システムメニューにクイックセーブ、ロードがないときに、音を鳴らしたいときに設定する</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadSound</td>
+<td class = "rightparam">quickSaveSound</td>
+
+</tr>
+
+<tr>
+<td class = "name">quickLoadErrorSound</td>
+<td class = "rightparam">quickLoadSound</td>
+
+</tr>
+
+<tr>
+<td class = "name">shiftSkipMessageOnly</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:shiftキーによるメッセージスキップ開始をメッセージ画面でのみ有効にする</td>
+</tr>
+
+<tr>
+<td class = "name">autoMessageCheckKillShift</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:エディターでのautoMessageボタン開始にあわせて、shiftキーによるメッセージスキップを解除する</td>
+</tr>
+
+<tr>
+<td class = "name">cannotSkipCheckKillShift</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:エディターでのcannotSkipボタン開始にあわせて、shiftキーによるメッセージスキップを解除する</td>
+</tr>
+
+<tr>
+<td class = "name">useSaijitsu</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:祭日チェックを行う。<br />nya/saijitsu.xtxに年,月,日を設定する</td>
+</tr>
+
+<tr>
+<td class = "name">quickLoadDelay</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:quickLoadショートカットキーの動作を描画後におくらせる</td>
+</tr>
+
+</table>
+
+
+
+<div class = "noticetitle" id="standard">
+<pre>
+標準的な最低限の設定例
+レジストリ名は基本必須です
+
+(会社名、ゲーム名は架空のものです)
+</pre>
+</div>
+<div class = "notice">
+<pre>
+name Game
+companyName BugnekoSoft
+gameName nyannyantrap
+dwqPackLevel 1
+</pre>
+</div>
+
+
+
+<br />
+
+<div class = "noticetitle" id="frame">
+<pre>
+ゲームの動作フレームのを50フレームにする設定例
+
+(フレーム数ではなく、1フレームのミリ秒で設定するので注意です)
+</pre>
+</div>
+<div class = "notice">
+<pre>
+frameTime 20
+</pre>
+</div>
+
+<br />
+
+
+<div class = "noticetitle" id="Div1">
+<pre>
+version 1.25に設定する例
+</pre>
+</div>
+<div class = "notice">
+<pre>
+highVersion 0
+middleVersion 2
+lowVersion 5
+</pre>
+</div>
+
+<br />
+
+
+<pre>
+windowAdjustFlag 1
+1:起動時にウィンドウを画面内に可能か限りいれるようにする
+
+
+adjustFullScreenLost 1
+0:フルスクリーンをロストしてもウィンドウにもどさない
+
+backLogDisableCheckFlag 1
+1:スリープなどから復帰時にホイールを一定時間無効にする
+backLogDisableCheckTime 5000
+//無効を判断するミリ秒
+backLogDisableTime 10
+//無効フレーム
+
+
+
+startupLoadErrorPrintFlag 0
+1:起動時からの画像読み込みエラーをダイアログ表示する
+
+
+
+
+
+facePrintMode 0
+1:メッセージウィンドウの下に顔コントロールを表示する
+2:メッセージウィンドウの上に顔コントロールを表示する
+
+
+
+expModeButtonIsMouse 1
+expModeButtonIsMessageCursor 2
+
+
+//キャラごとの音声ボリューム1に対する実際の増減値
+charaVoiceVolumeDelta 2
+
+
+//ボタンの効果音で音声設定になっているものも、キャラごとの音声ボリューム補正をかける
+//ボタンの設定で、[ボタン名]VolumeTypeが1になっているものについて、ファイル名の先頭2文字でキャラを判断し、ボリューム補正をかけます
+enableButtonVoiceCharaVolume 0
+
+
+
+
+layerOffVar[n] 変数名
+n番のレイヤーのオフを変数で制御する
+[n]はレイヤー番号なので0～15になります
+
+
+
+
+
+
+seVoiceDontStopFlag 1
+//スキップ中でも効果音音声は鳴らす
+
+
+
+notUseDirectDraw 0
+// 1:directDrawを使用しない(windows GDI処理)
+
+
+
+fukuroMoji 0
+//0:従来の右下に影をつける 1-:影を回りにつけて袋文字ふうにする -1:かげなし
+//
+// 1    2   3   
+//  *  ***  
+// *@* *@*  @*
+//  *  ***  **
+//
+
+fukuroCustom 0
+//1:かげの方向を独自に指定する
+//fukuro[j]_[i] 1           //影をつける場所を指定 j=1 i=1 が中心
+//
+// 1_1 1_2 1_3
+// 2_1     2_3
+// 3_1 3_2 3_3
+
+現時点のバージョンでは、袋文字設定はルビには反映されません。また、独自フォントには反映されません
+
+
+
+fontWeight 700
+//フォントの太さを指定。nnnのデフォルトは700(BOLD)になっています
+//0-1000の範囲
+//400で標準サイズ
+
+
+</pre>
+
+</body>
+</html>
+

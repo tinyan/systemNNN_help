@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>index</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../left.css" type="text/css" />
+	
+	
+
+
+
+
+
+
+
+<script type="text/javascript" src="wipenamelist.js"></script>
+
+
+<script type="text/javascript">
+<!--
+function init()
+{
+	typenumber = window.location.search.substr(1);
+    makewipenametable();
+
+//	image = new Array(wipeMax);
+  
+    check0 = 1;
+    check = 0;
+    
+    for (i=0;i<6;i++)
+    {
+        check = check0;
+        if (i == 0)
+        {
+            check = 31;
+        }
+
+        oPre = document.createElement("div");
+        oBody = document.getElementById("bodymain");
+        oBody.appendChild(oPre);
+        oPre.setAttribute("id","general" + i);
+        oPre.className ="block";
+        
+        if (check == typenumber)
+        {
+            document.all.item("general" + i).innerHTML = wipetypenamelist[check];
+            
+        }
+        else
+        {
+            document.all.item("general" + i).innerHTML = "<a href=\"wipeindexjavascript.htm?" + check + "\">" + wipetypenamelist[check] + "</a>";
+        }        
+        
+
+        if (i>0)
+        {        
+           check0 *= 2;
+        }
+    }  
+
+    if (typenumber > 0)
+    {
+        oPre = document.createElement("hr");
+        oBody = document.getElementById("bodymain");
+        oBody.appendChild(oPre);
+//        oPre.setAttribute("id","pre" + i);
+
+        //がぞういちらん
+
+
+        oPre = document.createElement("div");
+        oBody.appendChild(oPre);
+        oPre.setAttribute("id","subs");
+        oPre.className ="block";
+        document.all.item("subs").innerHTML = "<a href=\"wipealljavascript.htm?" + typenumber + "\" target=\"rightframe\"\">画像一覧</a>";
+    
+        for (i=1;i<wipeMax;i++)
+        {
+            if (wipetype[i] & typenumber)
+            {
+                oPre = document.createElement("div");
+                oPre.setAttribute("id","div" + i);
+                oBody.appendChild(oPre);
+            
+                document.all.item("div" + i).innerHTML = "<a href=\"wipejavascript.htm?" + i + "\" target=\"rightframe\">" + wipenamelist[i] + "</a>";
+            }
+        }
+        
+        
+        
+    }
+            
+       
+}
+
+
+// -->
+</script>
+
+
+</head>
+
+<body class = "basic" onload="init();">
+
+<div class = "toptitle">
+<center>エフェクト等</center>
+</div>
+
+<div class = "title">
+<center>ワイプ</center>
+</div>
+
+<br />
+
+<div class = "subtitle">
+<center>種類別</center>
+</div>
+
+
+<div id="bodymain">
+</div>
+
+
+
+<noscript>
+JAVASCRIPTを有効にしてください
+
+<br />
+<br />
+
+
+<a href="wipealljavascript.htm?31" target="rightframe">画像一覧</a>
+
+
+
+</noscript>
+
+
+</body>
+</html>
+
+

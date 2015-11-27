@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ロゴ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">ロゴ</p>
+<br />
+
+<pre>
+
+ロゴ画面の製作例です
+
+
+</pre>
+
+<div class = "noticetitle">
+画像の準備と設定
+</div>
+
+<pre>
+表示するロゴの個数を決めて、画像を準備します。
+サイズは、ゲーム画面と同じにしてください。
+形式はjpgかbmpです
+
+準備した画像は、
+bmp/sys
+または
+jpg/sys
+フォルダーにいれてpacnyanで変換しておきましょう。
+
+ここでは、nnnのロゴと、サークルのロゴの2枚を表示することにします。
+
+</pre>
+
+<table class = "none">
+
+<tr>
+<td class = "none"><img src="minigraphics/nnnlogo.jpg" alt="" /></td>
+<td class = "none"><img src="minigraphics/userlogo.jpg" alt="" /></td>
+</tr>
+
+<tr>
+<td class = "none">logo1</td>
+<td class = "none">logo2</td>
+</tr>
+
+</table>
+
+
+<br />
+<br />
+
+<pre>
+init設定
+ファイル init/logo.xtx
+</pre>
+<div class = "notice">
+<pre>
+modename logo
+
+logoNumber 2
+</pre>
+</div>
+
+<br />
+<div class = "warning">
+<pre>
+個別にファイル名を設定する機能もありますが、はじめからlogo1,logo2...
+という名前にしてしまうのが簡単です
+</pre>
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+表示のさせ方のカスタマイズ
+</div>
+
+<pre>
+1枚ののロゴは、短く、2枚目のロゴは長めに表示
+1枚目は、5フレームでフェードイン、10フレーム維持、3フレームでフェードアウト
+2枚目は、30フレームでフェードイン、200フレーム維持、50フレームでフェードアウト
+という設定にしてみます
+</pre>
+
+<div class = "notice">
+<pre>
+useCustomTimeFlag 1
+
+fadeInTime1 5
+keepTime1 10
+fadeOutTime1 3
+
+fadeInTime2 30
+keepTime2 200
+fadeOutTime2 50
+</pre>
+</div>
+
+<hr />
+
+
+<div class = "noticetitle">
+フェードイン、フェードアウトの色のかすたまいず
+</div>
+
+<pre>
+1枚目は黒からフェードインし、青にフェードアウト
+2枚目は青からフェードインし、白にフェードアウト
+</pre>
+
+
+<div class ="notice">
+<pre>
+useCustomColorFlag 1
+
+fadeInColorR1 0
+fadeInColorG1 0
+fadeInColorB1 0
+
+fadeOutolorR1 0
+fadeOutColorG1 0
+fadeOutColorB1 255
+
+fadeInColorR2 0
+fadeInColorG2 0
+fadeInColorB2 255
+
+fadeOutolorR2 255
+fadeOutColorG2 255
+fadeOutColorB2 255
+
+</pre>
+</div>
+
+<hr />
+
+
+<div class = "noticetitle">
+マウスクリックによるロゴ表示スキップのカスタマイズ
+</div>
+
+<pre>
+サークルロゴのみスキップ不可にしてみる
+</pre>
+
+<div class ="notice">
+<pre>
+useCustomSkipFlag 1
+
+skipOk2 0
+</pre>
+</div>
+
+<br />
+
+<div class = "warning">
+<pre>
+ロゴをスキップ不可にするのは、あまり好まれないようです
+契約上の理由等で、どうしようもない場合以外は設定しないことをお勧めします
+</pre>
+</div>
+
+<hr />
+<br />
+
+<div>
+その他の設定は <a href="../design_init/logo.htm">INIT仕様 - ロゴ</a> を参照してください
+</div>
+
+</body>
+</html>
+

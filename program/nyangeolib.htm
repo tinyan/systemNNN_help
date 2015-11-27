@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#A000C0"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+nyanGeoLib<BR>
+<BR>
+簡単なジオメトリ処理用のライブラリです<BR>
+この機能は CAllGeoクラスのstatic methodとして利用できます<BR>
+<BR>
+<TABLE BORDER=1>
+
+<TR>
+	<TD>2D3D</TD><TD>headerの場所</TD><TD>lib</TD><TD>解説等</TD>
+</TR>
+
+<TR>
+	<TD>2D</TD>
+	<TD>nyanGeoLib</TD>
+	<TD>nyanlib/lib/nyanGeoLib.lib</TD>
+	<TD ROWSPAN=2>通常、ヘッダーのincludeは必要ありません</TD>
+</TR>
+
+<TR>
+	<TD>3D</TD>
+	<TD>nyanGeo3DLib</TD>
+	<TD>nyan3Dlib/lib/nyanGeo3DLib.lib</TD>
+	
+</TR>
+
+</TABLE>
+
+<BR>
+
+<TABLE BORDER=1>
+	
+	<TR>
+		<TD>名前</TD><TD>パラメータ</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>機能</TD>
+	</TR>
+
+
+	<TR>
+		<TD>void BoxFill</TD><TD>(int x,int y,int sizeX,int sizeY,int r,int g,int b);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		塗りつぶし長方形を描画します。<BR>
+		座標(x,y)からサイズ(sizeX,sizeY)で、カラー(r,g,b)<BR>
+		サイズは正の数でである必要があります
+		</TD>
+	</TR>
+
+
+
+	<TR>
+		<TD>void Daikei</TD><TD>(POINT leftUpperPoint, int sizeUpperX, POINT leftBottomPoint, int sizeBottomX, int r, int g, int b)</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		台形を描画します<BR>
+		上底はleftUpperPointから横サイズsizeUpperX<BR>
+		下底はleftBottomPointから横サイズsizeBottomX<BR>
+		カラー(r,g,b)<BR>
+		横サイズは正の数である必要があります
+		</TD>
+	</TR>
+
+	<TR>
+		<TD>TransBoxFill</TD><TD>(int x,int y,int sizeX,int sizeY,int r,int g,int b,int ps);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		半透明塗りつぶし長方形を描画します<BR>
+		座標(x,y)からサイズ(sizeX,sizeY)まで<BR>
+		カラー(r,g,b)<BR>
+		半透明度ps(%)<BR>
+		横サイズは正の数である必要があります<BR>
+		半透明度の範囲はは、0～100の値で、0で透明です
+		</TD>
+	</TR>
+
+	<TR>
+		<TD>void AddCircleFill</TD><TD>int x, int y, int rx, int ry, int dr, int dg, int db);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		加(減)算塗りつぶし(楕)円を描画します<BR>
+		中心(x,y)からX半径rx,Y半径ry<BR>
+		色加減(dr,dg,db)<BR>
+		半径は正の値である必要があります<BR>
+		色加減は-255～255の範囲です
+		</TD>
+	</TR>
+
+	<TR>
+		<TD>void AddTorusFill</TD><TD>(int x, int y, int rx, int ry, int x2,int y2,int rx2, int ry2,int dr, int dg, int db);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		加(減)算塗りつぶし(楕)トーラスを描画します<BR>
+		内側中心(x,y)からX半径rx,Y半径ry<BR>
+		外側中心(x2,y2)からX半径rx2,Y半径ry2<BR>
+		色加減(dr,dg,db)<BR>
+		半径は正の値である必要があります<BR>
+		色加減は-255～255の範囲です<BR>
+		内側楕円が外側楕円を超えないようにする必要があります
+		</TD>
+	</TR>
+
+	<TR>
+		<TD>void Line</TD><TD>(int startX,int startY,int endX,int endY,int r,int g,int b);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		ラインを描画します<BR>
+		(startX,startY)から(endX,endY)まで<BR>
+		カラー(r,g,b)<BR>
+		終点も描画します
+		</TD>
+	</TR>
+
+	<TR>
+		<TD>void AddBoxFill</TD><TD>(int x,int y,int sizeX,int sizeY,int dr,int dg,int db);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>
+		加算塗りつぶし長方形を描画します<BR>
+		座標(x,y)からサイズ(sizeX,sizeY)まで<BR>
+		色加減(dr,dg,db)<BR>
+		横サイズは正の数である必要があります<BR>
+		色加減は-255～255の範囲です
+		</TD>
+	</TR>
+
+	<TR>
+		<TD ROWSPAN=2>void TransGradationBoxV</TD><TD>(POINT leftTop,SIZE size,int r1, int g1, int b1, int r4, int g4, int b4);</TD>
+	</TR>
+	<TR>
+				<TD>(POINT leftTop,POINT rightBottom,int r1, int g1, int b1, int r4, int g4, int b4);</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2>略</TD>
+	</TR>
+
+</TABLE>
+
+
+</BODY>
+</HTML>
+

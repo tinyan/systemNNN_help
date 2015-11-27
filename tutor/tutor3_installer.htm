@@ -1,0 +1,821 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>MSインストーラー設定例</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">MSインストーラー設定例</p>
+
+
+
+
+
+<pre>
+MSインストーラー(配置)による
+インストーラー作成手順例を説明します
+
+</pre>
+
+
+<div class = "warning">
+<pre>
+注意事項
+
+現在1GBを超えるゲームはビルドできないようです。MSの対応予定が現在発表されていませんので
+それの対応方法を示しておきます
+
+方法1
+Windowsの起動オプションに/3GBをつける。(この方法で、おそらく1.5GB程度までビルドできます)
+
+方法2
+64bitOSを使う(この方法で、おそらく2GB程度までビルドできます)
+
+方法3
+dwq,cdvawなどの容量の大きなファイルをビルドから除外し、外部プログラムでコピーする
+方法3については、必要な箇所で説明を追加しておきます
+</pre>
+</div>
+
+<br />
+
+
+<div class ="caution">
+<pre>
+前準備
+
+Visual Studio 2008(2005) のスタンダードエディション以上を購入します
+(2005の場合はプロフェッショナル以上が必要かもしれません。現在販売されているのは2008のほうです)
+
+以後の解説は、配置プロジェクトが使用可能な状態になっていることが前提となります
+また以下の解説は2005でのものです。2008では異なる可能性があります
+
+インストールする一式フォルダーに
+nnnInstallAddフォルダーをコピーします
+
+dwqcdvawCopy.exe    1GB対応用
+msiCall.exe         アンインストール設定用
+nnnDeleteSave.exe   セーブデータ削除用
+nnnDXCallMSI.exe    DirectXインストール用
+
+
+※ dwqCdvawCopy.exeは、1GB対応を行わない場合には必要ありません
+</pre>
+</div>
+
+
+<br />
+
+
+<div class ="warning">
+<pre>
+1GB超ゲーム対応補足
+
+ダミーフォルダーの作成
+
+もとデータ一式に
+makedummydwqcdvaw.exe
+をコピーします
+
+makedummydwqcdvaw.exe
+を実行させます
+
+「ダミーフォルダー」という名前のフォルダーと、なかにダミーのdwq,cdvawフォルダーおよび
+
+圧縮データ dwq.nyp cdvaw.nypができます
+
+</pre>
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+配置プロジェクトの新規作成
+</div>
+
+<pre>
+VisualStudioを起動し、メニューから[ファイル]-[新規作成]-[プロジェクト]を選択します
+</pre>
+
+<img src="installgraphics/tutor3_installer1.jpg" alt="" />
+<br />
+
+<pre>
+次のようなダイアログが表示されますので
+</pre>
+
+<img src="installgraphics/tutor3_installer2.jpg" alt="" />
+<br />
+
+<pre>
+1.[その他のプロジェクトの種類]-[セットアップと配置]をクリックします
+2.右側の[セットアッププジェクト]をクリックします
+3.必要に応じて、プロジェクト名と保存場所を設定します
+4.[OK]ボタンを押します
+
+これで、からのプロジェクトができます。あとは、これにファイルやレジストリ等を設定していきます
+
+</pre>
+
+<div class = "noticetitle">
+全体のプロパティの設定
+</div>
+
+<img src="installgraphics/tutor3_installer3.jpg" alt="" />
+<br />
+<pre>
+ソリューションエクスプロラーSetup3(この名前は先ほど付けた名前になっています)上で
+右クリックメニューを開き、[プロパティ]を選択します
+次のようなダイアログが開きます
+
+デフォルトの設定では、パッケージファイルは[セットアップファイルに圧縮]になっていますが
+CDやDVDが複数枚になる場合は、[キャビネットファイルに圧縮]を選んで、サイズのカスタマイズを行ってください
+</pre>
+
+<img src="installgraphics/tutor3_installer4.jpg" alt="" />
+<br />
+<pre>
+右上の、[構成マネージャー]というボタンを押します
+さらに次のようなダイアログが開きます
+</pre>
+
+<img src="installgraphics/tutor3_installer5.jpg" alt="" />
+<br />
+
+<pre>
+アクティブソリューション構成から[Release]を選び、閉じるボタンを押します
+前のダイアログにもどります
+</pre>
+
+<img src="installgraphics/tutor3_installer6.jpg" alt="" />
+<br />
+
+<pre>
+構成から、Releaseを選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer7.jpg" alt="" />
+<br />
+
+<pre>
+[必須コンポーネント]ボタンを押します
+次のようなダイアログが開きます
+</pre>
+
+<img src="installgraphics/tutor3_installer8.jpg" alt="" />
+<br />
+<pre>
+nnnではNetFramework2.0は使用していないのでチェックをはずします
+</pre>
+
+
+<br />
+<br />
+
+
+
+<img src="installgraphics/tutor3_installer8_2.jpg" alt="" />
+<br />
+<pre>
+
+かわりにWindows インストーラ 2.0をチェックします
+Windows インストーラ 3.1をチェックしてもいいですがこちらは若干サイズが大きめです
+
+98seにはWindows インストーラ 2.0がはいっていないので、
+対応OSを98se以降にする場合には必須コンポーネントでWindows インストーラ 2.0をチェックする必要があります
+
+NetFramework2.0にはWindows インストーラ 2.0がはいっているので
+NetFramework2.0をインストールする場合にはWindows インストーラ 2.0をチェックする必要はありません
+ただしNetFramework2.0はかなりサイズが大きいので、
+後述の1.ネットからダウンロードにした場合、かなり時間がかかります
+</pre>
+
+<div class = "caution">
+<pre>
+VS2008では、標準ではWindows インストーラ 2.0ははいっていないようですので
+Windows インストーラ 3.1をチェックしてください
+</pre>
+</div>
+<br />
+
+
+<img src="installgraphics/tutor3_installer8_1.jpg" alt="" />
+<br />
+<br />
+<br />
+<br />
+
+<pre>
+必須コンポーネントのインストール場所を設定します
+</pre>
+
+
+<img src="installgraphics/tutor3_installer8_3.jpg" alt="" />
+<br />
+
+<pre>
+1.必須コンポーネントをコンポーネントの開発元のwebサイトからダウンロードする
+2.アプリケーションと同じ場所から必須コンポーネントをダウンロードする
+
+1.サイズ小さい。ネット環境無いとコンポーネントダウンロードできない
+2.サイズ大きめ。ネット環境不要
+
+
+個人的お勧めは
+Windows インストーラ 2.0(VS2008の場合は3.1)
+2.アプリケーションと同じ場所から必須コンポーネントをダウンロードする
+
+です
+
+</pre>
+
+
+<div class = "noticetitle">
+ファイルの設定
+</div>
+
+<img src="installgraphics/tutor3_installer10.jpg" alt="" />
+<br />
+
+<pre>
+まずは、setup3上で右クリックメニューを開き、サブメニューの[表示]のなかから
+[ファイルシステム]を選びます
+これで、右側にファイル関連の情報が表示されるようになります
+</pre>
+
+<img src="installgraphics/tutor3_installer11.jpg" alt="" />
+<br />
+
+<pre>
+右側のファイルシステムウィンドウの
+[対象コンピューター上のファイルシステム]-[アプリケーションフォルダ]上で右クリックメニューを開き
+[追加] - [フォルダ]を選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer12.jpg" alt="" />
+<br />
+
+<pre>
+新しいフォルダが作られますので、その上で右クリックメニューを開き
+[名前の変更]を選んで名前をつけます。ここでは「nekoCat」という名前をつけたとして進めていきます
+
+なぜわざわざフォルダーを作るかというと、ユーザーがインストール先をD:\などにしてしまった場合に
+ルートに多数のファイルが散乱してしまうのを防止するためです
+
+次に、インストールしたいファイルのはいっているフォルダーを
+マイコンピューターなどを使って開きます
+</pre>
+
+<img src="installgraphics/tutor3_installer13.jpg" alt="" />
+<br />
+
+<pre>
+そのなかで、インストールしたいファイル及びフォルダーを全て選択し、
+右クリックメニューのコピーを選びます
+</pre>
+
+
+<img src="installgraphics/tutor3_installer14.jpg" alt="" />
+<br />
+
+<pre>
+これを先ほど作ったフォルダー「nekoCat」上で右クリックメニューを開き、[貼り付け]でコピーします。
+ドラッグでコピーしても問題ありません
+</pre>
+
+<br />
+<img src="installgraphics/tutor3_installer15.jpg" alt="" />
+<br />
+
+<div class = "warning">
+<pre>
+1GB超ゲームの対応策
+
+
+ダミーフォルダーとmakeDummyDwqCdvaw.exeは、コピーしないように注意してください
+
+現時点でビルド不可能なサイズのゲームの場合には、
+本来のdwq,cdvawフォルダーはコピーしないでください
+かわりに、ダミーフォルダーの中のdwq,cdvawフォルダーをコピーします。
+
+一部ファイルがMSインストーラー外でコピーしますので、MSインストーラーで表示される「必要な空き容量」は正しくなくなります
+インストールの際のダイアログのメッセージに必要なサイズを表記するようにしてください
+</pre>
+</div>
+
+
+<br />
+
+<pre>
+なかみのはいってないフォルダーは、デフォルトの設定では作成されませんので
+なかみのないフォルダー上で右クリックして、[プロパティ]を選び、右側に表示されるプロパティの中から
+AlwaysCreateを選び、[True]にしておきます。
+
+</pre>
+
+
+
+<img src="installgraphics/tutor3_installer16.jpg" alt="" />
+<br />
+<br />
+<br />
+
+<br />
+
+
+<br />
+
+<div class = "noticetitle">
+ショートカットの設定
+</div>
+
+<img src="installgraphics/tutor3_installer17_01.jpg" alt="" />
+<br />
+
+<pre>
+[ユーザーのプログラムメニュー]上で右クリックメニューを開き
+[追加] - [フォルダ]を選びます
+新しいフォルダが作成されますので、名前を付けておきます。
+ここには、サークル名、会社名などをいれるのがよいようです
+</pre>
+
+<img src="installgraphics/tutor3_installer17_02.jpg" alt="" />
+<br />
+
+<pre>
+さらにその下にもフォルダーを作成し、同様に名前を付けておきます。
+ここには、ゲーム名をいれるのがよいでしょう
+</pre>
+
+<img src="installgraphics/tutor3_installer17_03.jpg" alt="" />
+<br />
+
+<pre>
+ゲーム名のフォルダーをクリックして選択しておいて、右側のウィンドウで右クリックメニューを開き
+[新しいショートカットの作成]を選びます
+次のようなダイアログが開きます
+</pre>
+
+
+<img src="installgraphics/tutor3_installer18.jpg" alt="" />
+<br />
+
+<pre>
+[アプリケーションフォルダー]を選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer19.jpg" alt="" />
+<br />
+
+<pre>
+さきほど作った「nekoCat」フォルダーがありますので、これを選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer20.jpg" alt="" />
+<br />
+
+<pre>
+ショートカットを設定したいプログラムを選びます。ここではnnnExe2005.exeを選ぶことにしましょう
+選んだら[OK]ボタンを押してください
+</pre>
+
+<img src="installgraphics/tutor3_installer21.jpg" alt="" />
+<br />
+
+<pre>
+右側にショートカットのプロパティが表示されますので
+名前や、アイコンなどを設定しておきます
+
+
+</pre>
+
+<div class = "noticetitle">
+アンインストール用ショートカットの設定
+</div>
+
+
+<pre>
+同様にショートカットを作成します
+対象は、アプリケーションフォルダー nekoCat nnnInstallAdd msiCall.exe
+です
+</pre>
+
+
+
+
+<img src="installgraphics/tutor3_installer22.jpg" alt="" />
+<br />
+<pre>
+NameにUninstallと設定します。ここは、単なる名前ですので、カタカナにしたり自由に変えてかまいません
+
+Argumentに
+
+/Uninstall /[ProductCode]
+
+と設定します
+間には半角スペースを1つだけ入れてください
+
+下からコピペが楽です
+</pre>
+<input type="text" size = "60" value="/Uninstall /[ProductCode]" />
+<br />
+<br />
+
+<div class = "noticetitle">
+レジストリの設定
+</div>
+
+<pre>
+まず、左側のウィンドウのsetup3の上で右クリックメニューを開き
+[表示] - [レジストリ]を選びます
+これで、右側のウインドウには、レジストリ関連の情報が表示されるようになります
+
+プロパティを設定します
+</pre>
+
+<img src="installgraphics/tutor3_installer30.jpg" alt="" />
+<br />
+
+<pre>
+まずはインストールするゲームのレジストリの設定先を調べます
+これは、game.xtxで通常(特に設定なし)の場合は、HKEY_LOCAL_MACHINE
+設定がある場合は、HKEY_CURRENT_USER
+になります
+
+今回はHEKY_LOCAL_MACHINEに設定する場合について解説します
+HKEY_CURRENT_USERに設定する場合も、場所が違うだけで、方法はまったく同じです
+</pre>
+
+<img src="installgraphics/tutor3_installer31.jpg" alt="" />
+<br />
+
+<pre>
+HKEY_LOCAL_MACHINEのしたにSoftwareというフォルダーがあり、その下に[Manufacturer]というフォルダーがあります
+この上で右クリックメニューを開き、[名前の変更]を選び、名前を設定します
+</pre>
+
+<div class ="caution">
+ここで設定する名前は game.xtxで設定されている COMPANYNAME の右側の文字列です。
+</div>
+
+<br />
+<img src="installgraphics/tutor3_installer32.jpg" alt="" />
+<br />
+
+<pre>
+このような状態になります。「BAKUHATSUCLUB」の部分は、サークルや会社によってかわってきます
+</pre>
+
+<img src="installgraphics/tutor3_installer33.jpg" alt="" />
+<br />
+
+<pre>
+その上で右クリックメニューを開き[新規作成] - [キー]を選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer34.jpg" alt="" />
+<br />
+
+<pre>
+新しいキーが作成されますので、同様に名前を変更します
+</pre>
+
+<div class ="caution">
+ここで設定する名前は game.xtxで設定されている GAMENAME の右側の文字列です。
+</div>
+
+<br />
+<img src="installgraphics/tutor3_installer35.jpg" alt="" />
+<br />
+
+<pre>
+このような状態になります。「NEKOCATGAME」の部分は、ゲームごとにかわってきます
+</pre>
+
+<img src="installgraphics/tutor3_installer36.jpg" alt="" />
+<br />
+
+<pre>
+さらにこの上で右クリックメニューを開き、こんどは
+[新規作成] - [文字列の値]を選びます
+
+</pre>
+
+<img src="installgraphics/tutor3_installer37.jpg" alt="" />
+<br />
+
+<pre>
+新しい値が作成されますので、名前を変更します
+
+installdirectory
+
+という名前に変更してください。
+</pre>
+
+<img src="installgraphics/tutor3_installer38.jpg" alt="" />
+<br />
+
+<pre>
+名前の変更ができたら、右側のプロパティウィンドウで値を設定します
+</pre>
+<img src="installgraphics/tutor3_installer39.jpg" alt="" />
+<br />
+
+<pre>
+Valueを選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer40.jpg" alt="" />
+<br />
+
+<pre>
+右側には
+
+[TARGETDIR]nekoCat
+
+と入れます
+「nekoCat」は前に作ったフォルダー名です
+
+下からコピペが楽です
+</pre>
+<input type="text" size = "60" value="[TARGETDIR]" />
+<br />
+<br />
+
+<div class = "noticetitle">
+カスタム動作の設定
+</div>
+
+<pre>
+まずは、setup3の上で右クリックし、[表示] - [カスタム動作]を選びます。
+これで右側のウィンドウには、カスタム動作の情報が表示されるようになります
+
+カスタム動作として、
+
+インストール終了後にDirectXの追加インストール
+アンインストール時にセーブデータの削除(選択制)をつけることにします
+</pre>
+
+<img src="installgraphics/tutor3_installer50.jpg" alt="" />
+<br />
+
+<pre>
+右側の[カスタム動作] - [確定]の上で右クリックメニューを開き、[カスタム動作の追加]を選びます
+</pre>
+
+<img src="installgraphics/tutor3_installer51.jpg" alt="" />
+<br />
+<pre>
+[対象コンピューターのファイルシステム] - [アプリケーションフォルダー] - [nekoCat] - [nnnInstallAdd]
+を選びます。そのなかから、
+nnnDxCallMSI.exeを選択します
+</pre>
+
+<img src="installgraphics/tutor3_installer52.jpg" alt="" />
+<br />
+
+<pre>
+プロパティのArguments項目に /Installが設定されいますので、これに
+/[SourceDir]を追加して
+
+/Install /[SourceDir]
+
+に変更します
+
+下のテキストのコピペが楽です
+</pre>
+
+<input type="text" size = "60" value="/Install /[SourceDir]" />
+
+<br />
+<br />
+
+<img src="installgraphics/tutor3_installer52_2.jpg" alt="" />
+<br />
+
+<pre>
+同様のやり方で、アンインストールに
+nnnDeleteSave.exeを設定します
+</pre>
+<img src="installgraphics/tutor3_installer53.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+デフォルトで プロパティのArguments項目に /UNINSTALL
+がついていますが、これを変更しないようにしてください
+</pre>
+
+<br />
+
+<div class = "warning">
+<pre>
+1GB超ゲーム対抗処理
+
+インストールにカスタム動作として、dwqcdvawcopy.exeを追加します
+
+プロパティのArguments項目に /Installが設定されていますので、これに
+/[SourceDir] /[TARGETDIR]を追加して
+
+/Install /[SourceDir] /[TARGETDIR]nekoCat
+
+に変更します
+「nekoCat」の部分は、前につくったフォルダ名です。
+
+下のテキストのコピペが楽です
+</pre>
+</div>
+
+<input type="text" size = "60" value="/Install /[SourceDir] /[TARGETDIR]" />
+<br />
+<br />
+
+<div class = "noticetitle">
+のこりの全体設定
+</div>
+
+
+<pre>
+setup3をクリックし、右側にプロパティを表示しておきます
+</pre>
+
+<img src="installgraphics/tutor3_installer60.jpg" alt="" />
+<br />
+
+<pre>
+右側のプロパティウィンドウで設定を行います
+</pre>
+
+
+<img src="installgraphics/tutor3_installer61.jpg" alt="" />
+<br />
+
+<pre>
+1.InstallAllUsers設定
+false インストールしたユーザーだけが遊べるインストール設定
+true そのマシン使う全員が遊べるインストール設定
+
+2.Manufacturer設定
+サークルや会社ごとのデフォルトのフォルダー名として使用されます
+
+3.ProductName設定
+デフォルトのゲームフォルダー名として使用されます
+</pre>
+
+
+<div class = "caution">
+<pre>
+インストール時の [インストール フォルダ] ダイアログの InstallAllUsersVisible プロパティに true  が設定されている場合
+ユーザーがインストール時に選べるようになります。ユーザーに選ばせたくない場合は、ここをfalseにしてください
+</pre>
+</div>
+<br />
+
+<table class = "none">
+<tr class="none">
+<td class = "none"><img src="installgraphics/tutor3_installer61_2.jpg" alt="" /></td>
+<td class = "none">...</td>
+<td class = "none"><img src="installgraphics/tutor3_installer61_3.jpg" alt="" /></td>
+</tr>
+</table>
+
+<br />
+
+
+
+<div class = "noticetitle">
+ビルドなど
+</div>
+
+<pre>
+メインメニューの
+[ビルド] - [ソリューションのリビルド]
+または
+[ビルド] - [ソリューションのビルド]
+で、プロジェクトをビルドします
+</pre>
+
+<img src="installgraphics/tutor3_installer70.jpg" alt="" />
+<br />
+
+<pre>
+エラーがなければ、以下のようなメッセージが出力ウィンドウに表示されます
+1 正常終了、0 失敗、0 スキップ
+であることをたしかめたら
+プロジェクトを保存したフォルダーの
+Releaseフォルダの中にインストールようのデータ一式がはいっています
+
+</pre>
+
+<img src="installgraphics/tutor3_installer71.jpg" alt="" />
+<br />
+
+<pre>
+
+この例では
+
+InstMSIというフォルダーができていますがこのなかには、MSインストーラー2.0関連のファイルがはいっています
+</pre>
+<img src="installgraphics/tutor3_installer72.jpg" alt="" />
+<br />
+
+
+<pre>
+このReleaseフォルダの中身をインストーラー一式のフォルダーにコピーします
+
+インストーラー一式のフォルダーとは、
+DirectX一式や、アイコン、autorun.infなど必要なファイルをあらかじめいれておきます
+
+その後インストーラー一式のフォルダーをCDやDVDに焼くことでマスターが完成します
+</pre>
+
+
+
+<div class = "warning">
+<pre>
+1GB超ゲームの場合の追加事項
+
+インストーラー一式のフォルダーに
+
+本来のdwq,cdvawフォルダーをコピーするか
+
+ダミーフォルダーにある
+dwq.nyp
+cdvaw.nyp
+をコピーしてください
+こちらは簡易圧縮をかけられるので多少サイズが小さくなります
+
+</pre>
+</div>
+
+<div class = "noticetitle">
+その他
+</div>
+
+<pre>
+バナー設定
+
+[表示] - [ユーザーインターフェース]
+を選び、設定したいダイアログのプロパティを表示させます
+
+</pre>
+
+<img src="installgraphics/tutor3_installer81.jpg" alt="" />
+<br />
+
+<pre>
+BannerBitmapの右側をクリックして
+(参照)
+を選びます
+
+[対象コンピューター] - [アプリケーションフォルダー] - [nekocat]
+を選びます
+
+右側の [ファイルの追加] を選びます
+設定したい画像(bmp,jpg)のはいっているフォルダをえらびます
+
+</pre>
+
+<div class = "caution">
+<pre>
+このときVS2005だと正しくフィルターが働いていませんので一覧に画像がでません(おそらく設定ミス)
+ファイル名のところに改めて
+*.bmp
+または
+*.jpg
+と、いれます
+</pre>
+</div>
+
+
+<pre>
+表示された一覧から画像を選択します
+</pre>
+
+<div class = "notice">
+<pre>
+使用する画像は500x70ピクセルが最適です。(それ以外のサイズは拡大縮小されてしまいます)
+また、画像の左420ピクセルには、テキストがかさなりますので、それを考慮したデザインにしましょう
+</pre>
+</div>
+
+
+
+
+<br />
+
+
+
+</body>
+
+
+</html>
+

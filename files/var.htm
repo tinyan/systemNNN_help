@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>files - var</FONT><BR>
+</CENTER>
+<BR>
+FileName = nnndir\var.txt<BR>
+<BR>
+コンパイル後は<BR>
+spt\var.fxf<BR>
+という名前で暗号化されて保存されゲームから使用される<BR>
+<BR>
+1行に5こずつ変数名を記述する。区切り記号は[,]をつかう<BR>
+ぜんぶで200行1000個<BR>
+<BR>
+最初の100個はシステム予約で名前の変更はしてはいけない<BR>
+次の100個はプログラマー用予約エリア(変数が足りない場合は相談の上使うこと)<BR>
+次の100個はシステムファイル(sav\sysfile.sav)に保存されるタイプの変数<BR>
+さいごの700個はスクリプト用変数<BR>
+<BR>
+<BR>
+なるべく直接編集することはさけて、nnnEditから変更するようにする<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+システム変数解説<BR>
+<BR>
+<BR>
+date 4桁の月日を入れる adjustdate関数でyearを参考にしながら月日が変換される(date==1033 -> data==1103)<BR>
+rnd 0-9999の乱数が入る(読み込み専用)<BR>
+time 現在特定の用途なし<BR>
+week date yearを参考に曜日が入る 0:日曜 1:月曜・・・
+holiday date year を参考に月曜～金曜:0 土曜日曜:1がはいる。祝日はゲームごとに処理する必要あり<BR>
+year 現在特定の用途なし<BR>
+month 現在特定の用途なし<BR>
+day 現在特定の用途なし<BR>
+hour 現在特定の用途なし<BR>
+minute 現在特定の用途なし<BR>
+second 現在特定の用途なし<BR>
+<BR>
+systemyear<BR>
+systemmonth<BR>
+systemday<BR>
+systemhour<BR>
+systemminute<BR>
+systemsecond<BR>
+systemweek<BR>
+systemmillisecond これらはリアル時刻が入る<BR>
+<BR>
+mode 現在のゲーム実行モードがはいる。<BR>
+<BR>
+mousex<BR>
+mousey<BR>
+trig1<BR>
+trig2<BR>
+trig3<BR>
+click1<BR>
+click2<BR>
+click3<BR>
+wheel 現在のマウスの状態がはいる。<BR>
+<BR>
+listenbgmmode BGM鑑賞画面での曲の再生状態がはいる<BR>
+listenbgmnumber 現在再生中の曲の番号がはいる<BR>
+<BR>
+expmode1<BR>
+expmode2<BR>
+expmode3<BR>
+expmode4<BR>
+expmode5 拡張ラジオボタンの状態がはいる<BR>
+<BR>
+expcheck1<BR>
+expcheck2<BR>
+expcheck3<BR>
+expcheck4<BR>
+expcheck5 拡張チェックボタンの状態がはいる<BR>
+<BR>
+<BR>
+
+</BODY>
+</HTML>
+

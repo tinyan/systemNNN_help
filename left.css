@@ -1,0 +1,75 @@
+
+body.basic {background-color : #80C0A0; color : #202020}
+p.title {color : Black; font-size : 125%; text-align : center}
+pre {color : Black; font-size : 100%}
+a:link{color : #006060}
+a:vlink{color : #7499CC}
+a:alink{color : #000000}
+img {border-style :none}
+
+table {border-style : ridge; border-width : medium}
+tr {border-style :ridge; border-width : 2}
+td {border-style :ridge; border-width : 2}
+
+table.basic {border-style : ridge; border-width : medium}
+tr.basic {border-style :ridge; border-width : 2}
+td.basic {border-style :ridge; border-width : 2}
+
+table.none {border-style : none; border-width : 0}
+tr.none {border-style : none; border-width : 0}
+td.none {border-style : none; border-width : 0}
+
+div.toptitle
+{
+	background-color : #F3C4C4;	
+	margin: 2px;
+	width: 130px;
+	text-align:center;
+}
+
+div.title
+{
+	background-color : #D0DCCF;	
+	margin: 2px;
+	width: 130px;
+	text-align:center;
+}
+
+div.subtitle
+{
+	background-color : #90CCFF;	
+	margin: 2px;
+	width: 130px;
+	text-align:center;
+}
+
+div.block
+{
+	background-color : #DDDDDD;	
+	margin: 2px;
+	width: 130px;
+}
+
+div.submenu
+{
+	background-color : #CCCCCC;	
+	margin: 2px;
+	width: 130px;
+}
+
+div.selected
+{
+	background-color :#80F0A0;
+	margin: 2px;
+	width: 130px;
+	text-align:right;
+}
+
+div.sep
+{
+	background-color : #DDDDDD;	
+	margin: 2px;
+	width: 130px;
+	height: 2px;
+	font-size: 1px;
+}

@@ -1,0 +1,567 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - listenbgm</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\listenBGM.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+
+<TR>
+<TD>上下ボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照あとでリンクをつける</TD>
+</TR>
+
+<TR>
+<TD>戻るボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時フェード設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>チェックボタン</TD>
+<TD>以下のボタンをチェックボタンとして作成する[rew][play][ff][pause][stop]</TD>
+</TR>
+
+</TABLE>
+
+
+<BR>
+<BR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>listenBGM</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>playRestartScriptFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:曲が再生されるときに背景スクリプトを最初にもどす</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>stopRestartScriptFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:曲が停止されるときに背景スクリプトを最初にもどす</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>pauseRestartScriptFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:曲がポーズされるときに背景スクリプトを最初にもどす</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>filenameBG</TD>
+
+<TD ALIGN=LEFT>bgm_bg</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>volumeMin</TD>
+
+<TD ALIGN=RIGHT>80</TD>
+<TD ROWSPAN=2>画面上でのボリュームの最小値、最大値と実際のボリュームの対応</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeMax</TD>
+
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>filenameVolume</TD>
+
+<TD ALIGN=LEFT>ta_opt_bar</TD>
+<TD>ボリュームグラフィックファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>volumePrintX</TD>
+
+<TD ALIGN=RIGHT>53</TD>
+<TD ROWSPAN=2>ボリューム表示座標</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumePrintY</TD>
+
+<TD ALIGN=RIGHT>464</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSizeX</TD>
+
+<TD ALIGN=RIGHT>338</TD>
+<TD ROWSPAN=2>ボリュームのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSizeY</TD>
+
+<TD ALIGN=RIGHT>17</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>volumeSliderTransFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:ボリュームグラフィックを抜き処理を行わない</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>musicFadeInTime</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>曲のフェードイン時間を0.1秒単位で設定する(ex 1秒にしたいときは10を設定)</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>musicFadeOutTime</TD>
+
+<TD ALIGN=RIGHT>20</TD>
+<TD>曲のフェードアウト時間を設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>bgmLoopFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:曲をループさせる</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>checkListen</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:聞いた曲のみ選択できるようにする</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cannotMusicName</TD>
+
+<TD>？？？</TD>
+<TD>聞いてない曲の表示用共通名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>useCannotByList</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:聞いてない曲の表示用名を、nya\listenbgmlist.xtxから持ってくる</TD>
+</TR>
+
+ 
+<TR>
+<TD COLSPAN= 2>useCannotByList</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:聞いてない曲の表示用名を、nya\listenbgmlist.xtxから持ってくる</TD>
+</TR>
+ 
+
+
+
+<TR>
+<TD COLSPAN= 2>musicPrintNumber</TD>
+
+<TD ALIGN=RIGHT>8</TD>
+<TD>表示する曲数</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorPrintX</TD>
+
+<TD ALIGN=RIGHT>76</TD>
+<TD ROWSPAN=2>曲名表示位置(カーソル表示位置)</TD>
+</TR>
+ 
+<TR>
+<TD COLSPAN= 2>cursorPrintY</TD>
+
+<TD ALIGN=RIGHT>199</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorSizeX</TD>
+
+<TD ALIGN=RIGHT>294</TD>
+<TD ROWSPAN=2>カーソルサイズ</TD>
+</TR>
+ 
+<TR>
+<TD COLSPAN= 2>cursorPrintY</TD>
+
+<TD ALIGN=RIGHT>27</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>cursorNextX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>次の曲名表示位置までの距離</TD>
+</TR>
+ 
+<TR>
+<TD COLSPAN= 2>cursorNextY</TD>
+
+<TD ALIGN=RIGHT>26</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>filenameCursor</TD>
+
+<TD>ta_bgm_selc</TD>
+<TD>カーソルグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>cursorAnimeFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>カーソルをアニメさせる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorAnimeType</TD>
+<TD ALIGN=RIGHT>5</TD>
+<TD>カーソルのアニメ種類。ボタンと同じ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorAnimePattern</TD>
+<TD ALIGN=RIGHT>8</TD>
+<TD>カーソルのアニメパターンの数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorAnimeSpeed</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>カーソルのアニメ速度をフレーム数で設定</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>musicNamePrintX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>曲名表示位置(カーソルからの相対座標)</TD>
+</TR>
+ 
+<TR>
+<TD COLSPAN= 2>musicNamePrintY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>messageColorR</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+<TD ROWSPAN=3>曲名の通常表示色</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>messageColorG</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>messageColorB</TD>
+
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>cannotColorR</TD>
+
+<TD ALIGN=RIGHT>128</TD>
+<TD ROWSPAN=3>聞けない曲名の表示色</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>cannotColorG</TD>
+
+<TD ALIGN=RIGHT>128</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>cannotColorB</TD>
+
+<TD ALIGN=RIGHT>128</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>messageFontSize</TD>
+
+<TD ALIGN=RIGHT>22</TD>
+<TD>曲名のフォントサイズ</TD>
+</TR>
+
+
+
+
+
+
+
+<TR>
+<TD COLSPAN= 2>trackAndTimePrintFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>トラック番号、時間を表示する（現在仕様変更中につき0を設定しておくこと）</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>filenameNumber</TD>
+<TD>ta_bgm_num1</TD>
+<TD>数字フォントのファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>fontSizeX</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ROWSPAN=2>数字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fontSizeY</TD>
+<TD ALIGN=RIGHT>22</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fontNextX</TD>
+<TD ALIGN=RIGHT>fontSizeX</TD>
+<TD>数字フォントの文字間隔</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>trackPrintX</TD>
+<TD ALIGN=RIGHT>162</TD>
+<TD ROWSPAN=2>トラック数の表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>trackPrintY</TD>
+<TD ALIGN=RIGHT>101</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>minutePrintX</TD>
+<TD ALIGN=RIGHT>276</TD>
+<TD ROWSPAN=2>「分」表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>minutePrintY</TD>
+<TD ALIGN=RIGHT>101</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>secondPrintX</TD>
+<TD ALIGN=RIGHT>334</TD>
+<TD ROWSPAN=2>「秒」表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>secondPrintY</TD>
+<TD ALIGN=RIGHT>101</TD>
+
+</TR>
+
+
+
+
+
+</TABLE>
+
+
+<BR>
+
+memo
+<br />
+<pre>
+musicNameMax 12
+
+</pre>
+
+<pre>
+spectrumPrintFlag 0
+spectrumPrintType 2
+spectrumCalcuPoint 256(64,128,256,512,1024)
+spectrumPrintNumber 16
+spectrumStartHz 200
+spectrumEndHz 5000
+
+
+spectrumMaxWaitTime 15
+spectrumMaxGrav 1
+spectrumPrintX 0
+spectrumPrintY 600
+spectrumSizeX 4
+spectrumSizeY 60
+spectrumNextX spectrumSizeX+1
+spectrumMaxSizeY 2
+spectrumColorR 128
+spectrumColorG 255
+spectrumColorB 192
+spectrumPercent 100
+spectrumMaxColorR 255
+spectrumMaxColorG 0
+spectrumMaxColorB 0
+spectrumMaxPercent 100
+
+
+
+</pre>
+
+
+
+</BODY>
+</HTML>
+

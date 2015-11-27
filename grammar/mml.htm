@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>フィルムを選ぶ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">mml解説</p>
+
+
+
+<pre>
+
+BGMファイルの実体はoggファイル1つですが
+曲を、イントロ部分、ループ部分に分けて再生したい場合
+それをmmlファイルとして記述し、bgmファイルのかわりにmmlファイルを指定して再生することが可能です
+
+mmlファイルは、bgmファイルとループコントロールで記述されます
+
+ループの記述のしかたは
+[n:    ]
+で、[]のなかみがn回実行されます。nが0の場合には無限に実行されます
+
+たとえば、ある曲を、
+イントロ部分 bgm1
+ループ部分bgm2 bgm3 bgm4 bgm3 これを3回
+として再生したい場合には、以下のように記述します
+
+bgm1 [3: bgm2 bgm3 bgm4 bgm3]
+
+
+これをbgmnew.mmlという感じで拡張子mmlで保存し
+bgmlist.txtの設定でbgmnewとして指定します
+
+メモ帳などで作成して、名前をつけて保存で作成するのが簡単でしょう
+
+
+[]は4重まで入れ子にできますので
+次のような表現も可能です
+
+bgm1 [2: bgm2 [3:bgm3]]
+
+この場合は bgm1 bgm2 bgm3 bgm3 bgm3 bgm2 bgm3 bgm3 bgm3
+と演奏されます
+
+
+
+mmlファイルの中身にmmlファイルを指定することはできません
+
+</pre>
+
+</body>
+</html>
+

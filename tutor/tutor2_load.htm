@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ロード画面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">ロード画面</p>
+<br />
+
+<pre>
+
+ロード画面の製作例です
+セーブスロットの設定に関しては<a href="tutor2_datafile.htm">データファイル</a>を参照してください
+
+まずはタイトル画面と同様に、背景、BGMの設定を行いますここでは簡単に1枚絵3番のBGMでの設定例をあげておきます
+
+
+init設定
+ファイル init/load.xtx
+
+</pre>
+
+<div class="notice">
+<pre>
+modename load
+filenameBG load_bg
+bgmNumber 3
+</pre>
+</div>
+
+<hr />
+
+
+
+<div class = "noticetitle">
+セーブスロット数の決定
+</div>
+
+<pre>
+1ページあたりのセーブスロット数と、ページ数を指定し、これによって、
+ゲームで使えるセーブスロット数が決定されます
+ロードとセーブで同じ数になるように注意してください
+
+1ページあたり、横に3個、縦に2個、全部で20ページにしてみましょう
+セーブスロットの表示サイズは、<a href="tutor2_datafile.htm">データファイル</a>の方で設定されますので
+配置位置のみを設定します
+ここでは、表示開始位置が(50,40)で横方向に200dot、縦方向に150dotで配置する例をあげておきます
+</pre>
+
+
+<div class = "notice">
+<pre>
+page 20
+blockNumberX 3
+blockNumberY 2
+printX 50
+printY 40
+nextX 200
+nextY 150
+</pre>
+</div>
+
+<pre>
+
+スロットを円形など特殊な配置にしたい場合には、これに加えて、個別の座標を指定します。
+座標は全ページで共通になるので、1ページめと2ページめで別の配置とかの設定はできません
+</pre>
+
+<div class ="notice">
+<pre>
+dataPrintCustomFlag 1
+
+dataPrintX1 400
+dataPrintY1 100
+dataPrintX2 500
+dataPrintY2 200
+dataPrintX3 500
+dataPrintY3 400
+dataPrintX4 400
+dataPrintY4 500
+dataPrintX5 300
+dataPrintY5 400
+dataPrintX6 300
+dataPrintY6 200
+</pre>
+</div>
+
+
+<hr />
+
+<div class = "noticetitle">
+ページ切り替え方式設定
+</div>
+
+<pre>
+ページ切り替え方式を、上下ボタンかタブボタンにするかを設定します
+サイズ50x40dot表示位置(350,50) (350,500)の上下ボタンを使用する設定例です
+
+上下ボタンを使用する場合はup,downという名前でボタンを作成します
+タブボタンを使用する場合は、tabという名前のページ数の状態を持つラジオボタンを作成します
+
+実際のボタン作成に関しては<a href="../design_init/button.htm">INIT - ボタン</a>や<a href="../design_init/checkradiobutton.htm">INIT - 特殊ボタン</a> を参照してください
+</pre>
+
+<div class ="notice">
+<pre>
+pageMode 1
+
+upFileName ta_up
+upSizeX 50
+upSizeY 40
+upPrintX 350
+upPrintY 50
+
+downFileName ta_down
+downSizeX 50
+downSizeY 40
+downPrintX 350
+downPrintY 500
+
+</pre>
+</div>
+<hr />
+
+
+<div class = "noticetitle">
+クリック時の演出設定
+</div>
+
+<pre>
+クリック時の点滅時間をフレーム数で設定できます
+ながめの30フレームに設定する例です
+</pre>
+
+<div class = "notice">
+<pre>
+clickTime 30
+</pre>
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+クリック時の音の設定
+</div>
+
+<pre>
+クリック時の効果音をsystemseから番号で設定します
+クリック時 1
+押せないの場所をクリックしたとき 2
+にする設定例です
+</pre>
+
+<div class = "notice">
+<pre>
+loadSound 1
+cannotLoadSound 2
+</pre>
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+クイックセーブの読み込み許可設定
+</div>
+
+<pre>
+クイックセーブで使用されるセーブスロットも
+ロード対象として許可する設定例です
+</pre>
+
+<div class = "notice">
+<pre>
+quickLoadSelectOk 1
+</pre>
+</div>
+
+<hr />
+
+<br />
+<div>
+その他の設定は <a href="../design_init/load.htm">INIT仕様 - ロード</a> を参照してください
+</div>
+
+</body>
+</html>
+

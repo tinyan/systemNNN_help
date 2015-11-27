@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - selectscenechara</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\selectSceneChara.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>戻るボタン設定</TD>
+<TD>必要</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時フェード設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時音声設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+<TR>
+<TD>その他設定</TD>
+<TD>なし</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+</TABLE>
+
+
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>selectSceneChara</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+ 
+
+<TR>
+<TD COLSPAN=2>filenameBG</TD>
+
+<TD>scenem_bg</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+
+
+
+ 
+<TR>
+<TD COLSPAN=2>pictureMode</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>0:キャラ絵なし 1:この絵を常に表示 2:カーソルオン時のみ表示 3:通常、カーソルオンで2種類(画像は縦にならべる)もつ</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameButton</TD>
+<TD>ta_scenem_bt</TD>
+<TD>キャラ絵のファイル名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>cursorMode</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:カーソルなし 1:色 2:絵</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>cursorPercent</TD>
+<TD>50</TD>
+<TD>カーソルを半透明で表示する場合の透明度</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameCursor</TD>
+<TD>ta_cgm_cur</TD>
+<TD>カーソルを絵で表示する場合のファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>cursorPrintType</TD>
+<TD>1</TD>
+<TD>カーソル画像の表示方法 0:通常 1:半透明 2:加算</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>checkOnByPicFlag</TD>
+
+<TD>0</TD>
+<TD>カーソルオンを 0:大きさ 1:画像で チェックする</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>picNumberX</TD>
+
+<TD>シーンキャラの人数</TD>
+<TD>シーンキャラ画像が横に何人ずつならべてあるか</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>numberX</TD>
+
+<TD>シーンキャラ人数</TD>
+<TD ROWSPAN=2>並べて表示するシーンキャラの数を縦横それぞれ指定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>numberY</TD>
+
+<TD>1</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sizeX</TD>
+
+<TD>127</TD>
+<TD ROWSPAN=2>シーンキャラのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>sizeY</TD>
+
+<TD>127</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>baseX</TD>
+
+<TD>0</TD>
+<TD ROWSPAN=2>シーンキャラ表示開始位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>baseY</TD>
+
+<TD>0</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN=2>nextX</TD>
+
+<TD>sizeX</TD>
+<TD ROWSPAN=2>次のシーンキャラまでの距離</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>nextY</TD>
+
+<TD>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>heartPrintFlag</TD>
+
+<TD>1</TD>
+<TD>1:特殊シーンにハートマークなどを追加表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>heartPrintX</TD>
+<TD>0</TD>
+<TD ROWSPAN=2>ハートマークの表示位置をキャラからの相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>heartPrintY</TD>
+<TD>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>heartSizeX</TD>
+<TD>16</TD>
+<TD ROWSPAN=2>ハートマークのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>heartSizeY</TD>
+<TD>16</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>filenameHeart</TD>
+<TD>ta_heart</TD>
+<TD>ハートマークのファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>combineFlag</TD>
+
+<TD>0</TD>
+<TD>1:シーンキャラ表示位置を組み合わせで作成する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>combineType</TD>
+<TD>0</TD>
+<TD>組み合わせを 0:右上 1:左下 に、並べる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>combineNumber</TD>
+<TD>1</TD>
+<TD>組み合わせの人数</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>customPrintFlag</TD>
+
+<TD>0</TD>
+<TD>1:シーンキャラ表示位置を個別に設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>customStart</TD>
+<TD>1</TD>
+<TD>個別設定するキャラの開始番号</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>customEnd</TD>
+<TD>シーンキャラの人数</TD>
+<TD>個別設定するキャラの終了番号</TD>
+</TR>
+ 
+ 
+
+<TR>
+<TD></TD>
+<TD>printX[n]</TD>
+<TD></TD>
+<TD ROWSPAN=2>[n]番目のシーンキャラの表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>printY[n]</TD>
+<TD></TD>
+
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>cursorColorR</TD>
+<TD>128</TD>
+<TD ROWSPAN=3>カーソルの色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorColorG</TD>
+<TD>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>cursorColorB</TD>
+<TD>255</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>totalPercentPrintFlag</TD>
+
+<TD>1</TD>
+<TD>1:全シーン回収率を表示する</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>totalPercentPercentFlag</TD>
+<TD>1</TD>
+<TD>1:%(パーセント)記号も表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNameTotalPercentPic</TD>
+<TD>ta_font_cgm1</TD>
+<TD>シーン回収率表示用の数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentPrintX</TD>
+<TD></TD>
+<TD ROWSPAN=2>シーン回収率の表示位置</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentPrintY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentSizeX</TD>
+<TD></TD>
+<TD>シーン回収率数字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentSizeY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>totalPercentNextX</TD>
+<TD>totalPercentSizeX</TD>
+<TD>シーン回収率数字フォントの文字間隔</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>charaPercentPrintFlag</TD>
+
+<TD>1</TD>
+<TD>1:キャラごとのシーン回収率を表示する</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>percentPercentFlag</TD>
+<TD>1</TD>
+<TD>1:%(パーセント)記号表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>fileNamePercentPic</TD>
+<TD>ta_font_cgm1</TD>
+<TD>シーン回収率表示用の数字フォントグラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentPrintX</TD>
+<TD></TD>
+<TD ROWSPAN=2>シーン回収率表示位置をキャラ絵の表示位置からの相対座標で設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentPrintY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentSizeX</TD>
+<TD></TD>
+<TD>シーン回収率数字フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentSizeY</TD>
+<TD></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>percentNextX</TD>
+<TD>percentSizeX</TD>
+<TD>シーン回収率数字フォントの文字間隔</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>charaVoiceFlag</TD>
+
+<TD>0</TD>
+<TD>1:キャラ絵にカーソルがのったときに音声を出す(未実装)</TD>
+</TR>
+
+ 
+<TR>
+<TD></TD>
+<TD>charaVoiceWaitTime</TD>
+<TD>10</TD>
+<TD>音声を出すまでの待ち時間をフレームで指定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaVoiceFileName[n]</TD>
+<TD></TD>
+<TD>音声ファイル名</TD>
+</TR>
+
+
+ 
+
+
+</TABLE>
+
+<BR>
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

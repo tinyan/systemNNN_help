@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#A000C0"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+<BR>
+
+<pre>
+
+nnnファイル形式
+{
+    char nnnHeaderMessage[16] = "NNN DATA HEADER";
+    char myname[64];
+    char memo[256];
+    int nnnFlag[16];
+    if (nnnFlag[1] == 1)
+    {
+        int pic128x96[128*96];
+    }
+    else (nnnFlag[1] == 2)
+    {
+        int pic256x192[256*192];
+    }
+    CFilmCaseData filmCaseData;
+    CStoryBookData storyBookData;
+}
+
+
+CFilmCaseData形式
+{
+    char filmCaseHeaderMessage[16] = "[FILMCASEDATA] ";
+    int filmCaseFlag[16];
+    CFilmData filmData[filmNumber];
+}
+
+    filmNumber = filmCaseFlag[0];
+   
+   
+CFilmData形式
+{
+    char filmHeaderName[16] = "FILMDATA       ";
+    char filmName[64];
+    int filmFlag[16];
+   
+	if (miniPicFlag)
+	{
+	    int miniPic[32*24];
+	}
+	
+    CKomaData komaData[komaNumber];
+}
+
+    int komaNumber = filmFlag[0];
+    int createEffectFlag = filmFlag[1];
+    int miniPicFlag = filmFlag[2];
+    int filmColor = filmFlag[3];
+    int filmSpecialTypeTime = filmFlag[4];
+    int configMask = filmFlag[5];
+    int taikenLevel = filmFlag[6];
+    int cutinFlag = filmFlag[7];
+
+
+
+
+
+CKomaData形式
+{
+    char komaHeaderMessage[16] ="-KOMADATA      ";
+    int komaFlag1[16];
+    
+    if (komaFlag2ExistFlag)
+    {
+        int komaFlag2[16];
+    }
+    int paraKosuu[16];
+    if (effectVersion >= 3)
+    {
+        int selectParam[16];
+    }
+    
+    for (int i=0;i<16;i++)
+    {
+        if (effectExistFlag & (1 << i))
+        {
+            if (effectVersion == 0)
+            {
+                COLDEFFECT effect;
+            }
+            else
+            {
+                EFFECT effect;
+            }
+        }
+    }
+    
+    for (int i=0;i<16;i++)
+    {
+        if (pictureExistFlag & (1 << i))
+        {
+            if (effectVersion <= 1)
+            {
+                char pictureFileName[16];
+            }
+            else
+            {
+                char pictureFileName[256];
+            }
+        }
+    }
+    
+    if (miniPicFlag)
+    {
+        int miniPic[32*24];
+    }
+    if (largePicFlag)
+    {
+        int largePic[64*48];
+    }
+    if (veryLargePic)
+    {
+        int veryLargePic[128*96];
+    }
+    
+    if (komaNameFlag)
+    {
+        char komaName[64];
+    }
+ 
+    if (exMusicFlag)
+    {
+        int exMusicParam[16];
+    }   
+    
+    CMessageData messageData[messageNumber];
+}
+    messageNumber = komaFlag1[0];
+    overrapCount = komaFlag1[1];
+    overrapType = komaFlag1[2];
+    windowOffFlag = komaFlag1[3];
+    setCG = komaFla1g[4];
+    effectVersion = komaFlag1[5];
+    bgmNumber = komaFlag1[6];
+    frameTime = komaFlag1[7];            
+    selectLayer = komaFlag1[8] - 1;
+    selectEffectLayer = komaFlag1[9] - 1;
+    miniPicFlag = komaFlag1[10] & 1;
+    largePicFlag = komaFlag1[10] & 2;
+    veryLargePicFlag = komaFlag1[10] & 4;
+    komaNameFlag = komaFlag1[11];
+    demoFlag = komaFlag1[12] & 3;
+
+    exMusicFlag = komaFlag1[13] & 1;
+    komaFlag2ExistFlag = komaFlag1[13] & 2;
+    pictureExistFlag = komaFlag1[14];
+    effectExistFlag = komaFlag1[15];
+    
+    if (komaFlag2ExistFlag)
+    {
+        windowNumber = komaFlag2[0];
+        cursorNumber = komaFlag2[1];
+        mouseNumber = komaFlag2[2];
+        autoMessage = komaFlag2[3];
+        cannotClick = komaFlag2[4];
+        cannotSkip = komaFlag2[5];
+        optionOff = komaFlag2[6];
+        cutin = komaFlag2[7];
+        preload = komaFlag[8];
+    }
+    else
+    {
+        windowNumber = 0;
+        cursorNumber = 0;
+        mouseNumber = 0;
+        autoMessage = 0;
+        cannotClick = 0;
+        cannotSkip = 0;
+        optionOff = 0;
+        cutin = 0;
+        preload = 0;
+    }
+    
+
+
+
+
+CMessageData形式
+{
+    char messageHeadermessage[16] = "--MESSAGEDATA  ";
+    int messageFlag1[16];
+    if (exWork > 0)
+    {
+        int messageFlag2[exWork];
+    }
+    char messageBuffer[messageSize];
+    for (int i=0;i<16;i++)
+    {
+        if (voiceFileFlag & (1 << i))
+        {
+            char voiceFileName[64];
+        }
+    }
+    
+    if ((version > 0) && (seFileFlag > 1))
+    {
+        for (int i=1;i<16;i++)
+        {
+            if (seFileFlag & (1 << i))
+            {
+                int seNumber;//seNumber[i];
+            }
+        }
+    }
+    
+    for (int i=0;i<16;i++)
+    {
+        if (seFileFlag & (1 << i))
+        {
+            char seFileName[64];
+        }
+    }
+    
+    if (voiceControlFlag)
+    {
+        for (int i=0;i<16;i++)
+        {
+            if (voiceControlFlag & (1 << i))
+            {
+                int voiceControlData[8];
+            }
+        }
+    }
+    
+    if (seControlFlag)
+    {
+        for (int i=0;i<16;i++)
+        {
+            if (seControlFlag & (1 << i))
+            {
+                int seControlData[8];
+            }
+        }
+    }
+}
+
+
+    messageMode = messageFlag[0];
+    drawCount = messageFlag[1];
+    voiceCharaNumber = messageFlag[2];;
+	voiceNumber = messageFlag[3];
+	seNumber[0] = messageFlag[4];
+	voiceFileFlag = messageFlag[5];
+	seFileFlag = messageFlag[6];
+	serialNumber = messageFlag[7];
+	renameFileFlag = messageFlag[8];
+	voiceLockFlag = messageFlag[9];
+
+	version = messageFlag[10];
+
+	messageSize = messageFlag[11];
+	seControlFlag = messageFlag[12];
+	voiceControlFlag = messageFlag[13];
+
+	messageColor = messageFlag[14];
+    exWork = messageFlag[15];
+
+    canotClickFlag = 0;
+    automessageTime = 0;
+    autoMessageSpeed = 0;
+    expStatus = 0;
+    if (exWork > 0)
+    {
+        canotClickFlag = messageFlag2[0];
+    }
+    
+    if (exWork > 2)
+    {
+        autoMessageTime = messageFlag2[1];
+        autoMessageSpeed = messageFlag2[2];
+    }
+
+    if (exWork > 3)
+    {
+        expStatus = messageFlag2[3];
+    }
+            
+
+
+CStoryBookData形式
+{
+    char storyBookHeaderMessage[16] = "[STORYBOOKDATA]";
+    int storyBookFlag[16];
+    CStoryData storyDaya[storyNumber];
+}
+    storyNumber = storyBookFlag[0];
+    
+
+CStoryData形式
+{
+    char storyDataHeaderMessage[16] = "STORYDATA      ";
+    char storyName[64];
+    int storyFlag[16];
+    CCommandData commandData[commandNumber];
+}
+    commandNumber = storyFlag[0];
+    version = storyFlag[1];
+
+CCommandData形式
+{
+    char commandHeadermessage[16] = "-COMMANDDATA   ";
+    char typeName[16];
+    int commandFlag[16];
+    char buffer[bufferSize];    
+}
+    commandType = commandFlag[0];
+    //bufferSize = commandFlag[1];
+    //bufferSizeはcommandTypeで決定するのでこれはダミーである
+    level = commandFlag[2];
+    para = commandFlag[3];
+    subNumber = commandFlag[4];
+    systemCommandType = commandFlag[5];
+    systemCommandNumber = commandFlag[6];
+    bgmNumber = commandFlag[7];//dummy?
+    serial = commandFlag[8];
+    color =  commandFlag[9] & 0xffff;
+    backColor =  (commandFlag[9] >> 16) & 0xffff;
+    
+タイプ - バッファーサイズ対応    
+int CCommandData::m_needBufferSize[]=
+{
+	0,		//NOP
+	1024,	//IF
+	1024,	//ELSIF
+	0,		//ELSE
+	256,	//CASE
+	64,		//STORY
+	64,		//FILM
+	64,		//BGM-MIDI
+	64,		//BGM-CD
+	1024,	//SYSTEM
+	4096,	//CALCU
+	0,		//RET
+	0,		//NEXT
+	0,		//END
+	64,		//SCRIPT
+	0,
+	0,
+	1024,	//while
+	0,
+	0,		//ENDIF
+	64,		//DEBUG
+	64,		//JUMP
+	64,		//SUBSCRIPT
+};
+
+
+</pre>
+
+
+
+
+
+</BODY>
+</HTML>
+

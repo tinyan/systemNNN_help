@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>バックスクリプト</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+    
+    
+<script type="text/javascript">
+<!--
+function init()
+{
+	animenumber = 0;
+	animeflag = 0;
+	animespeed = 100;
+
+	aaa=0;
+	ids = 0;
+	wipenumber = window.location.search.substr(1);
+
+	image = new Array(3);
+	
+	for (i=0;i<3;i++)
+	{
+		image[i] = new Image();
+		str = "graphics/init_backscript2_" + (i+1) + ".jpg";
+		image[i].src = str;
+	}
+
+    animestart();
+}
+
+function animestart()
+{
+	if (animeflag == 0)
+	{
+		ids = setInterval("anime()",animespeed);
+		animeflag = 1;
+	}
+}
+
+function animestop()
+{
+	if (animeflag == 1)
+	{
+		clearInterval(ids);
+		animeflag = 0;
+	}
+}
+
+function animepause()
+{
+	if (animeflag == 1)
+	{
+		animestop();
+	}
+	else
+	{
+		anime();
+	}
+}
+
+function anime()
+{
+	animenumber++;
+	animenumber %= 3;
+	change();
+}
+
+function changeanimespeed(speed)
+{
+	animestop();
+	animespeed = speed;
+	animestart();
+}
+
+
+function change()
+{
+//	window.document.images["image666"].name = image[aaa].name;
+	window.document.images["image666"].src = image[animenumber].src;
+}
+
+// -->
+</script>
+
+    
+</head>
+
+<body class = "basic">
+
+<p class="title">バックスクリプト</p>
+
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">backScriptFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">背景スクリプトを使うかどうか 0:使わない 1:使う</td>
+</tr>
+
+<tr>
+<td class = "subname">backScriptName</td>
+<td class = "leftparam">なし</td>
+<td class = "desc">背景スクリプトのファイル名を拡張子なしで指定</td>
+</tr>
+
+<tr>
+<td class = "subname">backScriptLoopFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">背景スクリプトをループさせるかどうか<br /> 0:させない(タイトル画面等で1回でタイトルから抜ける場合等で使用する)<br />1:ループする</td>
+</tr>
+
+</table>
+
+
+
+<br />
+
+
+<div class ="notice">
+<pre>
+backScript(背景スクリプト)とは、
+
+通常、システム画面は、背景画像レイヤーと
+その上のボタンレイヤーで構成されています。
+
+この背景画像レイヤーを
+変化のあるものにしたい場合に
+nnnEditで作成したスクリプトに置き換えることができます
+</pre>
+</div>
+
+
+<br />
+<pre>
+通常
+</pre>
+<img src="graphics/init_backscript1.jpg" alt="" />
+
+
+<br />
+<br />
+<pre>
+バックスクリプト
+</pre>
+<br />
+<img id="image666" src="graphics/init_backscript2_1.jpg" alt="" />
+
+<div class ="caution">
+<pre>
+背景スクリプトでは、ユーザーの操作が必要となる機能は使用できません。
+1.メッセージ表示機能
+2.選択肢
+3.コマンド等command.xtxで指定された機能
+</pre>
+</div>
+
+
+<br />
+<pre>設定例
+</pre>
+
+<textarea cols="60" rows="4">
+backScriptFlag 1
+backScriptName bs_nekocat
+</textarea>
+
+<script type="text/javascript">
+<!--
+
+init();
+
+// -->
+</script>
+
+
+
+<noscript>
+JAVASCRIPTを有効にしてください
+</noscript>
+
+
+</body>
+</html>
+
+

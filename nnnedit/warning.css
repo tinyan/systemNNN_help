@@ -1,0 +1,23 @@
+
+
+.warning
+{
+	background-color : #D08080;
+	width:800px;
+	padding:5px;
+}
+
+.caution
+{
+	background-color : #D0D080;
+	width:800px;
+	padding:5px;
+}
+
+.notice
+{
+	background-color : #8080D0;
+	width:800px;
+	padding:5px;
+}
+

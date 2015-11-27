@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>whileをつかって「はい」と言わせる</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">whileをつかって君が「はい」と言うまで質問するのをやめない！</p>
+<br />
+
+<pre>
+今回は、スクリプトの繰り返し処理をつくってみます。
+NNNには繰り返しようのコマンドはwhileしかありません。for等はありませんので、whileで代用してください
+
+スクリプトは新たに作らずに、前回作ったselect_testに追加します
+</pre>
+
+<br />
+<br />
+<br />
+
+<pre>
+今回もフィルム作成からはじめます
+まずは、「姫を助けた後」という名前でフィルムを作ります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while1.jpg" alt="" /><br />
+
+<pre>
+コマ数は2個にしてみましょう
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while2.jpg" alt="" /><br />
+
+<pre>
+1コマめには、背景だけを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while3.jpg" alt="" /><br />
+
+<pre>
+2コマめには、背景と立ち絵を設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while4.jpg" alt="" /><br />
+
+<pre>
+1コマめに、めっせーじを1つ入れます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while5.jpg" alt="" /><br />
+
+<pre>
+2コマめにもメッセージを1ついれておきます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while6.jpg" alt="" /><br />
+
+<pre>
+つぎに、繰り返し用のフィルムをつくります。名前は「そんなひどい」にしておいてください
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while7.jpg" alt="" /><br />
+
+<pre>
+コマ数は1つです
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while8.jpg" alt="" /><br />
+
+<pre>
+さっきとは、違う背景と、立ち絵を設定してみましょう
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while9.jpg" alt="" /><br />
+
+<pre>
+メッセージを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while10.jpg" alt="" /><br />
+
+<pre>
+これでフィルムの準備はできました。次に変数をつかいます
+</pre>
+
+
+<br />
+
+<pre>
+NNNでは変数は、あらかじめ準備しておく必要があります。
+変数ウィンドウを探して、
+「PLAY変数」ボタンを押します。
+
+使われてないエリアをさがします。
+[0]とだけかかれているところが使われてないエリアです。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while20.jpg" alt="" /><br />
+
+<pre>
+その上で右クリックメニューをひらき、「変更」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while21.jpg" alt="" /><br />
+
+<pre>
+1行入力ダイアログが出ますので、そこに「王女の愛」と入力します
+これで、「王女の愛」という変数が使用できるようになりました
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while22.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+シナリオウィンドウを選び、必要なら一番上までスクロールさせておきます
+一番上には、前回作った「選択肢前」フィルムを表示するコマンドがはいっていますね
+まずは、そのコマンドを選択します。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while30.jpg" alt="" /><br />
+
+<pre>
+「新規」ボタンをおして、その位置に新規コマンドを挿入します
+3回押して、3つ作っておいてください
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while31.jpg" alt="" /><br />
+
+<pre>
+新たにつくったコマンドのうち一番上を選び、「姫を助けた後」フィルムを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while32.jpg" alt="" /><br />
+
+<pre>
+次に2番目のコマンドを選び、右クリックめにゅーから
+「計算」を選びます
+</pre>
+
+
+
+<img src ="graphics/tutor2_nnnedit_while33.jpg" alt="" /><br />
+
+<pre>
+テキスト入力ダイアログが出ますので、そこに
+
+王女の愛 = 0;
+
+と入力してください。
+これで、このコマンドが実行されると、「王女の愛」という変数の値が0に設定されます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while34.jpg" alt="" /><br />
+
+<pre>
+
+
+3つ目のコマンドに、右クリックメニューから
+「while」を選びます。
+
+やっと、whileがでてきました
+これからが本番です
+
+</pre>
+
+
+
+<img src ="graphics/tutor2_nnnedit_while35.jpg" alt="" /><br />
+
+<pre>
+whileを設定すると、自動的に1つの子コマンドが追加されます
+まずは、whileの中身(条件)を設定します
+
+whileコマンドの上で右クリックメニューをひらき、「内容修正」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while36.jpg" alt="" /><br />
+
+<pre>
+1行入力ダイアログが出ますので
+ここにwhileの条件をいれます。
+
+王女の愛 == 0
+
+と、入れてください。
+条件には
+;(セミコロン)は付けないので注意してください
+
+==
+とは、比較演算子で、この場合は、「王女の愛」が0だったら
+という条件になります
+
+この条件が成立している間、子コマンド(群)が実行されます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while37.jpg" alt="" /><br />
+<pre>
+次にwhileの子コマンドをつくります。
+whileの下のNOPの上で右クリックメニューを開き、
+[選択肢]-[2個]を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while38.jpg" alt="" /><br />
+
+<pre>
+これで、whileの子コマンドとして、選択肢が設定されました。
+ちなみに、選択肢の子コマンドは、whileの孫コマンドになります
+
+選択肢の作り方は前回行っているので、簡単にすすめます。
+SELECTの上で右クリックメニューを開き、「内容修正」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while39.jpg" alt="" /><br />
+
+<pre>
+テキスト入力ダイアログが出ますので、
+
+はい
+いいえ
+
+と2行入力します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while40.jpg" alt="" /><br />
+
+<pre>
+次に選択肢の中身を設定します
+1つ目のNOPの上で右クリックメニューを開き、「計算」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while41.jpg" alt="" /><br />
+
+<pre>
+テキスト入力ダイアログが開きますので、そこに
+
+王女の愛 = 1;
+
+と入力してください。
+はい、を選んだら、「王女の愛」が1になるということですね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while42.jpg" alt="" /><br />
+
+<pre>
+いいえ、をえらんだ場合のコマンドも設定します
+こちらは、「そんなひどい」フィルムを設定します
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while43.jpg" alt="" /><br />
+
+<pre>
+この時点で、このようなシナリオ構成になります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while44.jpg" alt="" /><br />
+
+<pre>
+whileで実行される子コマンドは、赤枠でかこまれた部分になります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while45.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+では、保存してから、ビルドして実行してみましょう
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while_run1.jpg" alt="" /><br />
+<br />
+<img src ="graphics/tutor2_nnnedit_while_run2.jpg" alt="" /><br />
+
+<pre>
+こんかい作ったフィルムまできました
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while_run3.jpg" alt="" /><br />
+
+<pre>
+なんか言ってますね</pre>
+
+<img src ="graphics/tutor2_nnnedit_while_run4.jpg" alt="" /><br />
+
+<pre>
+だが断る！
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_while_run5.jpg" alt="" /><br />
+
+<pre>
+いいえを選びます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run6.jpg" alt="" /><br />
+
+<pre>
+やはりこうきたか
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run5.jpg" alt="" /><br />
+
+<pre>
+もういちどいいえを選びます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run6.jpg" alt="" /><br />
+
+<pre>
+やっぱりだめです
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run5.jpg" alt="" /><br />
+
+<pre>
+どうしてもいやなんじゃよ
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run6.jpg" alt="" /><br />
+
+<pre>
+と、なんど「いいえ」を選んでも、しつこく繰返されます
+
+あきらめて「はい」を選ぶことにしましょう
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_while_run7.jpg" alt="" /><br />
+
+
+<pre>
+やっとぬけられ、前回作った部分に到着しました
+</pre>
+<img src ="graphics/tutor2_nnnedit_while_run8.jpg" alt="" /><br />
+
+<br />
+<br />
+<br />
+
+<a href="tutor2_nnnedit_makeif.htm">つぎへ(分岐)</a>
+
+
+</body>
+</html>
+

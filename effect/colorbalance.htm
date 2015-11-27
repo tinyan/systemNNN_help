@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnEdit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="effect.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">エフェクト - カラーバランス</p>
+<br />
+
+
+
+
+<a href="graphics/nowprinting.jpg"><img src="mini/nowprinting.jpg" alt="" /></a>
+<pre>
+
+
+立ち絵に色を加減算処理します
+輝度による加減を内部調整します
+さらにデフォルトでは輝度を維持するように調整します
+
+
+
+【画像エフェクト】
+【2D3D:???】
+
+</pre>
+
+<br />
+<table>
+
+<tr>
+	<td class="box1">パラメーター名</td>
+	<td class="box2">デフォルト値</td>
+	<td class="box3">解説</td>
+	<td class="box4">最小値</td>
+	<td class="box5">最大値</td>
+</tr>
+
+<tr>
+	<td class="box1"></td>
+	<td class="box2"></td>
+	<td class="box3"></td>
+	<td class="box4"></td>
+	<td class="box5"></td>
+</tr>
+
+<tr>
+	<td class="box1">フレーム</td>
+	<td class="box2">20</td>
+	<td class="box3">エフェクト全体の時間をフレーム数で指定</td>
+	<td class="box4">0</td>
+	<td class="box5">9999</td>
+</tr>
+
+<tr>
+	<td class="box1s">赤加減終了</td>
+	<td class="box2s">0</td>
+	<td class="box3s" rowspan="6">色加減の開始、終了時の値をRGBで指定</td>
+	<td class="box4s" rowspan="6">-255</td>
+	<td class="box5s" rowspan="6">255</td>
+</tr>
+
+<tr>
+	<td class="box1s">緑加減終了</td>
+	<td class="box2s">0</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">青加減終了</td>
+	<td class="box2s">0</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">赤加減開始</td>
+	<td class="box2s">赤加減終了</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">緑加減開始</td>
+	<td class="box2s">緑加減終了</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">青加減開始</td>
+	<td class="box2s">青加減終了</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">透過フラグ</td>
+	<td class="box2s">1</td>
+	<td class="box3s">0:抜きなし処理</td>
+	<td class="box4s">0</td>
+	<td class="box5s">1</td>
+</tr>
+
+<tr>
+	<td class="box1s">変化タイプ</td>
+	<td class="box2s">0</td>
+	<td class="box3s" rowspan="2">色加減の度合いをサブフレームで制御</td>
+	<td class="box4s">0</td>
+	<td class="box5s">199</td>
+</tr>
+
+<tr>
+	<td class="box1s">サブフレーム</td>
+	<td class="box2s">0</td>
+
+	<td class="box4s">0</td>
+	<td class="box5s">9999</td>
+</tr>
+
+<tr>
+	<td class="box1s">赤タイプ</td>
+	<td class="box2s">0</td>
+	<td class="box3s" rowspan="3">どの明るさ帯に色加減をかけるか<br />０：通常　１４７低輝度<br />２５８中輝度,３６９高輝度</td>
+	<td class="box4s" rowspan="3">0</td>
+	<td class="box5s" rowspan="3">9</td>
+</tr>
+
+<tr>
+	<td class="box1s">緑タイプ</td>
+	<td class="box2s">0</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">青タイプ</td>
+	<td class="box2s">0</td>
+
+
+
+</tr>
+
+<tr>
+	<td class="box1s">輝度保持</td>
+	<td class="box2s">1</td>
+	<td class="box3s">1:輝度保持処理を行う</td>
+	<td class="box4s">0</td>
+	<td class="box5s">1</td>
+</tr>
+
+<tr>
+	<td class="box1s"></td>
+	<td class="box2s"></td>
+	<td class="box3s"></td>
+	<td class="box4s"></td>
+	<td class="box5s"></td>
+</tr>
+
+
+
+</table>
+
+
+<pre>
+
+番号ごとの明るさ帯への処理度合いは、次の図のようになります
+
+</pre>
+<img src="graphics/effect_colorbalance.jpg" alt="" />
+
+
+
+</body>
+</html>
+

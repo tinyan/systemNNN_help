@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>FAQ EXE</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">FAQ EXE</p>
+
+
+<a href="#FAQ1">Q1.ホイールで読み進められるようにしたい</a><br />
+<a href="#FAQ2">Q2.キーボードで操作できるようにしたい</a><br />
+<a href="#FAQ3">Q3.体験版を作りたい</a><br />
+<a href=""></a><br />
+<a href=""></a><br />
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class ="notice" id="FAQ1">
+<pre>
+Q1. ホイールで読み進められるようにしたい
+
+A1. init/printMessage.xtxに
+    wheelDownIsClick 1
+    と記述します。ホイールの下でメッセージが進むようになります。
+</pre>
+<textarea cols="64" rows="1">wheelDownIsClick 1</textarea>
+</div>
+
+<br />
+
+<div class ="notice" id="FAQ2">
+<pre>
+Q2. キーボードで操作できるようにしたい
+
+A2. 現在対応作業中です。しばらくお待ちくださいにゃ
+</pre>
+</div>
+
+<br />
+
+<div class ="notice" id="FAQ3">
+<pre>
+Q3. 体験版を作りたい
+
+A3. 体験版をつくるときは、不必要な機能を削除していくことで作成していきます
+    おまけ以下が不要な場合には
+    game.xtxに
+    
+    omakeClassIsDisable 1
+    selectSceneCharaClassIsDisable 1
+    selectSceneClassIsDisable 1
+    selectCGCharaClassIsDisable 1
+    selectCGClassIsDisable 1
+    printCGClassIsDisable 1
+    listenBGMClassIsDisable 1
+    
+    と設定して、おまけ、シーンキャラ選択、シーン選択、CGキャラ選択、CG選択、BGM鑑賞、CG表示
+    の各画面を無効にし、さらに
+    title.xtxで
+    menu1Button3ExistFlag 0
+    と設定して、タイトル画面のメニューのおまけボタンを「存在しない」にします
+    
+    
+    
+</pre>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+</body>
+
+
+</html>
+

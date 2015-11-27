@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>サブフレーム</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="effect.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">サブフレーム</p>
+<br />
+
+
+<div class="caution">
+<pre>
+これは、エフェクトのかかり具合を、より複雑に制御するための項目です
+</pre>
+</div>
+
+
+
+<br />
+エフェクトの効果時間は、「フレーム」で設定しますが<br />
+エフェクトに種類によっては、エフェクトのかかり具合を<br />
+さらに細かく設定できるものもあります。<br />
+その設定を行うのがサブフレームと呼ばれるもので<br />
+変化タイプとサブフレームの2つのパラメーターを使って設定します<br />
+<br />
+サブフレームとは、フレーム数未満の値を設定し、この値で<br />
+フレームの動作を2分割(または繰り返し)させます<br />
+<br />
+変化タイプとは、<br />
+通常であればエフェクトのかかり具合は<br />
+最小から最大に滑らか(リニア)に変化するものを<br />
+特殊な変化のさせ方に変更するものです。<br />
+<br />
+たとえば、変化タイプが1であれば<br />
+<br />
+<img src="graphics/ta_movetype1.jpg"><br />
+<br />
+このような変化タイプになります<br />
+これの意味するところは、<br />
+サブフレームで指定された時間だけ、最小値のエフェクトのかかり具合を続け<br />
+そのあと、残りの時間かけて、最大値のエフェクトのかかり具合に変化していきます。<br />
+<br />
+
+<table border="1">
+
+<tr>
+<td>変化タイプ</td><td>アイコン</td><td>解説</td>
+</tr>
+
+<tr>
+<td>0</td><td><img src="graphics/ta_movetype0.jpg"></td><td>通常の変化タイプです。サブフレームは無意味です</td>
+</tr>
+
+<tr>
+<td>1</td><td><img src="graphics/ta_movetype1.jpg"></td><td>サブフレーム分最小値をとり、残りの時間で最大値まで変化します</td>
+</tr>
+
+<tr>
+<td>2</td><td><img src="graphics/ta_movetype2.jpg"></td><td>サブフレームの時間で最大値まで変化し、のこりの時間は最大値のままになります</td>
+</tr>
+
+<tr>
+<td>3</td><td><img src="graphics/ta_movetype3.jpg"></td><td>サブフレームかけて最大値まで変化し、残りの時間で最小値にもどります</td>
+</tr>
+
+<tr>
+<td>4</td><td><img src="graphics/ta_movetype4.jpg"></td><td>サブフレームかけて最大値まで変化し、フレーム数-(サブフレームx2)の間最大値を維持し、サブフレームかけて最小値に戻ります</td>
+</tr>
+
+<tr>
+<td>5</td><td><img src="graphics/ta_movetype5.jpg"></td><td>サブフレームかけて最大値まで変化し、サブフレームかけて最小値まで戻り、それをくりかえします</td>
+</tr>
+
+<tr>
+<td>6</td><td><img src="graphics/ta_movetype6.jpg"></td><td>サブフレームかけて、最大値から最小値に変化し、サブフレームかけて最大値に戻り、それを繰り返します</td>
+</tr>
+
+<tr>
+<td>7</td><td><img src="graphics/ta_movetype7.jpg"></td><td>サブフレームかけて最小値から最大値まで変化し、それを繰り返します</td>
+</tr>
+
+<tr>
+<td>8</td><td><img src="graphics/ta_movetype8.jpg"></td><td>サブフレームかけて最大値から最小値まで変化し、それを繰り返します</td>
+</tr>
+
+<tr>
+<td>9</td><td><img src="graphics/ta_movetype9.jpg"></td><td>サブフレームかけて最小値から最大値そして最小値まで変化を2回、残りの時間でもう1回変化します</td>
+</tr>
+
+<tr>
+<td>10</td><td><img src="graphics/ta_movetype10.jpg"></td><td>サブフレームかけて最小値から最大値まで変化を2回、残りの時間でもう1回変化します</td>
+</tr>
+
+
+
+
+</table>
+<br />
+変化タイプはによるエフェクトのかかり具合は、<br />
+、通常、リニア(直線的y=x)に変化しますが<br />
+<br />
+<br />
+変化タイプを+30すると、加速しながら変化 [y=x^2]<br />
+変化タイプを+60すると、減速しながら変化 [y=√x]<br />
+変化タイプを+75すると、最初と最後がゆるやかな変化 [y=(1-cosθ)/2]<br />
+<br />
+というように変更できます<br />
+<br />
+また+100することで、最大値と最小値を入れ替えることができます<br />
+<br />
+結果として値として有効な範囲は<br />
+0-10,30-40,60-70,75-85<br />
+100-110,130-140,160-170,175-185<br />
+に、なります<br />
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

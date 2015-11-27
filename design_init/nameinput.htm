@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nameInput</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">名前入力</p>
+
+
+
+<pre>
+FileName = init\nameinput.xtx
+</pre>
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">ボタン設定</td>
+<td class = "commonstatus">必須</td>
+<td class = "commondesc">[ok][cancel]ボタンを作成</td>
+</tr>
+
+</table>
+
+<br />
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">nameinput</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+
+
+<tr>
+<td class = "name">seiFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">姓の入力を行う</td>
+</tr>
+
+<tr>
+<td class = "subname">seiMax</td>
+<td class = "rightparam">4</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">seiFixFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">姓入力しないときに、「姓」を固定する</td>
+</tr>
+
+<tr>
+<td class = "subname">seiFixData</td>
+<td class = "leftparam"></td>
+<td class = "desc">固定用の姓</td>
+</tr>
+
+<tr>
+<td class = "subname">seiDontPrint</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:非入力時に表示しない</td>
+</tr>
+
+<tr>
+<td class = "subname">seiPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">seiPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">seiAlignMode</td>
+<td class = "rightparam"></td>
+<td class = "desc">0:左詰め 1:センター 2:右詰め</td>
+</tr>
+
+<tr>
+<td class = "subname">seiDialogFileName</td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "subname">seiColorR</td>
+<td class = "leftparam">192</td>
+<td class = "desc" rowspan="3">文字色</td>
+</tr>
+
+<tr>
+<td class = "subname">seiColorG</td>
+<td class = "leftparam">192</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiColorB</td>
+<td class = "leftparam">192</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiFixColorR</td>
+<td class = "leftparam">255</td>
+<td class = "desc" rowspan="3">決定済みの文字色</td>
+</tr>
+
+<tr>
+<td class = "subname">seiFixColorG</td>
+<td class = "leftparam">255</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiFixColorB</td>
+<td class = "leftparam">255</td>
+
+</tr>
+
+
+<tr>
+<td class = "name">seiCursorMode</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:なし 1:I型カーソル</td>
+</tr>
+
+<tr>
+<td class = "subname">seiCursorColorR</td>
+<td class = "rightparam">255</td>
+<td class = "desc" rowspan="3">カーソル色</td>
+</tr>
+
+<tr>
+<td class = "subname">seiCursorColorG</td>
+<td class = "rightparam">seiCursorColorR</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiCursorColorB</td>
+<td class = "rightparam">seiCursorColorG</td>
+
+</tr>
+
+
+<tr>
+<td class = "subname">seiCursorSizeX</td>
+<td class = "rightparam">3</td>
+<td class = "desc" rowspan="2">カーソルサイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">seiCursorSizeY</td>
+<td class = "rightparam">24</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiCursorPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2"></td>
+</tr>
+
+<tr>
+<td class = "subname">seiCursorPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">seiCursorOnTime</td>
+<td class = "rightparam">25</td>
+<td class = "desc">カーソルの点灯時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "subname">seiCursorOffTime</td>
+<td class = "rightparam">seiCursorOnTime</td>
+<td class = "desc">カーソルの滅時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "name">seiFontSize</td>
+<td class = "rightparam">24</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">seiFontSukimaX</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "name">meiFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">名の入力を行う</td>
+</tr>
+
+<tr>
+<td class = "subname">meiMax</td>
+<td class = "rightparam">4</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">meiFixFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">名入力しないときに、「名」を固定する</td>
+</tr>
+
+<tr>
+<td class = "subname">meiFixData</td>
+<td class = "leftparam"></td>
+<td class = "desc">固定用の名</td>
+</tr>
+
+<tr>
+<td class = "subname">meiDontPrint</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:非入力時に表示しない</td>
+</tr>
+
+
+<tr>
+<td class = "subname">meiPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">meiPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "subname">meiAlignMode</td>
+<td class = "rightparam"></td>
+<td class = "desc">0:左詰め 1:センター 2:右詰め</td>
+</tr>
+
+<tr>
+<td class = "subname">meiDialogFileName</td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "subname">meiColorR</td>
+<td class = "leftparam">192</td>
+<td class = "desc" rowspan="3">文字色</td>
+</tr>
+
+<tr>
+<td class = "subname">meiColorG</td>
+<td class = "leftparam">192</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiColorB</td>
+<td class = "leftparam">192</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiFixColorR</td>
+<td class = "leftparam">255</td>
+<td class = "desc" rowspan="3">決定済みの文字色</td>
+</tr>
+
+<tr>
+<td class = "subname">meiFixColorG</td>
+<td class = "leftparam">255</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiFixColorB</td>
+<td class = "leftparam">255</td>
+
+</tr>
+
+
+
+<tr>
+<td class = "name">seiMeiReverse</td>
+<td class = "rightparam">0</td>
+<td class = "desc">姓名の入力順序をいれかえる</td>
+</tr>
+
+
+<tr>
+<td class = "name">meiCursorMode</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:なし 1:I型カーソル</td>
+</tr>
+
+<tr>
+<td class = "subname">meiCursorColorR</td>
+<td class = "rightparam">255</td>
+<td class = "desc" rowspan="3">カーソル色</td>
+</tr>
+
+<tr>
+<td class = "subname">meiCursorColorG</td>
+<td class = "rightparam">meiCursorColorR</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiCursorColorB</td>
+<td class = "rightparam">meiCursorColorG</td>
+
+</tr>
+
+
+<tr>
+<td class = "subname">meiCursorSizeX</td>
+<td class = "rightparam">3</td>
+<td class = "desc" rowspan="2">カーソルサイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">meiCursorSizeY</td>
+<td class = "rightparam">24</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiCursorPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2"></td>
+</tr>
+
+<tr>
+<td class = "subname">meiCursorPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">meiCursorOnTime</td>
+<td class = "rightparam">25</td>
+<td class = "desc">カーソルの点灯時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "subname">meiCursorOffTime</td>
+<td class = "rightparam">meiCursorOnTime</td>
+<td class = "desc">カーソルの滅時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "name">meiFontSize</td>
+<td class = "rightparam">24</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">meiFontSukimaX</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "name">dialogPrintX</td>
+<td class = "rightparam">300</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">dialogPrintY</td>
+<td class = "rightparam">250</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">dialogSizeX</td>
+<td class = "rightparam">200</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">dialogSizeY</td>
+<td class = "rightparam">100</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">returnOk</td>
+<td class = "rightparam">1</td>
+<td class = "desc">入力せずにもどることを許可する</td>
+</tr>
+
+<tr>
+<td class = "name">nullNameOk</td>
+<td class = "rightparam">0</td>
+<td class = "desc">名前入力欄に入力せずに進むことを許可する</td>
+</tr>
+
+<tr>
+<td class = "name">statusVarName</td>
+<td class = "leftparam"></td>
+<td class = "desc">名前が決定されたか、入力されずにもどったかを変数で判定する場合に、その変数名を設定する 変数の値が0の場合は、入力なしでもどっている</td>
+</tr>
+
+<tr>
+<td class = "name">timeVarName</td>
+<td class = "leftparam"></td>
+<td class = "desc">最終決定までにかかった時間を変数で取得する場合に、その変数名を設定する。(もどってくる最大値は9999)</td>
+</tr>
+
+
+</table>
+
+
+
+<br />
+<pre>
+名前入力文字設定は以下の識別子で
+[sei]
+[mei]
+
+<a href="comment.htm">入力ダイアログ設定</a>を参照してください
+
+</pre>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>notice</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">notice</p>
+
+
+
+<pre>
+FileName = init\notice.xtx
+</pre>
+
+<div class ="notice">
+<pre>
+noticeとは、ゲームとは独立して画面にグラフィックを表示させるための設定です
+XBoxとかの、実績解除みたいの表示みたいな使い方もできます
+</pre>
+</div>
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">noticeNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">種類数</td>
+</tr>
+
+<tr>
+<td class = "name">bufferMax</td>
+<td class = "rightparam">1</td>
+<td class = "desc">表示用バッファーの数</td>
+</tr>
+
+<tr>
+<td class = "name">filenameNoticeTag</td>
+<td class = "leftparam">ta_notice</td>
+<td class = "desc">noticeようのグラフィックシートのファイル名。グラフィックシートが複数になる場合には、2枚目から、この名前のあとに数値(2,3,...)がつけたファイルを読み込みます</td>
+</tr>
+
+<tr>
+<td class = "name">sizeX</td>
+<td class = "rightparam">160</td>
+<td class = "desc" rowspan="2">noticeの1つのサイズ</td>
+</tr>
+
+<tr>
+<td class = "name">sizeY</td>
+<td class = "rightparam">80</td>
+
+</tr>
+
+<tr>
+<td class = "name">blockX</td>
+<td class = "rightparam">1</td>
+<td class = "desc" rowspan="2">1シートにいくつのグラフィックがあるか</td>
+</tr>
+
+<tr>
+<td class = "name">blockY</td>
+<td class = "rightparam">1</td>
+
+</tr>
+
+<tr>
+<td class = "name">startX[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">[n]番noticeの表示開始座標</td>
+</tr>
+
+<tr>
+<td class = "name">startY[n]</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">waitX[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">[n]番noticeの停止位置座標</td>
+</tr>
+
+<tr>
+<td class = "name">waitY[n]</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">endX[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">[n]番noticeの表示終了座標</td>
+</tr>
+
+<tr>
+<td class = "name">endY[n]</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">startPercent[n]</td>
+<td class = "rightparam">100</td>
+<td class = "desc">[n]番noticeの開始半透明値</td>
+</tr>
+
+<tr>
+<td class = "name">waitPercent[n]</td>
+<td class = "rightparam">100</td>
+<td class = "desc">[n]番noticeの停止半透明値</td>
+</tr>
+
+<tr>
+<td class = "name">endPercent[n]</td>
+<td class = "rightparam">100</td>
+<td class = "desc">[n]番noticeの表示終了半透明値</td>
+</tr>
+
+<tr>
+<td class = "name">startTime[n]</td>
+<td class = "rightparam">30</td>
+<td class = "desc">[n]番noticeの開始表示フレーム数</td>
+</tr>
+
+<tr>
+<td class = "name">waitTime[n]</td>
+<td class = "rightparam">30</td>
+<td class = "desc">[n]番noticeの停止表示フレーム数</td>
+</tr>
+
+<tr>
+<td class = "name">endTime[n]</td>
+<td class = "rightparam">30</td>
+<td class = "desc">[n]番noticeの表示終了フレーム数</td>
+</tr>
+
+<tr>
+<td class = "name">startSound[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">[n]番noticeの開始表示サウンド番号</td>
+</tr>
+
+<tr>
+<td class = "name">waitSound[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">[n]番noticeの停止サウンド番号</td>
+</tr>
+
+<tr>
+<td class = "name">endSound[n]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">[n]番noticeの表示終了サウンド番号</td>
+</tr>
+
+</table>
+
+<div class ="notice">
+<pre>
+notice[n]設定は、前の番号の設定を引き継ぎますので、たいていの場合は、1番のみ設定するだけで足ります
+</pre>
+</div>
+
+<pre>
+表示用バッファーとは
+
+スクリプト等から、まとめて3つのnotice表示命令が実行された場合、
+仮に番号を付けて1,2,3とします
+
+このときバッファーが1こだと、最後の3番のnoticeだけが表示され、1,2番は表示されません
+このときでも、例えば、バッファーを5つとっておくと、1番が表示され、2,3番は
+1番が表示し終わった後に順に表示されていきます
+
+
+あたらしいnotice命令で即表示したいときは、バッファーを1個に
+なるべく表示されないものがないようにしたいときはバッファーを数個に設定するのがよいようです
+
+
+
+sameDontSetFlag 1
+//1:バッファーが2以上のとき同じのを登録しない
+//0:バッファーが2以上のとき同じのでもを登録する
+
+</pre>
+
+</body>
+</html>
+

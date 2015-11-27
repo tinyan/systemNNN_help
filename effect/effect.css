@@ -1,0 +1,120 @@
+
+body.basic {background-color : #80C0A0; color : #202020}
+p.title {color : Black; font-size : 200%; text-align : center}
+pre {color : Black; font-size : 100%}
+a:link{color : #006060}
+a:vlink{color : #7499CC}
+a:alink{color : #000000}
+img {border-style :none}
+
+img.thumbnail
+{
+	width:200px;
+	height:150px;
+}
+
+
+.listbox
+{
+	width: 200;
+	height: 170;
+	background-color : #80A0E0;
+	margin: 5px;
+	float:left;
+	text-align:center;
+
+}
+
+.nextline
+{
+	clear:left;
+}
+
+.box1
+{
+	width: 130px;
+	background-color : #F3C4C4;
+	margin: 1px;
+}
+
+.box2
+{
+	width: 100px;
+	background-color : #D0DCCF;
+	margin: 1px;
+}
+
+.box3
+{
+	width: 300px;
+	background-color : #DDDDDD;
+	margin: 1px;
+}
+
+.box4
+{
+	width: 70px;
+	background-color : #777777;
+	margin: 1px;
+}
+
+.box5
+{
+	width: 70px;
+	background-color : #C0B0D0;
+	margin: 1px;
+}
+
+
+.box1s
+{
+	width: 130px;
+	background-color : #C39494;
+	margin: 1px;
+}
+
+.box2s
+{
+	width: 100px;
+	background-color : #A0AC9F;
+	margin: 1px;
+}
+
+.box3s
+{
+	width: 300px;
+	background-color : #ADADAD;
+	margin: 1px;
+}
+
+.box4s
+{
+	width: 70px;
+	background-color : #676767;
+	margin: 1px;
+}
+
+.box5s
+{
+	width: 70px;
+	background-color : #9080A0;
+	margin: 1px;
+}
+
+
+
+table {border-style : none; border-width : 1}
+tr {border-style :none; border-width : 1}
+td {border-style :none; border-width : 1}
+
+table.basic {border-style : ridge; border-width : medium}
+tr.basic {border-style :ridge; border-width : 2}
+td.basic {border-style :ridge; border-width : 2}
+
+table.none {border-style : none; border-width : 0}
+tr.none {border-style : none; border-width : 0}
+td.none {border-style : none; border-width : 0}
+
+td.disable {border-style : ridge; border-width : 2; color : #808080}
+td.delete {border-style : ridge; border-width : 2; text-decoration : "line-through"}
+

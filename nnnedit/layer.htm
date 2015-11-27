@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>レイヤー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="nnnedit.css" type="text/css" />
+    <link rel="stylesheet" href="warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">レイヤー</p>
+
+<br />
+<img src="graphics/nnnedit_layer_window.jpg" alt="" />
+<br />
+<br />
+<pre>
+レイヤーウィンドウでは、エフェクトを操作するために
+レイヤー番号の選択や、画像、エフェクト番号の選択等を行います
+
+</pre>
+
+<table class ="none">
+
+<tr>
+<td class="box1"><img src="graphics/nnnedit_button_open.jpg" alt="" /></td>
+<td class="box2">読み込み</td>
+<td class="box3">全16レイヤーをまとめてファイルから読み込みます(拡張子 .eff)</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/nnnedit_button_save.jpg" alt="" /></td>
+<td class="box2">保存</td>
+<td class="box3">全16レイヤーをまとめてファイルに書き込みます</td>
+</tr>
+
+</table>
+
+<br />
+<br />
+
+
+<div class ="notice">
+<pre>
+レイヤーは全部で16個で構成され、上から順に0～15の番号が振られています
+番号の少ないものから順に表示されて重ねられていきます。
+</pre>
+</div>
+
+
+<pre>
+グラフィックレイヤー
+</pre>
+
+<img src="graphics/nnnedit_layer_graphics.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+レイヤーウィンドウのこの左側の部分をグラフィックレイヤーと呼びます
+ここには、読み込まれたグラフィックの縮小画像が表示されます
+
+ここを右クリックすることで、画像読み込みのためのメニューが開きます
+</pre>
+
+<img src="graphics/nnnedit_layer_graphics_menu.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+TA 立ち絵を読み込みます(ta形式)
+EV イベント絵を読み込みます(ev形式)
+BG 背景を読み込みます(bg形式)
+ETC それ以外の形式が必要になった場合のために準備されています
+DEL そのレイヤーの絵の設定を削除します
+</pre>
+
+<br />
+<br />
+<br />
+<br />
+
+
+
+<pre>
+
+エフェクトレイヤー
+
+</pre>
+<img src="graphics/nnnedit_layer_effect.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+レイヤーウィンドウのこの右側の部分をエフェクトレイヤーと呼び、
+ここに各種エフェクトを設定していきます
+
+ここを右クリックすることでエフェクト選択のためのメニューが開きます
+</pre>
+
+<br />
+<img src="graphics/nnnedit_layer_effect_menu.jpg" alt="" />
+<br />
+<br />
+
+
+<pre>
+
+グラフィック選択ボタン
+
+</pre>
+
+<img src="graphics/nnnedit_layer_graphicsbutton.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+
+このボタンを押して点灯状態にすることで、画像を選択状態にできます。
+選択状態にした場合、
+
+座標ウィンドウに画像の配置情報が表示され、
+画像の配置のためのボタンが選択できるようになります。
+
+座標ウィンドウで配置ボタンを押すことで
+メインスクリーンに画像のファイル名と位置のガイドが表示され、
+メインスクリーン上で画像の画像の配置ができるようになります。
+
+</pre>
+
+<br />
+<br />
+<br />
+
+<pre>
+エフェクト選択ボタン
+
+</pre>
+<img src="graphics/nnnedit_layer_effectbutton.jpg" alt="" />
+<pre>
+
+
+このボタンを押して点灯状態にすることで、エフェクトを選択状態にできます。
+選択状態にした場合、
+
+エフェクトウィンドウでエフェクトのパラメータの設定、変更ができるようになります。
+
+メインスクリーンでもエフェクトのパラメータの変更ができるようになります
+
+</pre>
+
+<br />
+<br />
+<br />
+
+<pre>
+レイヤー表示切替ボタン
+
+</pre>
+
+<img src="graphics/nnnedit_layer_onoff.jpg" alt="" />
+<br />
+<br />
+
+<pre>
+このボタンでレイヤーの一時的な表示のオン・オフが切り替えられます。
+（この変更はエディター上でのみ有効で、ゲームには反映されません）
+
+</pre>
+<table class = "none">
+
+<tr>
+<td class = "box1"><img src="graphics/nnnedit_layer_eyeon.jpg" alt="" /></td>
+<td class = "box2">表示</td>
+</tr>
+
+<tr>
+<td class = "box1"><img src="graphics/nnnedit_layer_eyeoff.jpg" alt="" /></td>
+<td class = "box2">非表示</td>
+</tr>
+
+</table>
+<br />
+
+
+<pre>
+また、ここで右クリックすることで、
+この1つのレイヤーのみのロードセーブメニューが開きます
+ファイルの拡張子は .lefです
+</pre>
+
+<img src="graphics/nnnedit_layer_loadsavemenu.jpg" alt="" />
+<br />
+<br />
+
+
+
+<div class ="notice">
+<pre>
+縮小画像やエフェクト画像をドラッグすることで、それをコピーしたりすることができます
+SHIFTやCTRLキーと併用することで処理の方法を変えることが可能です
+ドラッグ中はマウスカーソルが変化します
+</pre>
+
+<table class ="none">
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_layer_cursor_exchange.jpg" alt="" /></td>
+<td class ="box2">通常</td>
+<td class ="box3">交換モードです。2つの絵または、2つのエフェクトを交換します</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_layer_cursor_copy.jpg" alt="" /></td>
+<td class ="box2">CTRLキー併用</td>
+<td class ="box3">コピーモードです。もとの絵またはエフェクトを対象のレイヤーにコピーします</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_layer_cursor_move.jpg" alt="" /></td>
+<td class ="box2">SHIFTキー併用</td>
+<td class ="box3">移動モードです。元の絵またはエフェクトを対象のレイヤーに移動します。もとのレイヤーは空になります</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_layer_cursor_cannot.jpg" alt="" /></td>
+<td class ="box2">-</td>
+<td class ="box3">移動できないところを選択しようとしています</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+</body>
+</html>
+

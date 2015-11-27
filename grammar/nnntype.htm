@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnの種類</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">nnnの種類</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+nnnファイルには、4種類のものがあり、ファイル名で区別されます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class = "box2">種類</td>
+<td class = "box3">区別</td>
+<td class = "box3">解説</td>
+</tr>
+
+<tr>
+<td class = "box2"></td>
+<td class = "box3"></td>
+<td class = "box3"></td>
+</tr>
+
+<tr>
+<td class = "box2">システムスクリプト</td>
+<td class = "box3">sys</td>
+<td class = "box3">ファイル名は固定です。ゲームを新規開始すると、このスクリプトから実行されます<br />ゲームの大まかな流れを記述します</td>
+</tr>
+
+<tr>
+<td class = "box2">通常スクリプト</td>
+<td class = "box3">_で始まらない名前</td>
+<td class = "box3">ゲームの大部分がこれになります。キャラごとや、日数ごとに分けて、フィルムや各種処理を記述します</td>
+</tr>
+
+<tr>
+<td class = "box2">サブスクリプト</td>
+<td class = "box3">_で始まる名前</td>
+<td class = "box3">いろいろなスクリプトで共通に使われる部分をここにかいて、通常スクリプトから使うと便利です</td>
+</tr>
+
+<tr>
+<td class = "box2">サブサブスクリプト</td>
+<td class = "box3">__で始まる名前</td>
+<td class = "box3">共通部分のさらに共通なところをまとめたいときに使用します</td>
+</tr>
+
+</table>
+
+<br />
+
+<pre>
+sys → 通常
+通常 → サブ
+サブ → サブサブ
+
+を、それぞれ呼び出します
+上位スクリプトはよびだせません
+</pre>
+
+</body>
+</html>
+

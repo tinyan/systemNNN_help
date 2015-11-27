@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnEdit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">コーデックエラー画面</p>
+
+
+<pre>
+FileName = init\codecError.xtx
+</pre>
+
+
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">ボタン設定</td>
+<td class = "commonstatus">必要</td>
+<td class = "commondesc">notButton,canButton,exitButton</td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可能</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可能</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">フェード設定</td>
+<td class = "commonstatus">可能</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">切り替え時音声</td>
+<td class = "commonstatus">可能</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">なし</td>
+<td class = "commondesc"></td>
+</tr>
+
+</table>
+
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">codecerror</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">nextMode</td>
+<td class = "leftparam">title</td>
+<td class = "desc">次のモードを番号または名前で設定する</td>
+</tr>
+
+<tr>
+<td class = "name">filenameBG</td>
+<td class = "leftparam">codecError</td>
+<td class = "desc">背景画像(バックスクリプトを使わない場合)</td>
+</tr>
+
+<tr>
+<td class = "name">dialogFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ダイアログボックスを表示する</td>
+</tr>
+
+<tr>
+<td class = "subname">filenameDialog</td>
+<td class = "leftparam">ta_dialog5</td>
+<td class = "desc">ダイアログファイル名</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogPrintX</td>
+<td class = "leftparam" rowspan="2">画面中央</td>
+<td class = "desc" rowspan="2">ダイアログ表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogPrintY</td>
+
+
+</tr>
+
+
+</table>
+
+<pre>
+
+ボタン設定解説
+
+notButton:再生しない(ムービーなしでゲームを進める)
+canButton:可能な限り再生(たいていは音のみになる)
+exitButton:戻る(あきらめてゲームを終了する)
+
+</pre>
+
+<br />
+<br />
+<br />
+<pre>
+標準的な設定例
+</pre>
+<div class = "notice">
+<pre>
+modename codecError
+[3つのボタンの設定を必要なだけすべて]
+</pre>
+</div>
+
+
+</body>
+</html>
+

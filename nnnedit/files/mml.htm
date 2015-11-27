@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>files - mml</FONT><BR>
+</CENTER>
+<BR>
+BGMの実体はoggファイル1つですが<BR>
+曲を、イントロ部分、ループ部分に分けて再生したい場合<BR>
+それをmmlファイルとして記述し、bgmファイルのかわりにmmlファイルを指定して再生することが可能です<BR>
+<BR>
+mmlファイルは、bgmファイルとループコントロールで記述されます<BR>
+<BR>
+ループの記述のしかたは<BR>
+[n:    ]<BR>
+で、[]のなかみがn回実行されます。nが0の場合には無限に実行されます<BR>
+<BR>
+たとえば、ある曲を、<BR>
+イントロ部分 bgm1 ループ部分bgm2 bgm3 bgm4 bgm3 これを3回<BR>
+として再生したい場合には、以下のように記述します<BR>
+<BR>
+bgm1 [3: bgm2 bgm3 bgm4 bgm3]<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+また、[]は4重まで入れ子にできます。<BR>
+<BR>
+<BR>
+
+</BODY>
+</HTML>
+

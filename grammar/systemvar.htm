@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>システム予約変数</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">システム予約変数</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+NNNシステムには、名前を変えることのできない特殊な変数が準備されています
+これらの多くは値を代入することはできず、読み出し専用となっています
+</pre>
+
+<br />
+<img src="graphics/var_button_sys.jpg" alt="" />
+<pre>
+を選んだときに表示される100個がそうです
+</pre>
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "varname">変数名</td>
+<td class = "vardesc">解説</td>
+<td class = "varstatus">書込</td>
+</tr>
+
+<tr>
+<td class = "vartitle" colspan="3">ゲーム状態</td>
+</tr>
+
+
+<tr>
+<td class = "varname">mode</td>
+<td class = "vardesc">動作中のゲームモード。主にバックスクリプトで使われる</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">listenbgmmode</td>
+<td class = "vardesc">音楽鑑賞画面での動作状態。プレイ中は1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">listenbgmnumber</td>
+<td class = "vardesc">音楽鑑賞画面で現在再生されている曲の番号</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">cgpercent</td>
+<td class = "vardesc">CG回収率</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">scenepercent</td>
+<td class = "vardesc">シーン回収率</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "vartitle" colspan="3">特殊</td>
+</tr>
+
+<tr>
+<td class = "varname">rnd</td>
+<td class = "vardesc">0-9999の乱数を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+
+<tr>
+<td class = "vartitle" colspan="3">時間</td>
+</tr>
+
+<tr>
+<td class = "varname">date</td>
+<td class = "vardesc">ユーザー使用可能な、月と日にちが一体となった変数。<br />12月26日であれば、1226になる。<br />year変数を参考に正規化する関数もあります。<br />3月34日(334)→4月3日(403)</td>
+<td class = "varstatus">可</td>
+</tr>
+
+<tr>
+<td class = "varname">year</td>
+<td class = "vardesc">ユーザー使用可能な「年」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+<tr>
+<td class = "varname">month</td>
+<td class = "vardesc">ユーザー使用可能な「月」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+<tr>
+<td class = "varname">day</td>
+<td class = "vardesc">ユーザー使用可能な「日」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+
+<tr>
+<td class = "varname">week</td>
+<td class = "vardesc">year,month,dayを元に曜日を計算します。0:日曜 1:月曜　～ 6:土曜</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">holiday</td>
+<td class = "vardesc">土曜、日曜、ユーザー指定の祭日の場合1になります。平日は0</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">hour</td>
+<td class = "vardesc">ユーザー使用可能な「時」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+<tr>
+<td class = "varname">minute</td>
+<td class = "vardesc">ユーザー使用可能な「分」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+<tr>
+<td class = "varname">second</td>
+<td class = "vardesc">ユーザー使用可能な「秒」変数</td>
+<td class = "varstatus">可</td>
+</tr>
+
+
+<tr>
+<td class = "vartitle" colspan="3">リアル時間</td>
+</tr>
+
+<tr>
+<td class = "varname">systemyear</td>
+<td class = "vardesc">実際の「年」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemmonth</td>
+<td class = "vardesc">実際の「月」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemday</td>
+<td class = "vardesc">実際の「日」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemhour</td>
+<td class = "vardesc">実際の「時」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemminute</td>
+<td class = "vardesc">実際の「分」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemsecond</td>
+<td class = "vardesc">実際の「秒」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemweek</td>
+<td class = "vardesc">実際の「曜日」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">systemmillisecond</td>
+<td class = "vardesc">実際の「ミリ秒」を返します</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "vartitle" colspan="3">マウス状態</td>
+</tr>
+
+
+<tr>
+<td class = "varname">mousex</td>
+<td class = "vardesc">マウスのX座標</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">mousey</td>
+<td class = "vardesc">マウスのY座標</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">trig1</td>
+<td class = "vardesc">左ボタンの状態。押されていると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">trig2</td>
+<td class = "vardesc">右ボタンの状態。押されていると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">trig3</td>
+<td class = "vardesc">中央ボタンの状態。押されていると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">click1</td>
+<td class = "vardesc">左ボタンがクリックされると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">click2</td>
+<td class = "vardesc">右ボタンがクリックされると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">click3</td>
+<td class = "vardesc">中央ボタンがクリックされると1</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">wheel</td>
+<td class = "vardesc">ホイールの移動量がはいります</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "vartitle" colspan="3">CONFIG追加情報</td>
+</tr>
+
+
+<tr>
+<td class = "varname">expmode1</td>
+<td class = "vardesc" rowspan="5">拡張ラジオボタンの状態</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expmode2</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expmode3</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expmode4</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expmode5</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expcheck1</td>
+<td class = "vardesc" rowspan="5">拡張チェックボタンの状態</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expcheck2</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expcheck3</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expcheck4</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">expcheck5</td>
+
+<td class = "varstatus"></td>
+</tr>
+
+
+<tr>
+<td class = "vartitle" colspan="3">DirectX関連</td>
+</tr>
+
+
+<tr>
+<td class = "varname">direct3d</td>
+<td class = "vardesc">現在のEXE動作。<br />2:2D<br />3:3D<br />0:不明</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">pixelshader</td>
+<td class = "vardesc">ピクセルシェーダーのバージョン</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">vertexshader</td>
+<td class = "vardesc">頂点シェーダーのバージョン</td>
+<td class = "varstatus"></td>
+</tr>
+
+
+<tr>
+<td class = "vartitle" colspan="3">その他予約済み変数</td>
+</tr>
+
+
+<tr>
+<td class = "varname">taiken</td>
+<td class = "vardesc">予約</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">time</td>
+<td class = "vardesc">予約</td>
+<td class = "varstatus"></td>
+</tr>
+
+<tr>
+<td class = "varname">nullpo</td>
+<td class = "vardesc">常に0</td>
+<td class = "varstatus"></td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
+

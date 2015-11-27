@@ -1,0 +1,47 @@
+<HTML>
+
+<HEAD>
+	<TITLE>たいにゃん</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      ALINK  ="#000000">
+
+<CENTER>Home Page<BR>
+<FONT SIZE=7><S>たいにゃん</S>NNN</FONT><BR>
+<!--count-->
+<BR><IMG SRC=nnn.gif><BR>
+これが勝利のかぎにゃ
+</CENTER>
+
+<BLOCKQUOTE>
+<FONT SIZE=4>
+
+<TABLE>
+<TR><TD><A HREF=bugneko/bugneko.htm>バグ猫ソフト公式Page</A></TD><TD>(97-06-06)</TD></TR>
+<TR><TD><A HREF="http://nyan.algolab.co.jp/%7esham/index.htm">紗夢猫先生 公式ホームページへのリンク</A></TD><TD>(00-06-11)★</TD></TR>
+<TR><TD><A HREF=chacha/chacha.htm>赤ずきんチャチャPage</A></TD><TD>(97-06-06)</TD></TR>
+<TR><TD><A HREF=monitor/monitor1.htm>モニター調整用Page</A></TD><TD>(97-08-24)</TD></TR>
+<TR><TD><A HREF=files/files.htm>Files</A></TD><TD>(97-08-21)</TD></TR>
+<TR><TD><A HREF=links/links.htm>Link</A></TD><TD>(97-08-21)</TD></TR>
+</TABLE>
+</FONT>
+
+<HR>
+<A HREF=http://vvvvvv.algolab.co.jp/~tinyan/kacho/kacho.htm>ゲーム 花鳥風月(テスト中)<BR></A>
+
+
+</BLOCKQUOTE>
+<HR>
+Link OK , 連絡も必要ありません<BR>
+<BR>
+<IMG SRC=links/bugicon.gif> リンク用バナーです。ご自由に<BR>
+<BR>
+
+<IMG SRC=line8.jpg>
+<BR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>簡易BBS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">簡易BBS</p>
+
+
+
+<form method="POST" action="bbs.cgi">
+お名前を入れてね:
+<!--username-->
+<input name="passcode" type="text" value="コード" size="10"/><img src="psw.jpg" alt=""/>書き込むときはこれをいれてね
+<br />
+<textarea name="bbstext" rows="5" cols="60">
+</textarea>
+<br />
+<br />
+表示する数
+<select name="bbslines">
+<!--bbssellines-->
+</select>
+<br />
+<br />
+<input name="command" type="hidden" value="bbs" />
+書き込む:<input name="bbscommand" type="submit" value="write6" />
+ やりなおし:<input name="bbscommand" type="reset" value="reset" />
+ 再表示:<input name="bbscommand" type="submit" value="reload" />
+</form>
+
+<hr>
+<!--bbsdata-->
+
+<br />
+
+
+
+
+
+</body>
+</html>

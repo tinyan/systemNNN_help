@@ -1,0 +1,293 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ゲーム内日付</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">ゲーム内日付</p>
+
+
+<pre>
+
+ゲーム内日付、曜日等を表示させます
+ゲーム内日付は
+変数名 year date
+を使用します
+dateは4桁の数値で、100の位及び1000の位が月を表し、10の位及び1の位で日をあらわします
+たとえば、12月3日なら date=1203です
+
+
+現在、場所選択画面でのみ試験的に動作可能です
+
+</pre>
+
+
+<table class = "none">
+
+<tr>
+<td class = "basicbox1">[tag名]</td>
+<td class = "basicbox2">gameに変換</td>
+</tr>
+
+
+</table>
+
+
+<br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name">gameDateLayerPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム内日付を表示させる</td>
+</tr>
+
+
+
+
+<tr>
+<td class = "name">[tag名]YearPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]MonthPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DayPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+
+
+<tr>
+<td class = "name">[tag名]YearSlashPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]MonthSlashPrintFlag</td>
+<td class = "rightparam">2</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DaySlashPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekYouPrintFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekBiPrintFlag</td>
+<td class = "rightparam">2</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">filename[tag名]TimeFont</td>
+<td class = "leftparam"></td>
+<td class = "desc">年月日のフォントファイル名</td>
+</tr>
+
+
+<tr>
+<td class = "name">[tag名]TimeFontSizeX</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]TimeFontSizeY</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]TimeFontNextX</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]TimePrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]TimePrintY</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]YearUpZeroPrintFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]MonthUpZeroPrintFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DayUpZeroPrintFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "name">[tag名]YearPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]YearPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]MonthPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]MonthPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DayPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DayPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "name">filename[tag名]WeekFont</td>
+<td class = "leftparam"></td>
+<td class = "desc">曜日のフォントファイル名</td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekFontSizeX</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekFontSizeY</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekFontNextX</td>
+<td class = "rightparam">0</td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]WeekPrintY</td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "name">[tag名]DatePrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">画面上での絶対表示位置(ロードセーブ画面では無視される)</td>
+</tr>
+
+<tr>
+<td class = "name">[tag名]DatePrintY</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+</table>
+
+<br />
+
+
+<pre>
+グラフィックは通常は次のように配置します
+
+日付
+0123456789:/%
+または
+0123456789年月日
+
+曜日
+日月火水木金土[][][]曜日
+
+
+
+gameLayerFirst 1
+//0にすると表示をあるていどシステム画像の上にもってこれます
+</pre>
+
+
+</body>
+</html>
+

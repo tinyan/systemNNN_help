@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>back</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">back</p>
+
+
+
+<pre>
+もどるボタンは、ボタン名「back」で、ボタンとして作成する
+詳しくは、ボタンの解説を参照
+</pre>
+
+
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">useCommonBackSetup</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1: game.xtxに書かれた戻るボタンの設定を使用する</td>
+</tr>
+
+</table>
+
+<br />
+
+<div class ="notice">
+<pre>
+戻るボタンの設定は、複数の画面で同じことが多いので
+
+設定をgame.xtxの方に表記して、useCommonBackSetupに1を設定することで
+game.xtxに書かれた共通戻るボタン設定で戻るボタンが作成されるようにすこともできます
+表示位置のみは、本来のinitで上書きできます
+
+この方法の利点は、同じ戻るボタンの設定を何回も書く必要がないのと、
+変更があった場合に、game.xtxの設定1箇所だけを書き直すだけですむことです
+</pre>
+</div>
+
+<br />
+
+<div class ="caution">
+<pre>
+おまけ画面やシステムメニューのの戻るボタンは、機能としては「戻る」ですが
+メニューの1項目として作成されるため、共通戻るボタン設定は使用できません
+</pre>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>実績表示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">実績表示</p>
+
+<pre>
+FileName = init\printResult.xtx
+
+
+</pre>
+
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">上下ボタン設定</td>
+<td class = "commonstatus">必要</td>
+<td class = "commondesc">複数ページの場合のみ</td>
+</tr>
+
+<tr>
+<td class = "commontype">戻るボタン設定</td>
+<td class = "commonstatus">必要</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">なし</td>
+<td class = "commondesc"></td>
+</tr>
+
+</table>
+
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">printResult</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">nextMode</td>
+<td class = "leftparam">omake</td>
+<td class = "desc">次のモードを番号または名前で設定する</td>
+</tr>
+
+
+</table>
+
+<pre>
+resultDescName nya\resultDesc.xtx
+
+descPrintType 1 //0:単純表示 1:つなげてスクロール
+
+messagePrintX 56
+messagePrintY 484
+messageFontSize 22
+messageColorR 255
+messageColorG 255
+messageColorB 255
+messageSukima 1
+messagelength 33
+messageNextY fontSize*1.5
+
+resultsPrintX 25
+resultsPrintY 70
+resultsSizeX 150 
+resultsSizeY 200
+resultsNextX resultsSizeX
+resultsNextY resultsSizeY
+
+resultsMax 20
+resultsNumberX 5
+resultsNumberY 2
+
+filenameResultsTag ta_sys_common_resultPlate
+filenameDialogTag ta_sys_common_result_getdialog
+
+dialogFlag 1
+dialogPrintX
+dialogPrintY
+dialogSizeX
+dialogSizeY
+
+voiceStartWait 25
+scrollStartWait 150
+scrollSpeed 3
+
+
+messageBlockMax 4
+
+voiceFlag 0
+
+
+
+</pre>
+
+<pre>
+----------
+resultDesc.xtx
+1行あたり8項目
+番号,音声ファイル名,説明1-4,よび1,よび2
+
+最初の行は説明
+音声ファイル名の先頭が ! の場合音をださない
+説明の先頭が @ の場合、その行はなしとして扱われる
+</pre>
+
+</body>
+</html>
+
+

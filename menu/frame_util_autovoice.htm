@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>音声自動割付</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="..\default.css" type="text/css" />
+    <link rel="stylesheet" href="..\buttont.css" type="text/css" />
+    <link rel="stylesheet" href="..\warning.css" type="text/css" />
+    <link rel="stylesheet" href="menu.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+<p class="title">音声自動割付</p>
+
+
+<br />
+<pre>
+メニューの[ユーティリティ]-[ボイスの自動割り振り]
+
+を選ぶことで
+キャラ名のついているメッセージに音声ファイル名を自動で割り付けることができます
+対象は現在開いているnnnファイルのみです
+</pre>
+<img src="graphics/framemenu_util.jpg" alt=""/><br />
+<br />
+<br />
+<br />
+<pre>
+メニューの[ユーティリティ]-[全ファイル処理]-[ボイスの自動割り振り]
+
+を選ぶことで
+キャラ名のついているメッセージに音声ファイル名を自動で割り付けることができます
+文章中の文字列検索または置換が行えます
+対象はプロジェクト内すべてのnnnファイルです
+</pre>
+<img src="graphics/framemenu_util_allfile.jpg" alt=""/><br />
+<br />
+<br />
+<br />
+
+<div class="notice">
+<pre>
+キャラ名の判断基準は、
+
+1.メッセージの1行目である(コメントは除く)
+2.nnndir/charaname.txtに登録されている
+
+です。
+
+割り振られるファイル名は
+nnndir/charaname.txtにかかれている、タグ名(半角2文字) + スクリプト番号(2ケタ) + メッセージ通し番号(4ケタ)
+
+に、なります。
+
+
+</pre>
+</div>
+
+
+
+</body>
+</html>
+

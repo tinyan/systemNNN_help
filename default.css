@@ -1,0 +1,23 @@
+
+body.basic {background-color : #80C0A0; color : #202020}
+p.title {color : Black; font-size : 200%; text-align : center}
+pre {color : Black; font-size : 100%}
+a:link{color : #006060}
+a:vlink{color : #7499CC}
+a:alink{color : #000000}
+img {border-style :none}
+
+table {border-style : ridge; border-width : medium}
+tr {border-style :ridge; border-width : 2}
+td {border-style :ridge; border-width : 2}
+
+table.basic {border-style : ridge; border-width : medium}
+tr.basic {border-style :ridge; border-width : 2}
+td.basic {border-style :ridge; border-width : 2}
+
+table.none {border-style : none; border-width : 0}
+tr.none {border-style : none; border-width : 0}
+td.none {border-style : none; border-width : 0}
+
+td.disable {border-style : ridge; border-width : 2; color : #808080}
+td.delete {border-style : ridge; border-width : 2; text-decoration : "line-through"}

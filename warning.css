@@ -1,0 +1,45 @@
+
+.error
+{
+	background-color : #F00000;
+	width:800px;
+	padding:5px;
+}
+
+.warning
+{
+	background-color : #D08080;
+	width:800px;
+	padding:5px;
+}
+
+.caution
+{
+	background-color : #D0D080;
+	width:800px;
+	padding:5px;
+}
+
+.notice
+{
+	background-color : #8080D0;
+	width:800px;
+	padding:5px;
+	font-weight:bold;	
+}
+
+.block
+{
+	background-color : #A0A0E0;
+	width:800px;
+	padding:5px;
+}
+
+
+.noticetitle
+{
+	background-color : #C0C0F0;
+	width:800px;
+	padding:5px;
+	margin:5px,0px,5px,0px;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - mainControl</FONT><BR>
+</CENTER>
+<BR>
+<BR>
+
+
+
+<BR>
+Filename = init\mainControl.xtx<BR>
+<BR>
+
+<TABLE BORDER=4>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>name</TD>
+<TD>mainControl</TD>
+<TD>変更不可。省略不可</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>oldUseGeneralFlag</TD>
+
+<TD ALIGN=LEFT>1</TD>
+<TD>旧形式の呼び出しを使う場合は0をいれる</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN=2>className</TD>
+
+<TD>nnncommongamebytinyan</TD>
+<TD>ウィンドウを作成時にRegisterClassで使われるクラス名を設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>filename2DExe</TD>
+
+<TD>nnnExe.exe</TD>
+<TD>2Dのexe名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>filename3DExe</TD>
+
+<TD>nnn3DExe.exe</TD>
+<TD>3Dのexe名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>checkMutexFlag</TD>
+
+<TD>1</TD>
+<TD>2重起動をチェックするかどうか 0:しない 1:する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>mutexName</TD>
+<TD>NNNCommonGameByTinyan</TD>
+<TD>2重起動防止につかわれるMutex名を設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>mutexErrorMessage</TD>
+<TD>二重起動はできません</TD>
+<TD>2重起動エラーダイアログメッセージ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>mutexErrorTitle</TD>
+<TD>Error</TD>
+<TD>2重起動エラーダイアログタイトル</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN=2>iconName</TD>
+
+<TD></TD>
+<TD>未実装</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>addVersionToWindowTitleFlag</TD>
+
+<TD>0</TD>
+<TD>ウィンドウタイトルにバージョン番号を付加するときに1又は2を設定 ただし、1の場合にはバージョンが1.00の時付加しない</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>windowTitle</TD>
+
+<TD>nnn標準プログラム</TD>
+<TD>通常のウィンドウのタイトルを設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowTitleTaiken</TD>
+
+<TD>nnn標準プログラム体験版</TD>
+<TD>体験版のウィンドウのタイトルを設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowTitleNet</TD>
+
+<TD>nnn標準プログラムネット版</TD>
+<TD>ネット版のウィンドウタイトルを設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowTitleDemo</TD>
+
+<TD>nnn標準プログラムデモ版</TD>
+<TD>デモ版のウィンドウタイトルを設定</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>initRandomSeed</TD>
+
+<TD>-1</TD>
+<TD>乱数初期化 -1:起動時の時刻で初期化 0:初期化しない 1～:その値で初期化</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>windowSizeX</TD>
+
+<TD>800</TD>
+<TD ROWSPAN=2>ウィンドウ(クライアントエリア)のサイズを指定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>windowSizeY</TD>
+
+<TD>600</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>needBpp</TD>
+
+<TD>16</TD>
+<TD>最低必要な色数をbit数で指定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>bppErrorMessage</TD>
+
+<TD>%dbitカラー以上に設定してください</TD>
+<TD>最低必要な色数が不足している場合のエラーダイアログメッセージ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>bppErrorTitle</TD>
+
+<TD>Error</TD>
+<TD>最低必要な色数が不足している場合のエラーダイアログタイトル</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>bppErrorMesAddNumFlag</TD>
+
+<TD>1</TD>
+<TD>エラーメッセージに色数表示をいれるかどうか 0:いれない 1:いれる</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>bppErrorMustAbortFlag</TD>
+
+<TD>0</TD>
+<TD>最低必要な色数不足している場合に起動を中止するかどうか 0:ユーザーに選択させる 1:中止する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>windowSizeErrorMessage</TD>
+
+<TD>画面サイズを%dx%d以上に設定してください</TD>
+<TD>ウィンドウサイズに問題があった場合のエラーダイアログのメッセージ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowSizeErrorTitle</TD>
+
+<TD>Error</TD>
+<TD>ウィンドウサイズエラーダイアログのタイトル</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowSizeErrorMesAddNumFlag</TD>
+
+<TD>1</TD>
+<TD>ウィンドウサイズエラーメッセージにサイズ表示をいれるかどうか 0:いれない 1:いれる</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>windowSizeErrorMustAbortFlag</TD>
+
+<TD>1</TD>
+<TD>ウィンドウサイズに問題があった場合起動を中止するかどうか 0:ユーザーに選択させる 1:中止する</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>mmxErrorMessage</TD>
+
+<TD>MMX機能が無いと判断されました\nこのマシンではプレイできないと思われます\nゲームを中止することをお勧めします</TD>
+<TD>MMX機能が存在しない場合のエラーダイアログメッセージ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>mmxErrorTitle</TD>
+
+<TD>警告</TD>
+<TD>MMX機能が存在しない場合のエラーダイアログタイトル</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>mmxErrorMustAbortFlag</TD>
+
+<TD>0</TD>
+<TD>MMX機能が存在しない場合に起動を中止するかどうか 0:ユーザーに選択させる 1:中止する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>checkDirectXFlag</TD>
+
+<TD>1</TD>
+<TD>1:DirectXをチェックする 0:チェックしない</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>directXErrorMessage</TD>
+<TD>DirectXがインストールされていない可能性があります\nこのまま続けますか</TD>
+<TD>DirectXエラーダイアログメッセージ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>directXErrorTitle</TD>
+<TD>警告</TD>
+<TD>DIrectXエラーダイアログタイトル</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>directXErrorMustAbortFlag</TD>
+<TD>1</TD>
+<TD>DirectXエラーが発生した場合に起動を中止するかどうか 0:ユーザーに選択させる 1:中止する</TD>
+</TR>
+
+
+
+
+
+
+
+</TABLE>
+
+
+<BR>
+
+<pre>
+fillStartWindowFlag 1
+</pre>
+
+</BODY>
+</HTML>
+

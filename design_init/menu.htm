@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>menu</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">menu</p>
+
+<pre>
+メニューボタンは、複数のボタンを一まとめにしたものです
+ゲームの進行度合いによってメニューの構成が変化する場合には
+複数のモードを持つように設定し、そのなかから選択されるようにします
+
+メニューボタンには、「基本ボタン」と「拡張ボタン」があり
+通常は、基本ボタンのみを使い、ゲームの進行によって拡張ボタンが
+出現する使われ方を想定しています
+
+
+メニューボタン名は、次の規則で命名されます
+
+menu[n]button[k]
+[n]番目のタイプのメニューの[k]番目のボタン
+拡張ボタンの番号は、基本ボタンから続きます
+
+ボタンごとの設定は、ボタンの解説を参照
+</pre>
+
+<br />
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr><td class = "name">basicButtonNumber</td>
+<td class = "rightparam">プログラム指定値</td>
+<td class = "desc">メニューが持つ「基本」ボタンの数です</td>
+</tr>
+
+<tr><td class = "name"> basicButtonSpecialMode[k] </td>
+<td class = "rightparam"></td>
+<td class = "desc">基本ボタン[k]が押されたときに、スクリプトを実行せずに、ゲーム固有の処理を行う場合に、ゲームモードを番号で設定(基本ボタンを増やしたときにのみ有効。本来の基本ボタンには使えない)</td>
+</tr>
+
+<tr><td class = "name">extModeNumber</td>
+<td class = "rightparam">0</td>
+<td class = "desc">拡張モードの個数</td>
+</tr>
+
+<tr><td class = "subname">extButtonNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">拡張ボタンの最大数</td>
+</tr>
+
+<tr><td class = "subname">extModeCheckVarName</td>
+<td class = "rightparam"></td>
+<td class = "desc">スクリプトから設定される拡張モードを示す変数名</td>
+</tr>
+
+<tr><td class = "subname">extModeReturnVarName</td>
+<td class = "rightparam"></td>
+<td class = "desc">スクリプトにどの拡張ボタンがおされたかを返す変数名(ただし追加した基本ボタンの場合には、-1,-2, ...が入る)</td>
+</tr>
+
+<tr><td class = "subname"> extButtonSpecialMode[k] </td>
+<td class = "rightparam"></td>
+<td class = "desc">拡張ボタン[k]が押されたときに、スクリプトを実行せずに、ゲーム固有の処理を行う場合に、ゲームモードを番号で設定</td>
+</tr>
+
+<tr><td class = "name">menuAnimeAdjustFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:メニューボタンのアニメを同期させる</td>
+</tr>
+
+<tr><td class = "name">menuNextX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">次のメニューボタンまでの距離。メニューボタンが等間隔の場合には、ボタン個別に座標を設定せずにこちらで行うことができます</td>
+</tr>
+
+<tr><td class = "name">menuNextY</td>
+<td class = "rightparam">menu1Button1SizeY</td>
+
+</tr>
+
+<tr><td class = "name">menu[n]Button[k]ExistFlag</td>
+<td class = "rightparam"></td>
+<td class = "desc">[n]ばんめのモードのメニューの[k]番目のボタンが存在するかどうか 0:存在しない 1:存在する</td>
+</tr>
+
+<tr><td class = "name">menu[n]Button[k]EnableFlag</td>
+<td class = "rightparam"></td>
+<td class = "desc">[n]ばんめのモードのメニューの[k]番目のボタンが有効かどうか 0:無効 1:有効</td>
+</tr>
+
+
+</table>
+
+<br />
+
+<div class ="caution">
+<pre>
+メニューボタンは、タイトル画面、おまけ画面で使用されています
+</pre>
+</div>
+
+<br />
+
+<pre>
+メニューボタンの設定のデフォルト値は、モード1のボタンは1つ前のボタンの設定
+モード2以降のボタンは、1つ前のモードの同じボタンの設定です
+
+
+たとえば、基本ボタンが4つ、拡張モードが2つ、拡張ボタンが3つある構成のメニューの場合には
+
+基本 拡張1拡張2
+[□] [←] [←] 基本ボタン1
+[↑] [←] [←] 基本ボタン2
+[↑] [←] [←] 基本ボタン3
+[↑] [←] [←] 基本ボタン4
+____ [□] [←] 拡張ボタン1
+____ [□] [←] 拡張ボタン2
+____ [□] [←] 拡張ボタン3
+
+このようにデフォルト値がコピーされます
+</pre>
+
+<br />
+
+
+<pre>
+タイトル画面に、あるエンディングをみたらサービスシナリオ用のボタンを2つ追加する設定
+
+(ボタン個別の設定は書いてありません)
+スクリプトで設定、参照される変数名は仮のものです
+</pre>
+<textarea cols="60" rows="8">
+extModeNumber 1
+extButtonNumber 2
+extModeCheckVarName エンディング見た
+extModeReturnVarName サービスシナリオ分岐番号
+</textarea>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<HTML>
+
+<HEAD>
+	<TITLE>ブラックTINYAN</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#f03020"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      ALINK  ="#000000">
+
+<CENTER>Home Page<BR>
+<FONT SIZE=7><S>たいにゃん</S>ブラックTINYAN</FONT><BR>
+<!--count-->
+</CENTER>
+
+<BLOCKQUOTE>
+<FONT SIZE=4>
+
+<TABLE>
+<TR><TD><A HREF=bugneko/bugneko.htm>ばか猫ソフト公式Page</A></TD><TD>(だめだ)</TD></TR>
+<TR><TD><A HREF=shamneko/shamneko.htm>紗夢猫先生 非公認Page</A></TD><TD>まだけしてなみたいだぞ(ふーん)</TD></TR>
+<TR><TD><A HREF=chacha/chacha.htm>赤ずきんバレッタPage</A></TD><TD>(しらんな)</TD></TR>
+<TR><TD><A HREF=monitor/monitor1.htm>モニター破壊用Page</A></TD><TD>(けっ)</TD></TR>
+<TR><TD><A HREF=files/files.htm>ごみ</A></TD><TD>(すてろ)</TD></TR>
+<TR><TD><A HREF=links/links.htm>そと</A></TD><TD>(さあな)</TD></TR>
+</TABLE>
+</FONT>
+
+<BR>
+<A HREF="http://www.cyc-soft.co.jp/">けけけ<BR>
+<BR>
+
+
+</BLOCKQUOTE>
+<HR>
+Link Free つまりリンク禁止だ<BR>
+<BR>
+<IMG SRC=links/bugicon.gif> リンク用バナーだそうだ。すてちまえ<BR>
+<BR>
+
+<IMG SRC=line8.jpg>
+<BR>
+<A HREF=mailto:tinyan666@mri.biglobe.ne.jp>不幸の手紙はここだ?<BR></A>
+
+</BODY>
+</HTML>

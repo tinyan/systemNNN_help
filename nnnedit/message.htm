@@ -1,0 +1,482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ファイル</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="..\default.css" type="text/css" />
+    <link rel="stylesheet" href="nnnedit.css" type="text/css" />
+    <link rel="stylesheet" href="button.css" type="text/css" />
+    <link rel="stylesheet" href="warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">コマ(メッセージ)</p>
+
+
+
+
+
+<img src="graphics/nnnedit_message.jpg" alt="" />
+<br />
+
+<pre>
+コマウィンドウでは、メッセージの選択および、内容の修正
+音声、効果音の設定を行います
+
+</pre>
+
+<table class="none">
+
+<tr>
+<td class ="box1">ボタン</td>
+<td class ="box2">名称</td>
+<td class ="box3">解説</td>
+</tr>
+
+<tr>
+<td class ="box1"></td>
+<td class ="box2"></td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_new.jpg" alt="" /></td>
+<td class ="box2">新規作成</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_cut.jpg" alt="" /></td>
+<td class ="box2">切り取り</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_copy.jpg" alt="" /></td>
+<td class ="box2">コピー</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_paste.jpg" alt="" /></td>
+<td class ="box2">貼り付け</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_delete.jpg" alt="" /></td>
+<td class ="box2">削除</td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_undo.jpg" alt="" /></td>
+<td class ="box2">UNDO</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_comment_bottom.jpg" alt="" /></td>
+<td class ="box2">下コメント</td>
+<td class ="box3">メッセージの下のコメントを表示する</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_comment_top.jpg" alt="" /></td>
+<td class ="box2">上コメント</td>
+<td class ="box3">未実装(メッセージの上のコメントを表示する)</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_exp.jpg" alt="" /></td>
+<td class ="box2">拡張フラグ</td>
+<td class ="box3">仕様検討中</td>
+</tr>
+
+
+</table>
+
+<pre>
+顔コントロールボタン
+現在のセリフに対応したキャラ絵を表示させるときに
+顔タイプ番号を指定します
+
+顔強制ボタン
+セリフからキャラが判別できないときに
+強制的に何番目のキャラとして扱うように指定します
+
+
+</pre>
+
+<br />
+<br />
+<br />
+<br />
+<table class="none">
+
+<tr>
+<td class ="box1">ボタン</td>
+<td class ="box2">名称</td>
+<td class ="box3">解説</td>
+</tr>
+
+<tr>
+<td class ="box1"></td>
+<td class ="box2"></td>
+<td class ="box3"></td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_print.jpg" alt="" /></td>
+<td class ="box2">メッセージモード変更</td>
+<td class ="box3">メッセージの表示方法を変更します
+    <br /><img src="graphics/nnnedit_button_message_print.jpg" alt="" />通常メッセージ
+    <br /><img src="graphics/nnnedit_button_message_lprint.jpg" alt="" />全体メッセージ
+    <br /><img src="graphics/nnnedit_button_message_append.jpg" alt="" />全体追加メッセージ
+    <br /><img src="graphics/nnnedit_button_message_draw.jpg" alt="" />時間待ち(メッセージは表示されない)
+</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_voice1.jpg" alt="" /></td>
+<td class ="box2">音声1</td>
+<td class ="box3">音声その1。音声が設定されていると、このように、ボタンが話している絵になります</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_voice2.jpg" alt="" /></td>
+<td class ="box2">音声2</td>
+<td class ="box3">音声その2。3D効果をかけることができる。モノラル音声のみ使用可能。定位はエディターで設定する</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_voice3.jpg" alt="" /></td>
+<td class ="box2">効果音音声1</td>
+<td class ="box3">効果音的に音声を鳴らすときはここを使う。たいていループさせるようです</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_voice4.jpg" alt="" /></td>
+<td class ="box2">効果音音声2</td>
+<td class ="box3">3D効果をかけることができる。モノラル音声のみ使用可能。定位はエディターで設定する</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound1.jpg" alt="" /></td>
+<td class ="box2">効果音1</td>
+<td class ="box3" rowspan="4">効果音を設定する。</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound2.jpg" alt="" /></td>
+<td class ="box2">効果音2</td>
+
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound3.jpg" alt="" /></td>
+<td class ="box2">効果音3</td>
+
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound4.jpg" alt="" /></td>
+<td class ="box2">効果音4</td>
+
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound5.jpg" alt="" /></td>
+<td class ="box2">効果音5</td>
+<td class ="box3" rowspan="4">効果音を設定する。3D効果がかけられます</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound6.jpg" alt="" /></td>
+<td class ="box2">効果音6</td>
+
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound7.jpg" alt="" /></td>
+<td class ="box2">効果音7</td>
+
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_message_sound8.jpg" alt="" /></td>
+<td class ="box2">効果音8</td>
+
+</tr>
+
+</table>
+<br />
+<div class ="caution">
+<pre>
+メッセージモード変更、音声、効果音音声、効果音のボタンは、通常のボタンと動作が多少違っています
+
+メッセージモード変更ボタンは、
+左クリックで内容の変更用ダイアログが開きます
+右クリックでモード選択用のメニューが開きます
+
+音声関連のボタンは
+左クリックで、設定されている音を再生します
+右クリックで、設定用のメニューがひらきます
+</pre>
+</div>
+<br />
+
+<div class = "descbox">
+<pre>
+メッセージのIDが表示されます。
+</pre>
+<img src="graphics/nnnedit_message_ex_id.jpg" alt="" />
+</div>
+<br />
+
+<div class = "descbox">
+<pre>
+設定されている音声の
+
+キャラ番号
+(キャラ名)
+音声番号
+[ファイル名]
+
+が表示されます
+</pre>
+<img src="graphics/nnnedit_message_ex_voicedesc.jpg" alt="" />
+</div>
+<br />
+
+<div class = "descbox">
+<pre>
+設定されている効果音の
+
+番号
+解説
+(ファイル名)
+
+が表示されます
+</pre>
+<img src="graphics/nnnedit_message_ex_sounddesc.jpg" alt="" />
+</div>
+
+
+<br />
+<br />
+
+<div class ="menubox">
+<table class="none">
+<tr class = "none">
+<td class = "none"><img src="graphics/nnnedit_button_message_print.jpg" alt="" /></td>
+<td class = "none">ボタン右クリックでのメニュー</td>
+</tr>
+</table>
+<br />
+<table class = "none">
+<tr>
+<td class = "none">
+<img src="graphics/nnnedit_menu_message_message.jpg" alt="" />
+</td>
+<td class = "none">
+    <table class = "none">
+    
+    <tr>
+    <td class = "box2">メッセージ</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">全体メッセージ</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">追加メッセージ</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">時間待ち</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">ID変更</td>
+    <td class = "box3">ID変更は、何らかの理由でメッセージIDの変更が必要になったときにのみ使用してください<br />通常は、エディターの「メッセージシリアル」で同時に全IDを設定します</td>
+    </tr>
+    
+    </table>
+</td>
+</tr>
+</table>
+</div>
+<br />
+
+
+<div class="menubox">
+<pre>
+音声メニュー
+</pre>
+<table class = "none">
+<tr>
+<td class = "none"><img src="graphics/nnnedit_menu_message_voice.jpg" alt="" />
+</td>
+<td class = "none">
+    <table class = "none">
+
+    <tr>
+    <td class="box2">Player番号設定</td>
+    <td class="box3" rowspan="2">何らかの理由でプレイヤー番号を変更する必要が発生した場合にのみ使ってください。通常はcharaname.txtから自動的に設定されます</td>
+    </tr>
+
+    <tr>
+    <td class="box2">ボイス番号修正</td>
+
+    </tr>
+ 
+    <tr>
+    <td class="box2">ファイル名変更</td>
+    <td class="box3">マスター後などに音声の修正があり、ファイル名が変更になる場合に使ってください</td>
+    </tr>
+    
+    <tr>
+    <td class="box2">音声継続</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">ループ切り替え</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">ボリューム</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">定位</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">削除</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">音声ロック</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">ロック解除</td>
+    <td class="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class="box2">効果音音声の停止</td>
+    <td class="box3"></td>
+    </tr>
+    
+    </table>
+</td>
+</tr>
+</table>
+</div>
+<br />
+
+<div class = "menubox">
+<pre>
+効果音メニュー
+</pre>
+<table class ="none">
+<tr>
+<td class="none"><img src="graphics/nnnedit_menu_message_sound.jpg" alt="" /></td>
+<td class="none">
+    <table class = "none">
+    
+    <tr>
+    <td class = "box2">効果音選択</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">ファイル名変更</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">停止</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">ループ切り替え</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">ボリューム</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">定位</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    <tr>
+    <td class = "box2">削除</td>
+    <td class = "box3"></td>
+    </tr>
+    
+    </table>
+</td>
+</tr>
+</table>
+</div>
+<br />
+
+<div class = "menubox">
+<pre>
+メッセージ上での右クリックメニュー
+</pre>
+<table class = "none">
+<tr>
+<td class ="none"><img src="graphics/nnnedit_menu_message_window.jpg" alt="" /></td>
+<td class ="none">
+    <table class ="none">
+    
+    <tr>
+    <td class ="box2">内容修正</td>
+    <td class ="box3"></td>
+    </tr>
+    
+    <tr>
+    <td class ="box2">メモ色変更→</td>
+    <td class ="box3">サブメニューからメモ色を選びます。エディタでのみ有効です）<br /><img src="graphics/nnnedit_menu_message_window_sub.jpg" alt="" /></td>
+    </tr>
+    
+    </table>
+</td>
+</tr>
+</table>
+</div>
+<br />
+
+<pre>
+メッセージ入力の際には、特殊な処理も行えます
+</pre>
+<a href="../grammar/nagashikomi.htm">ながしこみ</a>
+
+</body>
+</html>
+

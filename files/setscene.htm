@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>files - シーン登録</FONT><BR>
+</CENTER>
+<BR>
+FileName = nnndir\シーン回想登録テキスト.txt<BR>
+<BR>
+コンパイル後は<BR>
+<BR>
+spt\scene.dat<BR>
+という名前で保存されゲームから使用される<BR>
+
+<BR>
+シーン登録および再生用<BR>
+<BR>
+<BR>
+1ファイルにシーンキャラ全員分を記述する<BR>
+<BR>
+<BR>
+一人分の記述<BR>
+<BR>
+[キャラ名など]<BR>
+シーン1設定<BR>
+シーン2設定<BR>
+シーン3設定<BR>
+・<BR>
+・<BR>
+・<BR>
+<BR>
+という形式で設定する<BR>
+<BR>
+<BR>
+<BR>
+シーン1つの設定<BR>
+<BR>
+@スクリプトファイル名(nnn) フィルム名1 フィルム名2 ・・・<BR>
+<BR>
+という形式で設定する<BR>
+この行に記述されたフィルムがすべて再生された場合に、このシーンが見られたものとして扱われる。<BR>
+スクリプトファイル名の前に「#」をつけた場合には、特殊タイプシーンとしてシーン鑑賞選択で処理される<BR>
+<BR>
+<BR>
+<BR>
+フィルム名の設定<BR>
+<BR>
+フィルム名の先頭に「!」をつけた場合には、そのフィルムは既読フィルムのチェックには使われず、再生のみ行われる<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<pre>
+特殊:
+フィルム名の先頭を%にした場合には、シナリオ名として処理される(シナリオ内部のすべてのフィルムがながれる)
+</pre>
+
+</BODY>
+</HTML>
+

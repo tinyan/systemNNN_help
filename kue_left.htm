@@ -1,0 +1,301 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"/>
+   <meta name="GENERATOR" content="Mozilla/4.03 [ja] (Win95; I) [Netscape]"/>
+   <meta name="Author" content="たいにゃん"/>
+   <title>クェ JavaScript Version</title>
+<link rev="MADE" href="mailto:tinyan666@mri.biglobe.ne.jp"/>
+
+
+
+<script language="JavaScript" type = "text/javascript">
+
+aaa = 1;
+
+circleareaflag = false;
+
+mapSizeX = 21;
+mapSizeY = 21;
+centerX = (mapSizeX-1)/2;
+centerY = (mapSizeY-1)/2;
+
+map = new Array(mapSizeY);
+for (j=0;j<mapSizeY;j++)
+{
+    map[j] = new Array(mapSizeX);
+}
+
+
+mapchara = new Array(10);
+mapbgname = new Array(10);
+mapcolorname = new Array(10);
+kueoktable = new Array(10);
+
+mapchara[0] = "□";
+mapchara[1] = "×";
+mapchara[2] = "△";   //クェ
+mapchara[3] = "○";   //クェッ！？(嗅覚)
+mapchara[4] = "☆";   //クェェッ！！？/
+mapchara[5] = "★";   //ク、クェーッ！！/
+mapchara[6] = "５";   //
+mapchara[7] = "６";   //
+mapchara[8] = "７";   //
+mapchara[9] = "●";   //
+
+kueoktable[0] = 1;
+kueoktable[1] = 1;
+kueoktable[2] = 1;
+kueoktable[3] = 0;
+kueoktable[4] = 1;
+kueoktable[5] = 1;
+kueoktable[6] = 0;
+kueoktable[7] = 0;
+kueoktable[8] = 0;
+kueoktable[9] = 0;
+
+mapbgname[0] = "white";  //通常
+mapbgname[1] = "silver";  //使用済み
+mapbgname[2] = "lime";  //ありそう
+mapbgname[3] = "red";  //なさそう
+
+
+mapcolorname[0] = "black";   //通常
+mapcolorname[1] = "magenta";   //クェ等
+mapcolorname[2] = "blue";   //・・・
+
+InitMap();
+PrintMap();
+
+
+
+
+
+
+
+function  InitMap()
+{
+    for (j=0;j<mapSizeY;j++)
+    {
+        for (i=0;i<mapSizeX;i++)
+        {
+           map[j][i] = 0;
+        }
+    }        
+}
+
+function PrintMap()
+{
+    top.right1.document.open();
+    top.right1.document.write("<html>\n");
+    top.right1.document.write("<head><title></title>");
+    
+    top.right1.document.write('<SCRIPT language="JavaScript">');
+
+
+    top.right1.document.write('function testfunc(x,y){ top.left1.testfunc3(x,y);}');
+
+
+    
+    top.right1.document.write("</SCRIP");
+    top.right1.document.write("T>");
+    
+    
+    
+    top.right1.document.write("</head>\n");
+    top.right1.document.write("<body>\n");
+    
+    
+    
+
+    
+    
+    top.right1.document.write('<table style="cursor:default" border=2>\n');
+    for (j=0;j<mapSizeY;j++)
+    {
+        top.right1.document.write("<tr>\n");
+    
+        for (i=0;i<mapSizeX;i++)
+        {
+       
+           top.right1.document.write("<td ");
+           
+           //bgcolor
+           mapbgcolor = 0;
+           if (map[j][i] != 0)
+           {
+               mapbgcolor = 1;
+           }
+           else
+           {
+           }
+           
+           if (mapbgcolor > 0)
+           {
+               top.right1.document.write(" bgColor =");
+               top.right1.document.write(mapbgname[mapbgcolor]);
+           }
+           
+           
+           //text color
+           mapcolor = 0;
+           if (map[j][i] == 1)
+           {
+               mapcolor = 2;
+           }
+           else if (map[j][i] > 0)
+           {
+               mapcolor = 1;
+           }
+           
+           if (mapcolor > 0)
+           {
+               top.right1.document.write(" color = ");
+               top.right1.document.write(mapcolorname[mapcolor]);
+           }
+           
+           
+           top.right1.document.write(' onClick = "testfunc(' + i + ',' + j + ');"');
+           
+           top.right1.document.write(">\n");
+           
+           //data
+           
+           m = map[j][i];
+           if ((i==centerX) && (j==centerY))
+           {
+               m = 9;
+           }
+           
+           top.right1.document.write(mapchara[m]);
+           
+           
+           top.right1.document.write("</td>\n");
+        }
+        
+        top.right1.document.write("</tr>\n");
+    }
+    
+    top.right1.document.write("</table>\n");
+    
+    top.right1.document.write("</body>\n");
+    top.right1.document.write("</html>\n");
+    top.right1.document.close();
+
+
+}
+
+
+function ChangePic(menuName)
+{
+	document[menuName].src = selFileName[menuName];
+}
+
+function ChangePic2(menuName)
+{
+	document[menuName].src = normalFileName[menuName];
+}
+
+function testfunc()
+{
+    alert("testmessage");
+}
+
+function testcheck1()
+{
+    if (document.F1.C1.checked)
+    {
+        alert("testmessage-check1-on");
+    }
+    else
+    {
+        alert("testmessage-check1-off");
+    }
+}
+
+function testcheck2()
+{
+    alert("testmessage");
+}
+
+function testfunc3(x,y)
+{
+    if ((x>=0) && (x<mapSizeX) && (y>=0) && (y<mapSizeY))
+    {
+        d = map[y][x];
+        
+        d += 1;
+        d %= 10;
+        
+        while (kueoktable[d] == 0)
+        {
+            d += 1;
+            d %= 10;
+        }
+        
+        map[y][x] = d;
+        
+        PrintMap();
+    }
+}
+
+function testfunc2()
+{
+    alert("testmessage2222");
+    
+    top.document.open();
+    top.document.write("<html>\n");
+    top.document.write("<head><title>テスト</title></head>\n");
+    top.document.write("<body>へへへ</body>\n");
+    top.document.write("</html>\n");
+    top.document.close();
+ 
+}
+
+//-->
+</script>
+</head>
+<body text="#990000" bgcolor="#FFFFFF" link="#006060" vlink="#7499CC" alink="#000000">
+
+<script language="JavaScript" type = "text/javascript">
+
+
+
+
+
+//-->
+</script>
+
+
+<!--
+<A HREF="graphics/farce_new_top.jpg"><IMG BORDER=0 SRC="minigraphics/pandora02.jpg" ALT="PANDORA" NOSAVE HEIGHT=472 WIDTH=356></A><BR>
+-->
+
+<input type = "checkbox" name = "C0" value = "aaa" onclick="testcheck1();"/>@@@
+
+<form name = "F1" action = "#">
+<input type = "checkbox" name = "C1" value = "aaa" onclick="testcheck1();"/>aaa
+<input type = "checkbox" name = "C2" value = "bbb" onclick="testcheck2();"/>bbb
+</form>
+
+<form action = "#">
+あああ
+<input type = "hidden" onclick = "testfunc();"/>
+</form>
+
+<a href = "#" onclick = "testfunc();">ううう</a>
+
+<table style="cursor:default">
+<tr>
+<td abbr="てきすと" onclick = "testfunc2();"></td>
+</tr>
+</table>
+
+<form action = "#">
+いいい
+<input type = "submit" value = "ok" onclick = "testfunc2();"/>
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ルビ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">ルビ</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+
+
+ルビ仕様
+
+#［３ルビ文字列］
+
+
+
+半角#
+全角大括弧開き
+全角で、ルビの対象漢字数
+ルビ文字列(全角のみ)
+全角大括弧閉じ
+
+
+
+ルビ文字列に外字は使えません
+ルビ文字列に、全角大括弧はつかえません
+
+
+ルビは、表示文章の幅をこえません。はみだすときは、中におしこまれます
+2つ目以降のルビが前のルビにかかるときは、右にずらされます
+どうしてもはいらないルビは、文字間隔が自動的につめられます
+
+文章中に文字色がかわった場合には、ルビの文字色も対応する色にかわります
+(1文字目の漢字の色がそのルビ全体に使われます)
+
+
+
+
+
+設定は init::game.xtxで行う
+
+rubiFlag 1:ルビ使う
+rubiColorR
+rubiColorG
+rubiColorB
+rubiColorFix 文字の色がかわってもルビの色をかえない
+rubiPercent ルビの文字に対するサイズをパーセントで
+rubiDeltaY ルビの表示Y座標を調整する値
+rubiSukima ルビ文字間
+
+</pre>
+
+<br />
+
+<pre>
+エディターでのルビ設定ファイル
+nnndir/rubi.txt
+
+ルビ対象文字列 ルビ文字列
+をひとくみとして1行ずつ書いてきます
+
+ルビを付けたくないものには、設定文字列を*(半角アスタリスク)にします
+
+
+</pre>
+
+<pre>
+設定例
+
+元文章
+</pre>
+
+<div class="notice">
+<pre>
+まえあとてすとだよ
+狼少年と狼少女
+
+</pre>
+</div>
+
+<pre>
+設定ファイル
+</pre>
+
+<div class="notice">
+<pre>
+まえ マエヨウルビ
+あと アトヨウルビ
+えあ とちゅうてすと
+狼少年 *
+狼 うるふ
+
+</pre>
+</div>
+
+<br />
+
+<pre>
+変換後
+</pre>
+<div class="notice">
+<pre>
+まえ#［２マエヨウルビ］あと#［２アトヨウルビ］てすとだよ
+狼少年と狼#［１うるふ］少女
+</pre>
+</div>
+
+<pre>
+
+
+まえ、あと
+には、ルビがつきます
+
+えあ
+には、つきません。すでに、「え」が「まえ」で使われているためです
+
+狼少年の狼の部分にもルビはつきません
+
+狼少女の狼の部分にはルビがつきます
+
+
+
+
+</pre>
+
+
+
+</body>
+</html>
+

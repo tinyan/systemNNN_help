@@ -1,0 +1,39 @@
+
+body.basic
+{
+	background-color : #80C0A0;
+	color : #202020;
+}
+
+p.title
+{
+	text-align:center;
+	font-size:200%;
+	color:Black;
+}
+
+p.desctitle
+{
+	text-align:left;
+	font-size:120%;
+	color:Blue;
+}
+
+pre
+{
+	text-align:left;
+	font-size:100%;
+	color:Black;
+}
+
+iframe.desc
+{
+	
+	width:85%;
+	height:300px;
+	min-height:100px;
+}
+
+
+
+

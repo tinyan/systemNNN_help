@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>シーン登録手順</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">シーン登録手順</p>
+<br />
+
+
+<pre>
+1.登録したいフィルムをきめ、キャラごとに分類します。全部を一まとめにすることも可能です
+2.シーンの登録用テキスト nnndir/シーン回想登録テキスト.txtを作成します
+3.エディターで、シーン登録を行う設定にして全てビルドを実行します
+
+4.サムネイルの縮小画像を作成しておきます。場所はbmp/sys/ta/scです
+5.nya/scenevoice.xtxを作成します。シーン登録選択画面でつかわれる設定ファイルです
+
+6.init/selectscene.xtxを作成します。シーンを選択する画面の設定ファイルです。1ページに表示する個数や、配置などを設定します
+7.init/selectSceneChara.xtxを作成します(シーンキャラ人数が2人以上の場合のみ)みたいシーンのキャラを選択する画面の設定ファイルです
+
+8.キャラが1人のときは、キャラ選択画面が必要ないので
+    init/game.xtxに selectSceneCharaClassDisable 1
+    init/omake.xtxに autoSceneCharaFlag 1
+ を追加します
+ 
+
+</pre>
+
+
+</body>
+</html>
+
+

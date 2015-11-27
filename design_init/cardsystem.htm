@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>カードシステム</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">カードシステム</p>
+
+
+
+<pre>
+作成中
+
+FileName = init\cardsystem.xtx
+</pre>
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc">Ok という名前で決定ボタンを作成する</td>
+</tr>
+
+
+</table>
+
+<br />
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">cardsystem</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+<tr>
+<td class = "subtitle" colspan="3"><center>？？？関連</center></td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "rightparam"></td>
+<td class = "desc"></td>
+</tr>
+
+
+</table>
+
+
+
+<br />
+
+<pre>
+cardNumber
+キャラクターカードの種類数
+
+cardPlaceVar[n]
+カードのかさなり状態をいれる変数
+
+変数値解説
+0:ふりー
+1-:その番号のカードにのっている
+マイナス:その番号のカードにのられてる
+
+
+appearControlFlag 0
+カードの出現をコントロールする
+    appearFunctionName appearcard
+    appearVar カード出現コントロールワーク
+
+enableControlFlag 0
+カードの選択許可をコントロールする
+    enableFunctionName enablecard
+    enableVar カード許可コントロールワーク
+
+onokControlFlag 0
+カードの上にのせられる許可をコントロールする
+    onOkFunctionName onokcard
+    onOkVar カードのせコントロールワーク
+
+
+使い方、スクリプトのファンクションで
+ファンクション名(カード番号,状態);
+0:消去、不許可
+1:出現、許可
+
+
+updownAdjust 1
+1:カードの上下関係を番号の若い順に調整する(A→BとB→Aがおなじものとしてスクリプトに返される)
+
+
+
+powerMax 10
+パワーゲージの最大値
+powerMaxVar
+パワーゲージの最大値ををゲームの進行に応じて変更していく場合、その最大値を設定する変数名
+
+cardSizeX 100
+cardSizeY 200
+onCardPrintX -10
+onCardPrintY -20
+cardPrintX[n]
+cardPrintY[n]
+
+
+cardPrintType[n] 1,2,3,4,5,1,1
+cardSeatTable[n] 1,1,1,1,1,1,1
+cardAddColorR 64
+cardAddColorG 96
+cardAddColorB 32
+cardTransPercent 50
+
+tagNameCard ta_cardSeat
+
+cardLevelMax 1
+
+
+cardPowerPicByCard 0
+cardPowerPicByLevel 1
+cardPowerPicByStatus 0
+cardPowerPrintType[n]
+cardPowerSeatTable[n]
+cardPowerAddColor[RGB]
+cardPowerTransPercent
+cardPowerPrintX 10
+cardPowerPrintY 10
+cardPowerSizeX 16
+cardPowerSizeY 16
+cardPowerNextX cardPowerSizeX
+cardPowerNextY 0
+
+filenameCardPowerPic
+
+
+
+
+filenameCardBar ta_cardbar
+cardBarTate 0
+cardBarTypeNumber 1
+
+cardBarSizeX
+cardBarSizeY
+cardBarSizeX[n]
+cardBarSizeY[n]
+
+cardBarPrintX
+cardBarPrintY
+cardBarPrintX[n]
+cardBarPrintY[n]
+
+
+
+
+</pre>
+
+</body>
+</html>
+

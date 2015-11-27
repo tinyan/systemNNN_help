@@ -1,0 +1,94 @@
+<HTML>
+
+<HEAD>
+	<TITLE>たいにゃん</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      ALINK  ="#000000">
+
+<CENTER>Home Page<BR>
+<FONT SIZE=7>たいにゃん</FONT><BR>
+<!--count-->
+</CENTER>
+
+
+<BLOCKQUOTE>
+<FONT SIZE=4>
+
+<TABLE BORDER>
+	<TR>
+		<TD><A HREF=bugneko/bugneko.htm>バグ猫ソフト公式Page</A></TD>
+		<TD>(98-08-20)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF="http://nyan.algolab.co.jp/%7esham/index.htm">紗夢猫先生 公式ホームページへのリンク</A></TD>
+		<TD>(00-06-11)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF=chacha/chacha.htm>赤ずきんチャチャPage</A></TD>
+		<TD>(97-06-06)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF=monitor/monitor.htm>モニター調整用Page</A></TD>
+		<TD>(97-09-24)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF=files/files.htm>Files</A></TD>
+		<TD>(97-08-21)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF=links/links.htm>Link</A></TD>
+		<TD>(98-08-30)</TD>
+	</TR>
+	<TR>
+		<TD><A HREF=nyanlib/index.htm>NyanLib</A></TD>
+		<TD>(08-05-22)★</TD>
+	</TR>
+	<TR>
+		<TD><A HREF="nico.htm">にこにこ動画にあげたやつとか</A></TD>
+		<TD>(08-07-08)</TD>
+	</TR>
+	
+</TABLE>
+</FONT>
+
+</BLOCKQUOTE>
+
+<BR>
+
+
+<HR>
+<A HREF=http://nyan.algolab.co.jp/~tinyan/index.htm>猫の遊園地(オンラインゲームとかあるにゃ)</A><BR>
+<BR>
+
+
+
+<BR>
+
+
+<HR>
+</FONT>
+
+Link OK  , 連絡しなくてOKにゃ<BR>
+<BR>
+<IMG SRC="banner1.jpg"> リンク用バナーです。ご自由に<BR>
+<BR>
+<A HREF=pgp.key>PGP公開KEY</A><BR>
+<BR>
+<A HREF="story/1.htm">_</A><BR>
+<A HREF="http://www.geocities.co.jp/SiliconValley-SanJose/9016/">●</A><BR>
+
+<IMG SRC=line8.jpg>
+<BR>
+メイルはtinyan666@mri.biglobe.ne.jpから666を削ったところに<BR>
+
+
+
+
+
+
+</BODY>
+</HTML>

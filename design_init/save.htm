@@ -1,0 +1,632 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>セーブ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">セーブ</p>
+
+<br />
+
+
+<pre>
+FileName = init\save.xtx
+</pre>
+
+
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">上下ボタン設定</td>
+<td class = "commonstatus">必要(またはタブボタン)</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">戻るボタン設定</td>
+<td class = "commonstatus">必要</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">警告ボタン</td>
+<td class = "commondesc">警告ダイアログを表示する場合には[dialogOk][dialogCancel]という名前のボタンを作成すること</td>
+</tr>
+
+</table>
+
+<br />
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">save</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">fileNameBG</td>
+<td class = "leftparam">save_bg</td>
+<td class = "desc">背景画像ファイル名(バックスクリプトを使わないとき)</td>
+</tr>
+
+<tr>
+<td class = "name">page</td>
+<td class = "rightparam">10</td>
+<td class = "desc">ページ数</td>
+</tr>
+
+<tr>
+<td class = "name">blockNumberX</td>
+<td class = "rightparam">4</td>
+<td class = "desc" rowspan="2">1画面あたりのデータスロット数</td>
+</tr>
+
+<tr>
+<td class = "name">blockNumberY</td>
+<td class = "rightparam">3</td>
+
+</tr>
+
+
+<tr>
+<td class = "name">printX</td>
+<td class = "rightparam">85</td>
+<td class = "desc" rowspan="2">データスロットの表示開始位置</td>
+</tr>
+
+<tr>
+<td class = "name">printY</td>
+<td class = "rightparam">113</td>
+
+</tr>
+
+<tr>
+<td class = "name">nextX</td>
+<td class = "rightparam">166</td>
+<td class = "desc" rowspan="2">次のデータスロットまでの距離</td>
+</tr>
+
+<tr>
+<td class = "name">nextY</td>
+<td class = "rightparam">124</td>
+
+</tr>
+
+<tr>
+<td class = "name">dataPrintCustomFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:データスロットの座標を個別に設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">dataPrintX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">[n]番目のデータスロットの表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">dataPrintY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+<tr>
+<td class = "name">clickTime</td>
+<td class = "rightparam">8</td>
+<td class = "desc">データスロットクリック後の点滅時間をフレーム数で設定</td>
+</tr>
+
+
+<tr>
+<td class = "name">warningPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:上書き警告ダイアログを表示する</td>
+</tr>
+
+<tr>
+<td class = "subname">FilenameDialog</td>
+<td class = "leftparam">ta_dialog_4</td>
+<td class = "desc">警告ダイアログのファイル名</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogX</td>
+<td class = "rightparam">236</td>
+<td class = "desc" rowspan="2">警告ダイアログの表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogY</td>
+<td class = "rightparam">160</td>
+
+</tr>
+
+<tr>
+<td class = "subname">dialogSizeX</td>
+<td class = "rightparam">340</td>
+<td class = "desc" rowspan="2">警告ダイアログのサイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogSizeX</td>
+<td class = "rightparam">145</td>
+
+</tr>
+
+<tr>
+<td class = "name">saveSound</td>
+<td class = "leftparam">1</td>
+<td class = "desc">データスロットを選択した時にだす音を番号で設定</td>
+</tr>
+
+<tr>
+<td class = "name">warningSound</td>
+<td class = "rightparam">-1</td>
+<td class = "desc">警告ダイアログを表示する時にだす音を番号で設定</td>
+</tr>
+
+
+<tr>
+<td class = "name">quickSaveSelectOk</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:クイックセーブスロットにも書き込める</td>
+</tr>
+
+<tr>
+<td class = "name">pageMode</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:上下ボタン 2:タブボタン</td>
+</tr>
+
+<tr>
+<td class = "name">commentInputFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:セーブ時にコメントが入力できる</td>
+</tr>
+
+
+<tr>
+<td class = "subname">fileNameDialog2</td>
+<td class = "rightparam"></td>
+<td class = "desc">コメント入力ダイアログファイル名</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogX2</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">コメント入力ダイアログ表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogXY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">dialogSizeX2</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">コメント入力ダイアログサイズ</td>
+</tr>
+
+<tr>
+<td class = "subname">dialogSizeY2</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+<tr>
+<td class = "name">commentNullOk</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:コメントなし状態では、okボタンが押せない</td>
+</tr>
+
+<tr>
+<td class = "subname">saveCommentLineNumber</td>
+<td class = "rightparam">1</td>
+<td class = "desc">コメント入力可能行数を1-4で指定(現在1のみ可能)</td>
+</tr>
+
+<tr>
+<td class = "subname">textBoxPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">テキスト入力エリアのダイアログに対する位置を相対座標で指定</td>
+</tr>
+
+<tr>
+<td class = "subname">textBoxPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subname">textBoxDatePrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:テキスト入力ダイアログ内に、現在の日付を表示する</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDatePrintX</td>
+<td class = "rightparam">表示位置</td>
+<td class = "desc" rowspan="2"></td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDatePrintY</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">filenameTextBoxDate</td>
+<td class = "leftparam"></td>
+<td class = "desc">数字フォントファイルの名前</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDateFontSizeX</td>
+<td class = "rightparam">8</td>
+<td class = "desc" rowspan="2">数字フォントのサイズ</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDateFontSizeY</td>
+<td class = "rightparam">8</td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDateFontSizeX</td>
+<td class = "rightparam">8</td>
+<td class = "desc">数字フォントの文字幅</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxDateUpZeroFlag</td>
+<td class = "rightparam">1</td>
+<td class = "desc">上位の0を表示する</td>
+</tr>
+
+
+
+<tr>
+<td class = "subname">textBoxGameYearPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">テキスト入力ダイアログ内にゲーム内年を表示する</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameYearPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">表示位置</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameYearPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">filenameTextBoxGameYear</td>
+<td class = "leftparam"></td>
+<td class = "desc">数字フォントファイルの名前</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameYearFontSizeX</td>
+<td class = "rightparam">8</td>
+<td class = "desc" rowspan="2">数字フォントのサイズ</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameYearFontSizeY</td>
+<td class = "rightparam">8</td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameYearFontNextX</td>
+<td class = "rightparam">8</td>
+<td class = "desc">数字フォントの文字幅</td>
+</tr>
+
+<tr>
+<td class = "subname">textBoxGameDatePrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">テキスト入力ダイアログ内にゲーム内月日を表示する</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDatePrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">表示位置</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDatePrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">filenameTextBoxGameDate</td>
+<td class = "leftparam"></td>
+<td class = "desc">数字フォントファイルの名前</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateFontSizeX</td>
+<td class = "rightparam">8</td>
+<td class = "desc" rowspan="2">数字フォントのサイズ</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateFontSizeY</td>
+<td class = "rightparam">8</td>
+
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateFontNextX</td>
+<td class = "rightparam">8</td>
+<td class = "desc">数字フォントの文字幅</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateUpZeroFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム内月の上位の0を表示する</td>
+</tr>
+
+
+<tr>
+<td class = "subsubname">textBoxGameDateUpZeroFlag2</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム内日の上位の0を表示する</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateLeftFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム内月を左詰で表示</td>
+</tr>
+
+<tr>
+<td class = "subsubname">textBoxGameDateLeftFlag2</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:ゲーム内日を左詰で表示</td>
+</tr>
+
+
+<tr>
+<td class = "subname">miniCGPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:テキスト入力ダイアログ内にサムネイルを表示する</td>
+</tr>
+
+<tr>
+<td class = "subsubname">miniCGPrintX</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">表示位置</td>
+</tr>
+
+<tr>
+<td class = "subsubname">miniCGPrintY</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+
+
+
+<tr>
+<td class ="subname">textBoxAddPicPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class ="desc">1:テキスト入力ダイアログに追加グラフィックを表示する</td>
+</tr>
+
+
+<tr>
+<td class ="subsubname">textBoxAddPicPrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">追加画像のエリア内での表示位置を相対座標で設定</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxAddPicPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxAddPicSizeX</td>
+<td class = "rightparam">16</td>
+<td class ="desc" rowspan="2">追加画像のサイズ</td>
+</tr>
+
+<tr>
+<td class="subsubname">textBoxAddPicSizeY</td>
+<td class = "rightparam">16</td>
+
+</tr>
+
+<tr>
+<td class ="subsubname">fileNameTextBoxAddPic</td>
+<td class ="leftparam"></td>
+<td class ="desc">追加グラフィックファイル名</td>
+</tr>
+
+
+<tr>
+<td class ="subsubname">textBoxAddPicWithSpecialFlag</td>
+<td class = "rightparam">0</td>
+<td class ="desc">1:追加画像の表示を特殊数値表示と連動させる</td>
+</tr>
+
+
+
+<tr>
+<td class ="subsubname">textBoxAddPicMultiFlag</td>
+<td class = "rightparam">0</td>
+<td class ="desc">1:追加画像を数値によって変化させる</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxAddPicMultiNumberX</td>
+<td class = "rightparam">1</td>
+<td class ="desc">追加画像データが横にいくつならんでいるか</td>
+</tr>
+
+
+
+<tr>
+<td class ="subname">textBoxSpecialNumberPrintFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:テキスト入力ダイアログに特殊数値を表示させる</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberPrintLimit</td>
+<td class = "rightparam">-1</td>
+<td class ="desc">特殊数値がこの数より大きい場合に表示する</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberPrintX</td>
+<td class = "rightparam">0</td>
+<td class ="desc" rowspan="2">特殊数値のエリア内での表示位置を相対座標で設定</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberPrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberFontSizeX</td>
+<td class = "rightparam">16</td>
+<td class ="desc" rowspan="2">特殊数値のグラフィックフォントサイズ</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberFontSizeY</td>
+<td class = "rightparam">16</td>
+
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberFontNextX</td>
+<td class = "rightparam">specialNumberFontSizeX</td>
+<td class ="desc">特殊数値の文字間隔</td>
+</tr>
+
+<tr>
+<td class ="subsubname">textBoxSpecialNumberKeta</td>
+<td class = "rightparam">2</td>
+<td class ="desc">特殊数値の桁数</td>
+</tr>
+
+<tr>
+<td class ="subsubname">fileNameTextBoxSpecialNumberFont</td>
+<td class ="leftparam"></td>
+<td class ="desc">特殊数値のグラフィックフォントファイル名</td>
+</tr>
+
+</table>
+
+
+
+<pre>
+コメント入力文字設定は以下の識別子で
+[textInput]
+
+<a href="../design_init/comment.htm">コメント入力ダイアログ設定</a>を参照してください
+
+</pre>
+
+<pre>
+
+saveVoiceNumber 0
+//個数
+saveVoice[n] ボイスファイル名
+
+warningVoiceNumber 0
+//個数
+warningVoice[n] ボイスファイル名
+
+
+lastSelectFlag 0
+1:最終保存マークを表示する。設定はdatafile.xtxで
+
+quickSetLastFlag 0
+1:クイックセーブも最終保存として記録する -1:クイックセーブがおこなわれたら最終保存情報を削除する
+
+</pre>
+
+</body>
+</html>
+
+

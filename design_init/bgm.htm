@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>BGM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">BGM</p>
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">bgmNumber</td>
+<td class = "rightparam">-1</td>
+<td class = "desc">そのモードでの曲を番号で指定 bgmlist.txtに対応</td>
+</tr>
+
+<tr>
+<td class = "subname">bgmRestartFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">前のモードと同じ曲の場合、0:曲をそのまま続ける 1:頭から再生しなおす</td>
+</tr>
+
+<tr>
+<td class = "subname">bgmVolume</td>
+<td class = "rightparam">0</td>
+<td class = "desc">曲の音量の増減値を-100～100の範囲で指定する</td>
+</tr>
+
+<tr>
+<td class = "subname">bgmLoop</td>
+<td class = "rightparam">1</td>
+<td class = "desc">0:ループしない 1:曲をループさせる</td>
+</tr>
+
+<tr>
+<td class = "subname">bgmFadeInTime</td>
+<td class = "leftparam">init/game.xtxでの設定値</td>
+<td class = "desc">曲のフェードインタイムを0.1秒単位で指定。(ex. 設定値が35なら3.5秒)</td>
+</tr>
+
+</table>
+
+
+<br />
+<pre>設定例
+</pre>
+
+<textarea cols="60" rows="4">
+bgmNumber 3
+</textarea>
+
+
+</body>
+</html>
+
+

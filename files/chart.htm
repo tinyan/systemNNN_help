@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>chart</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">chart</p>
+
+<pre>
+
+チャート設定ファイルは
+チャプターごとに1ファイルになり、それぞれ
+chart/chart[n].xtx
+という名前で作成します
+
+
+1行目は一番下のスロットの位置の目安をいれます
+2行目からスロットの設定をいれていきます
+
+
+スロットの設定詳細は、以下のとおりです
+
+@スロット番号                   必須
+内部分岐の数                    必須(内部分岐がない場合は、1と設定してください)
+座標X                           必須
+座標Y                           必須
+飛び先1～8                      必要な数だけ
+$チェック変数名                 使う場合のみ設定    この変数が0のチャートは選択できません
+通常コメント1～                 任意
+!クリアー前コメント1～          任意
+
+コメントの最大行が3行を超える場合には
+init:chartMenu.xtxでchartDescMaxに最大行数を設定してください
+
+
+   
+
+使えるスロット番号は
+例えばinitの設定で1ファイルあたり1000にした場合(デフォルト設定時)には、
+chart1.xtx:1～999    (chart1.xtxにかぎり1からなので注意してください)
+chart2.xtx:1000～1999
+chart3.xtx:2000～2999
+chart4.xtx:3000～3999
+.
+.
+.
+というようになります
+
+
+
+
+内部分岐とは、1つのスロットの内部で複数のエンディング、ゲームオーバー、進行等があるばあいに設定します
+飛び先とは、スロット同士のつながりを意味します
+
+暗号化が必要なときはx2f.exeを使ってください
+
+
+
+
+
+実際の設定例 chart1.xtx
+1800
+@1 1 300 200 2 3 4 開始スロットだよ
+@2 1 100 300 ゲームオーバオー !はずれっぽい
+@3 1 200 300 ゲームオーオーバー !うさんくさい
+@4 3 300 300 5 グッドルートだよ !あやしい
+@5 1 200 500 1001 チャプター１終了
+
+
+
+
+</pre>
+
+</body>
+</html>
+

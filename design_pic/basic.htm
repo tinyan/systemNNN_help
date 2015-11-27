@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnEdit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">画像ファイルの基本</p>
+
+
+
+<pre>
+
+
+
+画像ファイルには大きくわけて2種類のものがあります。それは
+「マスク有り画像」と「マスク無し画像」です
+
+マスク有り画像には、マスク無し画像に加えて、内部にα(アルファ)値を示す8bit(256色)画像がはいっています
+このα値を使って半透明処理を行います
+
+
+スクリプトでは、
+背景にマスク無し画像、立ち絵と呼ばれる人物画像にマスク有り画像を使うことを想定しています
+ev,bgで始まるウ画像がマスク無し画像で
+taで始まる画像がマスク有り画像になります
+ev,bgの違いは名前だけです。evはイベント画像に、bgは背景画像に使用するのをお勧めします
+
+
+
+システム画像では、両方の種類の画像を必要に応じて使用しています
+多くの場合、背景にマスク無し画像、ボタンにマスク有り画像を使用します
+
+</pre>
+
+
+
+</body>
+</html>
+

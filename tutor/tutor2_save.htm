@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>セーブ画面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">セーブ画面</p>
+<br />
+
+<pre>
+
+セーブ画面の製作例です
+基本的にはロードと同じですが、上書き確認関連と、コメント入力が追加可能です
+
+セーブスロットの設定に関しては<a href="tutor2_datafile.htm">データファイル</a>を参照してください
+
+まずはタイトル画面と同様に、背景、BGMの設定を行いますここでは簡単に1枚絵3番のBGMでの設定例をあげておきます
+
+
+init設定
+ファイル init/save.xtx
+
+</pre>
+
+<div class="notice">
+<pre>
+modename save
+filenameBG save_bg
+bgmNumber 3
+</pre>
+</div>
+
+<hr />
+
+
+
+<div class = "noticetitle">
+セーブスロット数の決定
+
+セーブスロット数、位置などの設定は<a href="tutor2_load.htm">ロード</a>を参照してください
+</div>
+
+<hr />
+
+
+<div class = "noticetitle">
+クイックセーブの書き込み許可設定
+</div>
+
+<pre>
+クイックセーブで使用されるセーブスロットも
+セーブ対象として許可する設定例です
+</pre>
+
+<div class = "notice">
+<pre>
+quickSaveSelectOk 1
+</pre>
+</div>
+
+<hr />
+
+<br />
+
+<div class = "noticetitle">
+上書き確認ダイアログ設定
+</div>
+
+<pre>
+上書き確認ダイアログを使用する場合には
+フラグ、ファイル名、座標、サイズの指定
+DialogOkとDialogCancelという名前のボタンを作成する必要があります
+
+下は、ボタンの設定以外の設定例です
+
+ta_save_warning_dialogというファイル名のダイアログ(サイズ200x150)を(300,200)に表示する設定です
+</pre>
+
+
+
+<div class="notice">
+<pre>
+warningPrintFlag 1
+FileNameDialog ta_save_warning_dialog
+dialogX 300
+dialogY 200
+dialogSizeX 200
+dialogSizeY 150
+</pre>
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+セーブコメント設定
+</div>
+
+<pre>
+セーブするときにユーザーがコメントを入力できるようにする機能です
+
+現在1行のみ入力可能
+</pre>
+
+
+<div class="notice">
+<pre>
+commentInputFlag 0
+fileNameDialog2 ta_sav_comment_dialog
+dialogX2 200
+dialogY2 150
+dialogSizeX2 400
+dialogSizeY2 100
+commentNullOk 1
+textInputMax 16
+</pre>
+</div>
+
+<hr />
+
+<pre>
+中に表示されるテキストの
+さらに細かな設定を行う場合には、
+<a href="../design_init/comment.htm">コメント入力ダイアログ設定</a>を参照してください
+textInputという名前で設定します
+</pre>
+
+
+
+<div>
+その他の設定は <a href="../design_init/save.htm">INIT仕様 - セーブ</a> を参照してください
+</div>
+
+</body>
+</html>
+

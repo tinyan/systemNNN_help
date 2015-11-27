@@ -1,0 +1,35 @@
+
+
+
+
+
+table.button {border-style : none; border-width : 1}
+tr.button {border-style :none; border-width : 1}
+td.button {border-style :none; border-width : 1}
+td.buttonpic
+{
+	width: 24px;
+	background-color : #F3C4C4;
+	margin: 1px;
+	border-style :none;
+	border-width :1
+}
+
+td.buttonname
+{
+	width: 200px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border-style :none;
+	border-width :1
+}
+
+td.buttondesc
+{
+	width: 400px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border-style :none;
+	border-width :1
+}
+

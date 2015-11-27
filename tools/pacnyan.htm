@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+	<title>PacNyan</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+
+<p class="title">PACNYAN</p>
+
+<br />
+
+<img src="graphics/tool_pacnyan.jpg" alt="" />
+<br />
+
+<pre>
+bmp,jpeg画像をnnn用DWQフォーマットに変換するツールです
+さらに、画像をひとまとめにする機能もあります
+
+
+現在使える画像は
+
+bmp(8bit,24bit)
+jpeg(JFIF)カラー
+
+のみです
+
+
+現在試験的にPNG形式の一部に対応中です
+
+また、マスク画像はbmpに限られます
+</pre>
+
+<div class="caution">
+<pre>
+256色画像(8bitカラー)がおすすめです。カラーパレットの値は、R G B全て同じ(白～灰色～黒)にしておいてください
+マスクにフルカラー(24bit)画像を使用したの場合は、YUV変換後のY(輝度)が使われます
+</pre>
+</div>
+
+<pre>
+
+
+ディレクトリ構造は
+
+pacnyan.exeの階層に以下のディレクトリを（必要な分だけ）準備します
+
+
+//画像をいれる場所
+bmp\bg 背景
+bmp\ev イベント絵
+bmp\ta 立ち絵及びマスク画像
+bmp\sys システム用画像
+bmp\sys\ta システム用画像及びマスク画像
+bmp\sys\sc シーン観賞用サムネイル画像
+bmp\sys\sm CG鑑賞用サムネイル画像
+
+
+jpg形式の画像を使用する場合にはこちらにいれます
+
+jpg\bg
+jpg\ev
+jpg\ta
+jpg\sys
+jpg\sys\ta
+jpg\sys\sc
+jpg\sys\sm
+
+注：jpg形式であってもマスクは常にbmp(8bitカラー)です。ただし、入れる場所は同じjpgフォルダーになります
+
+
+PNG形式の画像を使用する場合にはこちらにいれます
+png\bg
+png\ev
+png\ta
+png\sys
+png\sys\ta
+png\sys\sc
+png\sys\sm
+
+
+
+//変換後のデータがはいる場所
+dwq\ ひとまとめにした場合のデーター(.vpk .vtb)は、ここにはいります
+dwq\ta
+dwq\bg
+dwq\ev
+dwq\sys マスクありなしにかかわらず、システム画像はここにまとめられます
+dwq\sc
+dwq\sm
+
+</pre>
+PNG形式の画像はそれ自身にマスクに相当するデータを含められるため、マスク用のbmp画像は必要ありません(いれないようにしてください)
+<pre>
+
+</pre>
+
+<br />
+
+<table>
+<tr ><td colspan="2">変換するスクリプト用画像を選ぶチェックボックス</td></tr>
+<tr><td>TA形式</td><td><img src="graphics/tool_pacnyan_tacheck.jpg" alt="" /></td></tr>
+<tr><td>BG形式</td><td><img src="graphics/tool_pacnyan_bgcheck.jpg" alt="" /></td></tr>
+<tr><td>EV形式</td><td><img src="graphics/tool_pacnyan_evcheck.jpg" alt="" /></td></tr>
+<tr ><td colspan="2">変換するシステム用画像を選ぶチェックボックス</td></tr>
+<tr><td>SYS形式(マスク無し)</td><td><img src="graphics/tool_pacnyan_syscheck.jpg" alt="" /></td></tr>
+<tr><td>SYSTA形式(マスク有り)</td><td><img src="graphics/tool_pacnyan_syscheck.jpg" alt="" /></td></tr>
+<tr><td>SM(CGサムネイル)</td><td><img src="graphics/tool_pacnyan_syssmcheck.jpg" alt="" /></td></tr>
+<tr><td>SC(シーンサムネイル)</td><td><img src="graphics/tool_pacnyan_syssccheck.jpg" alt="" /></td></tr>
+<tr ><td colspan="2">SM,SC画像をマスク有りとして変換するチェックボックス(※1)</td></tr>
+<tr><td>SC(シーンサムネイル)</td><td><img src="graphics/tool_pacnyan_scsmtacheck.jpg" alt="" /></td></tr>
+
+</table>
+
+<br />
+<br />
+
+<table>
+<tr><td colspan="2">動作オプション</td></tr>
+<tr><td>高速モード(※2)</td><td><img src="graphics/tool_pacnyan_newradio.jpg" alt="" /></td></tr>
+<tr><td>完全モード(※3)</td><td><img src="graphics/tool_pacnyan_compradio.jpg" alt="" /></td></tr>
+<tr><td>固める(※4)</td><td><img src="graphics/tool_pacnyan_packcheck.jpg" alt="" /></td></tr>
+<tr><td>固めるバージョン(※5)</td><td><img src="graphics/tool_pacnyan_versionbox.jpg" alt="" /></td></tr>
+</table>
+
+
+
+<pre>
+
+ファイル名の制限について
+
+イベント絵:ev+[任意の名前]
+
+背景:bg+[任意の名前]
+
+立ち絵:ta+[準任意の名前]
+そのマスク[立ち絵の名前]+m
+
+※立ち絵はmで終わる名前をつけることはできません
+
+TA形式システムグラフィックス:ta+[準任意の名前]
+そのマスク[TA形式システムグラフィックスの名前]+m
+
+※TA形式システムグラフィックスはmで終わる名前をつけることはできません
+マスク無しシステムグラフィックスはta,ev,bg,sm,scで始める名前は使えません(エラーは出ないので注意してください)
+
+CG観賞用サムネイル:sm+[イベント絵のファイル名]
+シーン観賞用サムネイル:[任意の名前](ただし、ta,ev,bg,smで始まる名前は使えません)
+CG鑑賞、シーン鑑賞用のサムネイルのマスク[サムネイルファイル名]+m
+
+※CG鑑賞、シーン鑑賞用のサムネイルをTA形式にする場合にも、mでおわる名前はつけられません
+
+
+
+
+
+
+(※1)
+これは、SMファイルの名前規則（後述）がtaで始まるのを禁止しているためです
+
+(※2)
+高速モード
+画像の日付を見て、あたらしいもののみをDWQに変換します
+
+(※3)
+完全モード
+すべてDWQに変換します
+
+(※4)
+DWQをまとめたファイルを作成します
+
+(※5)
+固めるバージョン
+画像データのバージョンアップがおこなわれた回数をいれます。
+通常は何もいれる必要はありません(0として処理されます)
+
+</pre>
+
+
+
+</body>
+</html>
+

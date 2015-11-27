@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ロード</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">ロード</p>
+
+<br />
+
+
+<pre>
+FileName = init\load.xtx
+</pre>
+
+
+<table class = "none">
+
+<tr><td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr>
+<td class = "commontype">種類</td>
+<td class = "commonstatus">状態</td>
+<td class = "commondesc">備考</td>
+</tr>
+
+<tr>
+<td class = "commontype"></td>
+<td class = "commonstatus"></td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">背景スクリプト設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">BGM設定</td>
+<td class = "commonstatus">可</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">上下ボタン設定</td>
+<td class = "commonstatus">必要(またはタブボタン)</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">戻るボタン設定</td>
+<td class = "commonstatus">必要</td>
+<td class = "commondesc"></td>
+</tr>
+
+<tr>
+<td class = "commontype">その他設定</td>
+<td class = "commonstatus">なし</td>
+<td class = "commondesc"></td>
+</tr>
+
+</table>
+
+<br />
+
+
+
+<table class = "none">
+
+<tr>
+<td class = "maintitle" colspan="3"><center>専用設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name"></td>
+<td class = "leftparam"></td>
+<td class = "desc"></td>
+</tr>
+
+<tr>
+<td class = "name">modename</td>
+<td class = "leftparam">load</td>
+<td class = "desc">モード名、変更不可。省略不可</td>
+</tr>
+
+<tr>
+<td class = "name">fileNameBG</td>
+<td class = "leftparam">load_bg</td>
+<td class = "desc">背景画像ファイル名(バックスクリプトを使わないとき)</td>
+</tr>
+
+
+<tr>
+<td class = "name">page</td>
+<td class = "rightparam">10</td>
+<td class = "desc">ページ数</td>
+</tr>
+
+<tr>
+<td class = "name">blockNumberX</td>
+<td class = "rightparam">4</td>
+<td class = "desc" rowspan="2">1画面あたりのデータスロット数</td>
+</tr>
+
+<tr>
+<td class = "name">blockNumberY</td>
+<td class = "rightparam">3</td>
+
+</tr>
+
+
+<tr>
+<td class = "name">printX</td>
+<td class = "rightparam">85</td>
+<td class = "desc" rowspan="2">データスロットの表示開始位置</td>
+</tr>
+
+<tr>
+<td class = "name">printY</td>
+<td class = "rightparam">113</td>
+
+</tr>
+
+<tr>
+<td class = "name">nextX</td>
+<td class = "rightparam">166</td>
+<td class = "desc" rowspan="2">次のデータスロットまでの距離</td>
+</tr>
+
+<tr>
+<td class = "name">nextY</td>
+<td class = "rightparam">124</td>
+
+</tr>
+
+<tr>
+<td class = "name">dataPrintCustomFlag</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:データスロットの座標を個別に設定する</td>
+</tr>
+
+<tr>
+<td class = "subname">dataPrintX[n]</td>
+<td class = "rightparam"></td>
+<td class = "desc" rowspan="2">[n]番目のデータスロットの表示位置</td>
+</tr>
+
+<tr>
+<td class = "subname">dataPrintY[n]</td>
+<td class = "rightparam"></td>
+
+</tr>
+
+
+<tr>
+<td class = "name">clickTime</td>
+<td class = "rightparam">8</td>
+<td class = "desc">データスロットクリック後の点滅時間をフレーム数で設定</td>
+</tr>
+
+
+<tr>
+<td class = "name">loadSound</td>
+<td class = "leftparam">1</td>
+<td class = "desc">ロード可能なスロットを選択した時にだす音を番号で設定</td>
+</tr>
+
+<tr>
+<td class = "name">cannotLoadSound</td>
+<td class = "leftparam">-1</td>
+<td class = "desc">ロード不可能なスロットを選択した時にだす音を番号で設定</td>
+</tr>
+
+
+<tr>
+<td class = "name">quickLoadSelectOk</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:クイックセーブスロットを選択できる</td>
+</tr>
+
+<tr>
+<td class = "name">pageMode</td>
+<td class = "rightparam">1</td>
+<td class = "desc">1:上下ボタン 2:タブボタン</td>
+</tr>
+
+</table>
+
+<pre>
+loadVoiceNumber 0
+//個数
+loadVoice[n] ボイスファイル名
+
+cannotLoadVoiceNumber 0
+//個数
+cannotLoadVoice[n] ボイスファイル名
+
+
+lastSelectFlag 0
+1:最終保存マークを表示する。設定はdatafile.xtxで
+
+</pre>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,580 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ボタン</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+
+</head>
+
+<body class = "basic">
+
+<p class="title">ボタン</p>
+
+
+<table class = "none">
+
+<tr>
+<td class = "basicbox1">[ボタン名]</td>
+<td class = "basicbox2">それぞれのボタン名に変換</td>
+</tr>
+
+<tr>
+<td class = "basicbox1">[n]</td>
+<td class = "basicbox2">1:通常時 2:マウスが乗った時 3:決定(クリック)時 4:選択不可時</td>
+</tr>
+
+<tr>
+<td class = "basicbox1">[k]</td>
+<td class = "basicbox2">1-3(アクセルキー設定で使用)</td>
+</tr>
+
+</table>
+
+
+<br />
+<br />
+
+<table class = "none">
+
+<tr>
+<td class = "commontitle" colspan="3"><center>共通設定</center></td>
+</tr>
+
+<tr><td class = "name">名前/サブ</td>
+<td class = "centerparam">デフォルト値</td>
+<td class = "desc">解説</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]Filename</td>
+<td class = "leftparam">なし</td>
+<td class = "desc">ボタンのグラフィックファイル名(システム dwqファイル)を拡張子なしで設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]ClickTime</td>
+<td class = "rightparam">8</td>
+<td class = "desc">クリックしてからボタンが押された動作を完了するまでの時間をフレーム数で設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]ExitWait</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ボタンからカーソルがはずれたと判断されるまでの待ち時間を設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]SizeX</td>
+<td class = "rightparam">16</td>
+<td class = "desc" rowspan="2">ボタンのサイズを設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]SizeY</td>
+<td class = "rightparam">16</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]PrintX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">ボタンの表示位置を設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]PrintY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckDeltaX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">ボタンの反応範囲開始位置を相対位置で指定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckDeltaY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckPicX</td>
+<td class = "rightparam">0</td>
+<td class = "desc" rowspan="2">ボタンの反応マスク画像の位置を指定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckPicY</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckSizeX</td>
+<td class = "rightparam">[ボタン名]SizeX</td>
+<td class = "desc" rowspan="2">ボタンの反応マスクサイズを指定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CheckSizeY</td>
+<td class = "rightparam">[ボタン名]SizeY</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]PrintMode</td>
+<td class = "rightparam">2</td>
+<td class = "desc">表示モード(現在2のみ使用可)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]IsCancelButton</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:このボタンをキャンセルボタンに設定(画面の任意の位置での右クリックに反応する)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]IsUpButton</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:このボタンを上ボタンに設定(画面の任意の位置でのマウスホイールに反応する)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]IsDownButton</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:このボタンを下ボタンに設定(画面の任意の位置でのマウスホイールに反応する)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]UpDownReverse</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:上下ボタンの動作を反転させる</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]TateYoko</td>
+<td class = "rightparam">0</td>
+<td class = "desc">1:グラフィックの並びを縦横いれかえる(主に縦長なボタンの場合に使う)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]PicSrcX[n]</td>
+<td class = "rightparam">sizeX*(n-1)</td>
+<td class = "desc" rowspan="2">画像データの開始位置を設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]PicSrcY[n]</td>
+<td class = "rightparam">0</td>
+
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]AnimeType[n]</td>
+<td class = "rightparam">1</td>
+<td class = "desc">ボタンのアニメタイプ1-8で設定(アニメタイプは別表を参照)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]AnimePattern[n]</td>
+<td class = "rightparam">1</td>
+<td class = "desc">ボタンアニメのグラフィックパターン数を設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]AnimeSpeed[n]</td>
+<td class = "rightparam">1</td>
+<td class = "desc">ボタンアニメの1パターンの表示時間をフレームで設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]AccelKey[k]</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ショートカットキーをキー番号または、1文字の数字、アルファベット大文字で設定(最大3つまで設定可能)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]ClickSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">クリックした瞬間に出す音を設定(systemSe.txtに対応)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]CannotClickSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">選択不可ボタンを押したときに出す音を設定(systemSe.txtに対応)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]EnterSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ボタンにカーソルがはいったと判断されたときに出す音を設定(systemSe.txtに対応)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]ExitSound</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ボタンからカーソルがはずれたと判断されたときに出す音を設定(systemSe.txtに対応)</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]VolumeType</td>
+<td class = "rightparam">0</td>
+<td class = "desc">0:サウンドボリュームで鳴らす 1:音声ボリュームで鳴らす</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]EnterWait</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ボタンにカーソルがはいったと判断されるまでの待ち時間を設定</td>
+</tr>
+
+<tr>
+<td class = "name">[ボタン名]ExitWait</td>
+<td class = "rightparam">0</td>
+<td class = "desc">ボタンからカーソルがはずれたと判断されるまでの待ち時間を設定</td>
+</tr>
+
+
+</table>
+
+<br />
+
+<div class ="caution">
+<pre>
+ボタンの効果音はシステム効果音の127番までしか使えません
+</pre>
+</div>
+
+<br />
+
+<table class ="none">
+
+<tr>
+<td class ="basicbox1">アニメタイプ</td>
+<td class ="basicbox1a">繰り返し</td>
+<td class ="basicbox1b">折り返し</td>
+<td class ="basicbox1c">オーバーラップ</td>
+</tr>
+
+<tr>
+<td class ="basicbox1"></td>
+<td class ="basicbox1a"></td>
+<td class ="basicbox1b"></td>
+<td class ="basicbox1c"></td>
+</tr>
+
+<tr>
+<td class ="basicbox1">1</td>
+<td class ="basicbox1a">有</td>
+<td class ="basicbox1b">通常</td>
+<td class ="basicbox1c">無</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">2</td>
+<td class ="basicbox1a">1回のみ</td>
+<td class ="basicbox1b">通常</td>
+<td class ="basicbox1c">無</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">3</td>
+<td class ="basicbox1a">有</td>
+<td class ="basicbox1b">折り返し</td>
+<td class ="basicbox1c">無</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">4</td>
+<td class ="basicbox1a">1回のみ</td>
+<td class ="basicbox1b">折り返し</td>
+<td class ="basicbox1c">無</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">5</td>
+<td class ="basicbox1a">有</td>
+<td class ="basicbox1b">通常</td>
+<td class ="basicbox1c">オーバーラップ</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">6</td>
+<td class ="basicbox1a">1回のみ</td>
+<td class ="basicbox1b">通常</td>
+<td class ="basicbox1c">オーバーラップ</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">7</td>
+<td class ="basicbox1a">有</td>
+<td class ="basicbox1b">折り返し</td>
+<td class ="basicbox1c">オーバーラップ</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">8</td>
+<td class ="basicbox1a">1回のみ</td>
+<td class ="basicbox1b">折り返し</td>
+<td class ="basicbox1c">オーバーラップ</td>
+</tr>
+
+</table>
+
+<br />
+
+<div class="notice">
+<pre>
+accelKey設定での注意
+
+数値または、キーの文字で指定する。
+アルファベットは大文字。(大文字=全角ではありません)
+
+このとき、「0」のキーが指定できないので
+「0」を指定したいときは、「0」の文字コード48で指定します
+
+また、「,」(カンマ)や「 」(スペース)もinitに使用できないので
+数値で指定します
+</pre>
+</div>
+
+<br />
+
+<table class ="none">
+
+<tr>
+<td class ="basicbox1">キー</td>
+<td class ="basicbox1a">数値</td>
+</tr>
+
+<tr>
+<td class ="basicbox1"></td>
+<td class ="basicbox1a"></td>
+</tr>
+
+<tr>
+<td class ="basicbox1">BACK???</td>
+<td class ="basicbox1a">8</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">TAB</td>
+<td class ="basicbox1a">9</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">CLEAR???</td>
+<td class ="basicbox1a">12</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">RETURN(Enter)</td>
+<td class ="basicbox1a">13</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">SHIFT</td>
+<td class ="basicbox1a">16</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">CONTROL</td>
+<td class ="basicbox1a">17</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">MENU???</td>
+<td class ="basicbox1a">18</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">PAUSE</td>
+<td class ="basicbox1a">19</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">CAPITAL</td>
+<td class ="basicbox1a">20</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">KANA</td>
+<td class ="basicbox1a">21</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">ESCAPE</td>
+<td class ="basicbox1a">27</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">SPACE</td>
+<td class ="basicbox1a">32</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">PRIOR</td>
+<td class ="basicbox1a">33</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">NEXT</td>
+<td class ="basicbox1a">34</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">END</td>
+<td class ="basicbox1a">35</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">HOME</td>
+<td class ="basicbox1a">36</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">LEFT</td>
+<td class ="basicbox1a">37</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">UP</td>
+<td class ="basicbox1a">38</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">RIGHT</td>
+<td class ="basicbox1a">39</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">DOWN</td>
+<td class ="basicbox1a">40</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">SELECT</td>
+<td class ="basicbox1a">41</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">PRINT</td>
+<td class ="basicbox1a">42</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">INSERT</td>
+<td class ="basicbox1a">45</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">DELETE</td>
+<td class ="basicbox1a">46</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">HELP</td>
+<td class ="basicbox1a">47</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">0-9</td>
+<td class ="basicbox1a">48-57</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">A-Z</td>
+<td class ="basicbox1a">65-90</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">LWIN</td>
+<td class ="basicbox1a">91</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">RWIN</td>
+<td class ="basicbox1a">92</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">APPS???</td>
+<td class ="basicbox1a">93</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー0-9</td>
+<td class ="basicbox1a">96-105</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[*]</td>
+<td class ="basicbox1a">106</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[+]</td>
+<td class ="basicbox1a">107</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[SEPARATOR]</td>
+<td class ="basicbox1a">108</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[-]</td>
+<td class ="basicbox1a">109</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[.]</td>
+<td class ="basicbox1a">110</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">テンキー[/]</td>
+<td class ="basicbox1a">111</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">ファンクション[F1]-[F24]</td>
+<td class ="basicbox1a">112-135</td>
+</tr>
+
+<tr>
+<td class ="basicbox1">カンマ</td>
+<td class ="basicbox1a">???(不明)</td>
+</tr>
+
+</table>
+
+<br />
+
+
+<pre>
+ボタングラフィックは通常は次のように配置します
+</pre>
+
+<img src="graphics/button.jpg" alt="" />
+<br />
+
+<pre>
+このように配置することもできます
+この場合には、画像開始位置を指定する必要があります
+</pre>
+
+<img src="graphics/button2.jpg" alt="" />
+
+</body>
+</html>
+

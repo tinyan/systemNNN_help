@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - gameMouse</FONT><BR>
+</CENTER>
+<BR>
+Filename = init\gameMouse.xtx<BR>
+<BR>
+
+
+
+
+
+<TABLE BORDER=4>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>name</TD>
+
+<TD>gameMouse</TD>
+<TD>省略しないこと</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>filenameMouse</TD>
+
+<TD>ta_mouse</TD>
+<TD>マウスグラフィックファイル名を設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sizeX</TD>
+
+<TD ALIGN=RIGHT>32</TD>
+<TD ROWSPAN=2>マウスのサイズを設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>sizeY</TD>
+
+<TD ALIGN=RIGHT>32</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>hotPointX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>マウスのホットポイント座標を設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>hotPointY</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+
+
+
+<TR>
+<TD COLSPAN=2>anime</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>マウスカーソルのアニメを 0:させない 1:させる</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>animeType</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>アニメの種類を設定（ボタンを参照）</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>animeSpeed</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>アニメの表示速度を設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>animePattern</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>アニメのパターン数を設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>specialMode</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>マウスの特殊演出 0:なし 1:残像 2:噴水</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>zanzouNumber</TD>
+
+<TD ALIGN=RIGHT>5</TD>
+<TD>残像の最大数</TD>
+</TR>
+
+
+</TABLE>
+
+mouseNumberConfig 1<BR>
+mouseNumberScript 1<BR>
+<BR>
+<BR>
+m:スクリプトによるマウスの種類<BR>
+n:コンフィグによるマウスの種類<BR>
+filenameMouse[m]_[n]	config,scriptともに複数種類ある場合<BR>
+filenameMouse[m]		scriptのみ複数種類<BR>
+filenameMouse[n]		configのみ複数種類<BR>
+<BR>
+
+</BODY>
+</HTML>
+

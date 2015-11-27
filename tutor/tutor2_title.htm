@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>タイトル</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">タイトル</p>
+<br />
+
+<pre>
+
+タイトル画面の製作例です
+
+
+</pre>
+
+<div class = "noticetitle">
+背景の表示方法の決定と設定
+</div>
+
+<pre>
+背景を1枚絵にするか、バックスクリプトにするか決定します
+1枚絵にする場合は画像を準備します
+サイズは、ゲーム画面と同じにしてください。
+形式はjpgかbmpです
+
+準備した画像は、
+bmp/sys
+または
+jpg/sys
+フォルダーにいれてpacnyanで変換しておきましょう。
+
+バックスクリプトにする場合は、<a href="../design_init/backscript.htm">バックスクリプト</a>を参考にしてください
+
+</pre>
+
+
+<pre>
+init設定
+ファイル init/title.xtx
+
+1枚絵の場合
+</pre>
+<div class = "notice">
+<pre>
+modename title
+
+filenameBG title_bg
+</pre>
+</div>
+<br />
+
+<pre>
+バックスクリプトの場合(test_backscriptというバックスクリプトを使う場合)
+</pre>
+<div class = "notice">
+<pre>
+modename title
+
+backScriptFlag 1
+backScriptName test_backscript
+</pre>
+</div>
+
+
+<hr />
+
+<div class = "noticetitle">
+BGMの設定
+</div>
+
+<pre>
+タイトル画面で流れるBGMを設定します。
+
+bgmlistの6番目の曲をながす場合
+</pre>
+
+
+<div class = "notice">
+<pre>
+bgmNumber 6
+</pre>
+</div>
+<br />
+<div>
+BGMのその他の設定は <a href="../design_init/bgm.htm">INIT仕様 - BGM</a> を参照してください
+</div>
+
+<hr />
+
+<div class = "noticetitle">
+一定時間でタイトル画面を抜けてオープニングへループさせる設定
+</div>
+
+<pre>
+3000フレーム経過で抜ける設定
+</pre>
+
+<div class = "notice">
+<pre>
+restartNextMode Opening
+autoRestartTime 3000
+</pre>
+</div>
+
+
+<pre>
+バックスクリプト終了にあわせて抜ける設定
+</pre>
+
+
+<div class = "notice">
+<pre>
+restartNextMode Opening
+scriptEndIsModeEnd 1
+</pre>
+</div>
+
+
+
+
+<hr />
+
+
+<div class = "noticetitle">
+メニューボタンの設定
+</div>
+
+<pre>
+タイトル画面では基本は5つのボタンをもつメニューを作成します。
+機能は決まっていて、順に
+
+新規ゲーム
+ロード
+コンフィグ
+おまけ
+ゲーム終了
+
+と、なっています
+
+では、標準的なメニューを作成してみましょう。ボタンのサイズは100x20dotとします
+ボタンは縦にならべて隙間を5dotあけることとします
+ボタンの細かな設定は<a href="../design_init/button.htm">INIT仕様 - ボタン</a> を参照してください
+ここでは、メニュー部分のみの設定を表記します
+</pre>
+
+<div class = "notice">
+<pre>
+menuNextY 25
+</pre>
+</div>
+
+<br />
+
+<div class = "caution">
+menuNextYの設定が5ではなく25になっていることに注意してください。
+menuNextYは、ボタンと次のボタンの位置の差を設定します
+</div>
+
+
+<hr />
+
+<div class = "noticetitle">
+メニュー表示に演出を付ける
+</div>
+
+
+<pre>
+表示開始まで50フレーム待たせる
+これは、バックスクリプト等で先頭にフェードインなどの演出がはいっている時などに使うとよいようです
+</pre>
+
+<div class = "notice">
+<pre>
+menuStartWaitTime 50
+</pre>
+</div>
+
+
+<pre>
+300フレームかけてメニューボタンが集まってくるような演出を付ける
+開始は縦横1000dotはなれた場所
+</pre>
+
+<div class = "notice">
+<pre>
+menuStartEffectType 2
+menuStartEffectTime 300
+menuStartDeltaX 1000
+menuStartDeltaY 1000
+</pre>
+</div>
+
+<div>
+<pre>
+
+使える演出の種類についてはは <a href="../design_init/title.htm">INIT仕様 - タイトル</a> を参照してください
+</pre>
+</div>
+
+
+<hr />
+
+<div class = "noticetitle">
+ゲームのクリア状況に応じてメニューボタンを増やす
+</div>
+
+<pre>
+あるエンディングをみたらおまけシナリオを2つ追加する設定例
+
+まずは、エディターのほうで、制御用の変数を準備します
+ここでは、「タイトル画面拡張モード」という名前としましょう。ゲーム変数にいれておいてください
+次に、どのおまけボタンが押されたかをスクリプトに知らせる為の変数を準備します。
+ここでは「追加シナリオボタン」という名前としましょう。プレイ変数に入れておいてください
+</pre>
+
+
+
+<div class = "notice">
+<pre>
+extModeNumber 1
+extButtonNumber 2
+extModeCheckVarName タイトル画面拡張モード
+extModeReturnVarName 追加シナリオボタン
+</pre>
+</div>
+
+<br />
+
+<div class = "caution">
+<pre>
+増えた分のボタンの設定も(ファイル名、座標等)をわすれないようにしましょう
+この場合は、menu2Button6 menu2Button7 というボタンの設定が必要になります
+</pre>
+</div>
+
+<div>
+<pre>
+あとは、スクリプトの方で、エンディングフィルムのあとに、
+計算で
+タイトル画面拡張モード = 1;
+を設定し、
+</pre>
+<img src="graphics/tutor2_title_help0.jpg" alt="" />
+
+<pre>
+
+スクリプトの先頭で、追加シナリオボタンの値に応じて分岐させましょう
+
+</pre>
+<img src="graphics/tutor2_title_help1.jpg" alt="" />
+
+</div>
+
+
+
+
+<hr />
+
+<br />
+<div>
+その他の設定は <a href="../design_init/title.htm">INIT仕様 - タイトル</a> を参照してください
+</div>
+
+</body>
+</html>
+

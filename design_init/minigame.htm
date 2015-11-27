@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ミニゲーム</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="init.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+<p class="title">ミニゲーム</p>
+
+
+
+
+<CENTER>
+<FONT SIZE=7>init - minigame</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\minigame.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>画面切り替え時フェード設定</TD>
+<TD>可能</TD>
+<TD>それぞれのとこを参照</TD>
+</TR>
+
+
+<TR>
+<TD>Exitボタン設定</TD>
+<TD>必要</TD>
+<TD>exitという名前でボタンを作成すること</TD>
+</TR>
+
+</TABLE>
+
+
+
+<BR>
+<BR>
+
+<BR>
+[parts] trump,mahjong,panel,number,arrow,shogi,go<BR>
+<BR>
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>minigame</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>noCGFileName</TD>
+
+<TD ALIGN=LEFT>nnnlogo</TD>
+<TD>みたCGがない場合に使われる絵(sys)</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>congraFileName</TD>
+
+<TD ALIGN=LEFT>ta_congra</TD>
+<TD>congratulation用の絵</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>[parts]PicFileName</TD>
+
+<TD ALIGN=LEFT></TD>
+<TD>共通パーツ[parts]グラフィックが必要な場合にはファイル名を設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>[parts]PicSizeX</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ROWSPAN=2>共通パーツ[parts]の1個の基本サイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>[parts]PicSizeY</TD>
+<TD ALIGN=RIGHT>16</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN=2>miniGameClickSound</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>ミニゲーム中の通常クリック音</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>miniGameClearSound</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>ミニゲーム中の通常クリアー音</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>miniGameMissSound</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>ミニゲーム中の通常ミス音</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>miniGameGoodSound</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>ミニゲーム中の通常Good音</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>addMiniGame</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>登録するミニゲームの数</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>miniGame[n]</TD>
+<TD ALIGN=RIGHT></TD>
+<TD>[n]番目のミニゲームの種類</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sabunOkFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:差分CGもミニゲーム対象にする</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>allOkFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>0:cglistにおまけで使わない記号がついているCGは対象外にする</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>miniGameCheckNumber</TD>
+
+<TD ALIGN=RIGHT>addMiniGame</TD>
+<TD>クリックでチェックするミニゲームの数(登録した数を超えないこと)</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>miniGameCheckMode[n]</TD>
+<TD ALIGN=LEFT>omake</TD>
+<TD>[n]番目のミニゲームのがどの画面からいけるか</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>miniGameCheckX[n]</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>[n]番目のミニゲームのチェック座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>miniGameCheckY[n]</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>miniGameCheckSizeX[n]</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>[n]番目のミニゲームのチェックサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>miniGameCheckSizeY[n]</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>checkVarName[n]</TD>
+<TD ALIGN=LEFT></TD>
+<TD>[n]番目のミニゲームの許可を変数で制御する場合、その変数名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>setVarName[n]</TD>
+<TD ALIGN=LEFT></TD>
+<TD>[n]番目のミニゲームクリアーで変数で制御する場合、その変数名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>setVarType[n]</TD>
+<TD ALIGN=RGIHT></TD>
+<TD>[n]番目のミニゲームクリアーで変数で制御する場合、そのやりかた 0:なし 1:1にする 2:+1する</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN=2>miniGameDescNumber[n]</TD>
+
+<TD ALIGN=RGIHT>0</TD>
+<TD>[n]番目のミニゲームにつける説明画像の数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>miniGameDescFileName[n]_[k]</TD>
+<TD></TD>
+<TD>[n]番目のミニゲームの[k]番目の説明画像ファイル名</TD>
+</TR>
+
+
+</TABLE>
+
+<pre>
+memo:
+
+ボタンに対応させる
+areaButtonMode 0    // 1:miniGameButton[n]という名前で必要な数ボタンを作る。init::miniGame.xtxのminiGameCheckNumberの数だけ
+
+exitPrintX[n]
+exitPrintY[n]   で、個別にexitボタンの位置のみを変更できる
+
+
+
+
+
+
+
+
+[n]何番目のミニゲームか
+[k]いくつめのsetCGか
+
+setCGNumber[n]
+//cg登録する個数
+
+setCGPlayer[n]_[k]
+setCGParam[n]_[k]
+//プレイヤー番号とCG番号(cglist**での通し番号)
+//登録するCGが１個のときは _[k] の部分はなくてもよい
+
+
+設定例
+setCGNumber1 	1
+setCGPlayer1	2
+setCGParam1 	5
+
+// 1ばんめのミニゲームをクリアーしたら、CGプレイヤー2の5番目のCGがONになる
+
+
+
+
+
+setCGNumber3 	2
+setCGPlayer3_1 	1
+setCGParam3_1 	2
+setCGPlayer3_2 	3
+setCGParam3_2 	4
+
+// 3ばんめのミニゲームをクリアーしたら、
+//CGプレイヤー1の2番目のCGと
+//CGプレイヤー3の4番目のCGがONになる
+
+
+
+
+</pre>
+
+
+</BODY>
+</HTML>
+

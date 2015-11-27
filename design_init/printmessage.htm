@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - printmessage</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\printMessage.xtx<BR>
+<BR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>不可</TD>
+<TD></TD>
+</TR>
+
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>なし</TD>
+<TD></TD>
+</TR>
+
+</TABLE>
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>printMessage</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>fontSize</TD>
+
+<TD ALIGN=RIGHT>24</TD>
+<TD>メッセージのフォントサイズ</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>printX</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>ウィンドウメッセージの表示位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>printY</TD>
+
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>nextX</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=2>次のメッセージまでの距離</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>nextY</TD>
+
+<TD ALIGN=RIGHT>fontSize+6</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>space</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>文字と文字の隙間</TD>
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>LPrintX</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>全画面表示メッセージの時の表示開始座標</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>LPrintY</TD>
+
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+
+
+
+<TR>
+<TD COLSPAN= 2>LNextX</TD>
+
+<TD ALIGN=RIGHT>nextX</TD>
+<TD ROWSPAN=2>全画面メッセージの次のメッセージまでの距離</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>LNextY</TD>
+
+<TD ALIGN=RIGHT>nextY</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>colorCustomFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>メッセージの色を設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>colorR</TD>
+<TD ALIGN=RIGHT>255</TD>
+<TD ROWSPAN=3>メッセージ色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>colorG</TD>
+<TD ALIGN=RIGHT>255</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>colorB</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>shadeColorR</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=3>メッセージの影色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>shadeColorG</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>shadeColorB</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameColorR</TD>
+<TD ALIGN=RIGHT>255</TD>
+<TD ROWSPAN=3>名前の色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameColorG</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameColorB</TD>
+<TD ALIGN=RIGHT>255</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameShadeColorR</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=3>名前の影色</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameShadeColorG</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameShadeColorB</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>autoNameWindowFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:名前の有り無しで名前専用ウィンドウの表示消去を自動制御する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>windowMessageNumber</TD>
+
+<TD ALIGN=RIGHT>4</TD>
+<TD>メッセージウィンドウに表示する行数</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>fullMessageNumber</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>全画面メッセージの表示する行数</TD>
+</TR>
+ 
+
+<TR>
+<TD COLSPAN= 2>nameFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1行目が名前の場合特所処理を行う</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>nameX</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>名前の表示開始座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameY</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameCenterFlag</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:名前をセンタリングする</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameLengthMax</TD>
+<TD ALIGN=RIGHT>5</TD>
+<TD>名前の最大文字数(この幅の表示エリアがあるとして処理される)</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameFontSize</TD>
+<TD ALIGN=RIGHT>20</TD>
+<TD>名前フォントのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameSpace</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>名前の文字と文字の隙間</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>blockX</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD ROWSPAN=2>削除予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>blockY</TD>
+
+<TD ALIGN=RIGHT>4</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>LBlockX</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD ROWSPAN=2>削除予定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>LBlockY</TD>
+
+<TD ALIGN=RIGHT>20</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>optionFlag</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>削除</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>drawOptionFlag</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>削除</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>LPrintOptionFlag</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD>削除</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>drawOverrapOptionFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>DRAW,OVERRAPの時にオプションボタンを表示させる</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>noVoiceWait</TD>
+
+<TD ALIGN=RIGHT>20</TD>
+<TD>※削除</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>voiceLastWait</TD>
+
+<TD ALIGN=RIGHT>500</TD>
+<TD>オートモードで音声終了後の待ち時間をミリ秒で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>noVoiceLastWait</TD>
+
+<TD ALIGN=RIGHT>2000</TD>
+<TD>オートモードで音声がない場合の表示後の待ち時間をミリ秒で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>autoMessageLastWait</TD>
+
+<TD ALIGN=RIGHT>2000</TD>
+<TD>オートメッセージの表示後の待ち時間をミリ秒で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>autoMessageWaitVoiceFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:オートメッセージでさらに音声終了を待つ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>autoMessageVoiceLastWait</TD>
+
+<TD ALIGN=RIGHT>voicelastWait</TD>
+<TD>オートモードメッセージで音声終了後の待ち時間をミリ秒で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>nameColorChangeFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>名前の色ををnameColorFileNameで指定されるファイルを参考にして変更する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>nameColorFileName</TD>
+<TD ALIGN=RIGHT>spt\namecol.xtx</TD>
+<TD>名前色及び、名前かどうかを判断するためのファイル</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>customMessageSpeed</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:メッセージ表示速度を個別に変更する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>messageSpeed[n]</TD>
+<TD ALIGN=RIGHT>順に20 40 60 120 10000</TD>
+<TD>[n]番目のメッセージ表示速度を1秒に表示したい文字数で設定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>backlogSound</TD>
+
+<TD ALIGN=RIGHT>-1</TD>
+<TD>バックログにいくときの音を番号で設定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>wheelDownIsClick</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:マウスホイールの下でもメッセージを送る</TD>
+</TR>
+
+
+
+
+
+
+
+</TABLE>
+
+<pre>
+noVoiceIsDefaultWait 0
+//1:音声オフ、またはキャラ音声オフのときに、ウエイトをデフォルトの音声無しとして処理する
+
+
+rightSkipOffIsClick 0
+//1: 右クリックによるオートオフclickでのみ反応するようになる
+
+
+
+namePicFlag 0
+filenameNamePic ta_namepic
+namePicSizeX 64
+namePicSizeY 16
+namePicDeltaX 0
+namePicDeltaY 0
+
+
+
+
+
+
+fontSizeTypeNumber 0
+//追加フォントサイズがあるときにその個数を指定
+
+fontSizeByFontSizeType[n]
+//最大72までです
+
+printXByFontSizeType[n]
+printYByFontSizeType[n]
+nextXByFontSizeType[n]
+nextYByFontSizeType[n]
+spaceByFontSizeType[n]
+
+
+
+//autoモードでの音声後待ち時間、音声無し時の待ち時間をコンフィグでの設定値を使う
+//n:1-5
+voiceLastWait[n]
+noVoiceLastWait[n]
+
+
+
+drawWindowWithMessageFlag 0
+//1:drawで強制的にウィンドウを表示しているとき、そこにメッセージも表示する
+
+
+</pre>
+
+
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

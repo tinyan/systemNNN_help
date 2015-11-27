@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.03 [ja] (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="たいにゃん">
+   <TITLE>クェ JavaScript Version</TITLE>
+<LINK REV=MADE HREF="mailto:tinyan666@mri.biglobe.ne.jp">
+
+
+
+<SCRIPT language="JavaScript">
+
+mapSizeX = 20;
+mapSizeY = 20;
+map = new Array(mapSizeY,mapSizeX);
+
+
+
+function PrintMap()
+{
+    top.right1.document.open();
+    top.right1.document.write("<html>\n");
+    top.right1.document.write("<head><title></title></head>\n");
+    top.right1.document.write("<body>\n");
+    
+    top.right1.document.write("<table border=2>\n");
+    for (j=0;j<mapSizeY;j++)
+    {
+        top.right1.document.write("<tr>\n");
+    
+        for (i=0;i<mapSizeX;i++)
+        {
+           top.right1.document.write("<td>\n");
+           
+           top.right1.document.write("あ");
+           
+           
+           top.right1.document.write("</td>\n");
+        }
+        
+        top.right1.document.write("</tr>\n");
+    }
+    
+    top.right1.document.write("</table>\n");
+    
+    top.right1.document.write("</body>\n");
+    top.right1.document.write("</html>\n");
+    top.right1.document.close();
+
+}
+
+
+
+
+function  InitMap()
+{
+    for (j=0;j<mapSizeY;j++)
+    {
+        for (i=0;i<mapSizeX;i++)
+        {
+           map[j][i] = 0;
+        }
+    }        
+}
+
+function PrintMap()
+{
+
+}
+
+
+function ChangePic(menuName)
+{
+	document[menuName].src = selFileName[menuName];
+}
+
+function ChangePic2(menuName)
+{
+	document[menuName].src = normalFileName[menuName];
+}
+
+function testfunc()
+{
+    alert("testmessage");
+}
+
+function testfunc2()
+{
+    alert("testmessage2222");
+    
+    top.document.open();
+    top.document.write("<html>\n");
+    top.document.write("<head><title>テスト</title></head>\n");
+    top.document.write("<body>へへへ</body>\n");
+    top.document.write("</html>\n");
+    top.document.close();
+ 
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#990000" BGCOLOR="#FFFFFF" LINK="#006060" VLINK="#7499CC" ALINK="#000000">
+<SCRIPT language="JavaScript">
+
+
+
+
+
+//-->
+</SCRIPT>
+
+
+<!--
+<A HREF="graphics/farce_new_top.jpg"><IMG BORDER=0 SRC="minigraphics/pandora02.jpg" ALT="PANDORA" NOSAVE HEIGHT=472 WIDTH=356></A><BR>
+-->
+
+
+
+<form action = "#">
+あああ
+<input type = "hidden" onclick = "testfunc();">
+</form>
+
+<a href = "#" onclick = "testfunc();">ううう</a>
+
+<table style="cursor:default">
+<tr>
+<td abbr="てきすと" onclick = "testfunc2();"></td>
+</tr>
+</table>
+
+<form action = "#">
+いいい
+<input type = "submit" value = "ok" onclick = "testfunc2();">
+</form>
+
+
+
+</BODY>
+</HTML>

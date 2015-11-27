@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>シナリオ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="nnnedit.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">シナリオ</p>
+
+<br />
+<img src="graphics/nnnedit_scenario.jpg" alt=""/>
+<br />
+
+
+<br />
+
+<table class="none">
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_new.jpg" alt="" /></td>
+<td class ="box2">新規作成</td>
+<td class ="box3">現在の選択位置に、新規コマンドを挿入します</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_edit.jpg" alt="" /></td>
+<td class ="box2">内容修正</td>
+<td class ="box3">選択中のコマンドの内容を(可能であれば)修正するためのダイアログを開きます</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_cut.jpg" alt="" /></td>
+<td class ="box2">切り取り</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_copy.jpg" alt="" /></td>
+<td class ="box2">コピー</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_paste.jpg" alt="" /></td>
+<td class ="box2">貼り付け</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_delete.jpg" alt="" /></td>
+<td class ="box2">削除</td>
+<td class ="box3">選択中のコマンドを削除します。親コマンドを削除した場合、その子コマンドも削除されます</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_undo.jpg" alt="" /></td>
+<td class ="box2">UNDO</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_back.jpg" alt="" /></td>
+<td class ="box2">戻る</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_jump.jpg" alt="" /></td>
+<td class ="box2">ジャンプ</td>
+<td class ="box3">未実装</td>
+</tr>
+
+<tr>
+<td class ="box1"><img src="graphics/nnnedit_button_foward.jpg" alt="" /></td>
+<td class ="box2">進む</td>
+<td class ="box3">未実装</td>
+</tr>
+
+</table>
+
+<br />
+
+<pre>
+
+
+シナリオはコマンドの集まりです
+
+段下げされたコマンドは、子コマンドです
+
+[A]
+　[B] Aの子1
+　[C] Aの子2
+[D]
+　[E] Dの子1
+　[F] Dの子2
+　[G] Dの子3
+　　[H] Gの子1
+　[I] Dの子4
+
+
+親コマンドの条件に応じて子コマンドが実行されます
+
+
+
+左側に表示されているアイコンの上で右クリックすると
+メニューが表示されますので変更可能な場合はコマンドを変更できます
+
+</pre>
+<br />
+<img src="graphics/nnnedit_menu_scenario_window.jpg" alt="" />
+<br />
+<pre>
+コマンドは以下の物が使えます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class="box1"><img src="graphics/command_nop.jpg" alt="" /></td>
+<td class="box2">NOP</td>
+<td class="box3">なにもしません。新規作成されたコマンドはこれになります。ほぼすべてのコマンドに変更可能です</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_if.jpg" alt="" /></td>
+<td class="box2">IF</td>
+<td  class="box3"rowspan ="4">
+条件の成立した子コマンド群を実行します<br />
+IF～ELSIF～ELSIF...～ELSIF～ELSE<br />
+という形式で使い<br />
+IF,ELSIFの中には条件式を書きこみます<br />
+条件ブロックの最後には、終端をしめす「とじ」というコマンドが自動的に追加されます
+
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_elsif.jpg" alt="" /></td>
+<td class="box2">ELSIF</td>
+
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_else.jpg" alt="" /></td>
+<td class="box2">ELSE</td>
+
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_endif.jpg" alt="" /></td>
+<td class="box2">ENDIF</td>
+
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_while.jpg" alt="" /></td>
+<td class="box2">WHILE</td>
+<td class="box3">書かれた条件が成立している間、子コマンド群を実行します</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_select.jpg" alt="" /></td>
+<td class="box2">選択肢</td>
+<td class="box3">
+選択肢を表示し選ばれた子コマンドを実行します<br />
+選択肢の数と子コマンドの数は同じでなければなりません<br />
+選択肢書き方は別解説を参照
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_story.jpg" alt="" /></td>
+<td class="box2">シナリオ</td>
+<td class="box3">他のシナリオを呼び出します<br />
+プログラミングでいうところのサブルーチンみたいなものです
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_film.jpg" alt="" /></td>
+<td class="box2">フィルム</td>
+<td class="box3">フィルムを実行します(ゲーム画面の大半はこれが占めます)</td>
+</tr>
+
+
+<tr>
+<td class="box1" rowspan = "2"><img src="graphics/command_sys.jpg" alt="" /></td>
+<td class="box2">コマンド</td>
+<td class="box3">
+ここでいう標準コマンドとは、スクリプトから呼び出される<br />
+ゲーム固有のプログラムをさします<br />
+通常はそこでユーザーの操作が入り、終了後にスクリプトに処理をもどします
+</td>
+</tr>
+
+<tr>
+
+<td class="box2">ファンクション</td>
+<td class="box3">
+ゲーム固有のプログラムの実行<br />
+標準関数は即時にスクリプトに処理をもどします<br />
+また、関数という名前ですが、値は返しません
+</td>
+</tr>
+
+
+<tr>
+<td class="box1"><img src="graphics/command_spt.jpg" alt="" /></td>
+<td class="box2">スクリプト呼び出し</td>
+<td class="box3">sysスクリプトから他のスクリプトを呼び出します</td>
+</tr>
+
+
+<tr>
+<td class="box1"><img src="graphics/command_subscript.jpg" alt="" /></td>
+<td class="box2">サブスクリプト呼び出し</td>
+<td class="box3">スクリプトから他のサブスクリプトを呼び出します</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_jump.jpg" alt="" /></td>
+<td class="box2">スクリプトジャンプ</td>
+<td class="box3">
+現在実行中のスクリプトを完全に中断し<br />
+新たなスクリプトを実行します<br />
+スクリプトからは、スクリプトへ<br />
+サブスクリプトからは、サブスクリプトへしか実行を移せません
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_ret.jpg" alt="" /></td>
+<td class="box2">RET</td>
+<td class="box3">
+呼び出されたシナリオにもどり、続きを実行します<br />
+サブルーチン呼び出しからもどるようなものです
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_next.jpg" alt="" /></td>
+<td class="box2">NEXT</td>
+<td class="box3">
+sys又は上位スクリプトに戻る<br />
+現在のスクリプトを終了し、よびだされたスクリプトの続きを実行します
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_end.jpg" alt="" /></td>
+<td class="box2">END</td>
+<td class="box3">
+sysスクリプトの「★トップ」スクリプトの最初から実行再開します<br />
+sysスクリプトでのみ使用可能です。
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_exit.jpg" alt="" /></td>
+<td class="box2">EXIT</td>
+<td class="box3">
+スクリプトの実行を終了し、ゲームのタイトル画面にもどります
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_calcu.jpg" alt="" /></td>
+<td class="box2">計算</td>
+<td class="box3">
+各種計算処理を書き込みます<br />
+あまり長い処理はできないので<br />
+必要に応じて複数の計算にわけます
+</td>
+</tr>
+
+<tr>
+<td class="box1"><img src="graphics/command_debug.jpg" alt="" /></td>
+<td class="box2">デバッグメッセージ</td>
+<td class="box3">
+デバッグモードで実行中に、ここで設定されたメッセージが<br />
+画面に表示されます
+</td>
+</tr>
+
+
+
+</table>
+
+
+<br />
+
+<table class="none">
+<tr>
+<td class="box2">マーキング</td>
+<td class="box3">エディタでのみ有効です<br />
+コマンドに色を指定します
+</td>
+</tr>
+
+<tr>
+<td class="box2">ブロックマーキング</td>
+<td class="box3">エディタでのみ有効です<br />
+コマンド群まとめてに色を指定します
+</td>
+</tr>
+
+</table>
+
+
+
+<br />
+<div class="notice">
+<pre>
+計算で使える機能
+</pre>
+
+<a href="../grammar/varandnumber.htm">数値・変数</a><br />
+<a href="../grammar/operation_set.htm">代入演算子</a><br />
+<a href="../grammar/operation_calcu.htm">2項演算子</a><br />
+</div>
+
+<br />
+
+
+<div class="notice">
+<pre>
+条件式、WHILEの条件で使用できる機能
+</pre>
+<a href="../grammar/varandnumber.htm">数値・変数</a><br />
+<a href="../grammar/operation_calcu.htm">2項演算子</a><br />
+<a href="../grammar/operation_compare.htm">比較演算子</a><br />
+</div>
+
+
+
+
+
+<br />
+
+<div class="notice">
+
+<pre>
+選択肢の書き方
+
+1行に1つの選択肢文章を書きます
+行頭に特殊記号をつけることで特殊な動作が指定できます
+
+<a href="../grammar/select.htm">選択肢詳細解説</a>
+</pre>
+
+</div>
+
+
+</body>
+</html>
+

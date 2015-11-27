@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>IF</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">IF</p>
+<br />
+
+<pre>
+今回は条件分岐をつけてみます。
+これでアドベンチャーゲームの主な構成要素は終了です
+
+今回も、select_testに追加していきます
+</pre>
+
+<pre>
+
+まずは、フィルムからつくっておきます
+「姫があぶない」という名前でフィルムを作成します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif1.jpg" alt="" /><br />
+
+<pre>
+コマ数は1つです
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif2.jpg" alt="" /><br />
+<pre>
+区別がつくように、エフェクトもつけておきます
+「ぬりつぶし」エフェクトを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif3.jpg" alt="" /><br />
+<pre>
+暗い緑色にしておきます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif4.jpg" alt="" /><br />
+<pre>
+メッセージも、それっぽいのを
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif5.jpg" alt="" /><br />
+
+<pre>
+もう1つフィルムをつくります
+名前は「バッドエンド」です。コマ数は1つ
+こんどは、赤で塗りつぶすエフェクトをつけておいてください
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif6.jpg" alt="" /><br />
+
+<pre>
+それようのメッセージ
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif7.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+さて、まずは変数の追加です
+PLAY変数を選び、あいているところで右クリックメニューを開いて
+「変更」をえらびます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif10.jpg" alt="" /><br />
+<pre>
+「魔王攻撃力」という名前で変数を作ります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif11.jpg" alt="" /><br />
+<pre>
+さらにもう1個
+「勇者防御力」という変数もつくります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif12.jpg" alt="" /><br />
+
+<br />
+
+<pre>
+
+
+シナリオウィンドウの1番上のコマンドを選択してから、
+「新規」ボタンを4回押して、コマンドを4つ追加します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif20.jpg" alt="" /><br />
+
+<pre>
+このようになります。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif21.jpg" alt="" /><br />
+
+<pre>
+1番上のNOPを「姫があぶない」フィルムに変更します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif22.jpg" alt="" /><br />
+<pre>
+2番目は、「計算」をえらび、
+
+勇者防御力 = 50;
+
+と入力します
+よわいですね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif23.jpg" alt="" /><br />
+
+<pre>
+こうなりましたね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif24.jpg" alt="" /><br />
+
+<pre>
+3番目には、3個の選択肢を設定します。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif25.jpg" alt="" /><br />
+
+<pre>
+選択肢の内容をせっていします。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif26.jpg" alt="" /><br />
+
+<pre>
+選択肢の1番目のNOPを「計算」にへんこうします
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif27.jpg" alt="" /><br />
+
+<pre>
+1つ目には
+
+魔王攻撃力 = 0;
+
+と入力します。あれには攻撃力がないので0ですね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif28.jpg" alt="" /><br />
+<pre>
+同様に、2番目、3番目も「計算」に変更し
+
+それぞれ
+
+魔王攻撃力 = 30;
+
+魔王攻撃力 = 999;
+
+
+と入力します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif29.jpg" alt="" /><br />
+
+<pre>
+次に、上から7つ目のNOPを選びます。これは、最初につくった4つ目のNOPですが、下にずれてきてます
+右クリックメニューを開き、
+「条件ブロック」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif30.jpg" alt="" /><br />
+
+<pre>
+このような画面になります。IFの子コマンド1つと、ENDIFコマンドが自動的に作成されます
+ENDIFは、IFの範囲をわかりやすくするために準備されています
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif31.jpg" alt="" /><br />
+
+<pre>
+IFの上で右クリックメニューを開き、「内容修正」を選びます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif32.jpg" alt="" /><br />
+<pre>
+1行入力ダイアログが出ますので、条件を入力します
+ここでは
+
+魔王攻撃力 < 勇者防御力
+
+といれます。魔王の攻撃力が、勇者の防御力を破れなかった場合に成立ですね
+
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif33.jpg" alt="" /><br />
+
+<pre>
+こうなります
+そのまま1個したのNOPを選択してください
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif34.jpg" alt="" /><br />
+
+<pre>
+IFの子コマンドを選択した状態で、「新規」ボタンを押します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif35.jpg" alt="" /><br />
+
+<pre>
+NOPが1つ、IFの子コマンドとして追加されます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif36.jpg" alt="" /><br />
+
+<pre>
+1つ目の子コマンドには、「バッドエンド」フィルムを設定します
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif37.jpg" alt="" /><br />
+
+<pre>
+2つ目の子コマンドには、[終わり]-[タイトル画面に抜ける]
+を設定します。
+
+このコマンドが実行されると、スクリプトの実行を終了して、タイトル画面にもどります
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif38.jpg" alt="" /><br />
+
+<pre>
+忘れないように保存して、ビルドしましょう
+</pre>
+
+
+<br />
+<pre>
+実行させてみましょう。
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run1.jpg" alt="" /><br />
+<pre>
+選択肢が表示されました
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run2.jpg" alt="" /><br />
+
+<pre>
+凍てつく波動を選んでみます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run3.jpg" alt="" /><br />
+
+<pre>
+バッドエンドですね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run6.jpg" alt="" /><br />
+
+<pre>
+タイトルにもどりました
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run7.jpg" alt="" /><br />
+
+<pre>
+痛恨の一撃を選んでみます
+</pre>
+
+
+<img src ="graphics/tutor2_nnnedit_makeif_run4.jpg" alt="" /><br />
+
+
+<pre>
+まだ攻撃力がたりませんでした
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run6.jpg" alt="" /><br />
+
+<pre>
+そしてタイトルです
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run7.jpg" alt="" /><br />
+
+
+<pre>
+ぱふぱふを選んでみます
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run5.jpg" alt="" /><br />
+
+
+<pre>
+バッドエンドにいかずに、ぬけたようです。
+前回作った部分ですね
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run8.jpg" alt="" /><br />
+
+
+<pre>
+また今日も、姫に「いいえ」と答える仕事がはじまるお
+</pre>
+
+<img src ="graphics/tutor2_nnnedit_makeif_run9.jpg" alt="" /><br />
+
+
+
+</body>
+</html>
+

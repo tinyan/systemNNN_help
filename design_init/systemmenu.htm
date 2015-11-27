@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - systemmenu</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\systemMenu.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>メニュー</TD>
+<TD>1つのモードで基本ボタンが9このメニューを作成する</TD>
+</TR>
+
+
+</TABLE>
+
+<BR>
+メニューボタンは順に<BR>
+<BR>
+セーブ<BR>
+ロード<BR>
+コンフィグ<BR>
+ウィンドウオフ<BR>
+メッセージスキップ<BR>
+バックログ<BR>
+自動モード<BR>
+キャンセル<BR>
+ゲーム終了<BR>
+<BR>
+と、なっています<BR>
+<BR>
+
+
+
+
+
+
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>systemMenu</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>optionNumber</TD>
+
+<TD ALIGN=RIGHT>9</TD>
+<TD>オプションメニューのメニュー数。9よりへらすことはできない</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>expOptionMode[n]</TD>
+<TD>0</TD>
+<TD>10個以上のボタンをつけたときのボタンの動作をモード番号で指定する</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>warningPrintFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:ゲーム終了を選んだ場合に警告を出す。ダイアログボタンとして[dialogOk][dialogCancel]を作成する必要がある</TD>
+</TR>
+
+
+
+<TR>
+<TD></TD>
+<TD>fileNameDialog</TD>
+<TD>ta_dialog3</TD>
+<TD>警告ダイアロググラフィックファイル名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>dialogX</TD>
+<TD ALIGN=RIGHT>340</TD>
+<TD ROWSPAN=2>警告ダイアログ表示座標</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>dialogY</TD>
+<TD ALIGN=RIGHT>105</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>dialogSizeX</TD>
+<TD ALIGN=RIGHT>236</TD>
+<TD ROWSPAN=2>警告ダイアログのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>dialogSizeY</TD>
+<TD ALIGN=RIGHT>160</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>menuPrintType</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>メニュー表示開始時の演出を 0:行わない 1～:指定されたタイプで行う</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>menuPrintTime</TD>
+<TD ALIGN=RIGHT>20</TD>
+<TD>演出時間をフレーム数で設定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>filenameMenuBase</TD>
+
+<TD>ta_menulistbase</TD>
+<TD>メニューの枠のファイル名</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>basePrintX</TD>
+
+<TD ALIGN=RIGHT>536</TD>
+<TD ROWSPAN=2>メニューの枠を表示する座標</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>basePrintY</TD>
+
+<TD ALIGN=RIGHT>10</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>baseSizeX</TD>
+
+<TD ALIGN=RIGHT>205</TD>
+<TD ROWSPAN=2>メニュー枠のサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>baseSizeY</TD>
+
+<TD ALIGN=RIGHT>300</TD>
+
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>backScreenType</TD>
+
+<TD ALIGN=RIGHT>2</TD>
+<TD>背景 1:指定されたファイル 2:そのときのゲーム画像を取り込む 3:背景スクリプト</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>screenToGetPutFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:背景スクリプト使用時に、GETPUTに現在の背景をとりこむ(メッセージ等は非表示)このとき、ネガその他の各種演出も有効になる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>getWithMessageFlag</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:GETPUTにとりこむ時にメッセージ等を表示する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenFileName</TD>
+<TD>bg_sysmenu</TD>
+<TD>背景タイプが1のときの背景画像ファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>backScreenEffectNega</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:取り込み画像を白黒反転させる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenEffectGrey</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:取り込み画像をモノクロ化する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenEffectMulti</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:取り込み画像に乗算処理を行う</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenMultiR</TD>
+<TD ALIGN=RIGHT>100</TD>
+<TD ROWSPAN=3>乗算値を0-100で設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenMultiG</TD>
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenMultiB</TD>
+<TD ALIGN=RIGHT>100</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>backScreenEffectAddSub</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:取り込み画像に色の加減算処理を行う</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenColorR</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ROWSPAN=3>加減算値を-255～255で設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenColorG</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>backScreenColorB</TD>
+<TD ALIGN=RIGHT>0</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>setDefaultShortCutFlag</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:メニューに、デフォルトのショートカットをつける。順に[S][L][C][ ][SHIFT][↑][A] なし なし</TD>
+</TR>
+
+ 
+<TR>
+<TD COLSPAN= 2>systemMenuSceneBackFileName</TD>
+
+<TD></TD>
+<TD>シーン鑑賞中の「ゲームにもどるボタン」のファイル名を指定</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>systemMenuSceneEndFileName</TD>
+
+<TD></TD>
+<TD>シーン鑑賞中の「ゲーム終了ボタン」のファイル名を指定</TD>
+</TR>
+
+
+
+</TABLE>
+
+
+<BR>
+シーン鑑賞中は、「ゲーム終了」ボタンは<BR>
+シーン選択画面にもどる動作になります。<BR>
+<BR>
+
+memo
+outClickReturnFlag 1:メニュー外でクリックでぬける
+
+expOptionCommand[n]
+5 quickLoad(LOAD)
+6 quickSave(SAVE)
+
+
+//titleにぬけるときの音
+exitWarningSound 
+</BODY>
+</HTML>
+

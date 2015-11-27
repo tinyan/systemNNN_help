@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>比較演算子</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">比較演算子</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+比較演算子とは、2つの値や変数を比較し、その結果を
+成立、不成立で表します。
+
+比較演算子は、シナリオの「IF」「ELSIF」「WHILE」コマンド内でのみ使用できます
+
+</pre>
+
+
+<table class="none">
+
+<tr>
+<td class="box1">==</td>
+<td class="box2">等しい</td>
+<td class="box3">2つの値が同じときに成立します。=でも代用できます</td>
+</tr>
+
+<tr>
+<td class="box1">!=</td>
+<td class="box2">等しくない</td>
+<td class="box3">2つの値が違うときに成立します。</td>
+</tr>
+
+<tr>
+<td class="box1">&gt</td>
+<td class="box2">大なり</td>
+<td class="box3">左の値が右の値より大きいときに成立します</td>
+</tr>
+
+<tr>
+<td class="box1">&gt=</td>
+<td class="box2">大なりイコール</td>
+<td class="box3">左の値が右の値より大きいか、同じときに成立します</td>
+</tr>
+
+<tr>
+<td class="box1">&lt</td>
+<td class="box2">小なり</td>
+<td class="box3">左の値が右の値より小さいときに成立します</td>
+</tr>
+
+<tr>
+<td class="box1">&lt=</td>
+<td class="box2">小なりイコール</td>
+<td class="box3">左の値が右の値より小さいか、同じときに成立します</td>
+</tr>
+
+
+<tr>
+<td class="box1">and</td>
+<td class="box2">論理積</td>
+<td class="box3">2つのの比較結果がともに成立のときに、成立します</td>
+</tr>
+
+<tr>
+<td class="box1">or</td>
+<td class="box2">論理和</td>
+<td class="box3">2つのの比較結果がどちらか1つでも成立のときに、成立します</td>
+</tr>
+
+<tr>
+<td class="box1">!</td>
+<td class="box2">論理反転</td>
+<td class="box3">これは、1つの比較結果の前につけて使用します。比較結果を反転します。成立のときに不成立、不成立のときに成立、になります</td>
+</tr>
+
+
+
+</table>
+
+
+<br />
+<br />
+
+<pre>
+比較演算の順序は、C言語に準拠していますが、よくわからないときは
+()「かっこ」をつけてしまいましょう
+
+</pre>
+<div class = "notice">
+( (リリカ愛情値 >= 800) and (最後のかぎ盗まれたフラグ == 0) ) or (無敵モード == 1)
+</div>
+<pre>
+
+上のように条件を書いた場合の成立不成立は、次のようになります
+</pre>
+
+<table class = "none">
+
+<tr>
+<td class = "box2">リリカ愛情値</td>
+<td class = "box2">最後のかぎ盗まれたフラグ</td>
+<td class = "box2">無敵モード</td>
+<td class = "box1">結果</td>
+</tr>
+
+<tr>
+<td class = "box2"></td>
+<td class = "box2"></td>
+<td class = "box2"></td>
+<td class = "box1"></td>
+</tr>
+
+<tr>
+<td class = "box2">500</td>
+<td class = "box2" rowspan="2">0</td>
+<td class = "box2" rowspan="4">0</td>
+<td class = "box1"></td>
+</tr>
+
+<tr>
+<td class = "box2">1000</td>
+
+
+<td class = "box1">成立</td>
+</tr>
+
+<tr>
+<td class = "box2">500</td>
+<td class = "box2" rowspan="2">1</td>
+
+<td class = "box1"></td>
+</tr>
+
+<tr>
+<td class = "box2">1000</td>
+
+
+<td class = "box1"></td>
+</tr>
+
+
+<tr>
+<td class = "box2">500</td>
+<td class = "box2" rowspan="2">0</td>
+<td class = "box2" rowspan="4">1</td>
+<td class = "box1">成立</td>
+</tr>
+
+<tr>
+<td class = "box2">1000</td>
+
+
+<td class = "box1">成立</td>
+</tr>
+
+<tr>
+<td class = "box2">500</td>
+<td class = "box2" rowspan="2">1</td>
+
+<td class = "box1">成立</td>
+</tr>
+
+<tr>
+<td class = "box2">1000</td>
+
+
+<td class = "box1">成立</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+
+td.topname
+{
+	width: 100px;
+	background-color : #F3C4C4;
+	margin: 1px;
+	border-style :none;
+	border-width :1;
+	text-align:center;
+}
+
+td.topdesc
+{
+	width: 300px;
+	background-color : #D0DCCF;
+	margin: 1px;
+	border-style :none;
+	border-width :1
+}
+
+td.topdate
+{
+	width: 100px;
+	background-color : #DDDDDD;
+	margin: 1px;
+	border-style :none;
+	border-width :1
+}

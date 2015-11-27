@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+
+<script type="text/javascript">
+<!--
+function init()
+{
+
+
+window.alert("test");
+	id = 0;
+
+    testmessage = new Array(100);
+    for (i=0;i<100;i++)
+    {
+        testmessage[i] = new Array(3);
+    }
+
+    testmessage[2][0] = "２－あ";
+    testmessage[2][1] = "２－い";
+    testmessage[2][2] = "２－う";
+
+    testmessage[3][0] = "３－ああ";
+    testmessage[3][1] = "３－いい";
+    testmessage[3][2] = "３－うう";
+    
+	wipenumber = window.location.search.substr(1);
+
+	image = new Array(6);
+	
+	image[0] = new Image();
+	image[0].src = "graphics/sample_from.jpg";
+	for (i=1;i<5;i++)
+	{
+		image[i] = new Image();
+		str = "graphics/sample_" + wipenumber + "_" + i + ".jpg";
+		image[i].src = str;
+	}
+	image[5] = new Image();
+	image[5].src = "graphics/sample_to.jpg";
+
+	window.document.images["pic0"].src = image[0].src;
+	window.document.images["pic1"].src = image[1].src;
+	window.document.images["pic2"].src = image[2].src;
+	window.document.images["pic3"].src = image[3].src;
+	window.document.images["pic4"].src = image[4].src;
+	window.document.images["pic5"].src = image[5].src;
+	
+	
+//	document.all.testdoc.innerHTML = "いいい";
+	document.all.testdoc2.innerHTML = testmessage[wipenumber][1];
+}
+
+
+
+
+// -->
+</script>
+
+</HEAD>
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<TABLE BORDER=1>
+<TR>
+	<TD>始</TD>
+	<TD>
+	0%<BR>
+	<IMG name="pic0" SRC="graphics/sample_from.jpg">
+	</TD>
+	<TD>→</TD>
+	<TD>
+	20%<BR>
+<IMG name="pic1" SRC="graphics/sample_1_1.jpg">
+	</TD>
+	<TD>→</TD>
+</TR>
+<TR>
+	<TD>→</TD>
+	<TD>
+	40%<BR>
+<IMG name="pic2" SRC="graphics/sample_1_2.jpg">
+	</TD>
+	<TD>→</TD>
+	<TD>
+	60%<BR>
+<IMG name="pic3" SRC="graphics/sample_1_3.jpg">
+	</TD>
+	<TD>→</TD>
+</TR>
+<TR>
+	<TD>→</TD>
+	<TD>
+	80%<BR>
+<IMG name="pic4" SRC="graphics/sample_1_4.jpg">
+	</TD>
+	<TD>→</TD>
+	<TD>
+	100%<BR>
+	<img id="pic5" src="graphics/sample_to.jpg" alt="" />
+	</TD>
+	<TD>終</TD>
+</TR>
+</TABLE>
+
+<div id="testdoc">
+おおお
+<pre id="testdoc2">
+あああ
+</pre>
+</div>
+
+<script type="text/javascript">
+<!--
+init();
+
+
+// -->
+</script>
+
+<noscript>
+JAVASCRIPTを有効にしてください
+</noscript>
+
+<BR>
+
+
+</BODY>
+</HTML>
+
+

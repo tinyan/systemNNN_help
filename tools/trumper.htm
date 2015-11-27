@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>トランプ作成支援</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="tools.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+<p class="title"><img src="graphics/trumper2.jpg" alt="" /><br />トランプ作成支援ツール</p>
+
+
+<pre>
+trumper.exe
+
+</pre>
+
+<table class = "none">
+
+<tr>
+<td class = "box2">元画像</td>
+<td class = "box2"><img src="graphics/tool_sample_trumpbase.jpg" alt="" /></td>
+</tr>
+
+<tr>
+<td class = "box2">パーツ画像</td>
+<td class = "box2"><img src="graphics/tool_sample_trumpparts.jpg" alt="" /><br />マスク<br /><img src="graphics/tool_sample_trumppartsm.jpg" alt="" /></td>
+</tr>
+
+<tr>
+<td class = "box2">作成後画像</td>
+<td class = "box2"><img src="graphics/tool_sample_trumpseat.jpg" alt="" /></td>
+</tr>
+
+</table>
+
+<br />
+<br />
+
+
+<pre>
+設定ファイル(trumper.txt)で細かな指定もできますが、たいていは必要ないとおもいます
+</pre>
+
+<table class="none">
+
+
+<tr>
+<td class="box2">名前</td>
+<td class="box2">デフォルト値</td>
+<td class="box3">解説</td>
+</tr>
+
+<tr>
+<td class="box2"></td>
+<td class="box2"></td>
+<td class="box3"></td>
+</tr>
+
+<tr>
+<td class="box2">cardSizeX</td>
+<td class="box2">96</td>
+<td class="box3" rowspan="2">トランプの1枚のサイズを指定します</td>
+</tr>
+
+<tr>
+<td class="box2">cardSizeY</td>
+<td class="box2">144</td>
+
+</tr>
+
+<tr>
+<td class="box2">largeSizeX</td>
+<td class="box2">28</td>
+<td class="box3" rowspan="2">マーク(カードでメインで使われるもの)のサイズを指定します</td>
+</tr>
+
+<tr>
+<td class="box2">largeSizeY</td>
+<td class="box2">28</td>
+
+</tr>
+
+<tr>
+<td class="box2">middleSizeX</td>
+<td class="box2">21</td>
+<td class="box3" rowspan="2">絵札に表示するマークのサイズを指定します</td>
+</tr>
+
+<tr>
+<td class="box2">middleSizeY</td>
+<td class="box2">21</td>
+
+</tr>
+
+<tr>
+<td class="box2">smallSizeX</td>
+<td class="box2">10</td>
+<td class="box3" rowspan="2">カードの左上、右下に表示されるマークのサイズを指定します</td>
+</tr>
+
+<tr>
+<td class="box2">smallSizeY</td>
+<td class="box2">11</td>
+
+</tr>
+
+<tr>
+<td class="box2">fontSizeX</td>
+<td class="box2">8</td>
+<td class="box3" rowspan="2">カードの左上、右下に表示される数字のサイズを指定します</td>
+</tr>
+
+<tr>
+<td class="box2">fontSizeY</td>
+<td class="box2">8</td>
+
+</tr>
+
+<tr>
+<td class="box2">number1PutX</td>
+<td class="box2">3</td>
+<td class="box3" rowspan="4">左上、右下の数字の表示位置</td>
+</tr>
+
+<tr>
+<td class="box2">number1PutY</td>
+<td class="box2">12</td>
+
+</tr>
+
+<tr>
+<td class="box2">number2PutX</td>
+<td class="box2">85</td>
+
+</tr>
+
+<tr>
+<td class="box2">number2PutY</td>
+<td class="box2">124</td>
+
+</tr>
+
+<tr>
+<td class="box2">smallMark1PutX</td>
+<td class="box2"></td>
+<td class="box3" rowspan="4">左上、右下のマークの表示位置</td>
+</tr>
+
+<tr>
+<td class="box2">smallMark1PutY</td>
+<td class="box2"></td>
+
+</tr>
+
+<tr>
+<td class="box2">smallMark2PutX</td>
+<td class="box2"></td>
+
+</tr>
+
+<tr>
+<td class="box2">smallMark2PutY</td>
+<td class="box2"></td>
+
+</tr>
+
+<tr>
+<td class="box2">normalNumber[n]</td>
+<td class="box2">1,1,2,2,3,4,5,5,5,5</td>
+<td class="box3">マークにうち上下左右を反転せずに表示する個数</td>
+</tr>
+
+<tr>
+<td class="box2">mark[n]putX[k]</td>
+<td class="box2"></td>
+<td class="box2" rowspan="2">n番目のカード番号のk個めのマークの表示位置</td>
+</tr>
+
+<tr>
+<td class="box2">mark[n]putY[k]</td>
+<td class="box2"></td>
+
+</tr>
+
+<tr>
+<td class="box2">middlePutX1</td>
+<td class="box2">61</td>
+<td class="box2" rowspan="4">絵札に付けるマークの表示位置を一括設定</td>
+</tr>
+
+<tr>
+<td class="box2">middlePutY1</td>
+<td class="box2">13</td>
+
+</tr>
+
+<tr>
+<td class="box2">middlePutX2</td>
+<td class="box2">14</td>
+
+</tr>
+
+<tr>
+<td class="box2">middlePutY2</td>
+<td class="box2">109</td>
+
+</tr>
+
+<tr>
+<td class="box2">worldPrintFlag</td>
+<td class="box2">1</td>
+<td class="box2">スペードのAにもマークを表示します</td>
+</tr>
+
+<tr>
+<td class="box2">middlePrintFlag</td>
+<td class="box2">1</td>
+<td class="box2">絵札にマークをつけます</td>
+</tr>
+
+<tr>
+<td class="box2">markPrintFlag</td>
+<td class="box2">1</td>
+<td class="box2">左上、右下のマークを表示します</td>
+</tr>
+
+<tr>
+<td class="box2">numberPrintFlag</td>
+<td class="box2">1</td>
+<td class="box2">左上、右下の数字を表示します</td>
+</tr>
+
+<tr>
+<td class="box2">filenameBase</td>
+<td class="box2">trumpBase</td>
+<td class="box2">元のトランプシート画像ファイル名を指定します。(フルカラー画像のみです)</td>
+</tr>
+
+<tr>
+<td class="box2">filenameParts</td>
+<td class="box2">trumpParts</td>
+<td class="box2">元のトランプパーツ画像およびマスクファイルを指定します。マスク画像ファイル名は、後ろに「m」を付けたものが使用されます。パーツ画像はフルカラーのみ、マスク画像は256色画像です</td>
+</tr>
+
+<tr>
+<td class="box2">filenameMake</td>
+<td class="box2">trumpSeat</td>
+<td class="box2">作成するトランプシート画像のファイル名を指定します</td>
+</tr>
+
+
+</table>
+
+<pre>
+もと画像、作成画像は実行ファイルと同じフォルダーです
+設定ファイル(trumper.txt)も同じフォルダにおきます
+
+</pre>
+
+<pre>
+設定例(サンプル画像用で使用したもの)
+</pre>
+<div class="notice">
+<pre>
+name trumper
+worldPrintFlag 0
+</pre>
+<pre>
+</pre>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

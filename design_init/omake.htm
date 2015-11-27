@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - omake</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\omake.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+
+
+<TR>
+<TD>その他設定</TD>
+<TD>メニュー</TD>
+<TD>最初の4つは、CG鑑賞、シーン鑑賞、音楽鑑賞、タイトルに戻る</TD>
+</TR>
+
+</TABLE>
+
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>title</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>fileNameBG</TD>
+
+<TD ALIGN=LEFT>title_bg2</TD>
+<TD>背景画像名</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>menuStartWaitTime</TD>
+
+<TD>0</TD>
+<TD>メニューが表示し始めるまでの時間をフレーム数で設定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>menuStartEffectTime</TD>
+
+<TD>0</TD>
+<TD>メニューが表示されはじめてからの特殊エフェクトがかかっている時間をフレーム数で設定する</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>menuStartEffectType</TD>
+
+<TD>0</TD>
+<TD>特殊エフェクトの種類 0:移動 1:半透明</TD>
+</TR>
+
+<TR>
+<TD COLSPAN=2>menuStartDeltaX</TD>
+
+<TD>0</TD>
+<TD ROWSPAN=2>特殊エフェクトで移動を選んだ場合のメニューの表示開始位置を相対座標で設定</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>menuStartDeltaY</TD>
+
+<TD>0</TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>autoCGCharaFlag</TD>
+
+<TD>0</TD>
+<TD>1:CG鑑賞キャラ選択を行わない(1人)</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>autoSceneCharaFlag</TD>
+
+<TD>0</TD>
+<TD>シーン鑑賞キャラ選択を行わない(1人)</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>cgModeExistFlag</TD>
+
+<TD>1</TD>
+<TD>0:CG鑑賞ボタンを削除する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>sceneModeExistFlag</TD>
+
+<TD>1</TD>
+<TD>0:シーン鑑賞ボタンを削除する</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN=2>bgmModeExistFlag</TD>
+
+<TD>1</TD>
+<TD>0:音楽鑑賞ボタンを削除する</TD>
+</TR>
+
+</TABLE>
+
+
+追加
+miniGame
+ミニゲームの個数
+
+miniGameCheckVarName
+使えるミニゲームの個数を変数で制御する場合その変数名をいれる
+
+miniGameCheckX[n]
+miniGameCheckY[n]
+miniGameCheckSizeX[n]
+miniGameCheckSizeY[n]
+ミニゲームに反応する隠しエリアの座標とサイズを設定する
+
+
+
+
+<BR>
+<CENTER><A HREF="../index.htm">Home</A></CENTER>
+
+</BODY>
+</HTML>
+

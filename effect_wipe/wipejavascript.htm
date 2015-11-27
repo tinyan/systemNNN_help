@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+
+
+<script type="text/javascript" src="wipenamelist.js"></script>
+
+
+<script type="text/javascript">
+<!--
+function init()
+{
+	animenumber = 0;
+	animeflag = 0;
+	animespeed = 100;
+
+	aaa=0;
+	id = 0;
+	wipenumber = window.location.search.substr(1);
+
+	image = new Array(11);
+	
+	image[0] = new Image();
+	image[0].src = "graphics/sample_from.jpg";
+	for (i=1;i<10;i++)
+	{
+		image[i] = new Image();
+		str = "graphics/sample_" + wipenumber + "_" + i + ".jpg";
+		image[i].src = str;
+	}
+	image[10] = new Image();
+	image[10].src = "graphics/sample_to.jpg";
+
+
+    for (i=0;i<=10;i++)
+    {
+        nm = "mini" + i;
+        
+  	    window.document.images[nm].src = image[i].src;  
+  	    window.document.images[nm].width = 75;  
+//  	    window.document.images[nm].width = 75;  
+  	    
+    }
+    makewipenametable();
+    document.all.wipename.innerHTML = wipenamelist[wipenumber];
+    document.all.wipedesc.innerHTML = wipedesclist[wipenumber];
+
+    
+  /*  
+    wipenamelist = new Array(100);
+    wipedesclist = new Array(100);
+    
+    wipenamelist[0] = "ワイプ名がはいる";
+    wipedesclist[0] = "ワイプ解説が入る";
+   
+    wipenamelist[1] = "オーバラップ";
+    wipedesclist[1] = "ワイプ解説が入る";
+    wipenamelist[2] = "カーテン(右)";
+    wipedesclist[2] = "ワイプ解説が入る";
+    wipenamelist[3] = "カーテン(下)";
+    wipedesclist[3] = "ワイプ解説が入る";
+    
+    
+    document.all.wipename.innerHTML = wipenamelist[wipenumber];
+    document.all.wipedesc.innerHTML = wipedesclist[wipenumber];
+    */
+    
+//	image[1] = new Image();
+//	image[1].src = "graphics/sample_1_1.jpg";
+//	image[2] = new Image();
+//	image[2].src = "graphics/sample_1_2.jpg";
+//	image[3] = new Image();
+//	image[3].src = "graphics/sample_1_3.jpg";
+//	image[4] = new Image();
+//	image[4].src = "graphics/sample_1_4.jpg";
+
+
+
+//	if (window.location.search.substr(1) == 2)
+//	{
+//		image[0].src = "graphics/sample_to.jpg";
+//		image[1].src = "graphics/sample_14_1.jpg";
+//		image[2].src = "graphics/sample_14_2.jpg";
+//		image[3].src = "graphics/sample_14_3.jpg";
+//		image[4].src = "graphics/sample_14_4.jpg";
+//		image[5].src = "graphics/sample_to.jpg";
+//	}
+
+//	Image image[6] = new Image[6];
+//	image[0] = new Image("graphics/sample_1_1.jpg");
+//	image[1] = new Image("graphics/sample_1_2.jpg");
+//	image[2] = new Image("graphics/sample_1_3.jpg");
+//	image[3] = new Image("graphics/sample_1_4.jpg");
+//	image[4] = new Image("graphics/sample_1_5.jpg");
+//	image[5] = new Image("graphics/sample_1_6.jpg");
+
+	animestart();
+}
+
+function animestart()
+{
+	if (animeflag == 0)
+	{
+		id = setInterval("anime()",animespeed);
+		animeflag = 1;
+	}
+}
+
+function animestop()
+{
+	if (animeflag == 1)
+	{
+		clearInterval(id);
+		animeflag = 0;
+	}
+}
+
+function animepause()
+{
+	if (animeflag == 1)
+	{
+		animestop();
+	}
+	else
+	{
+		anime();
+	}
+}
+
+function anime()
+{
+	animenumber++;
+	animenumber %= 30;
+	if (((animenumber >= 10) && (animenumber <= 20)) || (animenumber == 0))
+	{
+	    change();
+	}
+}
+
+function changeanimespeed(speed)
+{
+	animestop();
+	animespeed = speed;
+	animestart();
+}
+
+
+function change()
+{
+//	window.document.images["image666"].name = image[aaa].name;
+    
+    if (animenumber == 0)
+    {
+	    window.document.images["image666"].src = image[animenumber].src;
+	    window.document.all.percentprint.innerHTML = animenumber + "%";
+    }
+    else
+    {
+	    window.document.images["image666"].src = image[animenumber-10].src;
+	    window.document.all.percentprint.innerHTML = (animenumber-10)*10 + "%";
+	}
+}
+
+// -->
+</script>
+
+
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000"
+	  onload="init()"
+	  >
+
+
+<pre id="wipename">
+ワイプ名
+</pre>
+
+
+<img id="mini0" src="graphics/sample_from.jpg" width="75" height="56" alt="" />
+<img id="mini1" src="graphics/sample_1_1.jpg" width="75" height="56" alt="" />
+<img id="mini2" src="graphics/sample_1_2.jpg" width="75" height="56" alt="" />
+<img id="mini3" src="graphics/sample_1_3.jpg" width="75" height="56" alt="" />
+<img id="mini4" src="graphics/sample_1_4.jpg" width="75" height="56" alt="" />
+<img id="mini5" src="graphics/sample_1_5.jpg" width="75" height="56" alt="" />
+<img id="mini6" src="graphics/sample_1_6.jpg" width="75" height="56" alt="" />
+<img id="mini7" src="graphics/sample_1_7.jpg" width="75" height="56" alt="" />
+<img id="mini8" src="graphics/sample_1_8.jpg" width="75" height="56" alt="" />
+<img id="mini9" src="graphics/sample_1_9.jpg" width="75" height="56" alt="" />
+<img id="mini10" src="graphics/sample_to.jpg" width="75" height="56" alt="" />
+
+<br />
+<br />
+
+
+<img name="image666" src="graphics/sample_from.jpg">
+<BR>
+<pre id="percentprint">
+0%
+</pre>
+
+<script type="text/javascript">
+<!--
+
+
+
+// -->
+</script>
+
+<form name="F1" action="#">
+<input type="button" value="アニメ" onclick="animestart()">
+<input type="button" value="停止" onclick="animestop()">
+<input type="button" value="こまおくり" onclick="animepause()">
+<input type="button" value="低速(3)" onclick="changeanimespeed(333)">
+<input type="button" value="中(10)" onclick="changeanimespeed(100)">
+<input type="button" value="高速(20)" onclick="changeanimespeed(50)">
+</form>
+
+
+<br />
+<pre id="wipedesc">
+解説
+</pre>
+
+
+<noscript>
+JAVASCRIPTを有効にしてください
+</noscript>
+
+<BR>
+
+
+</BODY>
+</HTML>
+
+

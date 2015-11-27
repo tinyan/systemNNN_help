@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>PNG対応について</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">PNG対応について</p>
+
+<br />
+
+<a href="#FAQ1">Q1.PNGデータを使いたいのですが対応していますか</a><br />
+<a href="#FAQ2">Q2.PNGを使用した場合のcopyright表記等はどうすればいいのでしょうか</a><br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class ="notice" id="FAQ1">
+
+<pre>
+Q1.PNGデータを使いたいのですが対応していますか
+
+A1.現在試験的に一部対応中です。bit深度8又は16のみ対応しています。
+
+
+種類/bit数                  1           2           4           8           16
+
+グレースケール              △          △          △          ○          ○
+カラー                      -           -           -          ○          ○
+パレット                    △          △          △          ○          -
+アルファ付きグレースケール   -           -           -           ○          ○
+アルファ付きカラー           -           -           -           ○          ○
+
+透過ありグレースケール       △          △          △          ○          ○
+透過ありカラー               -           -           -          ○          ○
+透過ありパレット             △          △          △          ○          -
+
+
+○  対応
+△  対応(未検証)
+×  未対応
+-   存在せず
+
+</pre>
+</div>
+
+
+<br />
+
+<div class ="notice" id="FAQ2">
+<pre>
+Q2. PNGを使用した場合のcopyright表記等はどうすればいいのでしょうか
+
+A2. 使用しているライブラリ(zlib/libpng)はBSD風ライセンスよりもさらに条件の緩いライセンスです。
+    謝辞や著作権表示は必須ではありません。
+    が、作者に感謝と敬意を払う意味で、zlib_libpngフォルダ内の謝辞に会社名/サークル名を追加することをお勧めします
+</pre>
+</div>
+
+
+</body>
+
+
+</html>
+

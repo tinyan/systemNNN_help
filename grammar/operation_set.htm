@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>数値・変数</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../button.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+    <link rel="stylesheet" href="grammar.css" type="text/css" />
+</head>
+
+<body class = "basic">
+
+
+<p class="title">代入演算子</p>
+
+<pre>
+
+</pre>
+
+
+<br />
+<pre>
+NNNシステムで使用できる代入演算子は、
+通常代入と、一部の2項演算代入子です
+
+代入演算子は、シナリオの「計算」コマンド内でのみ使用できます
+</pre>
+
+<table class="none">
+
+<tr>
+<td class="box1">=</td>
+<td class="box2">代入</td>
+<td class="box3">左辺に右辺の値または計算結果を代入します。</td>
+</tr>
+
+<tr>
+<td class="box1">+=</td>
+<td class="box2" rowspan = "5">演算代入</td>
+<td class="box3" rowspan = "5">左辺に右辺の値を=の左側の演算子で計算し代入します</td>
+</tr>
+
+<tr>
+<td class="box1">-=</td>
+
+
+</tr>
+
+<tr>
+<td class="box1">*=</td>
+
+
+</tr>
+
+<tr>
+<td class="box1">/=</td>
+
+
+</tr>
+
+<tr>
+<td class="box1">%=</td>
+
+
+</tr>
+
+</table>
+
+<br />
+<pre>
+代入の使用例
+</pre>
+<div class="notice">
+<pre>
+館で落とした人数 = 7;
+崖から落とした人数 = 1;
+落とした人数 = 館で落とした人数 + 崖から落とした人数;
+ミスラのいんと = 2 + 2;
+</pre>
+</div>
+
+<br />
+<pre>
+上の計算を実行すると、「落とした人数」は8に、「ミスラのいんと」は、4になります
+</pre>
+
+
+<br />
+<br />
+<br />
+<pre>
+演算代入の使用例
+</pre>
+<div class="notice">
+<pre>
+食べたパンの枚数 = 1;
+食べたパンの枚数 += 3;
+食べたパンの枚数 += 3;
+</pre>
+</div>
+<br />
+<pre>
+上の計算を実行すると、「食べたパンの枚数」は7になります
+</pre>
+
+
+
+
+</body>
+</html>
+

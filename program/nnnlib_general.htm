@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>nnnLib - CCommonGeneral</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">nnnLib - CCommonGeneral</p>
+<br />
+
+<pre>
+CCommonGaneralクラスはnnnLibの各種画面の基本クラスです
+
+主なvirtualメソッド
+
+public:
+	virtual void InitByLoad(void){}
+	//ゲームデータが読み込まれた後に呼び出されます
+	
+	virtual void CreateExitScreen(void);
+	//マウス等の上部レイヤーを消去後virtual ReCreateExitScreen(){}を実行し、フェード用の画像を作成します
+	
+	virtual void StartUserCommand(int paraKosuu,int* paraPtr){}
+    //command.txtで指定されたコマンドがスクリプトから実行されたときに1回よびだされます。初期化などに使用します
+
+protected:
+
+	virtual int Calcu(void) = 0;    //1フレームごとにデフォルトのGeneralCalcu処理が終了後に呼び出されます。デフォルトその画面での動作処理を行います
+	virtual int Print(void) = 0;    //1フレームごとにデフォルトのGeneralPrint処理が終了後に呼び出されます。その画面での描画処理を行います
+	virtual int Init(void) = 0;     //画面モードが切り替わるときにデフォルトのGeneralInit処理が終了後に呼び出されます。
+	
+	virtual int EndMode(void) {return -1;}  //現在のモードが終了して別のモードに切り替わるときに呼び出されます
+	virtual void FinalExitRoutine(void) {}  //現在のモードが終了する最終段階で呼び出されます
+
+	virtual void BeforeInit(void) {}    //Init処理が呼び出される前に呼び出されます。デフォルトのGeneralInit前に処理したい部分をいれます
+	virtual void AfterInit(void) {}     //Init処理に終了後に呼び出されます
+	
+	virtual void BeforeCalcu(void){}    //Calcu処理が呼び出される前に呼び出されます。デフォルトのGeneralCalcu前に処理したい部分をいれます
+	virtual void AfterCalcu(void){}     //Calcu処理に終了後に呼び出されます
+	virtual void BeforePrint(void){}    //Print処理が呼び出される前に呼び出されます。デフォルトのGeneralPrint前に処理したい部分をいれます
+	virtual void AfterPrint(void){}     //Print処理に終了後に呼び出されます
+
+
+init処理用基本メソッド
+	BOOL LoadSetupFile(LPSTR filenameonly, int varKosuu = 64);  //セットアップ用initファイル(init/[filenameonly].xtx)を読み込ます
+	BOOL GetInitGameParam(int* lpVar, LPSTR name);              //lpVarにinitファイルのname項目の数値を代入します
+	BOOL GetInitGameParam(int* lpVar, LPSTR name,int initData); //同初期値指定バージョン。
+	BOOL GetInitGameString(LPSTR* lpStr, LPSTR name);           //lpStrにinitファイルのname項目の文字列へのポインタを代入します
+	BOOL GetInitGameString(LPSTR* lpStr, LPSTR name,LPSTR initString);  //同初期値指定バージョン。
+	
+そのたユーティリティ的な基本メソッド
+	BOOL CheckClick(BOOL bTrig2Flag = FALSE);   //マウスがクリックされたかどうかbTrig2FlagをTRUEにすると、左右どちらのボタンでもクリックと処理
+	void LoadUpDownButtonPic(void);     //上下ボタンの画像をinitに基づいて読み込みます
+	void LoadBackButtonPic(void);       //戻るボタンの画像をinitに基づいて読み込みます
+
+	virtual int ProcessUpDownBack(int rt);  //上下戻るセットボタンの戻り値のデフォルトの処理を行います。戻り値は押されたボタン番号(0-2)またはなし(-1)です
+	virtual int ProcessButtonGroup(int rt); //グループボタンの戻り値のデフォルトの処理を行います。戻り値は押されたボタン番号(0-n)またはなし(-1)です
+	virtual int ProcessCommonButton(int rt);   //ボタンの戻り値のデフォルトの処理を行います戻り値は押されたボタン番号(0)またはなし(-1)です
+	
+	virtual void CreateBackButton(void);    //initを元に戻るボタンを作成します
+	virtual void CreateUpDownButton(void);  //initを元に上下ボタンを作成します
+	virtual void CreateUpDownBack(void);    //上下ボタンと戻るボタンをセットにした上下戻るボタンを作成します(上下ボタン、戻るボタンが作成済みであることが必要)
+
+	virtual int ReturnFadeOut(int returnCode = -1); //Calcuでモードを切り替えるときに、return ReturnFadeOut(returnCode);とすることで、フェード処理終了後にモードが切り替わるようにできます
+
+	void GetFadeInOutSetup(void);   //initファイルからデフォルトのフェード処理設定を読み込みます
+	void GetBGMSetup(void);         //initファイルからデフォルトのBGM処理設定を読み込みます
+	void GetBackExecSetup(void);    //initファイルからデフォルトのバックスクリプト処理設定を読み込みます
+	virtual void GetAllPrintSetup(void);        //initファイルからデフォルトの画面強制全描画設定を読み込みます
+	
+
+	virtual void ReCreateExitScreen(void) {}    //特殊なフェード用画像を作成する場合に継承して処理してください
+	virtual void CreateEnterScreen(void);       //特殊なフェードイン後の画像が必要な場合に継承してしょりしてくだい。内部でのデフォルト処理ははCreateStartScreen()呼び出しです
+
+	virtual void CreateStartScreen(void);       //フェードイン後の画像を作成します。デフォルト動作はPrint()呼び出しです
+	
+
+	void PrintBackScriptOrBG(void);             //initの設定に応じて、commonBGで背景を塗りつぶすか、バックスクリプト画像を描画します。通常は継承したPrint()の頭で実行します
+
+	BOOL GetModeNumberBySetup(LPSTR name,int *lpVar);   //lpVarにinitのname項目をモード番号またはモード名として処理してその数値をいれます
+	int GetModeNumberByName(LPSTR name);    //モード名から数値に変換します。基本モードのみ対応(1-49)
+
+主なメンバ変数
+	int m_backScriptFlag;   //バックスクリプトの使用フラグ
+
+
+	CPicture* m_commonBG;   //共通背景用。全クラスで同一インスタンスを使用していますので、サイズ変更、Delete等は行わないようにしてください
+	CPicture* m_commonParts;//共通パーツ用。全クラスで同一インスタンスを使用していますので、サイズ変更、Delete等は行わないようにしてください
+	int* m_commonBuffer;    //共通バッファー全クラスで同一インスタンスを使用していますので、Delete等は行わないようにしてください
+
+	CGameCallBack* m_game;  //CGameCallBackクラス全クラスで同一インスタンスを使用していますので、Delete等は行わないようにしてください
+
+	CMyMouseStatus* m_mouseStatus;//マウス状態クラス、全クラスで同一インスタンスを使用していますので、Delete等は行わないようにしてください
+	CInputStatus* m_inputStatus;//マウス及びキー入力状態クラス、全クラスで同一インスタンスを使用していますので、Delete等は行わないようにしてください
+
+	CNameList* m_setup; //initファイルが読み込まれています
+
+	int m_classNumber;  //クラス番号
+
+	CCommonBackButton* m_back;  //戻るボタン
+	CCommonUpDownButtonGroup* m_updown;//上下ボタン
+	CCommonUpdownBack* m_updownBack;//上下戻るボタン    これらのボタンは基本クラスが管理しますので、delete等は行わないようにしてください
+
+
+	CPicture* m_exitScreen; //フェード用元画像
+	CPicture* m_enterScreen;//フェード用先画像
+
+
+</pre>
+
+
+</body>
+</html>
+
+
+

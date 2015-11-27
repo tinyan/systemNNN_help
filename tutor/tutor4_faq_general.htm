@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>FAQ general</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+	<link rev="Bookmark" href="mailto:tinyan@mri.biglobe.ne.jp" />
+    <link rel="stylesheet" href="../default.css" type="text/css" />
+    <link rel="stylesheet" href="../warning.css" type="text/css" />
+	
+</head>
+
+<body class = "basic">
+
+
+<p class="title">FAQ general(暫定、気づいたものをとりあえずいれておく)</p>
+
+
+<a href="#FAQ1">Q1.ロゴのあとにムービーを表示させたい</a><br />
+<a href="#FAQ2">Q2.ゲーム中にムービーを表示させたい</a><br />
+<a href="">2</a><br />
+<a href="">3</a><br />
+<a href="">4</a><br />
+<a href="">5</a><br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class ="notice" id="FAQ1">
+<pre>
+Q1. タイトル画面にいくまえにムービーを表示させたい
+
+A1. まずはゲームモードの変化をきめます。デフォルトは、ゲーム開始→ロゴ→タイトル画面になっていますので
+    今回は、ゲーム開始→ロゴ→ムービー→タイトル画面という流れにするときの設定を説明します
+    
+    init/logo.xtxに
+    
+    nextMode printMovie
+    を追加します
+    
+    また、ここに下記のような、ほかのnextModeの設定が書かれている場合は削除しておきます
+    nextMode title
+    
+    
+    これで、ゲーム起動からタイトル画面までの流れが、ゲーム開始→ロゴ→ムービー→タイトル画面
+    と、なります
+    
+    
+    init/printMovie.xtxに
+    nextMode title
+    を追加し
+    
+    さらに
+    movieFileName ほげほげ.mpg
+    のようにムービーファイル名を拡張子まで含めて設定します
+    
+    また、ムービー表示機能はデフォルトではオフになっていますので
+    init/game.xtxに
+    printMovieClassDisable 0
+    を設定しムービー表示機能をオンにします
+
+
+
+
+    起動時にコーデックのチェックを行わない場合は
+    init/nothing.xtxに
+    codecCheckFlag 0
+    
+    init/game.xtxに
+    codecErrorClassDisable 1
+    と設定します
+    
+    
+    コーデックのチェックを行う場合は
+    init/nothing.xtxに
+    codecCheckFlag 0
+
+    init/game.xtxに
+    codecErrorClassDisable 0
+    とし、
+    init/codecError.xtx
+    に必要な設定を行うとともに、グラフィックも準備します
+</pre>
+</div>
+
+<br />
+
+<div class ="notice" id="FAQ2">
+<pre>
+Q2. ゲーム中にムービーを表示させたい
+
+A2. まずはムービー一覧ファイルを作成します
+    nnndir/movielist.txtに
+    ムービーファイル名,説明
+    を1行セットにしたものを必要なだけ作成します
+    (これはエディターでビルドするとsptフォルダーに変換後のファイルが作成されます)
+    
+    つぎに、nnndir/command.txtに
+    printmovie,ムービー表示
+    という1行が入っていることを確認します
+    ない場合は追加しておいてください
+
+    init/game.xtxに
+    printMovieClassDisable 0
+    を設定しムービー表示機能をオンにします
+
+    エディターのシナリオウィンドウでムービーを表示させたい場所で
+    右クリックメニューからコマンドを選びます(ムービーというメニューもありますが未対応です)
+    コマンドの一覧がでますので、そのなかから「ムービー表示」を選びます
+    さらに同じ場所で右クリックメニューから内容修正を選び、ダイアログに
+    ムービー番号をいれます。これはnnndir/movielist.txtに対応しています。    
+    
+
+</pre>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+</body>
+
+
+</html>
+

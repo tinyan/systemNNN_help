@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Project NYANLIB</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Shift_JIS">
+	<LINK REV=MADE HREF="mailto:tinyan@mri.biglobe.ne.jp">
+</HEAD>
+
+<BODY BGCOLOR="#80C0A0"
+      LINK   ="#006060"
+      VLINK  ="#7499CC"
+      TEXT   ="#202020" 
+      ALINK  ="#000000">
+
+
+
+<CENTER>
+<FONT SIZE=7>init - selectplace</FONT><BR>
+</CENTER>
+<BR>
+FileName = init\selectPlace.xtx<BR>
+<BR>
+
+<TABLE BORDER=3>
+<TR>
+<TD COLSPAN=3>共通設定</TD>
+</TR>
+
+
+<TR>
+<TD>背景スクリプト設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>BGM設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>ゲーム内日付表示設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>アニメレイヤー表示設定</TD>
+<TD>可</TD>
+<TD></TD>
+</TR>
+
+<TR>
+<TD>その他設定</TD>
+<TD>場所ボタン</TD>
+<TD>[place][n]という名前でボタンを場所の数だけ作成する</TD>
+</TR>
+
+</TABLE>
+
+<BR>
+<BR>
+
+<TABLE BORDER=4>
+<TR>
+<TD COLSPAN=4>専用設定</TD>
+</TR>
+
+<TR>
+<TD>名前</TD>
+<TD>サブ</TD>
+<TD>デフォルト値</TD>
+<TD>解説</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN = 2>modename</TD>
+<TD>selectPlace</TD>
+<TD>モード名、変更不可。省略不可</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>placeNumber</TD>
+
+<TD ALIGN=RIGHT>1</TD>
+<TD>場所の数</TD>
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>selectedPlaceVarName</TD>
+
+<TD>場所選択番号</TD>
+<TD>選ばれた場所の番号が返る変数名</TD>
+</TR>
+ 
+
+
+
+<TR>
+<TD COLSPAN= 2>filenameBG</TD>
+
+<TD>idou_bg</TD>
+<TD>背景画像ファイル名</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>placeAppearFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:場所の表示を変数で制御する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>placeAppearVarName[n]</TD>
+<TD></TD>
+<TD>[n]番目の場所の表示非表示を制御する変数</TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN= 2>selectFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:場所が選択できるかどうか変数で制御する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>placeSelectOkVarName[n]</TD>
+<TD></TD>
+<TD>[n]番目の場所が選択できるかどうか制御する変数</TD>
+</TR>
+
+
+ 
+
+<TR>
+<TD COLSPAN= 2>areaSizeX</TD>
+
+<TD ALIGN=RIGHT>32</TD>
+<TD ROWSPAN=2>表示エリアのサイズ</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>areaSizeY</TD>
+
+<TD ALIGN=RIGHT>32</TD>
+
+</TR>
+
+<TR>
+<TD COLSPAN= 2>areaX[n]</TD>
+
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>[n]番目の場所の表示位置</TD>
+</TR>
+
+<TR>
+<TD COLSPAN= 2>areaY[n]</TD>
+
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+
+<TR>
+<TD COLSPAN= 2>charaFlag</TD>
+
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:場所にキャラを表示させる</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>allCharaFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>キャラグラフィックを1枚のシートにする</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>filenameCharaBase</TD>
+<TD>ta_chara</TD>
+<TD>個別のキャラグラフィックのファイル名の先頭部分</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>filenameAllChara</TD>
+<TD>ta_allchara</TD>
+<TD>全員分のキャラグラフィックのファイル名</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>returnCharaNumberFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:キャラ番号もスクリプトに返す</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>selectedCharaVarName</TD>
+<TD ALIGN=RIGHT>キャラ選択番号</TD>
+<TD>キャラ番号が返る変数名</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaOnlyFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:キャラがいるところのみ選択できるようにする</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaPrintUpper</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>1:キャラをボタンの上に表示する 0:キャラをボタンの下に表示する</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>placeCharaVarName[n]</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>n番目の場所にいるキャラの番号をいれる変数名</TD>
+</TR>
+
+
+
+
+<TR>
+<TD></TD>
+<TD>charaAnimePattern</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>キャラをアニメさせるときはパターン数を設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaAnimeSpeed</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>キャラをアニメさせるときの1パターンの表示フレーム数</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaAnimeType</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>キャラアニメの種類(ボタンを参照)</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaSizeX</TD>
+<TD ALIGN=RIGHT>32</TD>
+<TD ROWSPAN=2>キャラのサイズ</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaSizeY</TD>
+<TD ALIGN=RIGHT>32</TD>
+
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>charaX</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>キャラの表示位置をエリアに対する相対座標で設定</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaY</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaCustomFlag</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>1:キャラの表示位置を個別に設定する</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>charaX[n]</TD>
+<TD ALIGN=RIGHT></TD>
+<TD ROWSPAN=2>[n]番目のキャラの表示位置をエリアに対する相対座標で設定</TD>
+</TR>
+
+
+<TR>
+<TD></TD>
+<TD>charaY[n]</TD>
+<TD ALIGN=RIGHT></TD>
+
+</TR>
+
+
+
+
+</TABLE>
+
+<BR>
+<BR>
+allCharaFlagが0の場合には
+キャラファイル名は、placeCharaVarName[n]にいれたキャラ番号から作成されます<BR>
+fileNameCharaBase + placeCharaVarName[n]<BR>
+<BR>
+
+
+<BR>
+キャラ絵は、シートにした場合には<BR>
+chara1pic1anime1,chara1pic1anime2,..  chara1pic2anime1...<BR>
+chara2<BR>
+chara3<BR>
+<BR>
+<BR>
+ばらの場合には<BR>
+pic1anime1,pic1anime2...<BR>
+pic2<BR>
+pic3<BR>
+<BR>
+<BR>
+
+<pre>
+autoPicLoad 0   // 1:マウスを乗せたボタンに場所に応じて自動的に画像をレイヤーに読み込む
+autoPicCannotOk 0   // 1:選択不可のボタンも対象にする
+autoPicLayerTag[layer] // 読み込む画像のファイル名tag layerは0からなので注意
+autoPicRestartBackScript 0  // 1:画像に変化があった場合にバックスクリプトを最初からにもどします
+
+//バックスクリプトとセットで使います
+//自動読み込みレイヤーには、バックスクリプトではダミーの画像を読み込むように(0番の画像がおすすめです)
+
+//マウスがどのボタンにも乗っていないときは 0番のボタンとして処理する
+//そのためボタン番号は1からになります
+
+//使用例
+//移動画面でマウスがのった場所の名前とその画像を画面の特定の位置に表示する
+
+設定例
+//autoPicLoad 1
+//autoPicLayerTag9 ta_namePlate
+//autoPicLayerTag10 ta_placePhoto
+
+これで、マウスがボタンにのったときに
+9番のレイヤーにta_namePlate[ボタン番号]
+10番のレイヤーにta_placePhoto[ボタン番号]
+という画像が読み込まれます
+
+読み込む対象フォルダーはファイル名の頭2文字で決定されます
+dwq/[頭2文字]/ファイル名
+頭2文字はta,bg,evでなければなりません。
+
+
+
+
+//キーによる選択場所へのマウス移動および決定
+keyMoveEnable 1
+keyMoveCannotSelectOk 0
+keyMoveUpDownEnable 1
+keyMoveLeftRightEnable 1
+
+
+//1: 移動画面でのバックログを有効にする
+backLogOk 0
+
+
+onButtonVarName ほげほげ
+//マウスがのってるボタン番号をバックスクリプト等で参照したいときは、その変数をここに設定する
+
+onButtonChangeToRestartBackScript 0
+//1:ボタン画像を自動変換しない場合でものってるボタンがかわったらバックスクリプトを最初から実行する
+
+</pre>
+
+
+<BR>
+
+</BODY>
+</HTML>
+
